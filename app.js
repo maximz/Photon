@@ -1,5 +1,8 @@
 var express = require('express');
+var app = express();
 
-app.post('/', function(req, res, next) {
-  console.log("Received post request");
+var tesseract = require('./server_methods/tesseract_call.js').execute('image.png');
+
+var server = app.listen(3000, function() {
+    console.log('Listening on port %d', server.address().port);
 });
