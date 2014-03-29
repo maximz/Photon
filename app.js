@@ -2,10 +2,6 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
-var server = app.listen(3000, function() {
-    console.log("Listening to port %d", server.address().port);
-});
-
 var tesseract = require('./server_methods/tesseract_call.js').execute;
 app.use(express.bodyParser({ keepExtensions: true, uploadDir: './images'}));
 app.use(express.static(__dirname + '/public'));
@@ -46,7 +42,8 @@ app.post('/web', function(req, res) {
 	fs.readFile(outputPath + '.txt', 'utf8', function(err, data) {
 	    if (err) throw err;
 	    res.setHeader('Content-Type', 'application/json');
-	    res.end(JSON.stringify(data));
+	    res.end(JSON.stringify({
+		"text": data}));
 	});
 	
         // Remove data
@@ -63,6 +60,9 @@ app.post('/web', function(req, res) {
 
 });
 
+var server = app.listen(3000, function() {
+    console.log("Listening to port %d", server.address().port);
+});
 
 app.get('/', function(req, res) {
   res.sendfile("index.html"); 
