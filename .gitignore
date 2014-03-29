@@ -1,8 +1,11 @@
 *~
 node_modules/*
+output/*
 *.swp
 *.class
 .metadata
 bin
 gen
 .classpath
+^#*#$
+images/*

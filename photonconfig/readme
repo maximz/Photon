@@ -1,0 +1,2 @@
+Move the 'photonenglish' file to the tesseract config directory
+on Ubuntu this would be /usr/share/tesseract-ocr/tessdata/configs.
