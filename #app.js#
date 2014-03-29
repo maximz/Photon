@@ -22,12 +22,12 @@ app.post('/', function(req, res) {
     
     var time1 = new Date().getTime();
     var outputPath = './output/out' + time1;
-
+    
     // Should we refine images before giving them to tesseract?
 
     // Run tesseract, name output based on time started
-  //  child = exec('tesseract image.gif ' + outputPath,
-	child = exec('tesseract ' + req.files.image.path + ' ' + outputPath, 
+    child = exec('tesseract image.gif ' + outputPath,
+//    child = exec('tesseract ' + req.files.image.path + ' ' + outputPath, 
 		 function (error, stdout, stderr) {
 	console.log('stdout: ' + stdout);
 	console.log('stderr: ' + stderr);
@@ -58,4 +58,8 @@ app.post('/', function(req, res) {
 	    console.log('Successfully deleted image ' + time1);
 	});
     }); 
+});
+
+app.get('/', function(req, res) {
+    res.send("Do stuff");
 });
