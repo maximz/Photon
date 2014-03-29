@@ -1,4 +1,4 @@
-package com.comparty.photon;
+package com.comparty.photon.camera;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,45 +7,39 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import android.app.Fragment;
+import android.app.Activity;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-import com.comparty.photon.camera.CameraPreview;
+import com.comparty.photon.R;
 
-public class CameraFragment extends Fragment {
-	
+public class Custom_CameraActivity extends Activity {
 	private Camera mCamera;
 	private CameraPreview mCameraPreview;
 
+	/** Called when the activity is first created. */
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_camera, container,
-				false);
-
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_camera);
 		mCamera = getCameraInstance();
-		mCameraPreview = new CameraPreview(getActivity(), mCamera);
-		FrameLayout preview = (FrameLayout) rootView.findViewById(R.id.camera_preview);
+		mCameraPreview = new CameraPreview(this, mCamera);
+		FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
 		preview.addView(mCameraPreview);
 
-		Button captureButton = (Button) rootView.findViewById(R.id.button_capture);
+		Button captureButton = (Button) findViewById(R.id.button_capture);
 		captureButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				mCamera.takePicture(null, null, mPicture);
 			}
 		});
-		
-		return rootView;
 	}
 
 	/**
@@ -86,10 +80,10 @@ public class CameraFragment extends Fragment {
 		File mediaStorageDir = new File(
 				Environment
 				.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-				"Photon");
+				"MyCameraApp");
 		if (!mediaStorageDir.exists()) {
 			if (!mediaStorageDir.mkdirs()) {
-				Log.d("Photon", "failed to create directory");
+				Log.d("MyCameraApp", "failed to create directory");
 				return null;
 			}
 		}
