@@ -7,20 +7,34 @@
     <FrameLayout
         android:id="@+id/camera_preview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
+    <TextView
+        android:layout_gravity="top"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Take a picture of some text."
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"/>
+    
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom" >
 
-        <Button
+        <ImageButton
+            android:src="@drawable/camera_button"
+            android:background="@null"
             android:id="@+id/button_capture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
+            android:layout_marginBottom="10dp"
             android:text="Capture" />
+        
     </FrameLayout>
 
 </FrameLayout>
