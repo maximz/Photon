@@ -16,8 +16,23 @@
         android:text="Take photo" />
     
     <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/image" />
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Send" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyCam" 
+        android:layout_gravity="left"
+        android:id="@+id/mycam_button" />
 
 </FrameLayout>
