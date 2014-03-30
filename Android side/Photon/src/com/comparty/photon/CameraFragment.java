@@ -49,6 +49,10 @@ public class CameraFragment extends Fragment {
 
 	View rootView;
 
+	long startTime;
+
+	ImageHttpRequest request;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -100,12 +104,17 @@ public class CameraFragment extends Fragment {
 	}
 
 	public void startPreview() {
+		if (request != null && !request.isCancelled())
+			request.cancel(true);
+		
 		if ((mCamera = getCameraInstance()) != null) {
 
 			Parameters p = mCamera.getParameters();
 			p.setFlashMode(Parameters.FLASH_MODE_TORCH);
 			mCamera.setParameters(p);
 			mCameraPreview = new CameraPreview(getActivity(), mCamera);
+			FrameLayout preview = (FrameLayout) rootView.findViewById(R.id.camera_preview);
+			preview.addView(mCameraPreview);
 		}
 	}
 
@@ -129,12 +138,16 @@ public class CameraFragment extends Fragment {
 	PictureCallback mPicture = new PictureCallback() {
 		@Override
 		public void onPictureTaken(byte[] data, Camera camera) {
-			try {
+			try {				
+				startTime = System.currentTimeMillis();
+				
 //				Parameters p = mCamera.getParameters();
 //				p.setFlashMode(Parameters.FLASH_MODE_OFF);
 //				mCamera.setParameters(p);
-				mCamera.stopPreview();
-				mCamera.release();
+				FrameLayout preview = (FrameLayout) rootView.findViewById(R.id.camera_preview);
+				preview.removeAllViews();
+				//mCamera.stopPreview();
+				//mCamera.release();
 
 				instructions.setVisibility(View.GONE);
 
@@ -150,8 +163,8 @@ public class CameraFragment extends Fragment {
 				String testUrl = "http://httpbin.org/post";
 				String serverUrl = "http://54.186.196.147:3000/web";
 
-				ImageHttpRequest request = new ImageHttpRequest(data);
-				request.execute(serverUrl);
+				request = new ImageHttpRequest(data);
+				request.execute(testUrl);
 
 
 
@@ -195,7 +208,7 @@ public class CameraFragment extends Fragment {
 			multipartEntity.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
 			multipartEntity.addPart("image", bab);
 
-			Log.d("JSONHttp", "type: "+type);
+			Log.d("HttpRequest", "started");
 			try{
 
 				request = new HttpPost(uri[0]); 
@@ -220,7 +233,6 @@ public class CameraFragment extends Fragment {
 							int i;
 							while((i=instream.read())!=-1  ) {//&& current < end) {
 								sBuild.append((char) i);
-								current++;
 							}
 						} finally {
 							instream.close();
@@ -248,8 +260,9 @@ public class CameraFragment extends Fragment {
 				Log.d("Response", result+"");
 
 			try {
-				JSONObject json = new JSONObject(result);
-				((MainActivity) getActivity()).currentText = json.getString("text").replaceAll("\n", " ");
+				//JSONObject json = new JSONObject(result);
+				//((MainActivity) getActivity()).currentText = json.getString("text").replaceAll("\n", " ");
+				((MainActivity) getActivity()).currentText = "One two three four five six";
 				spritz.showSpritzer();
 			} catch(Exception e) {}
 
