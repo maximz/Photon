@@ -1,5 +1,9 @@
 <resources>
 
+     <style name="PivotLetter">
+        <item name="android:textColor">#FFFFBB33</item>
+    </style>
+    
     <!--
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
