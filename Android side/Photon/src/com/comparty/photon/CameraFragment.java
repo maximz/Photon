@@ -1,10 +1,7 @@
 package com.comparty.photon;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -27,13 +24,13 @@ import android.hardware.Camera.Parameters;
 import android.hardware.Camera.PictureCallback;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.comparty.photon.camera.CameraPreview;
@@ -52,7 +49,9 @@ public class CameraFragment extends Fragment {
 	long startTime;
 
 	ImageHttpRequest request;
-	
+
+	ImageView picView;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -63,6 +62,8 @@ public class CameraFragment extends Fragment {
 		instructions.setVisibility(View.VISIBLE);
 
 		mCamera = getCameraInstance();
+
+		picView = (ImageView) rootView.findViewById(R.id.pic);
 
 		Parameters p = mCamera.getParameters();
 		p.setFlashMode(Parameters.FLASH_MODE_TORCH);
@@ -93,11 +94,11 @@ public class CameraFragment extends Fragment {
 	public void onPause() {
 		super.onPause();
 		if (mCamera != null){
-            mCamera.release();        // release the camera for other applications
-            mCamera = null;
-        }
+			mCamera.release();        // release the camera for other applications
+			mCamera = null;
+		}
 	}
-	
+
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -106,8 +107,9 @@ public class CameraFragment extends Fragment {
 	public void startPreview() {
 		if (request != null && !request.isCancelled())
 			request.cancel(true);
-		
+
 		if ((mCamera = getCameraInstance()) != null) {
+			picView.setVisibility(View.GONE);
 
 			Parameters p = mCamera.getParameters();
 			p.setFlashMode(Parameters.FLASH_MODE_TORCH);
@@ -140,12 +142,13 @@ public class CameraFragment extends Fragment {
 		public void onPictureTaken(byte[] data, Camera camera) {
 			try {				
 				startTime = System.currentTimeMillis();
-				
-//				Parameters p = mCamera.getParameters();
-//				p.setFlashMode(Parameters.FLASH_MODE_OFF);
-//				mCamera.setParameters(p);
-				FrameLayout preview = (FrameLayout) rootView.findViewById(R.id.camera_preview);
-				preview.removeAllViews();
+
+				//				Parameters p = mCamera.getParameters();
+				//				p.setFlashMode(Parameters.FLASH_MODE_OFF);
+				//				mCamera.setParameters(p);
+
+
+
 				//mCamera.stopPreview();
 				//mCamera.release();
 
@@ -153,7 +156,7 @@ public class CameraFragment extends Fragment {
 
 				spritz = new SpritzFragment();
 				spritz.setCameraFragment(CameraFragment.this);
-				
+
 				//start spritz
 				FragmentTransaction ft = getFragmentManager().beginTransaction();
 				ft.setCustomAnimations(R.animator.alpha_in, R.animator.nochange);
@@ -162,9 +165,10 @@ public class CameraFragment extends Fragment {
 
 				String testUrl = "http://httpbin.org/post";
 				String serverUrl = "http://54.186.196.147:3000/web";
+				String backupUrl = "http://ec2-54-186-240-101.us-west-2.compute.amazonaws.com:3000/web";
 
 				request = new ImageHttpRequest(data);
-				request.execute(testUrl);
+				request.execute(backupUrl);
 
 
 
@@ -192,11 +196,24 @@ public class CameraFragment extends Fragment {
 			HttpClient httpclient = new DefaultHttpClient();
 			HttpPost request;
 
-			Bitmap bmp = BitmapFactory.decodeByteArray(data , 0, data.length);
+			Bitmap bmpprelim = BitmapFactory.decodeByteArray(data , 0, data.length);
 
 			Matrix matrix = new Matrix();
 			matrix.postRotate(90);
-			bmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
+			final Bitmap bmp = Bitmap.createBitmap(bmpprelim, 0, 0, bmpprelim.getWidth(), bmpprelim.getHeight(), matrix, true);
+
+			picView.post(new Runnable(){ public void run(){ 
+				picView.setImageBitmap(bmp);
+				picView.setVisibility(View.VISIBLE);
+
+
+				FrameLayout preview = (FrameLayout) rootView.findViewById(R.id.camera_preview);
+				preview.removeAllViews();
+
+			}
+			});
+
+
 
 			ByteArrayOutputStream bos = new ByteArrayOutputStream();
 			bmp.compress(Bitmap.CompressFormat.JPEG, 100, bos);
@@ -209,6 +226,8 @@ public class CameraFragment extends Fragment {
 			multipartEntity.addPart("image", bab);
 
 			Log.d("HttpRequest", "started");
+			//testing
+			//return null;
 			try{
 
 				request = new HttpPost(uri[0]); 
@@ -260,9 +279,9 @@ public class CameraFragment extends Fragment {
 				Log.d("Response", result+"");
 
 			try {
-				//JSONObject json = new JSONObject(result);
-				//((MainActivity) getActivity()).currentText = json.getString("text").replaceAll("\n", " ");
-				((MainActivity) getActivity()).currentText = "One two three four five six";
+				JSONObject json = new JSONObject(result);
+				((MainActivity) getActivity()).currentText = json.getString("text").replaceAll("\n", " ");
+				//((MainActivity) getActivity()).currentText = "One two three four five six";
 				spritz.showSpritzer();
 			} catch(Exception e) {}
 

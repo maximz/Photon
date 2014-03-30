@@ -26,9 +26,9 @@ public class SpritzFragment extends Fragment {
 
 	ProgressBar progress;
 	LinearLayout layout;
-	
+
 	CameraFragment cf;
-	
+
 	public interface Callback {
 		public void done();
 	};
@@ -38,16 +38,20 @@ public class SpritzFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_spritz, container,
 				false);
-		
+
 		layout = (LinearLayout) rootView.findViewById(R.id.spritzer_layout);
 		progress = (ProgressBar) rootView.findViewById(R.id.progress);
-		
+
 		SpritzerTextView textView = (SpritzerTextView) rootView.findViewById(R.id.spritzer);
 
 		s = new Spritzer(textView);
 		s.setCallback(new Callback() {
 			public void done() {
-				startButton.setImageResource(R.drawable.ic_media_play);
+				startButton.post(new Runnable() {
+					public void run() {
+						startButton.setImageResource(R.drawable.ic_media_play);
+					}
+				});								
 				playing = false;
 			}
 		});
@@ -86,7 +90,7 @@ public class SpritzFragment extends Fragment {
 				ft.setCustomAnimations(R.animator.nochange, R.animator.alpha_out);
 				ft.remove(SpritzFragment.this);
 				ft.commit();
-				
+
 				cf.startPreview();
 			}
 		});
@@ -120,20 +124,20 @@ public class SpritzFragment extends Fragment {
 
 		return rootView;
 	}
-	
+
 	public void setCameraFragment(CameraFragment c) {
 		this.cf = c;
 	}
-	
+
 	public void showProgress() {
 		layout.setVisibility(View.GONE);
 		progress.setVisibility(View.VISIBLE);
 	}
-	
+
 	public void showSpritzer() {
 		layout.setVisibility(View.VISIBLE);
 		progress.setVisibility(View.GONE);
-		
+
 		s.setText(((MainActivity) getActivity()).currentText);
 	}
 	String stuff = "Sons of Gondor! Of Rohan! My brothers. I see in your eyes the same fear that would take the heart of me. A day may come when the courage of Men fails, when we forsake our friends and break all bonds of fellowship, but it is not this day. An hour of wolves and shattered shields when the Age of Men comes crashing down, but it is not this day! This day we fight! By all that you hold dear on this good earth, I bid you stand, Men of the West!";
