@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#dd000000"
+    android:clickable="true"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -26,7 +27,7 @@
 
         <com.comparty.photon.spritz.SpritzerTextView
             android:id="@+id/spritzer"
-            android:layout_width="250dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:clickable="true"
@@ -88,7 +89,7 @@
                 android:background="@null"
                 android:text="-"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/speed"
@@ -107,7 +108,7 @@
                 android:background="@null"
                 android:text="+"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="50sp" />
         </LinearLayout>
     </FrameLayout>
 

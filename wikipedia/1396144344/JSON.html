@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>JSON - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/JSON" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=JSON&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=JSON&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/JSON" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JSON","wgTitle":"JSON","wgCurRevisionId":601719196,"wgRevisionId":601719196,"wgArticleId":1575082,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 errors: dates","All articles with dead external links","Articles with dead external links from April 2012","Wikipedia articles needing style editing from March 2014","All articles needing style editing","Articles using fixed number of columns in reflist","JSON","Ajax (programming)","Data serialization formats","JavaScript","Markup languages","2001 introductions"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"JSON","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q2063"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .kw5 {color: #FF0000;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-yaml {line-height: normal;}
+.source-yaml li, .source-yaml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for yaml
+ * CSS class: source-yaml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.yaml.source-yaml .de1, .yaml.source-yaml .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.yaml.source-yaml  {font-family:monospace;}
+.yaml.source-yaml .imp {font-weight: bold; color: red;}
+.yaml.source-yaml li, .yaml.source-yaml .li1 {font-weight: normal; vertical-align:top;}
+.yaml.source-yaml .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.yaml.source-yaml .li2 {font-weight: bold; vertical-align:top;}
+.yaml.source-yaml .kw1 {font-weight: bold;}
+.yaml.source-yaml .co0 {color: #303050;background-color: #F5F5F5}
+.yaml.source-yaml .co1 {color: blue;}
+.yaml.source-yaml .co2 {font-weight: bold; color: red;}
+.yaml.source-yaml .co3 {color: green;}
+.yaml.source-yaml .co4 {color: #007F45;}
+.yaml.source-yaml .co5 {color: #7f7fFF;}
+.yaml.source-yaml .co6 {color: #FF7000;}
+.yaml.source-yaml .co7 {color: #FF45C0;}
+.yaml.source-yaml .co8 {font-weight: bold; color: #005F5F;}
+.yaml.source-yaml .sy1 {color: cyan;}
+.yaml.source-yaml .sy2 {font-weight: bold; color: brown;}
+.yaml.source-yaml .st0 {color: #CF00CF;}
+.yaml.source-yaml .ln-xtra, .yaml.source-yaml li.ln-xtra, .yaml.source-yaml div.ln-xtra {background-color: #ffc;}
+.yaml.source-yaml span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-xml {line-height: normal;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.xml.source-xml .de1, .xml.source-xml .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.xml.source-xml  {font-family:monospace;}
+.xml.source-xml .imp {font-weight: bold; color: red;}
+.xml.source-xml li, .xml.source-xml .li1 {font-weight: normal; vertical-align:top;}
+.xml.source-xml .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.xml.source-xml .li2 {font-weight: bold; vertical-align:top;}
+.xml.source-xml .es0 {color: #000099; font-weight: bold;}
+.xml.source-xml .br0 {color: #66cc66;}
+.xml.source-xml .sy0 {color: #66cc66;}
+.xml.source-xml .st0 {color: #ff0000;}
+.xml.source-xml .nu0 {color: #cc66cc;}
+.xml.source-xml .sc-1 {color: #808080; font-style: italic;}
+.xml.source-xml .sc0 {color: #00bbdd;}
+.xml.source-xml .sc1 {color: #ddbb00;}
+.xml.source-xml .sc2 {color: #339933;}
+.xml.source-xml .sc3 {color: #009900;}
+.xml.source-xml .re0 {color: #000066;}
+.xml.source-xml .re1 {color: #000000; font-weight: bold;}
+.xml.source-xml .re2 {color: #000000; font-weight: bold;}
+.xml.source-xml .ln-xtra, .xml.source-xml li.ln-xtra, .xml.source-xml div.ln-xtra {background-color: #ffc;}
+.xml.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-JSON skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">JSON</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">For similarly-named people, see <a href="/wiki/J_Son_(disambiguation)" title="J Son (disambiguation)" class="mw-redirect">J Son (disambiguation)</a>.</div>
+<table class="metadata plainlinks ambox ambox-style" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>is written like <a href="/wiki/Wikipedia:NOT#GUIDE" title="Wikipedia:NOT" class="mw-redirect">a manual or guidebook</a>.</b> <span class="hide-when-compact">Please help <a class="external text" href="//en.wikipedia.org/w/index.php?title=JSON&amp;action=edit">rewrite this article</a> from a descriptive, <a href="/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutral point of view</a>, and remove advice or instruction.</span> <small><i>(March 2014)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox" cellspacing="3" style="border-spacing:3px;width:22em;">
+<caption>JSON</caption>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="/wiki/File:JSON_vector_logo.svg" class="image"><img alt="JSON vector logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/160px-JSON_vector_logo.svg.png" width="160" height="160" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/240px-JSON_vector_logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/320px-JSON_vector_logo.svg.png 2x" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="/wiki/Filename_extension" title="Filename extension">Filename extension</a></th>
+<td><code>.json</code></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="/wiki/Internet_media_type" title="Internet media type">Internet media type</a></th>
+<td><code>application/json</code></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="/wiki/Uniform_Type_Identifier" title="Uniform Type Identifier">Uniform Type Identifier</a></th>
+<td>public.json</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Type of format</th>
+<td>Data interchange</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Extended from</th>
+<td><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="/wiki/International_standard" title="International standard">Standard(s)</a></th>
+<td><a class="external mw-magiclink-rfc" rel="nofollow" href="//tools.ietf.org/html/rfc7159">RFC 7159</a>, <a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">ECMA-404</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://json.org/">json.org</a></span></td>
+</tr>
+</table>
+<p><b>JSON</b> (<span class="nowrap"><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="/wiki/Help:IPA_for_English" title="Help:IPA for English">/</a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/ˈ/ primary stress follows" style="border-bottom:1px dotted">ˈ</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/dʒ/ 'j' in 'jam'" style="border-bottom:1px dotted">dʒ</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/eɪ/ long 'a' in 'base'" style="border-bottom:1px dotted">eɪ</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'s' in 'sigh'" style="border-bottom:1px dotted">s</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/ɒ/ short 'o' in 'body'" style="border-bottom:1px dotted">ɒ</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'n' in 'nigh'" style="border-bottom:1px dotted">n</span></a></span><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="/wiki/Help:IPA_for_English" title="Help:IPA for English">/</a></span></span> <span title="English pronunciation respelling" class="Unicode"><a href="/wiki/Wikipedia:Pronunciation_respelling_key" title="Wikipedia:Pronunciation respelling key"><i><b><span class="smallcaps"><span class="SMALLCAPS" style="FONT-VARIANT:SMALL-CAPS;"><span class="NOCAPS" style="TEXT-TRANSFORM:LOWERCASE;">JAY</span></span></span></b>-soun</i></a></span>, <span class="nowrap"><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="/wiki/Help:IPA_for_English" title="Help:IPA for English">/</a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/ˈ/ primary stress follows" style="border-bottom:1px dotted">ˈ</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/dʒ/ 'j' in 'jam'" style="border-bottom:1px dotted">dʒ</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/eɪ/ long 'a' in 'base'" style="border-bottom:1px dotted">eɪ</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'s' in 'sigh'" style="border-bottom:1px dotted">s</span></a></span><span class="IPA nopopups"><a href="/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/ən/ 'on' in 'button'" style="border-bottom:1px dotted">ən</span></a></span><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="/wiki/Help:IPA_for_English" title="Help:IPA for English">/</a></span></span> <span title="English pronunciation respelling" class="Unicode"><a href="/wiki/Wikipedia:Pronunciation_respelling_key" title="Wikipedia:Pronunciation respelling key"><i><b><span class="smallcaps"><span class="SMALLCAPS" style="FONT-VARIANT:SMALL-CAPS;"><span class="NOCAPS" style="TEXT-TRANSFORM:LOWERCASE;">JAY</span></span></span></b>-son</i></a></span>), or <b>JavaScript Object Notation</b>, is an <a href="/wiki/Open_standard" title="Open standard">open standard</a> format that uses <a href="/wiki/Human-readable" title="Human-readable" class="mw-redirect">human-readable</a> text to transmit data objects consisting of <a href="/wiki/Attribute%E2%80%93value_pair" title="Attribute–value pair">attribute–value pairs</a>. It is used primarily to transmit data between a server and web application, as an alternative to <a href="/wiki/XML" title="XML">XML</a>.</p>
+<p>Although originally derived from the <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a> scripting language, JSON is a <a href="/wiki/Language-independent_specification" title="Language-independent specification">language-independent</a> data format, and code for <a href="/wiki/Parsing" title="Parsing">parsing</a> and generating JSON data is readily available in a large variety of <a href="/wiki/Programming_languages" title="Programming languages" class="mw-redirect">programming languages</a>.</p>
+<p>The JSON format was originally specified by <a href="/wiki/Douglas_Crockford" title="Douglas Crockford">Douglas Crockford</a>. It is currently described by two competing standards, <a class="external mw-magiclink-rfc" rel="nofollow" href="//tools.ietf.org/html/rfc7159">RFC 7159</a> and ECMA-404. The ECMA standard is minimal describing only the allowed grammar syntax, whereas the RFC also provides some semantic and security considerations.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> The official <a href="/wiki/Internet_media_type" title="Internet media type">Internet media type</a> for JSON is <code>application/json</code>. The JSON filename extension is <code>.json</code>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Data_types.2C_syntax_and_example"><span class="tocnumber">2</span> <span class="toctext">Data types, syntax and example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Data_portability_issues"><span class="tocnumber">2.1</span> <span class="toctext">Data portability issues</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Using_JSON_in_JavaScript"><span class="tocnumber">2.2</span> <span class="toctext">Using JSON in JavaScript</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Unsupported_native_data_types"><span class="tocnumber">2.3</span> <span class="toctext">Unsupported native data types</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Schema_and_Metadata"><span class="tocnumber">3</span> <span class="toctext">Schema and Metadata</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#JSON_Schema"><span class="tocnumber">3.1</span> <span class="toctext">JSON Schema</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#MIME_type"><span class="tocnumber">4</span> <span class="toctext">MIME type</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Applications"><span class="tocnumber">5</span> <span class="toctext">Applications</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#JSON-RPC"><span class="tocnumber">5.1</span> <span class="toctext">JSON-RPC</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Ajax"><span class="tocnumber">5.2</span> <span class="toctext">Ajax</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Security_issues"><span class="tocnumber">6</span> <span class="toctext">Security issues</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#JavaScript_eval.28.29"><span class="tocnumber">6.1</span> <span class="toctext">JavaScript eval()</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Native_encoding_and_decoding_in_browsers"><span class="tocnumber">6.2</span> <span class="toctext">Native encoding and decoding in browsers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Object_references"><span class="tocnumber">7</span> <span class="toctext">Object references</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Comparison_with_other_formats"><span class="tocnumber">8</span> <span class="toctext">Comparison with other formats</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#YAML"><span class="tocnumber">8.1</span> <span class="toctext">YAML</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#XML"><span class="tocnumber">8.2</span> <span class="toctext">XML</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Samples"><span class="tocnumber">8.3</span> <span class="toctext">Samples</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#JSON_sample"><span class="tocnumber">8.3.1</span> <span class="toctext">JSON sample</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#YAML_sample"><span class="tocnumber">8.3.2</span> <span class="toctext">YAML sample</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#XML_samples"><span class="tocnumber">8.3.3</span> <span class="toctext">XML samples</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Douglas_Crockford" title="Douglas Crockford">Douglas Crockford</a> was the first to specify and popularize the JSON format.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> The economic justification that led to the discovery of JSON grew out of a perceived market need for <a href="/wiki/State_(computer_science)" title="State (computer science)">stateful</a>, real-time server-to-browser communication without using browser plugins such as Flash or Java applets which were the dominant design at the time.</p>
+<p>The acronym JSON was coined at State Software Inc., a company co-founded by Douglas Crockford, Chip Morningstar and Robert F. Napiltonia, starting in April 2001, and funded by Tesla Ventures. When State was founded in early 2001 by six former employees of <a href="/wiki/Communities.com" title="Communities.com">Communities.com</a>, they agreed to build a system that used standard browser capabilities and provided an <a href="/wiki/Abstraction_layer" title="Abstraction layer">abstraction layer</a> for Web developers to create stateful Web applications that had a persistent duplex connection to a Web server by holding the two <a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a> connections open and recycling them before standard browser time-outs if no further data were exchanged. The idea for the State Application Framework was developed by <a href="/wiki/Chip_Morningstar" title="Chip Morningstar">Chip Morningstar</a> at State Software.<sup id="cite_ref-Morningstar_3-0" class="reference"><a href="#cite_note-Morningstar-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-State_Software_4-0" class="reference"><a href="#cite_note-State_Software-4"><span>[</span>4<span>]</span></a></sup> It was used in a project at Communities.com for Cartoon Network, which used a plug-in with a proprietary messaging format to manipulate <a href="/wiki/Dynamic_HTML" title="Dynamic HTML">DHTML</a> elements (this system is also owned by 3DO). Upon discovery of early <a href="/wiki/Ajax_(programming)" title="Ajax (programming)">Ajax</a> capabilities, digiGroups, Noosh, and others used frames to pass information into the user browsers' visual field without refreshing a Web application's visual context, realizing real-time rich Web applications using only the standard HTTP, HTML and JavaScript capabilities of Netscape 4.0.5+ and IE 5+. Douglas Crockford then found that JavaScript could be used as an object-based messaging format for such a system. The system was sold to Sun Microsystems, Amazon.com and EDS. The <a rel="nofollow" class="external text" href="http://json.org/">JSON.org</a> Web site was launched in 2002. In December 2005, <a href="/wiki/Yahoo!" title="Yahoo!">Yahoo!</a> began offering some of its <a href="/wiki/Web_service" title="Web service">Web services</a> in JSON.<sup id="cite_ref-yahoo_5-0" class="reference"><a href="#cite_note-yahoo-5"><span>[</span>5<span>]</span></a></sup> <a href="/wiki/Google" title="Google">Google</a> started offering JSON feeds for its <a href="/wiki/GData" title="GData">GData</a> web protocol in December 2006.<sup id="cite_ref-Google_6-0" class="reference"><a href="#cite_note-Google-6"><span>[</span>6<span>]</span></a></sup></p>
+<p>Although JSON was originally based on a non-strict subset of the <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a> scripting language (specifically, Standard <a href="/wiki/Ecma_International" title="Ecma International">ECMA</a>-262 3rd Edition—December 1999<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup>) and is commonly used with that language, it is a <a href="/wiki/Language-independent_specification" title="Language-independent specification">language-independent</a> data format. Code for <a href="/wiki/Parsing" title="Parsing">parsing</a> and generating JSON data is readily available for a large variety of <a href="/wiki/Programming_languages" title="Programming languages" class="mw-redirect">programming languages</a>. <a rel="nofollow" class="external text" href="http://json.org/">JSON's Web site</a> provides a comprehensive listing of existing JSON <a href="/wiki/Language_binding" title="Language binding">libraries</a>, organized by language.</p>
+<p>Though JSON is commonly perceived as being a subset of JavaScript and ECMAScript, it allows some unescaped characters in strings that are illegal in JavaScript and ECMAScript strings.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<p>A typical <a href="/wiki/Mashup_(web_application_hybrid)" title="Mashup (web application hybrid)">mashup</a> fetches JSON-format data from several different web servers using an <a href="/wiki/Open_API" title="Open API">Open API</a>.</p>
+<h2><span class="mw-headline" id="Data_types.2C_syntax_and_example">Data types, syntax and example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=2" title="Edit section: Data types, syntax and example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JSON's basic types are:</p>
+<ul>
+<li>Number — a signed decimal number that may contain a fractional part and may use exponential <a href="/wiki/E_notation" title="E notation" class="mw-redirect">E notation</a>. JSON does not allow non-numbers like <a href="/wiki/NaN" title="NaN">NaN</a>, nor does it make any distinction between integer and floating-point. (Even though JavaScript uses a <a href="/wiki/Double-precision_floating-point_format" title="Double-precision floating-point format">double-precision floating-point format</a> for all its numeric values, other languages implementing JSON may encode numbers differently)</li>
+<li><a href="/wiki/String_(computer_science)" title="String (computer science)">String</a> — a sequence of zero or more <a href="/wiki/Unicode" title="Unicode">Unicode</a> characters, though characters outside the <a href="/wiki/Basic_Multilingual_Plane" title="Basic Multilingual Plane" class="mw-redirect">BMP</a> must be represented as a <a href="/wiki/Surrogate_pair" title="Surrogate pair" class="mw-redirect">surrogate pair</a>. Strings are delimited with double-quotation marks and support a backslash <a href="/wiki/Escape_character" title="Escape character">escaping</a> syntax.</li>
+<li><a href="/wiki/Boolean_datatype" title="Boolean datatype" class="mw-redirect">Boolean</a> — either of the words <code>true</code> or <code>false</code></li>
+<li><a href="/wiki/Array_data_structure" title="Array data structure">Array</a> — an <a href="/wiki/List_(abstract_data_type)" title="List (abstract data type)">ordered list</a> of zero or more values, each of which may be of any type. Arrays use <a href="/wiki/Square_bracket" title="Square bracket" class="mw-redirect">square bracket</a> notation with elements being comma-separated.</li>
+<li><a href="/wiki/Associative_array" title="Associative array">Object</a> — an unordered <a href="/wiki/Associative_array" title="Associative array">associative array</a> (name/value pairs). Objects are delimited with <a href="/wiki/Curly_brace" title="Curly brace" class="mw-redirect">curly braces</a> and use commas to separate each pair, while within each pair the colon ':' character separates the key or name from its value. All keys must be strings and should be distinct from each other within that object.</li>
+<li><code><a href="/wiki/Nullable_type" title="Nullable type">null</a></code> — An empty value, using the word <code>null</code></li>
+</ul>
+<p>JSON generally ignores any <a href="/wiki/Whitespace_character" title="Whitespace character">whitespace</a> around or between syntactic elements (values and punctuation, but not within a string value). However JSON only recognizes four specific whitespace characters: the space, horizontal tab, line feed, and carriage return. JSON does not provide or allow any sort of comment syntax.</p>
+<p>Early versions of JSON (such as specified by <a class="external mw-magiclink-rfc" rel="nofollow" href="//tools.ietf.org/html/rfc4627">RFC 4627</a>) required that a valid JSON "document" must consist of only an object or an array type—though they could contain other types within them. This restriction was relaxed starting with <a class="external mw-magiclink-rfc" rel="nofollow" href="//tools.ietf.org/html/rfc7158">RFC 7158</a>, so that a JSON document may consist entirely of any possible JSON typed value.</p>
+<p>The following example shows a possible JSON representation describing a person.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+<span class="br0">{</span>
+    <span class="st0">"firstName"</span><span class="sy0">:</span> <span class="st0">"John"</span><span class="sy0">,</span>
+    <span class="st0">"lastName"</span><span class="sy0">:</span> <span class="st0">"Smith"</span><span class="sy0">,</span>
+    <span class="st0">"isAlive"</span><span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span>
+    <span class="st0">"age"</span><span class="sy0">:</span> <span class="nu0">25</span><span class="sy0">,</span>
+    <span class="st0">"height_cm"</span><span class="sy0">:</span> <span class="nu0">167.64</span><span class="sy0">,</span>
+    <span class="st0">"address"</span><span class="sy0">:</span> <span class="br0">{</span>
+        <span class="st0">"streetAddress"</span><span class="sy0">:</span> <span class="st0">"21 2nd Street"</span><span class="sy0">,</span>
+        <span class="st0">"city"</span><span class="sy0">:</span> <span class="st0">"New York"</span><span class="sy0">,</span>
+        <span class="st0">"state"</span><span class="sy0">:</span> <span class="st0">"NY"</span><span class="sy0">,</span>
+        <span class="st0">"postalCode"</span><span class="sy0">:</span> <span class="st0">"10021-3100"</span>
+    <span class="br0">}</span><span class="sy0">,</span>
+    <span class="st0">"phoneNumbers"</span><span class="sy0">:</span> <span class="br0">[</span>
+        <span class="br0">{</span> <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"home"</span><span class="sy0">,</span> <span class="st0">"number"</span><span class="sy0">:</span> <span class="st0">"212 555-1234"</span> <span class="br0">}</span><span class="sy0">,</span>
+        <span class="br0">{</span> <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"fax"</span><span class="sy0">,</span>  <span class="st0">"number"</span><span class="sy0">:</span> <span class="st0">"646 555-4567"</span> <span class="br0">}</span>
+    <span class="br0">]</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Data_portability_issues">Data portability issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=3" title="Edit section: Data portability issues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Despite the widespread belief that JSON is a strict subset of JavaScript, this is not the case. Specifically, JSON allows the <a href="/wiki/Unicode#New_lines" title="Unicode">Unicode line terminators</a> <span class="nowrap">U+2028</span>  <span class="smallcaps" style="font-variant:small-caps;">line separator</span> and <span class="nowrap">U+2029</span>  <span class="smallcaps" style="font-variant:small-caps;">paragraph separator</span> to appear unescaped in quoted strings, while JavaScript does not.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> This is a consequence of JSON disallowing only "control characters". For maximum portability these characters should be backslash-escaped. This subtlety is important when generating <a href="/wiki/JSONP" title="JSONP">JSONP</a>.</p>
+<p>Although permitted by JSON, including the null character <span class="nowrap">U+0000</span> <span style="font-size:small">&lt;control-0000&gt;</span> in a string, whether backslash-escaped or not, may cause problems with some JSON implementations, especially those based on the <a href="/wiki/C_language" title="C language" class="mw-redirect">C language</a>.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<p>Even though JSON documents may be, and often are, encoded in <a href="/wiki/UTF-8" title="UTF-8">UTF-8</a> which supports the full Unicode repertoire; including characters outside the BMP (U+10000 to U+10FFFF) may be problematic. In particular those characters must be explicitly encoded (and decoded) using surrogate pairs. This is similar to how the <a href="/wiki/UTF-16" title="UTF-16">UTF-16</a> encoding works. For example, to include the <a href="/wiki/Emoji" title="Emoji">Emoji</a> character <span class="nowrap">U+1F602</span> <span style="font-size:125%"><span class="Unicode">😂</span></span> <span class="smallcaps" style="font-variant:small-caps;">face with tears of joy</span> in JSON:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+<span class="br0">{</span> <span class="st0">"face"</span><span class="sy0">:</span> <span class="st0">"<span class="es0">\u</span>D83D<span class="es0">\u</span>DE02"</span> <span class="br0">}</span>
+</pre></div>
+</div>
+<p>Numbers in JSON are agnostic with regards to their representation within programming languages. No differentiation is made between an integer and floating-point value: some implementations may treat <code>42</code>, <code>42.0</code>, and <code>4.2E+1</code> as the same number while others may not. Furthermore no requirements are made regarding implementation issues such as <a href="/wiki/Arithmetic_overflow" title="Arithmetic overflow">overflow</a>, <a href="/wiki/Arithmetic_underflow" title="Arithmetic underflow">underflow</a>, loss of precision, or rounding. Additionally, JSON says nothing about the treatment of <a href="/wiki/Signed_zeros" title="Signed zeros" class="mw-redirect">signed zeros</a>: whether <code>0.0</code> is distinct from <code>-0.0</code>. Most implementations that use the <a href="/wiki/IEEE_754" title="IEEE 754" class="mw-redirect">IEEE 754</a> floating-point standard, including JavaScript, will preserve signed zeros; but not all JSON implementation may do so.</p>
+<h3><span class="mw-headline" id="Using_JSON_in_JavaScript">Using JSON in JavaScript</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=4" title="Edit section: Using JSON in JavaScript">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Since JSON was derived from JavaScript and its syntax is (mostly) a subset of the language, it is often possible to use the JavaScript <code>eval()</code> function to parse JSON data. This is considered unsafe. Instead, a JSON parser library or JavaScript's native JSON support should be used for reading and writing JSON. A correctly implemented JSON parser will only accept valid JSON, preventing potentially malicious code from being inadvertently executed.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+ <span class="kw1">var</span> p <span class="sy0">=</span> JSON.<span class="me1">parse</span><span class="br0">(</span>contact<span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>Web browsers, such as <a href="/wiki/Firefox" title="Firefox">Firefox</a> and <a href="/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer</a>, have, since 2010, included support for parsing JSON. As native browser support is more efficient and secure than <code>eval()</code>, native JSON support is included in Edition 5 of the <a href="/wiki/ECMAScript" title="ECMAScript">ECMAScript</a> standard.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Unsupported_native_data_types">Unsupported native data types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=5" title="Edit section: Unsupported native data types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/JavaScript_syntax" title="JavaScript syntax">JavaScript syntax</a> defines several native data types that are not included in the JSON standard:<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup> Date, Error, Regular Expression, and Function. These JavaScript data types must be represented by some other data format, with the programs on both ends agreeing on how to convert between the types. As of 2011, there are some de facto standards, e.g. converting from Date to String, but none universally recognized.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup><sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup> Other languages may have a different set of native types that must be <a href="/wiki/Serialization" title="Serialization">serialized</a> carefully to deal with this type of conversion.</p>
+<h2><span class="mw-headline" id="Schema_and_Metadata">Schema and Metadata</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=6" title="Edit section: Schema and Metadata">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="JSON_Schema">JSON Schema</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=7" title="Edit section: JSON Schema">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><span id="Schema"></span> JSON Schema<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup> specifies a JSON-based format to define the structure of JSON data for validation, documentation, and interaction control. A JSON Schema provides a contract for the JSON data required by a given application, and how that data can be modified. JSON Schema is based on the concepts from <a href="/wiki/XML_Schema_(W3C)" title="XML Schema (W3C)">XML Schema</a>, <a href="/wiki/RelaxNG" title="RelaxNG" class="mw-redirect">RelaxNG</a>, and <a href="/w/index.php?title=Kwalify&amp;action=edit&amp;redlink=1" class="new" title="Kwalify (page does not exist)">Kwalify</a>, but is JSON-based. The JSON data schema can be used to validate JSON data; the same serialization/deserialization tools can be used both for the schema and data. The schema is self-describing.</p>
+<p>JSON Schema is an <a href="/wiki/Internet_Draft" title="Internet Draft">Internet Draft</a>, currently version 4.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup> There are several validators available for different programming languages,<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup> each with varying levels of conformance.</p>
+<p>Example JSON Schema:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+<span class="br0">{</span>
+    <span class="st0">"name"</span><span class="sy0">:</span> <span class="st0">"Product"</span><span class="sy0">,</span>
+    <span class="st0">"properties"</span><span class="sy0">:</span> <span class="br0">{</span>
+        <span class="st0">"id"</span><span class="sy0">:</span> <span class="br0">{</span>
+            <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"number"</span><span class="sy0">,</span>
+            <span class="st0">"description"</span><span class="sy0">:</span> <span class="st0">"Product identifier"</span><span class="sy0">,</span>
+            <span class="st0">"required"</span><span class="sy0">:</span> <span class="kw2">true</span>
+        <span class="br0">}</span><span class="sy0">,</span>
+        <span class="st0">"name"</span><span class="sy0">:</span> <span class="br0">{</span>
+            <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"string"</span><span class="sy0">,</span>
+            <span class="st0">"description"</span><span class="sy0">:</span> <span class="st0">"Name of the product"</span><span class="sy0">,</span>
+            <span class="st0">"required"</span><span class="sy0">:</span> <span class="kw2">true</span>
+        <span class="br0">}</span><span class="sy0">,</span>
+        <span class="st0">"price"</span><span class="sy0">:</span> <span class="br0">{</span>
+            <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"number"</span><span class="sy0">,</span>
+            <span class="st0">"minimum"</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">,</span>
+            <span class="st0">"required"</span><span class="sy0">:</span> <span class="kw2">true</span>
+        <span class="br0">}</span><span class="sy0">,</span>
+        <span class="st0">"tags"</span><span class="sy0">:</span> <span class="br0">{</span>
+            <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"array"</span><span class="sy0">,</span>
+            <span class="st0">"items"</span><span class="sy0">:</span> <span class="br0">{</span>
+                <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"string"</span>
+            <span class="br0">}</span>
+        <span class="br0">}</span><span class="sy0">,</span>
+        <span class="st0">"stock"</span><span class="sy0">:</span> <span class="br0">{</span>
+            <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"object"</span><span class="sy0">,</span>
+            <span class="st0">"properties"</span><span class="sy0">:</span> <span class="br0">{</span>
+                <span class="st0">"warehouse"</span><span class="sy0">:</span> <span class="br0">{</span>
+                    <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"number"</span>
+                <span class="br0">}</span><span class="sy0">,</span>
+                <span class="st0">"retail"</span><span class="sy0">:</span> <span class="br0">{</span>
+                    <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"number"</span>
+                <span class="br0">}</span>
+            <span class="br0">}</span>
+        <span class="br0">}</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>The JSON Schema above can be used to test the validity of the JSON code below:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+<span class="br0">{</span>
+    <span class="st0">"id"</span><span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span>
+    <span class="st0">"name"</span><span class="sy0">:</span> <span class="st0">"Foo"</span><span class="sy0">,</span>
+    <span class="st0">"price"</span><span class="sy0">:</span> <span class="nu0">123</span><span class="sy0">,</span>
+    <span class="st0">"tags"</span><span class="sy0">:</span> <span class="br0">[</span> <span class="st0">"Bar"</span><span class="sy0">,</span> <span class="st0">"Eek"</span> <span class="br0">]</span><span class="sy0">,</span>
+    <span class="st0">"stock"</span><span class="sy0">:</span> <span class="br0">{</span>
+        <span class="st0">"warehouse"</span><span class="sy0">:</span> <span class="nu0">300</span><span class="sy0">,</span>
+        <span class="st0">"retail"</span><span class="sy0">:</span> <span class="nu0">20</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="MIME_type">MIME type</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=8" title="Edit section: MIME type">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The official <a href="/wiki/MIME_type" title="MIME type" class="mw-redirect">MIME type</a> for JSON text is "<code>application/json</code>".<sup id="cite_ref-18" class="reference"><a href="#cite_note-18"><span>[</span>18<span>]</span></a></sup> Although most modern implementations have adopted the official MIME type, many applications continue to provide legacy support for other MIME types. Many service providers, browsers, servers, web applications, libraries, frameworks, and APIs use, expect, or recognize the (unofficial) MIME type "<code>text/json</code>" or the content-type "<code>text/javascript</code>". Notable examples include the Google Search API,<sup id="cite_ref-faraday-stack-pull-2_19-0" class="reference"><a href="#cite_note-faraday-stack-pull-2-19"><span>[</span>19<span>]</span></a></sup> Yahoo!,<sup id="cite_ref-faraday-stack-pull-2_19-1" class="reference"><a href="#cite_note-faraday-stack-pull-2-19"><span>[</span>19<span>]</span></a></sup><sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup> Flickr,<sup id="cite_ref-faraday-stack-pull-2_19-2" class="reference"><a href="#cite_note-faraday-stack-pull-2-19"><span>[</span>19<span>]</span></a></sup> Facebook API,<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>21<span>]</span></a></sup> <a href="/wiki/Lift_(web_framework)" title="Lift (web framework)">Lift framework</a>,<sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span>[</span>22<span>]</span></a></sup> Dojo Toolkit 0.4,<sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span>[</span>23<span>]</span></a></sup> etc.</p>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=9" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="JSON-RPC">JSON-RPC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=10" title="Edit section: JSON-RPC">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/JSON-RPC" title="JSON-RPC">JSON-RPC</a> is an <a href="/wiki/Remote_procedure_call" title="Remote procedure call">RPC</a> protocol built on JSON, as a replacement for <a href="/wiki/XML-RPC" title="XML-RPC">XML-RPC</a> or <a href="/wiki/SOAP" title="SOAP">SOAP</a>. It is a simple protocol that defines only a handful of data types and commands. JSON-RPC allows for notifications (information sent to the server that does not require a response) and for multiple calls to be sent to the server that may be answered out of order. Example of a JSON-RPC 2.0 request and response using positional parameters.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+<span class="sy0">--&gt;</span> <span class="br0">{</span><span class="st0">"jsonrpc"</span><span class="sy0">:</span> <span class="st0">"2.0"</span><span class="sy0">,</span> <span class="st0">"method"</span><span class="sy0">:</span> <span class="st0">"subtract"</span><span class="sy0">,</span> <span class="st0">"params"</span><span class="sy0">:</span> <span class="br0">[</span><span class="nu0">42</span><span class="sy0">,</span> <span class="nu0">23</span><span class="br0">]</span><span class="sy0">,</span> <span class="st0">"id"</span><span class="sy0">:</span> <span class="nu0">1</span><span class="br0">}</span>
+<span class="sy0">&lt;--</span> <span class="br0">{</span><span class="st0">"jsonrpc"</span><span class="sy0">:</span> <span class="st0">"2.0"</span><span class="sy0">,</span> <span class="st0">"result"</span><span class="sy0">:</span> <span class="nu0">19</span><span class="sy0">,</span> <span class="st0">"id"</span><span class="sy0">:</span> <span class="nu0">1</span><span class="br0">}</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Ajax">Ajax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=11" title="Edit section: Ajax">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>JSON is often used in <a href="/wiki/Ajax_(programming)" title="Ajax (programming)">Ajax</a> techniques. Ajax is a term for the ability of a <a href="/wiki/Webpage" title="Webpage" class="mw-redirect">webpage</a> to request new data after it has loaded into the <a href="/wiki/Web_browser" title="Web browser">web browser</a>, usually in response to user actions on the displayed webpage. As part of the Ajax model, the new data is usually incorporated into the user interface display dynamically the moment it arrives back from the server. For example when the user is typing into a <a href="/wiki/Text_box" title="Text box">search box</a>, <a href="/wiki/Client-side_scripting" title="Client-side scripting">client-side code</a> sends what they type to a server that will respond with a possible list of items from its <a href="/wiki/Database" title="Database">database</a>. These might be displayed in a <a href="/wiki/Drop-down_list" title="Drop-down list">drop-down list</a> beneath the search box. The user may then stop typing and select the relevant <a href="/wiki/String_(computer_science)" title="String (computer science)">string</a> directly. When it was originally implemented in the mid-2000s, Ajax commonly used <a href="/wiki/XML" title="XML">XML</a> as the data interchange format. Now many developers use JSON to pass the Ajax updates between the server and the client.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24"><span>[</span>24<span>]</span></a></sup></p>
+<p>The following JavaScript code is just one example of a <a href="/wiki/Client-side" title="Client-side">client</a> using <a href="/wiki/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a> to request data in JSON format from a server. (The <a href="/wiki/Server-side" title="Server-side">server-side</a> programming is omitted; it must be set up to service requests to the <code>url</code> containing a JSON-formatted string.)</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+<span class="kw1">var</span> my_JSON_object<span class="sy0">;</span>
+<span class="kw1">var</span> http_request <span class="sy0">=</span> <span class="kw1">new</span> XMLHttpRequest<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+http_request.<span class="me1">open</span><span class="br0">(</span><span class="st0">"GET"</span><span class="sy0">,</span> url<span class="sy0">,</span> <span class="kw2">true</span><span class="br0">)</span><span class="sy0">;</span>
+http_request.<span class="me1">onreadystatechange</span> <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">var</span> done <span class="sy0">=</span> <span class="nu0">4</span><span class="sy0">,</span> ok <span class="sy0">=</span> <span class="nu0">200</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>http_request.<span class="me1">readyState</span> <span class="sy0">===</span> done <span class="sy0">&amp;&amp;</span> http_request.<span class="me1">status</span> <span class="sy0">===</span> ok<span class="br0">)</span> <span class="br0">{</span>
+        my_JSON_object <span class="sy0">=</span> JSON.<span class="me1">parse</span><span class="br0">(</span><span class="st0">''</span><span class="st0">'http_request.responseText'</span><span class="st0">''</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span><span class="sy0">;</span>
+http_request.<span class="me1">send</span><span class="br0">(</span><span class="kw2">null</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Security_issues">Security issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=12" title="Edit section: Security issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Although JSON is intended solely as a <a href="/wiki/Data_serialization" title="Data serialization" class="mw-redirect">data serialization</a> format, its design as a non-strict subset of the JavaScript scripting language poses several security concerns. These concerns center on the use of a JavaScript interpreter to execute JSON text dynamically as embedded JavaScript. This exposes a program to errant or malicious scripts. This is a serious issue when dealing with data retrieved from the Internet. This easy and popular but risky technique exploits JSON's compatibility with the JavaScript <code>eval()</code> function which is described below.</p>
+<h3><span class="mw-headline" id="JavaScript_eval.28.29">JavaScript <code>eval()</code></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=13" title="Edit section: JavaScript eval()">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Because most JSON-formatted text is also syntactically legal JavaScript code, a seductively easy way for a JavaScript program to parse JSON-formatted data is to use the built-in JavaScript <code>eval()</code> function, which was designed to evaluate JavaScript <a href="/wiki/Expression_(computer_science)" title="Expression (computer science)">expressions</a>. Rather than using a JSON-specific parser, the JavaScript interpreter itself is used to <i>execute</i> the JSON data producing native JavaScript objects. This technique is terribly risky, however, if there is any chance that the JSON data might contain arbitrary JavaScript code, which would then be executed also.</p>
+<p>Unless precautions are taken to validate the data first, the eval technique is subject to <a href="/wiki/Vulnerability_(computing)" title="Vulnerability (computing)">security vulnerabilities</a> when the data and the entire JavaScript environment are not within the control of a single <a href="/wiki/Trusted_system" title="Trusted system">trusted source</a>. For example, if the data is itself not trusted, it is subject to malicious JavaScript <a href="/wiki/Code_injection" title="Code injection">code injection</a> attacks. Such breaches of trust also can create vulnerabilities for <a href="/wiki/Data_theft" title="Data theft">data theft</a>, <a href="/wiki/Digital_identity" title="Digital identity">authentication forgery</a>, and other potential misuse of data and resources.</p>
+<p>As a workaround, a <a href="/wiki/Regular_expression" title="Regular expression">regular expression</a> can be used to partially validate the data prior to invoking <code>eval()</code>. The RFC that defines JSON (<a class="external mw-magiclink-rfc" rel="nofollow" href="//tools.ietf.org/html/rfc4627">RFC 4627</a>) suggests using the following code to validate JSON before evaluating it (the variable 'text' is the input JSON):<sup id="cite_ref-25" class="reference"><a href="#cite_note-25"><span>[</span>25<span>]</span></a></sup></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+<span class="kw1">var</span> my_JSON_object <span class="sy0">=</span> <span class="sy0">!</span><span class="br0">(</span><span class="co2">/[^,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]/</span>.<span class="me1">test</span><span class="br0">(</span>
+    text.<span class="me1">replace</span><span class="br0">(</span><span class="co2">/"(\\.|[^"\\])*"/g</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> eval<span class="br0">(</span><span class="st0">'('</span> <span class="sy0">+</span> text <span class="sy0">+</span> <span class="st0">')'</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>A new function, <code>JSON.parse()</code>, was thus developed as a safer alternative to <code>eval</code>. It is specifically intended to process JSON data and not JavaScript. It was originally planned for inclusion in the Fourth Edition of the <a href="/wiki/ECMAScript" title="ECMAScript">ECMAScript</a> standard,<sup id="cite_ref-26" class="reference"><a href="#cite_note-26"><span>[</span>26<span>]</span></a></sup> but this did not occur. It was first added to the Fifth Edition,<sup id="cite_ref-27" class="reference"><a href="#cite_note-27"><span>[</span>27<span>]</span></a></sup> and is now supported by the major browsers given below. For older ones, a compatible JavaScript library is available at JSON.org.</p>
+<p>An additional issue when parsing JSON using the <code>eval()</code> function is that there are some Unicode characters that are valid in JSON strings but invalid in JavaScript, so additional escaping may be needed in some cases.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28"><span>[</span>28<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Native_encoding_and_decoding_in_browsers">Native encoding and decoding in browsers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=14" title="Edit section: Native encoding and decoding in browsers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Recent Web browsers now either have or are working on native JSON encoding/decoding. Not only does this eliminate the <code>eval()</code> security problem above, but it can also increase performance compared to the JavaScript libraries commonly used before. As of June 2009 the following browsers have or will have native JSON support, via <code>JSON.parse()</code> and <code>JSON.stringify()</code>:</p>
+<ul>
+<li><a href="/wiki/Mozilla_Firefox_3.5" title="Mozilla Firefox 3.5" class="mw-redirect">Mozilla Firefox 3.5</a>+<sup id="cite_ref-29" class="reference"><a href="#cite_note-29"><span>[</span>29<span>]</span></a></sup></li>
+<li>Microsoft <a href="/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer</a> 8+<sup id="cite_ref-30" class="reference"><a href="#cite_note-30"><span>[</span>30<span>]</span></a></sup></li>
+<li><a href="/wiki/Opera_(web_browser)" title="Opera (web browser)">Opera 10.5</a>+<sup id="cite_ref-31" class="reference"><a href="#cite_note-31"><span>[</span>31<span>]</span></a></sup></li>
+<li><a href="/wiki/WebKit" title="WebKit">WebKit</a>-based browsers (Apple Safari)<sup id="cite_ref-32" class="reference"><a href="#cite_note-32"><span>[</span>32<span>]</span></a></sup></li>
+<li><a href="/wiki/Blink_(layout_engine)" title="Blink (layout engine)">Blink</a>-based browsers (e.g. Google Chrome, Opera)</li>
+</ul>
+<p>At least five popular JavaScript libraries have committed to use native JSON, if available:</p>
+<ul>
+<li><a href="/wiki/YUI_Library" title="YUI Library">YUI Library</a><sup id="cite_ref-33" class="reference"><a href="#cite_note-33"><span>[</span>33<span>]</span></a></sup></li>
+<li><a href="/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a><sup id="cite_ref-34" class="reference"><a href="#cite_note-34"><span>[</span>34<span>]</span></a></sup></li>
+<li><a href="/wiki/JQuery" title="JQuery">jQuery</a><sup id="cite_ref-35" class="reference"><a href="#cite_note-35"><span>[</span>35<span>]</span></a></sup></li>
+<li><a href="/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a><sup id="cite_ref-36" class="reference"><a href="#cite_note-36"><span>[</span>36<span>]</span></a></sup></li>
+<li><a href="/wiki/MooTools" title="MooTools">MooTools</a><sup id="cite_ref-37" class="reference"><a href="#cite_note-37"><span>[</span>37<span>]</span></a></sup></li>
+</ul>
+<p>The default character encoding for JSON is <a href="/wiki/UTF-8" title="UTF-8">UTF-8</a>; it also supports <a href="/wiki/UTF-16" title="UTF-16">UTF-16</a> and <a href="/wiki/UTF-32" title="UTF-32">UTF-32</a>.</p>
+<h2><span class="mw-headline" id="Object_references">Object references</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=15" title="Edit section: Object references">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The JSON standard does not support object <a href="/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a>, but the <a href="/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a> illustrates how conventions can be adopted to support such references using standard JSON. Specifically, the <a rel="nofollow" class="external text" href="http://dojotoolkit.org/api/?qs=1.5/dojox/json/ref">dojox.json.ref</a> module provides support for several forms of referencing including <a href="/wiki/Circular_reference" title="Circular reference">circular</a>, multiple, inter-message, and <a href="/wiki/Lazy_evaluation" title="Lazy evaluation">lazy</a> referencing.<sup id="cite_ref-38" class="reference"><a href="#cite_note-38"><span>[</span>38<span>]</span></a></sup><sup id="cite_ref-39" class="reference"><a href="#cite_note-39"><span>[</span>39<span>]</span></a></sup> Alternatively, non-standard solutions exist such as the use of Mozilla JavaScript Sharp Variables, although this functionality has been removed in Firefox version 12.<sup id="cite_ref-40" class="reference"><a href="#cite_note-40"><span>[</span>40<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Comparison_with_other_formats">Comparison with other formats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=16" title="Edit section: Comparison with other formats">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink boilerplate seealso">See also: <a href="/wiki/Comparison_of_data_serialization_formats" title="Comparison of data serialization formats">Comparison of data serialization formats</a></div>
+<p>JSON is promoted as a low-overhead alternative to XML as both of these formats have widespread support for creation, reading and decoding in the real-world situations where they are commonly used.<sup id="cite_ref-41" class="reference"><a href="#cite_note-41"><span>[</span>41<span>]</span></a></sup> Apart from XML, examples could include <a href="/wiki/OGDL" title="OGDL">OGDL</a>, <a href="/wiki/YAML" title="YAML">YAML</a> and <a href="/wiki/Comma-separated_values" title="Comma-separated values">CSV</a>. Also, <a href="/wiki/Protocol_Buffers" title="Protocol Buffers">Google Protocol Buffers</a> can fill this role, although it is not a data interchange language.</p>
+<h3><span class="mw-headline" id="YAML">YAML</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=17" title="Edit section: YAML">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/YAML" title="YAML">YAML</a> is almost, but not entirely, a superset of JSON. For example, escaping a slash (/) with a backslash (\) is valid JSON, but not valid YAML. (This is common practice when injecting JSON into HTML to protect against <a href="/wiki/Cross-site_scripting" title="Cross-site scripting">cross-site scripting attacks</a>.) Nonetheless, many YAML parsers can natively parse the output from many JSON encoders.<sup id="cite_ref-YAML_Version_1.2_42-0" class="reference"><a href="#cite_note-YAML_Version_1.2-42"><span>[</span>42<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="XML">XML</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=18" title="Edit section: XML">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/XML" title="XML">XML</a> has been used to describe structured data and to serialize objects. Various XML-based protocols exist to represent the same kind of data structures as JSON for the same kind of data interchange purposes. When data is encoded in XML, the result is typically larger than an equivalent encoding in JSON, mainly because of XML's closing tags. Yet, if the data is compressed using an algorithm like <a href="/wiki/Gzip" title="Gzip">gzip</a>, there is little difference because compression is good at saving space when a pattern is repeated.</p>
+<p>When used without an XML schema, XML values don't have a specific data type.</p>
+<h3><span class="mw-headline" id="Samples">Samples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=19" title="Edit section: Samples">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="JSON_sample">JSON sample</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=20" title="Edit section: JSON sample">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">
+<span class="br0">{</span>
+    <span class="st0">"firstName"</span><span class="sy0">:</span> <span class="st0">"John"</span><span class="sy0">,</span>
+    <span class="st0">"lastName"</span><span class="sy0">:</span> <span class="st0">"Smith"</span><span class="sy0">,</span>
+    <span class="st0">"age"</span><span class="sy0">:</span> <span class="nu0">25</span><span class="sy0">,</span>
+    <span class="st0">"address"</span><span class="sy0">:</span> <span class="br0">{</span>
+        <span class="st0">"streetAddress"</span><span class="sy0">:</span> <span class="st0">"21 2nd Street"</span><span class="sy0">,</span>
+        <span class="st0">"city"</span><span class="sy0">:</span> <span class="st0">"New York"</span><span class="sy0">,</span>
+        <span class="st0">"state"</span><span class="sy0">:</span> <span class="st0">"NY"</span><span class="sy0">,</span>
+        <span class="st0">"postalCode"</span><span class="sy0">:</span> <span class="st0">"10021"</span>
+    <span class="br0">}</span><span class="sy0">,</span>
+    <span class="st0">"phoneNumber"</span><span class="sy0">:</span> <span class="br0">[</span>
+        <span class="br0">{</span>
+            <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"home"</span><span class="sy0">,</span>
+            <span class="st0">"number"</span><span class="sy0">:</span> <span class="st0">"212 555-1234"</span>
+        <span class="br0">}</span><span class="sy0">,</span>
+        <span class="br0">{</span>
+            <span class="st0">"type"</span><span class="sy0">:</span> <span class="st0">"fax"</span><span class="sy0">,</span>
+            <span class="st0">"number"</span><span class="sy0">:</span> <span class="st0">"646 555-4567"</span>
+        <span class="br0">}</span>
+    <span class="br0">]</span><span class="sy0">,</span>
+    <span class="st0">"gender"</span><span class="sy0">:</span><span class="br0">{</span>
+         <span class="st0">"type"</span><span class="sy0">:</span><span class="st0">"male"</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>Both of the following examples carry the same kind of information as the JSON example above in different ways.</p>
+<h4><span class="mw-headline" id="YAML_sample">YAML sample</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=21" title="Edit section: YAML sample">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The above JSON code is also entirely valid <a href="/wiki/YAML" title="YAML">YAML</a>; however, YAML also offers an alternative syntax intended to be more human-accessible by replacing nested delimiters like <code>{}</code>, <code>[]</code>, and <code>"</code> marks with structured whitespace indents.<sup id="cite_ref-YAML_Version_1.2_42-1" class="reference"><a href="#cite_note-YAML_Version_1.2-42"><span>[</span>42<span>]</span></a></sup></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="yaml source-yaml">
+<pre class="de1">
+<span class="sy1">---</span><span class="co3">
+  firstName</span><span class="sy2">: </span> John<span class="co3">
+  lastName</span><span class="sy2">: </span> Smith<span class="co3">
+  age</span><span class="sy2">: </span><span class="nu0">25</span><span class="co3">
+  address</span><span class="sy2">: </span><span class="co3">
+        streetAddress</span><span class="sy2">: </span><span class="nu0">21</span> 2nd Street<span class="co3">
+        city</span><span class="sy2">: </span>New York<span class="co3">
+        state</span><span class="sy2">: </span>NY<span class="co3">
+        postalCode</span><span class="sy2">: </span><span class="nu0">10021</span>
+    <span class="co3">
+  phoneNumber</span><span class="sy2">: </span>
+        -  <span class="co3">
+            type</span><span class="sy2">: </span>home<span class="co3">
+            number</span><span class="sy2">: </span><span class="nu0">212</span> <span class="nu0">555</span>-<span class="nu0">1234</span>
+        -  <span class="co3">
+            type</span><span class="sy2">: </span>fax<span class="co3">
+            number</span><span class="sy2">: </span><span class="nu0">646</span> <span class="nu0">555</span>-<span class="nu0">4567</span><span class="co3">
+  gender</span><span class="sy2">: </span><span class="co3">
+        type</span><span class="sy2">: </span>male
+</pre></div>
+</div>
+<h4><span class="mw-headline" id="XML_samples">XML samples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=22" title="Edit section: XML samples">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="xml source-xml">
+<pre class="de1">
+<span class="sc3"><span class="re1">&lt;person<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;firstName<span class="re2">&gt;</span></span></span>John<span class="sc3"><span class="re1">&lt;/firstName<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;lastName<span class="re2">&gt;</span></span></span>Smith<span class="sc3"><span class="re1">&lt;/lastName<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;age<span class="re2">&gt;</span></span></span>25<span class="sc3"><span class="re1">&lt;/age<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;address<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;streetAddress<span class="re2">&gt;</span></span></span>21 2nd Street<span class="sc3"><span class="re1">&lt;/streetAddress<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;city<span class="re2">&gt;</span></span></span>New York<span class="sc3"><span class="re1">&lt;/city<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;state<span class="re2">&gt;</span></span></span>NY<span class="sc3"><span class="re1">&lt;/state<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;postalCode<span class="re2">&gt;</span></span></span>10021<span class="sc3"><span class="re1">&lt;/postalCode<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/address<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;phoneNumbers<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;phoneNumber</span> <span class="re0">type</span>=<span class="st0">"home"</span><span class="re2">&gt;</span></span>212 555-1234<span class="sc3"><span class="re1">&lt;/phoneNumber<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;phoneNumber</span> <span class="re0">type</span>=<span class="st0">"fax"</span><span class="re2">&gt;</span></span>646 555-4567<span class="sc3"><span class="re1">&lt;/phoneNumber<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/phoneNumbers<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;gender<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;type<span class="re2">&gt;</span></span></span>male<span class="sc3"><span class="re1">&lt;/type<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/gender<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/person<span class="re2">&gt;</span></span></span>
+</pre></div>
+</div>
+<p>The primitive values can also get encoded using attributes instead of tags:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="xml source-xml">
+<pre class="de1">
+<span class="sc3"><span class="re1">&lt;person</span> <span class="re0">firstName</span>=<span class="st0">"John"</span> <span class="re0">lastName</span>=<span class="st0">"Smith"</span> <span class="re0">age</span>=<span class="st0">"25"</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;address</span> <span class="re0">streetAddress</span>=<span class="st0">"21 2nd Street"</span> <span class="re0">city</span>=<span class="st0">"New York"</span> <span class="re0">state</span>=<span class="st0">"NY"</span> <span class="re0">postalCode</span>=<span class="st0">"10021"</span> <span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;phoneNumbers<span class="re2">&gt;</span></span></span>
+     <span class="sc3"><span class="re1">&lt;phoneNumber</span> <span class="re0">type</span>=<span class="st0">"home"</span> <span class="re0">number</span>=<span class="st0">"212 555-1234"</span><span class="re2">/&gt;</span></span>
+     <span class="sc3"><span class="re1">&lt;phoneNumber</span> <span class="re0">type</span>=<span class="st0">"fax"</span>  <span class="re0">number</span>=<span class="st0">"646 555-4567"</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/phoneNumbers<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;gender</span> <span class="re0">type</span>=<span class="st0">"male"</span><span class="re2">/&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;/person<span class="re2">&gt;</span></span></span>
+</pre></div>
+</div>
+<p>The XML encoding <i>may</i> therefore be comparable in length to the equivalent JSON encoding. A wide range of XML processing technologies exist, from the <a href="/wiki/Document_Object_Model" title="Document Object Model">Document Object Model</a> to <a href="/wiki/XPath" title="XPath">XPath</a> and <a href="/wiki/XSLT" title="XSLT">XSLT</a>. XML can also be styled for immediate display using <a href="/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a>. <a href="/wiki/XHTML" title="XHTML">XHTML</a> is a form of XML so that elements can be passed in this form ready for direct insertion into webpages using client-side scripting.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=23" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/S-expression" title="S-expression">S-expression</a> - the comparable LISP format for trees as text.</li>
+<li><a href="/wiki/JSONP" title="JSONP">JSONP</a> – JSON with Padding, a pattern of usage commonly employed when retrieving JSON across domains</li>
+<li>Binary encodings for JSON
+<ul>
+<li><a href="/wiki/BSON" title="BSON">BSON</a></li>
+<li><a href="/wiki/Smile_(Data_Interchange_Format)" title="Smile (Data Interchange Format)">Smile</a></li>
+<li><a href="/wiki/UBJSON" title="UBJSON">UBJSON</a></li>
+</ul>
+</li>
+<li><a href="/wiki/GeoJSON" title="GeoJSON">GeoJSON</a> - an open format for encoding a variety of geographic data structures</li>
+<li><a href="/wiki/JSON-LD" title="JSON-LD">JSON-LD</a> - JavaScript Object Notation for Linked Data, currently a W3C Recommendation</li>
+<li><a href="/wiki/JSON-RPC" title="JSON-RPC">JSON-RPC</a></li>
+<li><a href="/wiki/SOAPjr" title="SOAPjr">SOAPjr</a> – a hybrid of SOAP and JR (JSON-RPC)</li>
+<li><a href="/wiki/JsonML" title="JsonML">JsonML</a></li>
+<li><a href="/wiki/Jayrock" title="Jayrock">Jayrock</a> - an open source implementation of JSON for the <a href="/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=24" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation web">Bray, Tim. <a rel="nofollow" class="external text" href="https://www.tbray.org/ongoing/When/201x/2014/03/05/RFC7159-JSON">"JSON Redux AKA RFC7159"</a>. <i>Ongoing</i><span class="reference-accessdate">. Retrieved 16 March 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.atitle=JSON+Redux+AKA+RFC7159&amp;rft.au=Bray%2C+Tim&amp;rft.aufirst=Tim&amp;rft.aulast=Bray&amp;rft.genre=article&amp;rft_id=https%3A%2F%2Fwww.tbray.org%2Fongoing%2FWhen%2F201x%2F2014%2F03%2F05%2FRFC7159-JSON&amp;rft.jtitle=Ongoing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://developer.yahoo.com/yui/theater/video.php?v=crockford-json">Video: Douglas Crockford — The JSON Saga</a>, on Yahoo! Developer Network. In the video Crockford states: "I do not claim to have invented JSON&#160;... What I did was I found it, I named it, I described how it was useful.&#160;... So, the idea's been around there for a while. What I did was I gave it a specification, and a little Web site."</span></li>
+<li id="cite_note-Morningstar-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-Morningstar_3-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.fudco.com/chip/resume.html">"Chip Morningstar Biography"</a>. undated.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=Chip+Morningstar+Biography&amp;rft.date=undated&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.fudco.com%2Fchip%2Fresume.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Check date values in: <code>|date=</code> (<a href="/wiki/Help:CS1_errors#bad_date" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-State_Software-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-State_Software_4-0">^</a></b></span> <span class="reference-text"><span class="citation news"><a rel="nofollow" class="external text" href="http://www.prnewswire.com/news-releases/state-software-breaks-through-web-app-development-barrier-with-state-application-framework-75971782.html">"State Software Breaks Through Web App Development Barrier With State Application Framework: Software Lets Developers Create Truly Interactive Applications; Reduces Costs, Development Time and Improves User Experience"</a>. <i>PR Newswire</i>. February 12, 2002.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.atitle=State+Software+Breaks+Through+Web+App+Development+Barrier+With+State+Application+Framework%3A+Software+Lets+Developers+Create+Truly+Interactive+Applications%3B+Reduces+Costs%2C+Development+Time+and+Improves+User+Experience&amp;rft.date=February+12%2C+2002&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fstate-software-breaks-through-web-app-development-barrier-with-state-application-framework-75971782.html&amp;rft.jtitle=PR+Newswire&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-yahoo-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-yahoo_5-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a href="/wiki/Yahoo!" title="Yahoo!">Yahoo!</a>. <a rel="nofollow" class="external text" href="http://web.archive.org/web/20071011085815/http://developer.yahoo.com/common/json.html">"Using JSON with Yahoo! Web services"</a>. Archived from <a rel="nofollow" class="external text" href="http://developer.yahoo.com/common/json.html">the original</a> on October 11, 2007<span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.aulast=Yahoo%21&amp;rft.au=Yahoo%21&amp;rft.btitle=Using+JSON+with+Yahoo%21+Web+services&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdeveloper.yahoo.com%2Fcommon%2Fjson.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Google-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-Google_6-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a href="/wiki/Google" title="Google">Google</a>. <a rel="nofollow" class="external text" href="http://code.google.com/apis/gdata/json.html">"Using JSON with Google Data APIs"</a><span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.au=Google&amp;rft.aulast=Google&amp;rft.btitle=Using+JSON+with+Google+Data+APIs&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcode.google.com%2Fapis%2Fgdata%2Fjson.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation web"><a href="/wiki/Douglas_Crockford" title="Douglas Crockford">Crockford, Douglas</a> (May 28, 2009). <a rel="nofollow" class="external text" href="http://json.org">"Introducing JSON"</a>. json.org<span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.au=Crockford%2C+Douglas&amp;rft.aufirst=Douglas&amp;rft.aulast=Crockford&amp;rft.btitle=Introducing+JSON&amp;rft.date=May+28%2C+2009&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fjson.org&amp;rft.pub=json.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="citation web">Magnus Holm. <a rel="nofollow" class="external text" href="http://timelessrepo.com/json-isnt-a-javascript-subset">"JSON: The JavaScript subset that isn't."</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.aulast=Magnus+Holm&amp;rft.au=Magnus+Holm&amp;rft.btitle=JSON%3A+The+JavaScript+subset+that+isn%27t.&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Ftimelessrepo.com%2Fjson-isnt-a-javascript-subset&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span id="CITEREFMagnus_Holm2011" class="citation">Magnus Holm (May 15, 2011), <a rel="nofollow" class="external text" href="http://github.com/judofyr/timeless/commit/9212af0a8d2124b92a7e4c6355007e4b4b0ae71d">"JSON: The JavaScript subset that isn't"</a>, <i>The timeless repository</i>, <a rel="nofollow" class="external text" href="http://github.com/judofyr/timeless/commit/9212af0a8d2124b92a7e4c6355007e4b4b0ae71d">9212af0a8d2124b92a7e4c6355007e4b4b0ae71d</a><span class="reference-accessdate">, retrieved 2013-01-11</span></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.atitle=JSON%3A+The+JavaScript+subset+that+isn%27t&amp;rft.aulast=Magnus+Holm&amp;rft.au=Magnus+Holm&amp;rft.date=May+15%2C+2011&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fgithub.com%2Fjudofyr%2Ftimeless%2Fcommit%2F9212af0a8d2124b92a7e4c6355007e4b4b0ae71d&amp;rft.jtitle=The+timeless+repository&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://jansson.readthedocs.org/en/2.5/conformance.html">"RFC Conformance"</a>. <i>Jansson</i><span class="reference-accessdate">. Retrieved 16 March 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.atitle=RFC+Conformance&amp;rft.genre=article&amp;rft_id=https%3A%2F%2Fjansson.readthedocs.org%2Fen%2F2.5%2Fconformance.html&amp;rft.jtitle=Jansson&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">Standard ECMA-262</a></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a class="external mw-magiclink-rfc" rel="nofollow" href="//tools.ietf.org/html/rfc7159">RFC 7159</a></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://stackoverflow.com/questions/206384/how-to-format-a-json-date">jquery - How to format a JSON date? - Stack Overflow</a></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://weblogs.asp.net/bleroy/archive/2008/01/18/dates-and-json.aspx">Dates and JSON - Tales from the Evil Empire</a></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://json-schema.org/">JSON Schema</a></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-zyp-json-schema-04">JSON Schema draft 4</a></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://json-schema.org/implementations">JSON Schema implementations</a></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.iana.org/assignments/media-types/application/index.html">IANA | Application Media Types</a></span></li>
+<li id="cite_note-faraday-stack-pull-2-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-faraday-stack-pull-2_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-faraday-stack-pull-2_19-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-faraday-stack-pull-2_19-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://github.com/mislav/faraday-stack/pull/2">Faraday Stack pull request</a></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://blog.programmableweb.com/2005/12/16/yahoo-javascript-and-json/">Yahoo!, JavaScript, and JSON</a></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://github.com/AFNetworking/AFNetworking/pull/148">AFNetworking pull request 148</a></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://github.com/lift/lift/blob/master/framework/lift-base/lift-webkit/src/main/scala/net/liftweb/http/Req.scala">Lift framework source</a></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://bugs.dojotoolkit.org/browser/legacy/branches/0.4/src/io/BrowserIO.js">Dojo Toolkit 0.4 /src/io/BrowserIO.js</a></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><span class="citation web">Garrett, Jesse James (18 February 2005). <a rel="nofollow" class="external text" href="http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications">"Ajax: A New Approach to Web Applications"</a>. Adaptive Path<span class="reference-accessdate">. Retrieved 19 March 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.aufirst=Jesse+James&amp;rft.au=Garrett%2C+Jesse+James&amp;rft.aulast=Garrett&amp;rft.btitle=Ajax%3A+A+New+Approach+to+Web+Applications&amp;rft.date=18+February+2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.adaptivepath.com%2Fideas%2Fajax-new-approach-web-applications&amp;rft.pub=Adaptive+Path&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><span class="citation IETF_document">Douglas Crockford (July 2006). <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc4627#section-6">"IANA Considerations"</a>. <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc4627"><i>The application/json Media Type for JavaScript Object Notation (JSON)</i></a>. <a href="/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">IETF</a>. sec.&#160;6. RFC 4627<span class="printonly">. <a rel="nofollow" class="external free" href="https://tools.ietf.org/html/rfc4627#section-6">https://tools.ietf.org/html/rfc4627#section-6</a></span><span class="reference-accessdate">. Retrieved October 21, 2009</span>.</span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><span class="citation web"><a href="/wiki/Douglas_Crockford" title="Douglas Crockford">Crockford, Douglas</a> (December 6, 2006). <a rel="nofollow" class="external text" href="http://www.json.org/fatfree.html">"JSON: The Fat-Free Alternative to XML"</a><span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.au=Crockford%2C+Douglas&amp;rft.aufirst=Douglas&amp;rft.aulast=Crockford&amp;rft.btitle=JSON%3A+The+Fat-Free+Alternative+to+XML&amp;rft.date=December+6%2C+2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.json.org%2Ffatfree.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf">"ECMAScript Fifth Edition"</a><span class="reference-accessdate">. Retrieved March 18, 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=ECMAScript+Fifth+Edition&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.ecma-international.org%2Fpublications%2Ffiles%2FECMA-ST%2FECMA-262.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://timelessrepo.com/json-isnt-a-javascript-subset">"JSON: The JavaScript subset that isn't"</a>. Magnus Holm<span class="reference-accessdate">. Retrieved 16 May 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=JSON%3A+The+JavaScript+subset+that+isn%27t&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Ftimelessrepo.com%2Fjson-isnt-a-javascript-subset&amp;rft.pub=Magnus+Holm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://developer.mozilla.org/en/Using_JSON_in_Firefox">"Using Native JSON"</a>. June 30, 2009<span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=Using+Native+JSON&amp;rft.date=June+30%2C+2009&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fdeveloper.mozilla.org%2Fen%2FUsing_JSON_in_Firefox&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><span class="citation web">Barsan, Corneliu (September 10, 2008). <a rel="nofollow" class="external text" href="http://blogs.msdn.com/ie/archive/2008/09/10/native-json-in-ie8.aspx">"Native JSON in IE8"</a><span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.au=Barsan%2C+Corneliu&amp;rft.aufirst=Corneliu&amp;rft.aulast=Barsan&amp;rft.btitle=Native+JSON+in+IE8&amp;rft.date=September+10%2C+2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fblogs.msdn.com%2Fie%2Farchive%2F2008%2F09%2F10%2Fnative-json-in-ie8.aspx&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.opera.com/docs/specs/presto25/#ecmascript">"Web specifications supported in Opera Presto 2.5"</a>. March 10, 2010<span class="reference-accessdate">. Retrieved March 29, 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=Web+specifications+supported+in+Opera+Presto+2.5&amp;rft.date=March+10%2C+2010&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.opera.com%2Fdocs%2Fspecs%2Fpresto25%2F%23ecmascript&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><span class="citation web">Hunt, Oliver (June 22, 2009). <a rel="nofollow" class="external text" href="https://bugs.webkit.org/show_bug.cgi?id=20031">"Implement ES 3.1 JSON object"</a><span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.aufirst=Oliver&amp;rft.au=Hunt%2C+Oliver&amp;rft.aulast=Hunt&amp;rft.btitle=Implement+ES+3.1+JSON+object&amp;rft.date=June+22%2C+2009&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fbugs.webkit.org%2Fshow_bug.cgi%3Fid%3D20031&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://developer.yahoo.com/yui/json/#native">"YUI 2: JSON utility"</a>. September 1, 2009<span class="reference-accessdate">. Retrieved October 22, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=YUI+2%3A+JSON+utility&amp;rft.date=September+1%2C+2009&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdeveloper.yahoo.com%2Fyui%2Fjson%2F%23native&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.prototypejs.org/learn/json">"Learn JSON"</a>. April 7, 2010<span class="reference-accessdate">. Retrieved April 7, 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=Learn+JSON&amp;rft.date=April+7%2C+2010&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.prototypejs.org%2Flearn%2Fjson&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://dev.jquery.com/ticket/4429">"Ticket #4429"</a>. May 22, 2009<span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=Ticket+%234429&amp;rft.date=May+22%2C+2009&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdev.jquery.com%2Fticket%2F4429&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://trac.dojotoolkit.org/ticket/8111">"Ticket #8111"</a>. June 15, 2009<span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=Ticket+%238111&amp;rft.date=June+15%2C+2009&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Ftrac.dojotoolkit.org%2Fticket%2F8111&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://mootools.lighthouseapp.com/projects/2706/tickets/419-use-the-native-json-object-if-available">"Ticket 419"</a>. October 11, 2008<span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=Ticket+419&amp;rft.date=October+11%2C+2008&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fmootools.lighthouseapp.com%2Fprojects%2F2706%2Ftickets%2F419-use-the-native-json-object-if-available&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><span class="citation web">Zyp, Kris (June 17, 2008). <a rel="nofollow" class="external text" href="http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo">"JSON referencing in Dojo"</a><span class="reference-accessdate">. Retrieved July 3, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.aufirst=Kris&amp;rft.aulast=Zyp&amp;rft.au=Zyp%2C+Kris&amp;rft.btitle=JSON+referencing+in+Dojo&amp;rft.date=June+17%2C+2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.sitepen.com%2Fblog%2F2008%2F06%2F17%2Fjson-referencing-in-dojo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><span class="citation web">von Gaza, Tys (Dec 7, 2010). <a rel="nofollow" class="external text" href="http://plugins.jquery.com/project/jsonref">"JSON referencing in jQuery"</a><span class="reference-accessdate">. Retrieved Dec 7, 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.aufirst=Tys&amp;rft.aulast=von+Gaza&amp;rft.au=von+Gaza%2C+Tys&amp;rft.btitle=JSON+referencing+in+jQuery&amp;rft.date=Dec+7%2C+2010&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fplugins.jquery.com%2Fproject%2Fjsonref&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span><sup class="noprint Inline-Template"><span style="white-space: nowrap;">[<i><a href="/wiki/Wikipedia:Link_rot" title="Wikipedia:Link rot"><span title="&#160;since April 2012">dead link</span></a></i>]</span></sup></span></li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">"Sharp variables in JavaScript"</a><span class="reference-accessdate">. Retrieved 21 April 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=Sharp+variables+in+JavaScript&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fdeveloper.mozilla.org%2Fen%2FSharp_variables_in_JavaScript&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.json.org/xml.html">"JSON: The Fat-Free Alternative to XML"</a>. json.org<span class="reference-accessdate">. Retrieved 14 March 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJSON&amp;rft.btitle=JSON%3A+The+Fat-Free+Alternative+to+XML&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.json.org%2Fxml.html&amp;rft.pub=json.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-YAML_Version_1.2-42"><span class="mw-cite-backlink">^ <a href="#cite_ref-YAML_Version_1.2_42-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-YAML_Version_1.2_42-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://yaml.org/spec/1.2/spec.html">YAML Version 1.2</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=JSON&amp;action=edit&amp;section=25" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.json.com/">JSON.com</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.json.org/">Format home page</a></li>
+<li><a class="external mw-magiclink-rfc" rel="nofollow" href="//tools.ietf.org/html/rfc7159">RFC 7159</a> - The JavaScript Object Notation (JSON) Data Interchange Format</li>
+<li><a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">ECMA-404</a> - The JSON Data Interchange Format</li>
+<li><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/bb299886.aspx">JSON-Introduction By Microsoft</a></li>
+<li><a rel="nofollow" class="external text" href="http://bolinfest.com/essays/json.html">Improvements to JSON</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.webtoolkitonline.com/json-tester.html">Test JSON online</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1023
+CPU time usage: 2.472 seconds
+Real time usage: 2.596 seconds
+Preprocessor visited node count: 6633/1000000
+Preprocessor generated node count: 35614/1500000
+Post‐expand include size: 65177/2048000 bytes
+Template argument size: 7396/2048000 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 3/500
+Lua time usage: 0.124/10.000 seconds
+Lua memory usage: 3.45 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1575082-0!*!0!!en!4!* and timestamp 20140328220245
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=JSON&amp;oldid=601719196">http://en.wikipedia.org/w/index.php?title=JSON&amp;oldid=601719196</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:JSON" title="Category:JSON">JSON</a></li><li><a href="/wiki/Category:Ajax_(programming)" title="Category:Ajax (programming)">Ajax (programming)</a></li><li><a href="/wiki/Category:Data_serialization_formats" title="Category:Data serialization formats">Data serialization formats</a></li><li><a href="/wiki/Category:JavaScript" title="Category:JavaScript">JavaScript</a></li><li><a href="/wiki/Category:Markup_languages" title="Category:Markup languages">Markup languages</a></li><li><a href="/wiki/Category:2001_introductions" title="Category:2001 introductions">2001 introductions</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_errors:_dates" title="Category:CS1 errors: dates">CS1 errors: dates</a></li><li><a href="/wiki/Category:All_articles_with_dead_external_links" title="Category:All articles with dead external links">All articles with dead external links</a></li><li><a href="/wiki/Category:Articles_with_dead_external_links_from_April_2012" title="Category:Articles with dead external links from April 2012">Articles with dead external links from April 2012</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_style_editing_from_March_2014" title="Category:Wikipedia articles needing style editing from March 2014">Wikipedia articles needing style editing from March 2014</a></li><li><a href="/wiki/Category:All_articles_needing_style_editing" title="Category:All articles needing style editing">All articles needing style editing</a></li><li><a href="/wiki/Category:Articles_using_fixed_number_of_columns_in_reflist" title="Category:Articles using fixed number of columns in reflist">Articles using fixed number of columns in reflist</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=JSON&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=JSON" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/JSON"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:JSON"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/JSON" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=JSON&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=JSON&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/JSON" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/JSON" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=JSON&amp;oldid=601719196" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=JSON&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q2063" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=JSON&amp;id=601719196" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=JSON">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=JSON&amp;oldid=601719196&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=JSON&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D8%AC%D8%B3%D9%88%D9%86" title="جسون – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="//bg.wikipedia.org/wiki/JSON" title="JSON – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="//ca.wikipedia.org/wiki/JSON" title="JSON – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="//cs.wikipedia.org/wiki/JavaScript_Object_Notation" title="JavaScript Object Notation – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="//de.wikipedia.org/wiki/JavaScript_Object_Notation" title="JavaScript Object Notation – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="//et.wikipedia.org/wiki/JSON" title="JSON – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="//es.wikipedia.org/wiki/JSON" title="JSON – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="//eu.wikipedia.org/wiki/JavaScript_Object_Notation" title="JavaScript Object Notation – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/%D8%AC%DB%8C%E2%80%8C%D8%B3%D9%86" title="جی‌سن – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/JavaScript_Object_Notation" title="JavaScript Object Notation – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="//gl.wikipedia.org/wiki/JSON" title="JSON – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="//ko.wikipedia.org/wiki/JSON" title="JSON – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hy"><a href="//hy.wikipedia.org/wiki/JSON" title="JSON – Armenian" lang="hy" hreflang="hy">Հայերեն</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="//id.wikipedia.org/wiki/JSON" title="JSON – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="//it.wikipedia.org/wiki/JSON" title="JSON – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="//he.wikipedia.org/wiki/JSON" title="JSON – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="//lv.wikipedia.org/wiki/JSON" title="JSON – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="//hu.wikipedia.org/wiki/JSON" title="JSON – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ml"><a href="//ml.wikipedia.org/wiki/%E0%B4%9C%E0%B5%86%E0%B4%B8%E0%B5%BA" title="ജെസൺ – Malayalam" lang="ml" hreflang="ml">മലയാളം</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="//ms.wikipedia.org/wiki/JSON" title="JSON – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="//nl.wikipedia.org/wiki/JSON" title="JSON – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="//ja.wikipedia.org/wiki/JavaScript_Object_Notation" title="JavaScript Object Notation – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="//no.wikipedia.org/wiki/JSON" title="JSON – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="//pl.wikipedia.org/wiki/JSON" title="JSON – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="//pt.wikipedia.org/wiki/JSON" title="JSON – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ro"><a href="//ro.wikipedia.org/wiki/JSON" title="JSON – Romanian" lang="ro" hreflang="ro">Română</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="//ru.wikipedia.org/wiki/JSON" title="JSON – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="//simple.wikipedia.org/wiki/JSON" title="JSON – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="//sr.wikipedia.org/wiki/JSON" title="JSON – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="//fi.wikipedia.org/wiki/JSON" title="JSON – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="//sv.wikipedia.org/wiki/JSON" title="JSON – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-ta"><a href="//ta.wikipedia.org/wiki/%E0%AE%AF%E0%AF%87%E0%AE%9A%E0%AE%A3%E0%AF%8D" title="யேசண் – Tamil" lang="ta" hreflang="ta">தமிழ்</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="//th.wikipedia.org/wiki/%E0%B9%80%E0%B8%88%E0%B8%8B%E0%B8%B1%E0%B8%99" title="เจซัน – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="//tr.wikipedia.org/wiki/JSON" title="JSON – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="//uk.wikipedia.org/wiki/JSON" title="JSON – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="//vi.wikipedia.org/wiki/JavaScript_Object_Notation" title="JavaScript Object Notation – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="//zh.wikipedia.org/wiki/JSON" title="JSON – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="//www.wikidata.org/wiki/Q2063#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 28 March 2014 at 22:02.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/wiki/JSON" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1099 in 0.487 secs. -->
+	</body>
+</html>

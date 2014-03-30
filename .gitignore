@@ -9,3 +9,4 @@ gen
 .classpath
 ^#*#$
 images/*
+wikitext/*

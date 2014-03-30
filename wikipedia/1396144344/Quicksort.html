@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Quicksort - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Quicksort" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Quicksort&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Quicksort&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Quicksort" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Quicksort","wgTitle":"Quicksort","wgCurRevisionId":600443965,"wgRevisionId":600443965,"wgArticleId":3268249,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles using fixed number of columns in reflist","Use dmy dates from January 2012","Sorting algorithms","Comparison sorts","Articles with example pseudocode","1961 in science"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Quicksort","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["ro-ro","ro","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q486598"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Quicksort skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Quicksort</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="infobox" cellspacing="3" style="border-spacing:3px;width:22em;">
+<caption>Quicksort</caption>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="/wiki/File:Sorting_quicksort_anim.gif" class="image" title="Quicksort in action on a list of numbers. The horizontal lines are pivot values."><img alt="Quicksort in action on a list of numbers. The horizontal lines are pivot values." src="//upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif" width="280" height="214" /></a><br />
+<div>Visualization of the quicksort algorithm. The horizontal lines are pivot values.</div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Class</th>
+<td><a href="/wiki/Sorting_algorithm" title="Sorting algorithm">Sorting algorithm</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Worst case performance</a></th>
+<td>O(<i>n</i><sup>2</sup>)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Best case performance</a></th>
+<td>O(<i>n</i> log <i>n</i>) (simple partition)<br />
+or O(<i>n</i>) (three-way partition and equal keys)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Average case performance</a></th>
+<td>O(<i>n</i> log <i>n</i>)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Worst case space complexity</a></th>
+<td>O(<i>n</i>) auxiliary (naive)<br />
+O(log <i>n</i>) auxiliary (Sedgewick 1978)</td>
+</tr>
+</table>
+<p><b>Quicksort</b>, or <b>partition-exchange sort</b>, is a <a href="/wiki/Sorting_algorithm" title="Sorting algorithm">sorting algorithm</a> developed by <a href="/wiki/Tony_Hoare" title="Tony Hoare">Tony Hoare</a> that, <a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">on average</a>, makes O(<i>n</i>&#160;log&#160;<i>n</i>) comparisons to sort <i>n</i> items. In the <a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">worst case</a>, it makes O(<i>n</i><sup>2</sup>) comparisons, though this behavior is rare. Quicksort is often faster in practice than other O(<i>n</i>&#160;log&#160;<i>n</i>) algorithms.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> Additionally, quicksort's sequential and localized memory references work well with a <a href="/wiki/CPU_cache" title="CPU cache">cache</a>. Quicksort is a <a href="/wiki/Comparison_sort" title="Comparison sort">comparison sort</a> and, in efficient implementations, is not a <a href="/wiki/Stable_sort" title="Stable sort" class="mw-redirect">stable sort</a>. Quicksort can be implemented with an <a href="/wiki/In-place_algorithm" title="In-place algorithm">in-place partitioning algorithm</a>, so the entire sort can be done with only O(log&#160;<i>n</i>) additional space used by the <a href="/wiki/Stack_(abstract_data_type)" title="Stack (abstract data type)">stack</a> during the <a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">recursion</a>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Algorithm"><span class="tocnumber">2</span> <span class="toctext">Algorithm</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Simple_version"><span class="tocnumber">2.1</span> <span class="toctext">Simple version</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#In-place_version"><span class="tocnumber">2.2</span> <span class="toctext">In-place version</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Implementation_issues"><span class="tocnumber">2.3</span> <span class="toctext">Implementation issues</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Choice_of_pivot"><span class="tocnumber">2.3.1</span> <span class="toctext">Choice of pivot</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Repeated_elements"><span class="tocnumber">2.3.2</span> <span class="toctext">Repeated elements</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Optimizations"><span class="tocnumber">2.3.3</span> <span class="toctext">Optimizations</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Parallelization"><span class="tocnumber">2.3.4</span> <span class="toctext">Parallelization</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Formal_analysis"><span class="tocnumber">3</span> <span class="toctext">Formal analysis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Average-case_analysis_using_discrete_probability"><span class="tocnumber">3.1</span> <span class="toctext">Average-case analysis using discrete probability</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Average-case_analysis_using_recurrences"><span class="tocnumber">3.2</span> <span class="toctext">Average-case analysis using recurrences</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Analysis_of_randomized_quicksort"><span class="tocnumber">3.3</span> <span class="toctext">Analysis of randomized quicksort</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Space_complexity"><span class="tocnumber">3.4</span> <span class="toctext">Space complexity</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Relation_to_other_algorithms"><span class="tocnumber">4</span> <span class="toctext">Relation to other algorithms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Selection-based_pivoting"><span class="tocnumber">4.1</span> <span class="toctext">Selection-based pivoting</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Variants"><span class="tocnumber">4.2</span> <span class="toctext">Variants</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Generalization"><span class="tocnumber">4.3</span> <span class="toctext">Generalization</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Notes"><span class="tocnumber">6</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The quicksort algorithm was developed in 1960 by <a href="/wiki/Tony_Hoare" title="Tony Hoare">Tony Hoare</a> while in the <a href="/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a>, as a visiting student at <a href="/wiki/Moscow_State_University" title="Moscow State University">Moscow State University</a>. At that time, Hoare worked in a project on <a href="/wiki/Machine_translation" title="Machine translation">machine translation</a> for the <a href="/wiki/National_Physical_Laboratory,_UK" title="National Physical Laboratory, UK" class="mw-redirect">National Physical Laboratory</a>. He developed the algorithm in order to sort the words to be translated, to make them more easily matched to an already-sorted Russian-to-English dictionary that was stored on magnetic tape.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>Quicksort gained widespread adoption, appearing, for example, in <a href="/wiki/Unix" title="Unix">Unix</a> as the default library sort function, whence it lent its name to the <a href="/wiki/C_standard_library" title="C standard library">C standard library</a> function <code><a href="/wiki/Qsort" title="Qsort">qsort</a></code><sup id="cite_ref-engineering_4-0" class="reference"><a href="#cite_note-engineering-4"><span>[</span>4<span>]</span></a></sup> and in the reference implementation of <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>. It was analyzed extensively by <a href="/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Robert Sedgewick</a>, who wrote his Ph.D. thesis about the algorithm and suggested several improvements.<sup id="cite_ref-engineering_4-1" class="reference"><a href="#cite_note-engineering-4"><span>[</span>4<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Algorithm">Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=2" title="Edit section: Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="/wiki/File:Quicksort-diagram.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Quicksort-diagram.svg/200px-Quicksort-diagram.svg.png" width="200" height="400" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Quicksort-diagram.svg/300px-Quicksort-diagram.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/af/Quicksort-diagram.svg/400px-Quicksort-diagram.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Quicksort-diagram.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf17/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Full example of quicksort on a random set of numbers. The shaded element is the pivot. It is always chosen as the last element of the partition. However, always choosing the last element in the partition as the pivot in this way results in poor performance (<span class="texhtml"><i>O</i>(<i>n</i>²)</span>) on <i>already sorted</i> lists, or lists of identical elements. Since sub-lists of sorted / identical elements crop up a lot towards the end of a sorting procedure on a large set, versions of the quicksort algorithm which choose the pivot as the middle element run much more quickly than the algorithm described in this diagram on large sets of numbers.</div>
+</div>
+</div>
+<p>Quicksort is a <a href="/wiki/Divide_and_conquer_algorithm" title="Divide and conquer algorithm" class="mw-redirect">divide and conquer algorithm</a>. Quicksort first divides a large <a href="/wiki/List_(computing)" title="List (computing)" class="mw-redirect">list</a> into two smaller sub-lists: the low elements and the high elements. Quicksort can then recursively sort the sub-lists.</p>
+<p>The steps are:</p>
+<ol>
+<li>Pick an element, called a <b>pivot</b>, from the list.</li>
+<li>Reorder the list so that all elements with values less than the pivot come before the pivot, while all elements with values greater than the pivot come after it (equal values can go either way). After this partitioning, the pivot is in its final position. This is called the <b>partition</b> operation.</li>
+<li><a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">Recursively</a> apply the above steps to the sub-list of elements with smaller values and separately to the sub-list of elements with greater values.</li>
+</ol>
+<p>The <a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">base case</a> of the recursion is lists of size zero or one, which never need to be sorted.</p>
+<h3><span class="mw-headline" id="Simple_version">Simple version</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=3" title="Edit section: Simple version">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In simple <a href="/wiki/Pseudocode" title="Pseudocode">pseudocode</a>, the algorithm might be expressed as this:</p>
+<pre>
+ <b>function</b> quicksort(<i>array</i>)
+     <b>if</b> length(<i>array</i>) ≤ 1
+         <b>return</b> <i>array</i>  <u>// an array of zero or one elements is already sorted</u>
+     select and remove a pivot element <i>pivot</i> from 'array'  <u>// see '<a href="#Choice_of_pivot">#Choice of pivot</a>' below</u>
+     create empty lists <i>less</i> and <i>greater</i>
+     <b>for each</b> <i>x</i> <b>in</b> <i>array</i>
+         <b>if</b> <i>x</i> ≤ <i>pivot</i> <b>then</b> append <i>x</i> to <i>less</i>
+         <b>else</b> append <i>x</i> to <i>greater</i>
+     <b>return</b> concatenate(quicksort(<i>less</i>), list(<i>pivot</i>), quicksort(<i>greater</i>)) <u>// two recursive calls</u>
+</pre>
+<p>Notice that we only examine elements by comparing them to other elements. This makes quicksort a <a href="/wiki/Comparison_sort" title="Comparison sort">comparison sort</a>. This version is also a <a href="/wiki/Stable_sort" title="Stable sort" class="mw-redirect">stable sort</a> (assuming that the "for each" method retrieves elements in original order, and the pivot selected is the last among those of equal value).</p>
+<p>The correctness of the partition algorithm is based on the following two arguments:</p>
+<ul>
+<li>At each iteration, all the elements processed so far are in the desired position: before the pivot if less than the pivot's value, after the pivot if greater than the pivot's value (<a href="/wiki/Loop_invariant" title="Loop invariant">loop invariant</a>).</li>
+<li>Each iteration leaves one fewer element to be processed (<a href="/wiki/Loop_variant" title="Loop variant">loop variant</a>).</li>
+</ul>
+<p>The correctness of the overall algorithm can be proven via induction: for zero or one element, the algorithm leaves the data unchanged; for a larger data set it produces the concatenation of two parts, elements less than the pivot and elements greater than it, themselves sorted by the recursive hypothesis.</p>
+<p><br style="clear:both;" /></p>
+<div class="thumb tleft">
+<div class="thumbinner" style="width:202px;"><a href="/wiki/File:Partition_example.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Partition_example.svg/200px-Partition_example.svg.png" width="200" height="244" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Partition_example.svg/300px-Partition_example.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Partition_example.svg/400px-Partition_example.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Partition_example.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf17/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+In-place partition in action on a small list. The boxed element is the pivot element, blue elements are less or equal, and red elements are larger.</div>
+</div>
+</div>
+<h3><span class="mw-headline" id="In-place_version">In-place version</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=4" title="Edit section: In-place version">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The disadvantage of the simple version above is that it requires O(<i>n</i>) extra storage space, which is as bad as naïve <a href="/wiki/Merge_sort" title="Merge sort">merge sort</a>. The additional memory allocations required can also drastically impact speed and cache performance in practical implementations. There is a more complex version which uses an <a href="/wiki/In-place_algorithm" title="In-place algorithm">in-place</a> partition algorithm and can achieve the complete sort using O(log <i>n</i>) space (not counting the input) on average (for the <a href="/wiki/Call_stack" title="Call stack">call stack</a>). We start with a partition function:</p>
+<pre>
+  <i>// left is the index of the leftmost element of the subarray</i>
+  <i>// right is the index of the rightmost element of the subarray (inclusive)</i>
+  <i>// number of elements in subarray = right-left+1</i>
+  <b>function</b> partition(array, left, right, pivotIndex)
+     pivotValue := array[pivotIndex]
+     swap array[pivotIndex] and array[right]  <i>// Move pivot to end</i>
+     storeIndex := left
+     <b>for</b> i <b>from</b> left <b>to</b> right - 1  <i>// left ≤ i &lt; right</i>
+         <b>if</b> array[i] ≤ pivotValue
+             swap array[i] and array[storeIndex]
+             storeIndex := storeIndex + 1  <i>// only increment storeIndex if swapped</i>
+     swap array[storeIndex] and array[right]  <i>// Move pivot to its final place</i>
+     <b>return</b> storeIndex
+</pre>
+<p>This is the in-place partition algorithm. It partitions the portion of the array between indexes <i>left</i> and <i>right</i>, inclusively, by moving all elements less than <code>array[pivotIndex]</code> before the pivot, and the equal or greater elements after it. In the process it also finds the final position for the pivot element, which it returns. It temporarily moves the pivot element to the end of the subarray, so that it doesn't get in the way. Because it only uses exchanges, the final list has the same elements as the original list. Notice that an element may be exchanged multiple times before reaching its final place. Also, in case of pivot duplicates in the input array, they can be spread across the right subarray, in any order. This doesn't represent a partitioning failure, as further sorting will reposition and finally "glue" them together.</p>
+<p>This form of the partition algorithm is not the original form; multiple variations can be found in various textbooks, such as versions not having the storeIndex. However, this form is probably the easiest to understand.</p>
+<p>Once we have this, writing quicksort itself is easy:</p>
+<pre>
+ <b>function</b> quicksort(array, left, right)
+     <i>// If the list has 2 or more items</i>
+     <b>if</b> left &lt; right
+         <i>// See "<a href="#Choice_of_pivot">#Choice of pivot</a>" section below for possible choices</i>
+         choose any pivotIndex such that left ≤ pivotIndex ≤ right
+         <i>// Get lists of bigger and smaller items and final position of pivot</i>
+         pivotNewIndex := partition(array, left, right, pivotIndex)
+         <i>// Recursively sort elements smaller than the pivot (assume pivotNewIndex - 1 does not underflow)</i>
+         quicksort(array, left, pivotNewIndex - 1)
+         <i>// Recursively sort elements at least as big as the pivot (assume pivotNewIndex + 1 does not overflow)</i>
+         quicksort(array, pivotNewIndex + 1, right)
+</pre>
+<p>Each recursive call to this <i>quicksort</i> function reduces the size of the array being sorted by at least one element, since in each invocation the element at <i>pivotNewIndex</i> is placed in its final position. Therefore, this algorithm is guaranteed to terminate after at most <i>n</i> recursive calls. However, since <i>partition</i> reorders elements within a partition, this version of quicksort is not a stable sort.</p>
+<h3><span class="mw-headline" id="Implementation_issues">Implementation issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=5" title="Edit section: Implementation issues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Choice_of_pivot">Choice of pivot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=6" title="Edit section: Choice of pivot">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In very early versions of quicksort, the leftmost element of the partition would often be chosen as the pivot element. Unfortunately, this causes worst-case behavior on already sorted arrays, which is a rather common use-case. The problem was easily solved by choosing either a random index for the pivot, choosing the middle index of the partition or (especially for longer partitions) choosing the <a href="/wiki/Median" title="Median">median</a> of the first, middle and last element of the partition for the pivot (as recommended by <a href="/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick</a>).<sup id="cite_ref-sedgewickBook_5-0" class="reference"><a href="#cite_note-sedgewickBook-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>Selecting a pivot element is also complicated by the existence of <a href="/wiki/Integer_overflow" title="Integer overflow">integer overflow</a>. If the boundary indices of the subarray being sorted are sufficiently large, the naïve expression for the middle index, <i>(left + right)/2</i>, will cause overflow and provide an invalid pivot index. This can be overcome by using, for example, <i>left + (right-left)/2</i> to index the middle element, at the cost of more complex arithmetic. Similar issues arise in some other methods of selecting the pivot element.</p>
+<h4><span class="mw-headline" id="Repeated_elements">Repeated elements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=7" title="Edit section: Repeated elements">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>With a partitioning algorithm such as the one described above (even with one that chooses good pivot values), quicksort exhibits poor performance for inputs that contain many repeated elements. The problem is clearly apparent when all the input elements are equal: at each recursion, the left partition is empty (no input values are less than the pivot), and the right partition has only decreased by one element (the pivot is removed). Consequently, the algorithm takes quadratic time to sort an array of equal values.</p>
+<p>To solve this quicksort equivalent of the <a href="/wiki/Dutch_national_flag_problem" title="Dutch national flag problem">Dutch national flag problem</a>,<sup id="cite_ref-engineering_4-2" class="reference"><a href="#cite_note-engineering-4"><span>[</span>4<span>]</span></a></sup> an alternative linear-time partition routine can be used that separates the values into three groups: values less than the pivot, values equal to the pivot, and values greater than the pivot. (Bentley and McIlroy call this a "fat partition" and note that it was already implemented in the <code><a href="/wiki/Qsort" title="Qsort">qsort</a></code> of <a href="/wiki/Version_7_Unix" title="Version 7 Unix">Version 7 Unix</a>.<sup id="cite_ref-engineering_4-3" class="reference"><a href="#cite_note-engineering-4"><span>[</span>4<span>]</span></a></sup>) The values equal to the pivot are already sorted, so only the less-than and greater-than partitions need to be recursively sorted. In pseudocode, the quicksort algorithm becomes</p>
+<pre>
+<b>function</b> quicksort(A, lo, hi)
+    if lo &lt; hi
+        p = pivot(A, lo, hi)
+        left, right = partition(A, p, lo, hi)  // note: multiple return values
+        quicksort(A, lo, left)
+        quicksort(A, right, hi)
+</pre>
+<p>The best case for the algorithm now occurs when all elements are equal (or are chosen from a small set of <span class="texhtml"><i>k</i> ≪ <i>n</i></span> elements). In the case of all equal elements, the modified quicksort will perform at most two recursive calls on empty subarrays and thus finish in linear time.</p>
+<h4><span class="mw-headline" id="Optimizations">Optimizations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=8" title="Edit section: Optimizations">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Two other important optimizations, also suggested by Sedgewick and widely used in practice are:<sup id="cite_ref-glibc_qsort_6-0" class="reference"><a href="#cite_note-glibc_qsort-6"><span>[</span>6<span>]</span></a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<ul>
+<li>To make sure at most O(log N) space is used, <a href="//en.wiktionary.org/wiki/recurse" class="extiw" title="wiktionary:recurse">recurse</a> first into the smaller side of the partition, then use a <a href="/wiki/Tail_call" title="Tail call">tail call</a> to recurse into the other.</li>
+<li>Use <a href="/wiki/Insertion_sort" title="Insertion sort">insertion sort</a>, which has a smaller constant factor and is thus faster on small arrays, for invocations on small arrays (i.e. where the length is less than a threshold <i>k</i> determined experimentally). This can be implemented by simply stopping the recursion when less than <i>k</i> elements are left, leaving the entire array <i>k</i>-sorted: each element will be at most <i>k</i> positions away from its final position. Then, a single <a href="/wiki/Insertion_sort" title="Insertion sort">insertion sort</a> pass finishes the sort in O(<i>k</i>×<i>n</i>) time.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup> A separate insertion sort of each small segment as they are identified adds the overhead of starting and stopping many small sorts, but avoids wasting effort comparing keys across the many segment boundaries, which keys will be in order due to the workings of the quicksort process.</li>
+</ul>
+<h4><span class="mw-headline" id="Parallelization">Parallelization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=9" title="Edit section: Parallelization">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Like <a href="/wiki/Merge_sort" title="Merge sort">merge sort</a>, quicksort can also be <a href="/wiki/Parallel_algorithm" title="Parallel algorithm">parallelized</a> due to its divide-and-conquer nature. Individual in-place partition operations are difficult to parallelize, but once divided, different sections of the list can be sorted in parallel. The following is a straightforward approach: If we have <img class="tex" alt="p" src="//upload.wikimedia.org/math/8/3/8/83878c91171338902e0fe0fb97a8c47a.png" /> processors, we can divide a list of <img class="tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> elements into <img class="tex" alt="p" src="//upload.wikimedia.org/math/8/3/8/83878c91171338902e0fe0fb97a8c47a.png" /> sublists in <i>O</i>(<i>n</i>) average time, then sort each of these in <img class="tex" alt="\textstyle O\left(\frac{n}{p} \log\frac{n}{p}\right)" src="//upload.wikimedia.org/math/c/b/0/cb0bc7cdd9817843a2b46d97f92ddfb2.png" /> average time. Ignoring the <i>O</i>(<i>n</i>) preprocessing and merge times, this is <a href="/wiki/Linear_speedup" title="Linear speedup" class="mw-redirect">linear speedup</a>. If the split is blind, ignoring the values, the merge naïvely costs <i>O</i>(<i>n</i>). If the split partitions based on a succession of pivots, it is tricky to parallelize and naïvely costs <i>O</i>(<i>n</i>). Given <i>O</i>(log <i>n</i>) or more processors, only <i>O</i>(<i>n</i>) time is required overall, whereas an approach with <a href="/wiki/Linear_speedup" title="Linear speedup" class="mw-redirect">linear speedup</a> would achieve <i>O</i>(log <i>n</i>) time for overall.</p>
+<p>One advantage of this simple parallel quicksort over other parallel sort algorithms is that no synchronization is required, but the disadvantage is that sorting is still <i>O</i>(<i>n</i>) and only a sublinear speedup of <i>O</i>(log <i>n</i>) is achieved. A new thread is started as soon as a sublist is available for it to work on and it does not communicate with other threads. When all threads complete, the sort is done.</p>
+<p>Other more sophisticated parallel sorting algorithms can achieve even better time bounds.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> For example, in 1991 David Powers described a parallelized quicksort (and a related <a href="/wiki/Radix_sort" title="Radix sort">radix sort</a>) that can operate in <i>O</i>(log <i>n</i>) time on a CRCW <a href="/wiki/Parallel_Random_Access_Machine" title="Parallel Random Access Machine" class="mw-redirect">PRAM</a> with <i>n</i> processors by performing partitioning implicitly.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Formal_analysis">Formal analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=10" title="Edit section: Formal analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Average-case_analysis_using_discrete_probability">Average-case analysis using discrete probability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=11" title="Edit section: Average-case analysis using discrete probability">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>To sort an array of <span class="texhtml mvar" style="font-style:italic;">n</span> distinct elements, quicksort takes <span class="texhtml"><i>O</i>(<i>n</i> log <i>n</i>)</span> time in expection, averaged over all <span class="texhtml"><i>n</i>!</span> permutations of <span class="texhtml mvar" style="font-style:italic;">n</span> elements with <a href="/wiki/Uniform_distribution_(discrete)" title="Uniform distribution (discrete)">equal probability</a>. Why? For a start, it is not hard to see that the partition operation takes <span class="texhtml"><i>O</i>(<i>n</i>)</span> time.</p>
+<p>In the most unbalanced case, each time we perform a partition we divide the list into two sublists of size <span class="texhtml">0</span> and <span class="texhtml"><i>n</i> − 1</span> (for example, if all elements of the array are equal). This means each recursive call processes a list of size one less than the previous list. Consequently, we can make <span class="texhtml"><i>n</i> − 1</span> nested calls before we reach a list of size 1. This means that the <a href="/wiki/Call_stack" title="Call stack">call tree</a> is a linear chain of <span class="texhtml"><i>n</i> − 1</span> nested calls. The <span class="texhtml mvar" style="font-style:italic;">i</span>th call does <span class="texhtml"><i>O</i>(<i>n</i> − <i>i</i>)</span> work to do the partition, and <img class="tex" alt="\textstyle\sum_{i=0}^n (n-i) = O(n^2)" src="//upload.wikimedia.org/math/e/1/1/e111b6dc31c7dbec42f0c2d1ba7a2a12.png" />, so in that case Quicksort takes <span class="texhtml"><i>O</i>(<i>n</i>²)</span> time. That is the worst case: given knowledge of which comparisons are performed by the sort, there are adaptive algorithms that are effective at generating worst-case input for quicksort on-the-fly, regardless of the pivot selection strategy.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup></p>
+<p>In the most balanced case, each time we perform a partition we divide the list into two nearly equal pieces. This means each recursive call processes a list of half the size. Consequently, we can make only <span class="texhtml">log₂ <i>n</i></span> nested calls before we reach a list of size 1. This means that the depth of the <a href="/wiki/Call_stack" title="Call stack">call tree</a> is <span class="texhtml">log₂ <i>n</i></span>. But no two calls at the same level of the call tree process the same part of the original list; thus, each level of calls needs only <span class="texhtml"><i>O</i>(<i>n</i>)</span> time all together (each call has some constant overhead, but since there are only <span class="texhtml"><i>O</i>(<i>n</i>)</span> calls at each level, this is subsumed in the <span class="texhtml"><i>O</i>(<i>n</i>)</span> factor). The result is that the algorithm uses only <span class="texhtml"><i>O</i>(<i>n</i> log <i>n</i>)</span> time.</p>
+<p>In fact, it's not necessary to be perfectly balanced; even if each pivot splits the elements with 75% on one side and 25% on the other side (or any other fixed fraction), the call depth is still limited to <img class="tex" alt="\log_{4/3} n" src="//upload.wikimedia.org/math/3/a/0/3a0d4c27ba300db6cd5d410c3f9b7e8f.png" />, so the total running time is still <span class="texhtml"><i>O</i>(<i>n</i> log <i>n</i>)</span>.</p>
+<p>So what happens on average? If the pivot has rank somewhere in the middle 50 percent, that is, between the 25th percentile and the 75th percentile, then it splits the elements with at least 25% and at most 75% on each side. If we could consistently choose a pivot from the two middle 50 percent, we would only have to split the list at most <img class="tex" alt="\log_{4/3} n" src="//upload.wikimedia.org/math/3/a/0/3a0d4c27ba300db6cd5d410c3f9b7e8f.png" /> times before reaching lists of size 1, yielding an <span class="texhtml"><i>O</i>(<i>n</i> log <i>n</i>)</span> algorithm.</p>
+<p>When the input is a random permutation, the pivot has a random rank, and so it is not guaranteed to be in the middle 50 percent. However, when we start from a random permutation, in each recursive call the pivot has a random rank in its list, and so it is in the middle 50 percent about half the time. That is good enough. Imagine that you flip a coin: heads means that the rank of the pivot is in the middle 50 percent, tail means that it isn't. Imagine that you are flipping a coin over and over until you get <span class="texhtml mvar" style="font-style:italic;">k</span> heads. Although this could take a long time, on average only <span class="texhtml">2<i>k</i></span> flips are required, and the chance that you won't get <span class="texhtml mvar" style="font-style:italic;">k</span> heads after <span class="texhtml">100<i>k</i></span> flips is highly improbable (this can be made rigorous using Chernoff bounds). By the same argument, Quicksort's recursion will terminate on average at a call depth of only <img class="tex" alt="2 \log_{4/3} n" src="//upload.wikimedia.org/math/3/d/2/3d234c4ebae608bf6bc34ef8e0b39b92.png" />. But if its average call depth is <span class="texhtml"><i>O</i>(log <i>n</i>)</span>, and each level of the call tree processes at most <span class="texhtml mvar" style="font-style:italic;">n</span> elements, the total amount of work done on average is the product, <span class="texhtml"><i>O</i>(<i>n</i> log <i>n</i>)</span>. Note that the algorithm does not have to verify that the pivot is in the middle half—if we hit it any constant fraction of the times, that is enough for the desired complexity.</p>
+<h3><span class="mw-headline" id="Average-case_analysis_using_recurrences">Average-case analysis using recurrences</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=12" title="Edit section: Average-case analysis using recurrences">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An alternative approach is to set up a <a href="/wiki/Recurrence_relation" title="Recurrence relation">recurrence relation</a> for the <span class="texhtml"><i>T</i>(<i>n</i>)</span> factor, the time needed to sort a list of size <span class="texhtml mvar" style="font-style:italic;">n</span>. In the most unbalanced case, a single quicksort call involves <span class="texhtml"><i>O</i>(<i>n</i>)</span> work plus two recursive calls on lists of size <span class="texhtml">0</span> and <span class="texhtml"><i>n</i>−1</span>, so the recurrence relation is</p>
+<dl>
+<dd><img class="tex" alt="T(n) = O(n) + T(0) + T(n-1) = O(n) + T(n-1)." src="//upload.wikimedia.org/math/a/5/6/a56e1feb27396a1b11d04b6023d6a39a.png" /></dd>
+</dl>
+<p>This is the same relation as for <a href="/wiki/Insertion_sort" title="Insertion sort">insertion sort</a> and <a href="/wiki/Selection_sort" title="Selection sort">selection sort</a>, and it solves to worst case <span class="texhtml"><i>T</i>(<i>n</i>) = <i>O</i>(<i>n</i>²)</span>.</p>
+<p>In the most balanced case, a single quicksort call involves <span class="texhtml"><i>O</i>(<i>n</i>)</span> work plus two recursive calls on lists of size <span class="texhtml"><i>n</i>/2</span>, so the recurrence relation is</p>
+<dl>
+<dd><img class="tex" alt="T(n) = O(n) + 2T\left(\frac{n}{2}\right)." src="//upload.wikimedia.org/math/2/5/9/2591b18006e6e189ff08444815b5bf39.png" /></dd>
+</dl>
+<p>The <a href="/wiki/Master_theorem" title="Master theorem">master theorem</a> tells us that <span class="texhtml"><i>T</i>(<i>n</i>) = <i>O</i>(<i>n</i> log <i>n</i>)</span>.</p>
+<p>The outline of a formal proof of the <span class="texhtml"><i>O</i>(<i>n</i> log <i>n</i>)</span> expected time complexity follows. Assume that there are no duplicates as duplicates could be handled with linear time pre- and post-processing, or considered cases easier than the analyzed. When the input is a random permutation, the rank of the pivot is uniform random from 0 to <span class="texhtml"><i>n</i> − 1</span>. Then the resulting parts of the partition have sizes <span class="texhtml mvar" style="font-style:italic;">i</span> and <span class="texhtml"><i>n</i> − <i>i</i> − 1</span>, and i is uniform random from 0 to <span class="texhtml"><i>n</i> − 1</span>. So, averaging over all possible splits and noting that the number of comparisons for the partition is <span class="texhtml"><i>n</i> − 1</span>, the average number of comparisons over all permutations of the input sequence can be estimated accurately by solving the recurrence relation:</p>
+<dl>
+<dd><img class="tex" alt="C(n) = n - 1 + \frac{1}{n} \sum_{i=0}^{n-1} (C(i)+C(n-i-1))" src="//upload.wikimedia.org/math/5/4/c/54c41caae12933ce5550402f95c8fc12.png" /></dd>
+</dl>
+<p>Solving the recurrence gives <span class="texhtml"><i>C</i>(<i>n</i>) = 2<i>n</i> ln <i>n</i> ≈ 1.39<i>n</i> log₂ <i>n</i></span>.</p>
+<p>This means that, on average, quicksort performs only about 39% worse than in its best case. In this sense it is closer to the best case than the worst case. Also note that a <a href="/wiki/Comparison_sort" title="Comparison sort">comparison sort</a> cannot use less than <span class="texhtml">log₂(<i>n</i>!)</span> comparisons on average to sort <span class="texhtml mvar" style="font-style:italic;">n</span> items (as <a href="/wiki/Comparison_sort#Lower_bound_for_the_average_number_of_comparisons" title="Comparison sort">explained in the article Comparison sort</a>) and in case of large <span class="texhtml mvar" style="font-style:italic;">n</span>, <a href="/wiki/Stirling%27s_approximation" title="Stirling's approximation">Stirling's approximation</a> yields <span class="texhtml">log₂(<i>n</i>!) ≈ <i>n</i>(log₂ <i>n</i> − log₂ <i>e</i>)</span>, so quicksort is not much worse than an ideal comparison sort. This fast average runtime is another reason for quicksort's practical dominance over other sorting algorithms.</p>
+<h3><span class="mw-headline" id="Analysis_of_randomized_quicksort">Analysis of randomized quicksort</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=13" title="Edit section: Analysis of randomized quicksort">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Using the same analysis, one can show that randomized quicksort has the desirable property that, for any input, it requires only <i>O</i>(<i>n</i> log <i>n</i>) <a href="/wiki/Expected_value" title="Expected value">expected</a> time (averaged over all choices of pivots). However, there exists a combinatorial proof, more elegant than both the analysis using discrete probability and the analysis using recurrences.</p>
+<p>To each execution of Quicksort corresponds the following binary search tree (BST): the initial pivot is the root node; the pivot of the left half is the root of the left subtree, the pivot of the right half is the root of the right subtree, and so on. The number of comparisons of the execution of Quicksort equals the number of comparisons during the construction of the BST by a sequence of insertions. So, the average number of comparisons for randomized Quicksort equals the average cost of constructing a BST when the values inserted <img class="tex" alt="(x_1,x_2,...,x_n)" src="//upload.wikimedia.org/math/f/8/5/f85bf746c842098c40eff42587e12dab.png" /> form a random permutation.</p>
+<p>Consider a BST created by insertion of a sequence <img class="tex" alt="(x_1,x_2,...,x_n)" src="//upload.wikimedia.org/math/f/8/5/f85bf746c842098c40eff42587e12dab.png" /> of values forming a random permutation. Let C denote the cost of creation of the BST. We have: <img class="tex" alt="C=\sum_i \sum_{j&lt;i}" src="//upload.wikimedia.org/math/8/9/c/89c7275d350a47b67c200258f329d13e.png" /> (whether during the insertion of <img class="tex" alt="x_i" src="//upload.wikimedia.org/math/0/5/e/05e42209d67fe1eb15a055e9d3b3770e.png" /> there was a comparison to <img class="tex" alt="x_j" src="//upload.wikimedia.org/math/f/4/b/f4bb95e27d8505366199bb81f2b75b6f.png" />).</p>
+<p>By linearity of expectation, the expected value E(C) of C is <img class="tex" alt="E(C)= \sum_i \sum_{j&lt;i}" src="//upload.wikimedia.org/math/2/f/c/2fc772d6c4f6c90db215332c54df0628.png" /> Pr(during the insertion of <img class="tex" alt="x_i" src="//upload.wikimedia.org/math/0/5/e/05e42209d67fe1eb15a055e9d3b3770e.png" /> there was a comparison to <img class="tex" alt="x_j" src="//upload.wikimedia.org/math/f/4/b/f4bb95e27d8505366199bb81f2b75b6f.png" />).</p>
+<p>Fix i and j&lt;i. The values <img class="tex" alt="{x_1,x_2,...,x_j}" src="//upload.wikimedia.org/math/9/c/2/9c226db01772e0a4dde4c25d6f2dcaa4.png" />, once sorted, define j+1 intervals. The core structural observation is that <img class="tex" alt="x_i" src="//upload.wikimedia.org/math/0/5/e/05e42209d67fe1eb15a055e9d3b3770e.png" /> is compared to <img class="tex" alt="x_j" src="//upload.wikimedia.org/math/f/4/b/f4bb95e27d8505366199bb81f2b75b6f.png" /> in the algorithm if and only if <img class="tex" alt="x_i" src="//upload.wikimedia.org/math/0/5/e/05e42209d67fe1eb15a055e9d3b3770e.png" /> falls inside one of the two intervals adjacent to <img class="tex" alt="x_j" src="//upload.wikimedia.org/math/f/4/b/f4bb95e27d8505366199bb81f2b75b6f.png" />.</p>
+<p>Observe that since <img class="tex" alt="(x_1,x_2,...,x_n)" src="//upload.wikimedia.org/math/f/8/5/f85bf746c842098c40eff42587e12dab.png" /> is a random permutation, <img class="tex" alt="(x_1,x_2,...,x_j,x_i)" src="//upload.wikimedia.org/math/e/d/b/edb30fd71d643c22949ecb7b6f2a2516.png" /> is also a random permutation, so the probability that <img class="tex" alt="x_i" src="//upload.wikimedia.org/math/0/5/e/05e42209d67fe1eb15a055e9d3b3770e.png" /> is adjacent to <img class="tex" alt="x_j" src="//upload.wikimedia.org/math/f/4/b/f4bb95e27d8505366199bb81f2b75b6f.png" /> is exactly <img class="tex" alt="2/(j+1)" src="//upload.wikimedia.org/math/4/5/8/458b7f69bbf471ab8af20986f975f8ee.png" />.</p>
+<p>We end with a short calculation: <img class="tex" alt="E(C)=\sum_i \sum_{j&lt;i} 2/(j+1)= O(\sum_i \log i)=O(n \log n)." src="//upload.wikimedia.org/math/e/d/5/ed58fbcfab5db5624cdaf9bf2f10fee1.png" /></p>
+<h3><span class="mw-headline" id="Space_complexity">Space complexity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=14" title="Edit section: Space complexity">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The space used by quicksort depends on the version used.</p>
+<p>The in-place version of quicksort has a space complexity of <span class="texhtml"><i>O</i>(log <i>n</i>)</span>, even in the worst case, when it is carefully implemented using the following strategies:</p>
+<ul>
+<li>in-place partitioning is used. This unstable partition requires <span class="texhtml"><i>O</i>(1)</span> space.</li>
+<li>After partitioning, the partition with the fewest elements is (recursively) sorted first, requiring at most <span class="texhtml"><i>O</i>(log <i>n</i>)</span> space. Then the other partition is sorted using <a href="/wiki/Tail_recursion" title="Tail recursion" class="mw-redirect">tail recursion</a> or iteration, which doesn't add to the call stack. This idea, as discussed above, was described by <a href="/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">R. Sedgewick</a>, and keeps the stack depth bounded by <span class="texhtml"><i>O</i>(log <i>n</i>)</span>.<sup id="cite_ref-sedgewickBook_5-1" class="reference"><a href="#cite_note-sedgewickBook-5"><span>[</span>5<span>]</span></a></sup><sup id="cite_ref-sedgewickQsortPaper_12-0" class="reference"><a href="#cite_note-sedgewickQsortPaper-12"><span>[</span>12<span>]</span></a></sup></li>
+</ul>
+<p>Quicksort with in-place and unstable partitioning uses only constant additional space before making any recursive call. Quicksort must store a constant amount of information for each nested recursive call. Since the best case makes at most <span class="texhtml"><i>O</i>(log <i>n</i>)</span> nested recursive calls, it uses <span class="texhtml"><i>O</i>(log <i>n</i>)</span> space. However, without Sedgewick's trick to limit the recursive calls, in the worst case quicksort could make <span class="texhtml"><i>O</i>(<i>n</i>)</span> nested recursive calls and need <span class="texhtml"><i>O</i>(<i>n</i>)</span> auxiliary space.</p>
+<p>From a bit complexity viewpoint, variables such as <i>left</i> and <i>right</i> do not use constant space; it takes <span class="texhtml"><i>O</i>(log <i>n</i>)</span> bits to index into a list of <span class="texhtml mvar" style="font-style:italic;">n</span> items. Because there are such variables in every stack frame, quicksort using Sedgewick's trick requires <span class="texhtml"><i>O</i>((log <i>n</i>)²)</span> bits of space. This space requirement isn't too terrible, though, since if the list contained distinct elements, it would need at least <span class="texhtml"><i>O</i>(<i>n</i> log <i>n</i>)</span> bits of space.</p>
+<p>Another, less common, not-in-place, version of quicksort uses <span class="texhtml"><i>O</i>(<i>n</i>)</span> space for working storage and can implement a stable sort. The working storage allows the input array to be easily partitioned in a stable manner and then copied back to the input array for successive recursive calls. Sedgewick's optimization is still appropriate.</p>
+<h2><span class="mw-headline" id="Relation_to_other_algorithms">Relation to other algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=15" title="Edit section: Relation to other algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Quicksort is a space-optimized version of the <a href="/wiki/Binary_tree_sort" title="Binary tree sort" class="mw-redirect">binary tree sort</a>. Instead of inserting items sequentially into an explicit tree, quicksort organizes them concurrently into a tree that is implied by the recursive calls. The algorithms make exactly the same comparisons, but in a different order. An often desirable property of a <a href="/wiki/Sorting_algorithm" title="Sorting algorithm">sorting algorithm</a> is stability - that is the order of elements that compare equal is not changed, allowing controlling order of multikey tables (e.g. directory or folder listings) in a natural way. This property is hard to maintain for in situ (or in place) quicksort (that uses only constant additional space for pointers and buffers, and logN additional space for the management of explicit or implicit recursion). For variant quicksorts involving extra memory due to representations using pointers (e.g. lists or trees) or files (effectively lists), it is trivial to maintain stability. The more complex, or disk-bound, data structures tend to increase time cost, in general making increasing use of virtual memory or disk.</p>
+<p>The most direct competitor of quicksort is <a href="/wiki/Heapsort" title="Heapsort">heapsort</a>. Heapsort's worst-case running time is always <i>O</i>(<i>n</i> log <i>n</i>). But, heapsort is assumed to be on average somewhat slower than standard in-place quicksort. This is still debated and in research, with some publications indicating the opposite.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup><sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup> <a href="/wiki/Introsort" title="Introsort">Introsort</a> is a variant of quicksort that switches to heapsort when a bad case is detected to avoid quicksort's worst-case running time. If it is known in advance that heapsort is going to be necessary, using it directly will be faster than waiting for introsort to switch to it.</p>
+<p>Quicksort also competes with <a href="/wiki/Mergesort" title="Mergesort" class="mw-redirect">mergesort</a>, another recursive sort algorithm but with the benefit of worst-case <i>O</i>(<i>n</i> log <i>n</i>) running time. Mergesort is a <a href="/wiki/Stable_sort" title="Stable sort" class="mw-redirect">stable sort</a>, unlike standard in-place quicksort and heapsort, and can be easily adapted to operate on <a href="/wiki/Linked_list" title="Linked list">linked lists</a> and very large lists stored on slow-to-access media such as <a href="/wiki/Disk_storage" title="Disk storage">disk storage</a> or <a href="/wiki/Network_attached_storage" title="Network attached storage" class="mw-redirect">network attached storage</a>. Although quicksort can easily be implemented as a stable sort using linked lists, it will often suffer from poor pivot choices without random access. The main disadvantage of mergesort is that, when operating on arrays, efficient implementations require <i>O</i>(<i>n</i>) auxiliary space, whereas the variant of quicksort with in-place partitioning and tail recursion uses only <i>O</i>(log <i>n</i>) space. (Note that when operating on linked lists, mergesort only requires a small, constant amount of auxiliary storage.)</p>
+<p><a href="/wiki/Bucket_sort" title="Bucket sort">Bucket sort</a> with two buckets is very similar to quicksort; the pivot in this case is effectively the value in the middle of the value range, which does well on average for uniformly distributed inputs.</p>
+<h3><span class="mw-headline" id="Selection-based_pivoting">Selection-based pivoting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=16" title="Edit section: Selection-based pivoting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A <a href="/wiki/Selection_algorithm" title="Selection algorithm">selection algorithm</a> chooses the <i>k</i>th smallest of a list of numbers; this is an easier problem in general than sorting. One simple but effective selection algorithm works nearly in the same manner as quicksort, and is accordingly known as <a href="/wiki/Quickselect" title="Quickselect">quickselect</a>. The difference is that instead of making recursive calls on both sublists, it only makes a single tail-recursive call on the sublist which contains the desired element. This change lowers the average complexity to linear or <i>O</i>(<i>n</i>) time, which is optimal for selection, but worst-case time is still <i>O</i>(<i>n</i><sup>2</sup>).</p>
+<p>A variant of quickselect, the <a href="/wiki/Median_of_medians" title="Median of medians">median of medians</a> algorithm, chooses pivots more carefully, ensuring that the pivots are near the middle of the data (between the 30th and 70th percentiles), and thus has guaranteed linear time – worst-case <i>O</i>(<i>n</i>). This same pivot strategy can be used to construct a variant of quickselect (median of medians quicksort) with worst-case <i>O</i>(<i>n</i>) time. However, the overhead of choosing the pivot is significant, so this is generally not used in practice.</p>
+<p>More abstractly, given a worst-case <i>O</i>(<i>n</i>) selection algorithm, one can use it to find the ideal pivot (the median) at every step of quicksort, producing a variant with worst-case <i>O</i>(<i>n</i> log <i>n</i>) running time. In practical implementations this variant is considerably slower on average, but it is of theoretical interest, showing how an optimal selection algorithm can yield an optimal sorting algorithm.</p>
+<h3><span class="mw-headline" id="Variants">Variants</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=17" title="Edit section: Variants">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are four well known variants of quicksort:</p>
+<ul>
+<li><b>Balanced quicksort:</b> choose a pivot likely to represent the middle of the values to be sorted, and then follow the regular quicksort algorithm.</li>
+<li><b>External quicksort:</b> The same as regular quicksort except the pivot is replaced by a buffer. First, read the M/2 first and last elements into the buffer and sort them. Read the next element from the beginning or end to balance writing. If the next element is less than the least of the buffer, write it to available space at the beginning. If greater than the greatest, write it to the end. Otherwise write the greatest or least of the buffer, and put the next element in the buffer. Keep the maximum lower and minimum upper keys written to avoid resorting middle elements that are in order. When done, write the buffer. Recursively sort the smaller partition, and loop to sort the remaining partition. This is a kind of three-way quicksort in which the middle partition (buffer) represents a sorted subarray of elements that are <i>approximately</i> equal to the pivot.</li>
+<li><b>Three-way radix quicksort</b> (developed by Sedgewick and also known as <b>multikey quicksort</b>): is a combination of <a href="/wiki/Radix_sort" title="Radix sort">radix sort</a> and quicksort. Pick an element from the array (the pivot) and consider the first character (key) of the string (multikey). Partition the remaining elements into three sets: those whose corresponding character is less than, equal to, and greater than the pivot's character. Recursively sort the "less than" and "greater than" partitions on the same character. Recursively sort the "equal to" partition by the next character (key). Given we sort using bytes or words of length W bits, the best case is O(KN) and the worst case O(2<sup>K</sup>N) or at least O(N<sup>2</sup>) as for standard quicksort, given for unique keys N&lt;2<sup>K</sup>, and K is a hidden constant in all standard <a href="/wiki/Comparison_sort" title="Comparison sort">comparison sort</a> algorithms including quicksort. This is a kind of three-way quicksort in which the middle partition represents a (trivially) sorted subarray of elements that are <i>exactly</i> equal to the pivot.</li>
+<li><b>Quick radix sort</b> (also developed by Powers as a o(K) parallel <a href="/wiki/Parallel_Random_Access_Machine" title="Parallel Random Access Machine" class="mw-redirect">PRAM</a> algorithm). This is again a combination of <a href="/wiki/Radix_sort" title="Radix sort">radix sort</a> and quicksort but the quicksort left/right partition decision is made on successive bits of the key, and is thus O(KN) for N K-bit keys. Note that all <a href="/wiki/Comparison_sort" title="Comparison sort">comparison sort</a> algorithms effectively assume an ideal K of O(logN) as if k is smaller we can sort in O(N) using a hash table or <a href="/wiki/Integer_sorting" title="Integer sorting">integer sorting</a>, and if K &gt;&gt; logN but elements are unique within O(logN) bits, the remaining bits will not be looked at by either quicksort or quick radix sort, and otherwise all comparison sorting algorithms will also have the same overhead of looking through O(K) relatively useless bits but quick radix sort will avoid the worst case O(N<sup>2</sup>) behaviours of standard quicksort and quick radix sort, and will be faster even in the best case of those comparison algorithms under these conditions of uniqueprefix(K) &gt;&gt; logN. See Powers <sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup> for further discussion of the hidden overheads in comparison, radix and parallel sorting.</li>
+</ul>
+<h3><span class="mw-headline" id="Generalization">Generalization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=18" title="Edit section: Generalization">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Richard Cole and David C. Kandathil, in 2004, discovered a one-parameter family of sorting algorithms, called partition sorts, which on average (with all input orderings equally likely) perform at most <img class="tex" alt="n\log n + {O}(n)" src="//upload.wikimedia.org/math/5/a/2/5a23e7dfa462feb5e91069482af8c7aa.png" /> comparisons (close to the information theoretic lower bound) and <img class="tex" alt="{\Theta}(n\log n)" src="//upload.wikimedia.org/math/a/c/1/ac1dd5350b6aef9761f4f8d40e52d6df.png" /> operations; at worst they perform <img class="tex" alt="{\Theta}(n\log^2 n)" src="//upload.wikimedia.org/math/9/e/2/9e2fb9a58c7862df0eb6141edf75d1de.png" /> comparisons (and also operations); these are in-place, requiring only additional <img class="tex" alt="{O}(\log n)" src="//upload.wikimedia.org/math/b/d/6/bd6050c2618cfa91378c68d57b6caa3d.png" /> space. Practical efficiency and smaller variance in performance were demonstrated against optimised quicksorts (of <a href="/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick</a> and <a href="/wiki/Jon_Bentley" title="Jon Bentley">Bentley</a>-<a href="/wiki/Douglas_McIlroy" title="Douglas McIlroy">McIlroy</a>).<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=19" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Introsort" title="Introsort">Introsort</a></li>
+<li><a href="/wiki/Flashsort" title="Flashsort">Flashsort</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=20" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation book">Steven S. Skiena (27 April 2011). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=7XUSn0IKQEgC"><i>The Algorithm Design Manual</i></a>. Springer. p.&#160;129. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-84800-069-8" title="Special:BookSources/978-1-84800-069-8">978-1-84800-069-8</a><span class="reference-accessdate">. Retrieved 27 November 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.aulast=Steven+S.+Skiena&amp;rft.au=Steven+S.+Skiena&amp;rft.btitle=The+Algorithm+Design+Manual&amp;rft.date=27+April+2011&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D7XUSn0IKQEgC&amp;rft.isbn=978-1-84800-069-8&amp;rft.pages=129&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.cs.auckland.ac.nz/~jmor159/PLDS210/qsort1a.html">"Data structures and algorithm: Quicksort"</a>. Auckland University.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.btitle=Data+structures+and+algorithm%3A+Quicksort&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.auckland.ac.nz%2F~jmor159%2FPLDS210%2Fqsort1a.html&amp;rft.pub=Auckland+University&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation journal">Shustek, L. (2009). "Interview: An interview with C.A.R. Hoare". <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Comm. ACM</a></i> <b>52</b> (3): 38–41. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F1467247.1467261">10.1145/1467247.1467261</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Interview%3A+An+interview+with+C.A.R.+Hoare&amp;rft.aufirst=L.&amp;rft.aulast=Shustek&amp;rft.au=Shustek%2C+L.&amp;rft.date=2009&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F1467247.1467261&amp;rft.issue=3&amp;rft.jtitle=Comm.+ACM&amp;rft.pages=38%E2%80%9341&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=52" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F1467247.1467261&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+<li id="cite_note-engineering-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-engineering_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-engineering_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-engineering_4-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-engineering_4-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><span class="citation journal">Bentley, Jon L.; McIlroy, M. Douglas (1993). <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.14.8162">"Engineering a sort function"</a>. <i>Software—Practice and Experience</i> <b>23</b> (11): 1249–1265.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Engineering+a+sort+function&amp;rft.au=Bentley%2C+Jon+L.&amp;rft.aufirst=Jon+L.&amp;rft.aulast=Bentley&amp;rft.au=McIlroy%2C+M.+Douglas&amp;rft.date=1993&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.14.8162&amp;rft.issue=11&amp;rft.jtitle=Software%E2%80%94Practice+and+Experience&amp;rft.pages=1249%E2%80%931265&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=23" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-sedgewickBook-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-sedgewickBook_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-sedgewickBook_5-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book"><a href="/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick, Robert</a> (1 September 1998). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=ylAETlep0CwC"><i>Algorithms In C: Fundamentals, Data Structures, Sorting, Searching, Parts 1-4</i></a> (3 ed.). Pearson Education. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-81-317-1291-7" title="Special:BookSources/978-81-317-1291-7">978-81-317-1291-7</a><span class="reference-accessdate">. Retrieved 27 November 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.aufirst=Robert&amp;rft.aulast=Sedgewick&amp;rft.au=Sedgewick%2C+Robert&amp;rft.btitle=Algorithms+In+C%3A+Fundamentals%2C+Data+Structures%2C+Sorting%2C+Searching%2C+Parts+1-4&amp;rft.date=1+September+1998&amp;rft.edition=3&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DylAETlep0CwC&amp;rft.isbn=978-81-317-1291-7&amp;rft.pub=Pearson+Education&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-glibc_qsort-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-glibc_qsort_6-0">^</a></b></span> <span class="reference-text">qsort.c in <a href="/wiki/GNU_libc" title="GNU libc" class="mw-redirect">GNU libc</a>: <a rel="nofollow" class="external autonumber" href="http://www.cs.columbia.edu/~hgs/teaching/isp/hw/qsort.c">[1]</a>, <a rel="nofollow" class="external autonumber" href="http://repo.or.cz/w/glibc.git/blob/HEAD:/stdlib/qsort.c">[2]</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.ugrad.cs.ubc.ca/~cs260/chnotes/ch6/Ch6CovCompiled.html">http://www.ugrad.cs.ubc.ca/~cs260/chnotes/ch6/Ch6CovCompiled.html</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="citation book">Jon Bentley (1999). <i>Programming Pearls</i>. Addison-Wesley Professional.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.au=Jon+Bentley&amp;rft.aulast=Jon+Bentley&amp;rft.btitle=Programming+Pearls&amp;rft.date=1999&amp;rft.genre=book&amp;rft.pub=Addison-Wesley+Professional&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="citation book">Miller, Russ; Boxer, Laurence (2000). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=dZoZAQAAIAAJ"><i>Algorithms sequential &amp; parallel: a unified approach</i></a>. Prentice Hall. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-13-086373-7" title="Special:BookSources/978-0-13-086373-7">978-0-13-086373-7</a><span class="reference-accessdate">. Retrieved 27 November 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.au=Boxer%2C+Laurence&amp;rft.aufirst=Russ&amp;rft.aulast=Miller&amp;rft.au=Miller%2C+Russ&amp;rft.btitle=Algorithms+sequential+%26+parallel%3A+a+unified+approach&amp;rft.date=2000&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DdZoZAQAAIAAJ&amp;rft.isbn=978-0-13-086373-7&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">David M. W. Powers, <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/327487.html">Parallelized Quicksort and Radixsort with Optimal Speedup</a>, <i>Proceedings of International Conference on Parallel Computing Technologies</i>. <a href="/wiki/Novosibirsk" title="Novosibirsk">Novosibirsk</a>. 1991.</span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><span class="citation journal">McIlroy, M. D. (1999). "A killer adversary for quicksort". <i>Software: Practice and Experience</i> <b>29</b> (4): 341–237. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1002%2F%28SICI%291097-024X%2819990410%2929%3A4%3C341%3A%3AAID-SPE237%3E3.3.CO%3B2-I">10.1002/(SICI)1097-024X(19990410)29:4&lt;341::AID-SPE237&gt;3.3.CO;2-I</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=A+killer+adversary+for+quicksort&amp;rft.aufirst=M.+D.&amp;rft.aulast=McIlroy&amp;rft.au=McIlroy%2C+M.+D.&amp;rft.date=1999&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1002%2F%28SICI%291097-024X%2819990410%2929%3A4%3C341%3A%3AAID-SPE237%3E3.3.CO%3B2-I&amp;rft.issue=4&amp;rft.jtitle=Software%3A+Practice+and+Experience&amp;rft.pages=341%E2%80%93237&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=29" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1002.2F.28SICI.291097-024X.2819990410.2929:43.3.CO.3B2-I&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+<li id="cite_note-sedgewickQsortPaper-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-sedgewickQsortPaper_12-0">^</a></b></span> <span class="reference-text"><span class="citation journal"><a href="/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick, R.</a> (1978). "Implementing Quicksort programs". <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Comm. ACM</a></i> <b>21</b> (10): 847–857. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F359619.359631">10.1145/359619.359631</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Implementing+Quicksort+programs&amp;rft.aufirst=R.&amp;rft.aulast=Sedgewick&amp;rft.au=Sedgewick%2C+R.&amp;rft.date=1978&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F359619.359631&amp;rft.issue=10&amp;rft.jtitle=Comm.+ACM&amp;rft.pages=847%E2%80%93857&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=21" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F359619.359631&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><span class="citation web">Hsieh, Paul (2004). <a rel="nofollow" class="external text" href="http://www.azillionmonkeys.com/qed/sort.html">"Sorting revisited."</a>. www.azillionmonkeys.com<span class="reference-accessdate">. Retrieved 26 April 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.aufirst=Paul&amp;rft.au=Hsieh%2C+Paul&amp;rft.aulast=Hsieh&amp;rft.btitle=Sorting+revisited.&amp;rft.date=2004&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.azillionmonkeys.com%2Fqed%2Fsort.html&amp;rft.pub=www.azillionmonkeys.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><span class="citation web">MacKay, David (1 December 2005). <a rel="nofollow" class="external text" href="http://users.aims.ac.za/~mackay/sorting/sorting.html">"Heapsort, Quicksort, and Entropy"</a>. users.aims.ac.za/~mackay<span class="reference-accessdate">. Retrieved 26 April 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.aufirst=David&amp;rft.aulast=MacKay&amp;rft.au=MacKay%2C+David&amp;rft.btitle=Heapsort%2C+Quicksort%2C+and+Entropy&amp;rft.date=1+December+2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fusers.aims.ac.za%2F~mackay%2Fsorting%2Fsorting.html&amp;rft.pub=users.aims.ac.za%2F~mackay&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text">David M. W. Powers, <a rel="nofollow" class="external text" href="http://david.wardpowers.info/Research/AI/papers/199501-ACAW-PUPC.pdf">Parallel Unification: Practical Complexity</a>, Australasian Computer Architecture Workshop, Flinders University, January 1995</span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text">Richard Cole, David C. Kandathil: <a rel="nofollow" class="external text" href="http://www.cs.nyu.edu/cole/papers/part-sort.pdf">"The average case analysis of Partition sorts"</a>, European Symposium on Algorithms, 14–17 September 2004, Bergen, Norway. Published: Lecture Notes in Computer Science 3221, Springer Verlag, pp. 240-251.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=21" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="citation journal"><a href="/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick, R.</a> (1978). "Implementing Quicksort programs". <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Comm. ACM</a></i> <b>21</b> (10): 847–857. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F359619.359631">10.1145/359619.359631</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Implementing+Quicksort+programs&amp;rft.aufirst=R.&amp;rft.aulast=Sedgewick&amp;rft.au=Sedgewick%2C+R.&amp;rft.date=1978&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F359619.359631&amp;rft.issue=10&amp;rft.jtitle=Comm.+ACM&amp;rft.pages=847%E2%80%93857&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=21" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F359619.359631&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></li>
+<li><span class="citation journal">Dean, B. C. (2006). "A simple expected running time analysis for randomized "divide and conquer" algorithms". <i>Discrete Applied Mathematics</i> <b>154</b>: 1–5. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1016%2Fj.dam.2005.07.005">10.1016/j.dam.2005.07.005</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=A+simple+expected+running+time+analysis+for+randomized+%22divide+and+conquer%22+algorithms&amp;rft.au=Dean%2C+B.+C.&amp;rft.aufirst=B.+C.&amp;rft.aulast=Dean&amp;rft.date=2006&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1016%2Fj.dam.2005.07.005&amp;rft.jtitle=Discrete+Applied+Mathematics&amp;rft.pages=1%E2%80%935&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=154" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1016.2Fj.dam.2005.07.00510.1016.2Fj.dam.2005.07.005&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></li>
+<li><span class="citation journal"><a href="/wiki/Tony_Hoare" title="Tony Hoare">Hoare, C. A. R.</a> (1961). "Algorithm 63: Partition". <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Comm. ACM</a></i> <b>4</b> (7): 321. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F366622.366642">10.1145/366622.366642</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Algorithm+63%3A+Partition&amp;rft.aufirst=C.+A.+R.&amp;rft.au=Hoare%2C+C.+A.+R.&amp;rft.aulast=Hoare&amp;rft.date=1961&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F366622.366642&amp;rft.issue=7&amp;rft.jtitle=Comm.+ACM&amp;rft.pages=321&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=4" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F366622.366642&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></li>
+<li><span class="citation journal"><a href="/wiki/Tony_Hoare" title="Tony Hoare">Hoare, C. A. R.</a> (1961). "Algorithm 64: Quicksort". <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Comm. ACM</a></i> <b>4</b> (7): 321. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F366622.366644">10.1145/366622.366644</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Algorithm+64%3A+Quicksort&amp;rft.aufirst=C.+A.+R.&amp;rft.au=Hoare%2C+C.+A.+R.&amp;rft.aulast=Hoare&amp;rft.date=1961&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F366622.366644&amp;rft.issue=7&amp;rft.jtitle=Comm.+ACM&amp;rft.pages=321&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=4" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F366622.366644&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></li>
+<li><span class="citation journal"><a href="/wiki/Tony_Hoare" title="Tony Hoare">Hoare, C. A. R.</a> (1961). "Algorithm 65: Find". <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Comm. ACM</a></i> <b>4</b> (7): 321–322. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F366622.366647">10.1145/366622.366647</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Algorithm+65%3A+Find&amp;rft.aufirst=C.+A.+R.&amp;rft.au=Hoare%2C+C.+A.+R.&amp;rft.aulast=Hoare&amp;rft.date=1961&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F366622.366647&amp;rft.issue=7&amp;rft.jtitle=Comm.+ACM&amp;rft.pages=321%E2%80%93322&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=4" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F366622.366647&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></li>
+<li><span class="citation journal"><a href="/wiki/Tony_Hoare" title="Tony Hoare">Hoare, C. A. R.</a> (1962). "Quicksort". <i><a href="/wiki/The_Computer_Journal" title="The Computer Journal">Comput. J.</a></i> <b>5</b> (1): 10–16. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1093%2Fcomjnl%2F5.1.10">10.1093/comjnl/5.1.10</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Quicksort&amp;rft.aufirst=C.+A.+R.&amp;rft.au=Hoare%2C+C.+A.+R.&amp;rft.aulast=Hoare&amp;rft.date=1962&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1093%2Fcomjnl%2F5.1.10&amp;rft.issue=1&amp;rft.jtitle=Comput.+J.&amp;rft.pages=10%E2%80%9316&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=5" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1093.2Fcomjnl.2F5.1.10&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span> (Reprinted in Hoare and Jones: <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=SERIES11430.63445"><i>Essays in computing science</i></a>, 1989.)</li>
+<li><span id="CITEREFMusser1997" class="citation journal"><a href="/wiki/David_Musser" title="David Musser">Musser, David R.</a> (1997). <a rel="nofollow" class="external text" href="http://www.cs.rpi.edu/~musser/gp/introsort.ps">"Introspective Sorting and Selection Algorithms"</a>. <i>Software: Practice and Experience</i> (Wiley) <b>27</b> (8): 983–993. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1002%2F%28SICI%291097-024X%28199708%2927%3A8%3C983%3A%3AAID-SPE117%3E3.0.CO%3B2-%23">10.1002/(SICI)1097-024X(199708)27:8&lt;983::AID-SPE117&gt;3.0.CO;2-#</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Introspective+Sorting+and+Selection+Algorithms&amp;rft.aufirst=David+R.&amp;rft.aulast=Musser&amp;rft.au=Musser%2C+David+R.&amp;rft.date=1997&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.cs.rpi.edu%2F~musser%2Fgp%2Fintrosort.ps&amp;rft_id=info%3Adoi%2F10.1002%2F%28SICI%291097-024X%28199708%2927%3A8%3C983%3A%3AAID-SPE117%3E3.0.CO%3B2-%23&amp;rft.issue=8&amp;rft.jtitle=Software%3A+Practice+and+Experience&amp;rft.pages=983%E2%80%93993&amp;rft.pub=Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=27" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1002.2F.28SICI.291097-024X.28199708.2927:83.0.CO.3B2-.23&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></li>
+<li><a href="/wiki/Donald_Knuth" title="Donald Knuth">Donald Knuth</a>. <i>The Art of Computer Programming</i>, Volume 3: <i>Sorting and Searching</i>, Third Edition. Addison-Wesley, 1997. <a href="/wiki/Special:BookSources/0201896850" class="internal mw-magiclink-isbn">ISBN 0-201-89685-0</a>. Pages 113–122 of section 5.2.2: Sorting by Exchanging.</li>
+<li><a href="/wiki/Thomas_H._Cormen" title="Thomas H. Cormen">Thomas H. Cormen</a>, <a href="/wiki/Charles_E._Leiserson" title="Charles E. Leiserson">Charles E. Leiserson</a>, <a href="/wiki/Ronald_L._Rivest" title="Ronald L. Rivest" class="mw-redirect">Ronald L. Rivest</a>, and <a href="/wiki/Clifford_Stein" title="Clifford Stein">Clifford Stein</a>. <i><a href="/wiki/Introduction_to_Algorithms" title="Introduction to Algorithms">Introduction to Algorithms</a></i>, Second Edition. <a href="/wiki/MIT_Press" title="MIT Press">MIT Press</a> and <a href="/wiki/McGraw-Hill" title="McGraw-Hill" class="mw-redirect">McGraw-Hill</a>, 2001. <a href="/wiki/Special:BookSources/0262032937" class="internal mw-magiclink-isbn">ISBN 0-262-03293-7</a>. Chapter 7: Quicksort, pp.&#160;145–164.</li>
+<li>A. LaMarca and R. E. Ladner. "The Influence of Caches on the Performance of Sorting." Proceedings of the Eighth Annual ACM-SIAM Symposium on Discrete Algorithms, 1997. pp.&#160;370–379.</li>
+<li><a href="/wiki/Faron_Moller" title="Faron Moller">Faron Moller</a>. <a rel="nofollow" class="external text" href="http://www.cs.swan.ac.uk/~csfm/Courses/CS_332/quicksort.pdf">Analysis of Quicksort</a>. CS 332: Designing Algorithms. Department of Computer Science, <a href="/wiki/Swansea_University" title="Swansea University">Swansea University</a>.</li>
+<li><span class="citation journal">Martínez, C.; Roura, S. (2001). "Optimal Sampling Strategies in Quicksort and Quickselect". <i><a href="/wiki/SIAM_Journal_on_Computing" title="SIAM Journal on Computing">SIAM J. Comput.</a></i> <b>31</b> (3): 683–705. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1137%2FS0097539700382108">10.1137/S0097539700382108</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Optimal+Sampling+Strategies+in+Quicksort+and+Quickselect&amp;rft.aufirst=C.&amp;rft.aulast=Mart%C3%ADnez&amp;rft.au=Mart%C3%ADnez%2C+C.&amp;rft.au=Roura%2C+S.&amp;rft.date=2001&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1137%2FS0097539700382108&amp;rft.issue=3&amp;rft.jtitle=SIAM+J.+Comput.&amp;rft.pages=683%E2%80%93705&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=31" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1137.2FS0097539700382108&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></li>
+<li><span class="citation journal">Bentley, J. L.; McIlroy, M. D. (1993). "Engineering a sort function". <i>Software: Practice and Experience</i> <b>23</b> (11): 1249–1265. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1002%2Fspe.4380231105">10.1002/spe.4380231105</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AQuicksort&amp;rft.atitle=Engineering+a+sort+function&amp;rft.au=Bentley%2C+J.+L.&amp;rft.aufirst=J.+L.&amp;rft.aulast=Bentley&amp;rft.au=McIlroy%2C+M.+D.&amp;rft.date=1993&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1002%2Fspe.4380231105&amp;rft.issue=11&amp;rft.jtitle=Software%3A+Practice+and+Experience&amp;rft.pages=1249%E2%80%931265&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=23" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1002.2Fspe.4380231105&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Quicksort&amp;action=edit&amp;section=22" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">The Wikibook <i><a href="//en.wikibooks.org/wiki/Algorithm_implementation" class="extiw" title="wikibooks:Algorithm implementation">Algorithm implementation</a></i> has a page on the topic of: <i><b><a href="//en.wikibooks.org/wiki/Algorithm_implementation/Sorting/Quicksort" class="extiw" title="wikibooks:Algorithm implementation/Sorting/Quicksort">Quicksort</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.sorting-algorithms.com/quick-sort">Animated Sorting Algorithms: Quick Sort</a> – graphical demonstration and discussion of quick sort</li>
+<li><a rel="nofollow" class="external text" href="http://www.sorting-algorithms.com/quick-sort-3-way">Animated Sorting Algorithms: 3-Way Partition Quick Sort</a> – graphical demonstration and discussion of 3-way partition quick sort</li>
+<li><a rel="nofollow" class="external text" href="http://pages.stern.nyu.edu/~panos/java/Quicksort/index.html">Interactive Tutorial for Quicksort</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.yorku.ca/sychen/research/sorting/index.html">Quicksort applet</a> with "level-order" recursive calls to help improve algorithm analysis</li>
+<li><a rel="nofollow" class="external text" href="http://opendatastructures.org/versions/edition-0.1e/ods-java/11_1_Comparison_Based_Sorti.html#SECTION001412000000000000000">Open Data Structures - Section 11.1.2 - Quicksort</a></li>
+<li><a rel="nofollow" class="external text" href="http://en.literateprograms.org/Category:Quicksort">Literate implementations of Quicksort in various languages</a> on LiteratePrograms</li>
+<li><a rel="nofollow" class="external text" href="http://coderaptors.com/?QuickSort">A colored graphical Java applet</a> which allows experimentation with initial state and shows statistics</li>
+<li><a rel="nofollow" class="external text" href="http://h2database.googlecode.com/svn/trunk/h2/src/tools/org/h2/dev/sort/InPlaceStableQuicksort.java">An in-place, stable Quicksort</a> (Java) which runs in <i>O</i>(<i>n</i> log <i>n</i> log <i>n</i>) time.</li>
+</ul>
+<div style="clear:both;"></div>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Sorting" title="Template:Sorting"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Sorting" title="Template talk:Sorting"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Sorting&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="/wiki/Sorting_algorithm" title="Sorting algorithm">Sorting algorithms</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Theory</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Computational_complexity_theory" title="Computational complexity theory">Computational complexity theory</a></li>
+<li><a href="/wiki/Big_O_notation" title="Big O notation">Big O notation</a></li>
+<li><a href="/wiki/Total_order" title="Total order">Total order</a></li>
+<li><a href="/wiki/List_(computing)" title="List (computing)" class="mw-redirect">Lists</a></li>
+<li><a href="/wiki/In-place_algorithm" title="In-place algorithm">Inplacement</a></li>
+<li><a href="/wiki/Sorting_algorithm#Stability" title="Sorting algorithm">Stability</a></li>
+<li><a href="/wiki/Comparison_sort" title="Comparison sort">Comparison sort</a></li>
+<li><a href="/wiki/Adaptive_sort" title="Adaptive sort">Adaptive sort</a></li>
+<li><a href="/wiki/Sorting_network" title="Sorting network">Sorting network</a></li>
+<li><a href="/wiki/Integer_sorting" title="Integer sorting">Integer sorting</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Exchange sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Bubble_sort" title="Bubble sort">Bubble sort</a></li>
+<li><a href="/wiki/Cocktail_sort" title="Cocktail sort">Cocktail sort</a></li>
+<li><a href="/wiki/Odd%E2%80%93even_sort" title="Odd–even sort">Odd–even sort</a></li>
+<li><a href="/wiki/Comb_sort" title="Comb sort">Comb sort</a></li>
+<li><a href="/wiki/Gnome_sort" title="Gnome sort">Gnome sort</a></li>
+<li><strong class="selflink">Quicksort</strong></li>
+<li><a href="/wiki/Stooge_sort" title="Stooge sort">Stooge sort</a></li>
+<li><a href="/wiki/Bogosort" title="Bogosort">Bogosort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Selection_algorithm" title="Selection algorithm">Selection sorts</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Selection_sort" title="Selection sort">Selection sort</a></li>
+<li><a href="/wiki/Heapsort" title="Heapsort">Heapsort</a></li>
+<li><a href="/wiki/Smoothsort" title="Smoothsort">Smoothsort</a></li>
+<li><a href="/wiki/Cartesian_tree#Application_in_sorting" title="Cartesian tree">Cartesian tree sort</a></li>
+<li><a href="/wiki/Tournament_sort" title="Tournament sort">Tournament sort</a></li>
+<li><a href="/wiki/Cycle_sort" title="Cycle sort">Cycle sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Insertion sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Insertion_sort" title="Insertion sort">Insertion sort</a></li>
+<li><a href="/wiki/Shellsort" title="Shellsort">Shellsort</a></li>
+<li><a href="/wiki/Splaysort" title="Splaysort">Splaysort</a></li>
+<li><a href="/wiki/Tree_sort" title="Tree sort">Tree sort</a></li>
+<li><a href="/wiki/Library_sort" title="Library sort">Library sort</a></li>
+<li><a href="/wiki/Patience_sorting" title="Patience sorting">Patience sorting</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Merge sorts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Merge_sort" title="Merge sort">Merge sort</a></li>
+<li><a href="/wiki/Cascade_merge_sort" title="Cascade merge sort">Cascade merge sort</a></li>
+<li><a href="/wiki/Oscillating_merge_sort" title="Oscillating merge sort">Oscillating merge sort</a></li>
+<li><a href="/wiki/Polyphase_merge_sort" title="Polyphase merge sort">Polyphase merge sort</a></li>
+<li><a href="/wiki/Strand_sort" title="Strand sort">Strand sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Distribution sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/American_flag_sort" title="American flag sort">American flag sort</a></li>
+<li><a href="/wiki/Bead_sort" title="Bead sort">Bead sort</a></li>
+<li><a href="/wiki/Bucket_sort" title="Bucket sort">Bucket sort</a></li>
+<li><a href="/wiki/Burstsort" title="Burstsort">Burstsort</a></li>
+<li><a href="/wiki/Counting_sort" title="Counting sort">Counting sort</a></li>
+<li><a href="/wiki/Pigeonhole_sort" title="Pigeonhole sort">Pigeonhole sort</a></li>
+<li><a href="/wiki/Proxmap_sort" title="Proxmap sort">Proxmap sort</a></li>
+<li><a href="/wiki/Radix_sort" title="Radix sort">Radix sort</a></li>
+<li><a href="/wiki/Flashsort" title="Flashsort">Flashsort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Concurrent sorts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Bitonic_sorter" title="Bitonic sorter">Bitonic sorter</a></li>
+<li><a href="/wiki/Batcher_odd%E2%80%93even_mergesort" title="Batcher odd–even mergesort">Batcher odd–even mergesort</a></li>
+<li><a href="/wiki/Pairwise_sorting_network" title="Pairwise sorting network">Pairwise sorting network</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Hybrid_algorithm" title="Hybrid algorithm">Hybrid sorts</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Timsort" title="Timsort">Timsort</a></li>
+<li><a href="/wiki/Introsort" title="Introsort">Introsort</a></li>
+<li><a href="/wiki/Spreadsort" title="Spreadsort">Spreadsort</a></li>
+<li><a href="/wiki/UnShuffle_sort" title="UnShuffle sort">UnShuffle sort</a></li>
+<li><a href="/wiki/JSort" title="JSort">JSort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Topological_sorting" title="Topological sorting">Topological sorting</a></li>
+<li><a href="/wiki/Pancake_sorting" title="Pancake sorting">Pancake sorting</a></li>
+<li><a href="/wiki/Spaghetti_sort" title="Spaghetti sort">Spaghetti sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1207
+CPU time usage: 0.992 seconds
+Real time usage: 1.179 seconds
+Preprocessor visited node count: 3080/1000000
+Preprocessor generated node count: 8751/1500000
+Post‐expand include size: 117806/2048000 bytes
+Template argument size: 4274/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 14/500
+Lua time usage: 0.088/10.000 seconds
+Lua memory usage: 2.3 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:3268249-0!*!0!!en!4!*!math=0 and timestamp 20140320124959
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Quicksort&amp;oldid=600443965">http://en.wikipedia.org/w/index.php?title=Quicksort&amp;oldid=600443965</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Sorting_algorithms" title="Category:Sorting algorithms">Sorting algorithms</a></li><li><a href="/wiki/Category:Comparison_sorts" title="Category:Comparison sorts">Comparison sorts</a></li><li><a href="/wiki/Category:1961_in_science" title="Category:1961 in science">1961 in science</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_using_fixed_number_of_columns_in_reflist" title="Category:Articles using fixed number of columns in reflist">Articles using fixed number of columns in reflist</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_January_2012" title="Category:Use dmy dates from January 2012">Use dmy dates from January 2012</a></li><li><a href="/wiki/Category:Articles_with_example_pseudocode" title="Category:Articles with example pseudocode">Articles with example pseudocode</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Quicksort&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Quicksort" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Quicksort"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Quicksort"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Quicksort" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Quicksort&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Quicksort&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Quicksort" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Quicksort" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Quicksort&amp;oldid=600443965" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Quicksort&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q486598" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Quicksort&amp;id=600443965" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Quicksort">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Quicksort&amp;oldid=600443965&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Quicksort&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8_%D8%B3%D8%B1%D9%8A%D8%B9" title="ترتيب سريع – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bn"><a href="//bn.wikipedia.org/wiki/%E0%A6%95%E0%A7%81%E0%A6%87%E0%A6%95_%E0%A6%B8%E0%A6%B0%E0%A7%8D%E0%A6%9F" title="কুইক সর্ট – Bengali" lang="bn" hreflang="bn">বাংলা</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="//bg.wikipedia.org/wiki/%D0%91%D1%8A%D1%80%D0%B7%D0%BE_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%B0%D0%BD%D0%B5" title="Бързо сортиране – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="//ca.wikipedia.org/wiki/Quicksort" title="Quicksort – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="//cs.wikipedia.org/wiki/Quicksort" title="Quicksort – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="//de.wikipedia.org/wiki/Quicksort" title="Quicksort – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="//es.wikipedia.org/wiki/Quicksort" title="Quicksort – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AA%D8%A8%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C_%D8%B3%D8%B1%DB%8C%D8%B9" title="مرتب‌سازی سریع – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/Tri_rapide" title="Tri rapide – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="//ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC" title="퀵 정렬 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hy"><a href="//hy.wikipedia.org/wiki/%D4%B1%D6%80%D5%A1%D5%A3_%D5%BF%D5%A5%D5%BD%D5%A1%D5%AF%D5%A1%D5%BE%D5%B8%D6%80%D5%B8%D6%82%D5%B4" title="Արագ տեսակավորում – Armenian" lang="hy" hreflang="hy">Հայերեն</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="//id.wikipedia.org/wiki/Quicksort" title="Quicksort – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-is"><a href="//is.wikipedia.org/wiki/Snarr%C3%B6%C3%B0un" title="Snarröðun – Icelandic" lang="is" hreflang="is">Íslenska</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="//it.wikipedia.org/wiki/Quicksort" title="Quicksort – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="//he.wikipedia.org/wiki/%D7%9E%D7%99%D7%95%D7%9F_%D7%9E%D7%94%D7%99%D7%A8" title="מיון מהיר – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-kk"><a href="//kk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%B7_%D1%81%D2%B1%D1%80%D1%8B%D0%BF%D1%82%D0%B0%D1%83" title="Тез сұрыптау – Kazakh" lang="kk" hreflang="kk">Қазақша</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="//lv.wikipedia.org/wiki/%C4%80tr%C4%81s_k%C4%81rto%C5%A1anas_algoritms" title="Ātrās kārtošanas algoritms – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-lt"><a href="//lt.wikipedia.org/wiki/Greitojo_rikiavimo_algoritmas" title="Greitojo rikiavimo algoritmas – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="//hu.wikipedia.org/wiki/Gyorsrendez%C3%A9s" title="Gyorsrendezés – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="//nl.wikipedia.org/wiki/Quicksort" title="Quicksort – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="//ja.wikipedia.org/wiki/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E3%82%BD%E3%83%BC%E3%83%88" title="クイックソート – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="//no.wikipedia.org/wiki/Sorteringsalgoritme#Quick_sort" title="Sorteringsalgoritme – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-uz"><a href="//uz.wikipedia.org/wiki/Quicksort" title="Quicksort – Uzbek" lang="uz" hreflang="uz">Oʻzbekcha</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="//pl.wikipedia.org/wiki/Sortowanie_szybkie" title="Sortowanie szybkie – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="//pt.wikipedia.org/wiki/Quicksort" title="Quicksort – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ro"><a href="//ro.wikipedia.org/wiki/Quicksort" title="Quicksort – Romanian" lang="ro" hreflang="ro">Română</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="//ru.wikipedia.org/wiki/%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0" title="Быстрая сортировка – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="//sk.wikipedia.org/wiki/Quicksort" title="Quicksort – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="//sl.wikipedia.org/wiki/Hitro_urejanje" title="Hitro urejanje – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="//sr.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B8%D0%BA%D1%81%D0%BE%D1%80%D1%82" title="Квиксорт – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-sh"><a href="//sh.wikipedia.org/wiki/Quicksort" title="Quicksort – Serbo-Croatian" lang="sh" hreflang="sh">Srpskohrvatski / српскохрватски</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="//fi.wikipedia.org/wiki/Pikalajittelu" title="Pikalajittelu – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="//sv.wikipedia.org/wiki/Quicksort" title="Quicksort – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="//tr.wikipedia.org/wiki/H%C4%B1zl%C4%B1_s%C4%B1ralama" title="Hızlı sıralama – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="//uk.wikipedia.org/wiki/%D0%A8%D0%B2%D0%B8%D0%B4%D0%BA%D0%B5_%D1%81%D0%BE%D1%80%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" title="Швидке сортування – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="//vi.wikipedia.org/wiki/S%E1%BA%AFp_x%E1%BA%BFp_nhanh" title="Sắp xếp nhanh – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="//zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F" title="快速排序 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="//www.wikidata.org/wiki/Q486598#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 20 March 2014 at 12:49.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/wiki/Quicksort" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1169 in 0.366 secs. -->
+	</body>
+</html>
