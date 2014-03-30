@@ -3,18 +3,17 @@ var app = express();
 var fs = require('fs');
 
 var tesseract = require('./server_methods/tesseract_call.js').execute;
+var sanitize = require('./server_methods/sanitize_picture.js').execute;
+
 app.use(express.bodyParser({ keepExtensions: true, uploadDir: './images'}));
 app.use(express.static(__dirname + '/public'));
-
-app.post('/mobile', function(req, res) {
-  console.log(req);
-});
 
 // Handle requests (assumes that the request comes with an image file)
 app.post('/web', function(req, res) {
     console.log('req: ' + req.files);
   var time1 = new Date().getTime();
   var outputPath = './output/out' + time1;
+  var preOutputPath = 'pre' + outputPath;
 
   // Should we refine images before giving them to tesseract?
   // Could be a bonus project
@@ -28,16 +27,12 @@ app.post('/web', function(req, res) {
 //        console.log('exec error: ' + error);
 //    }
 //
+  
+  santize(req.files.image.path,  
     tesseract(req.files.image.path, outputPath, function(imagePath, outputPath) {
       // Used to measure the amount of time tesseract takes
       var time2 = new Date().getTime();
       console.log('Time taken (ms): ' + (time2 - time1));
-
-      // Print the output to ensure it is correct
-      // var output = fs.readFileSync(outputPath + '.txt');
-      // console.log('tesseract output: ' + output);
-
-      // Do some nifty error-checking and markov stuff
 
 	fs.readFile(outputPath + '.txt', 'utf8', function(err, data) {
 	    if (err) throw err;
