@@ -1,12 +1,15 @@
 package com.comparty.photon;
 
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.comparty.photon.spritz.Spritzer;
 import com.comparty.photon.spritz.SpritzerTextView;
@@ -16,6 +19,13 @@ public class SpritzFragment extends Fragment {
 
 	boolean playing = false;
 
+	ImageButton startButton;
+	TextView wpmText;
+
+	public interface Callback {
+		public void done();
+	};
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -24,22 +34,76 @@ public class SpritzFragment extends Fragment {
 		SpritzerTextView textView = (SpritzerTextView) rootView.findViewById(R.id.spritzer);
 
 		s = new Spritzer(textView);
-		s.setText(stuff);
-		s.setWpm(500);
+		s.setCallback(new Callback() {
+			public void done() {
+				startButton.setImageResource(R.drawable.ic_media_play);
+				playing = false;
+			}
+		});
 
-		ImageButton startButton = (ImageButton) rootView.findViewById(R.id.start_pause);
+		s.setText(stuff);
+		s.setWpm(((MainActivity) getActivity()).wpm);
+
+		startButton = (ImageButton) rootView.findViewById(R.id.start_pause);
 		startButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				if (!playing) {
 					s.start();
 					playing = true;
-					
+					startButton.setImageResource(R.drawable.ic_media_pause);
 				} else {
 					s.pause();
 					playing = false;
+					startButton.setImageResource(R.drawable.ic_media_play);
 				}
 			}
 		});
+
+		ImageButton restartButton = (ImageButton) rootView.findViewById(R.id.restart);
+		restartButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				s.clearText();
+				s.setText(stuff);
+				s.start();
+			}
+		});
+
+		ImageButton close = (ImageButton) rootView.findViewById(R.id.close);
+		close.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
+				ft.setCustomAnimations(R.animator.nochange, R.animator.alpha_out);
+				ft.remove(SpritzFragment.this);
+				ft.commit();
+			}
+		});
+
+		Button plus = (Button) rootView.findViewById(R.id.faster);
+		plus.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				((MainActivity) getActivity()).wpm += 50;
+				if (((MainActivity) getActivity()).wpm > 1500)
+					((MainActivity) getActivity()).wpm = 1500;
+
+				s.setWpm(((MainActivity) getActivity()).wpm);
+				wpmText.setText(((MainActivity) getActivity()).wpm+"wpm");
+			}
+		});
+
+		Button minus = (Button) rootView.findViewById(R.id.slower);
+		minus.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				((MainActivity) getActivity()).wpm -= 50;
+				if (((MainActivity) getActivity()).wpm < 100)
+					((MainActivity) getActivity()).wpm = 100;
+				s.setWpm(((MainActivity) getActivity()).wpm);
+				wpmText.setText(((MainActivity) getActivity()).wpm+"wpm");
+			}
+		});
+
+		wpmText = (TextView) rootView.findViewById(R.id.speed);
+		wpmText.setText(((MainActivity) getActivity()).wpm+"wpm");
+
 
 		return rootView;
 	}

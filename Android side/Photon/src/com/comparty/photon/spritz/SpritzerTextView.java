@@ -157,7 +157,7 @@ public class SpritzerTextView extends TextView implements View.OnClickListener {
     private int calculatePivotXOffset() {
         // Measure the rendered distance of CHARS_LEFT_OF_PIVOT chars
         // plus half the pivot character
-        return calculateLengthOfPrintedCharacters(Spritzer.CHARS_LEFT_OF_PIVOT + 4 + .50f);
+        return calculateLengthOfPrintedCharacters(Spritzer.CHARS_LEFT_OF_PIVOT + 2 + .50f);
     }
 
     private int calculateLengthOfPrintedCharacters(float numCharacters) {
