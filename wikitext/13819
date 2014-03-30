@@ -1,0 +1,30 @@
+Although typically only available in Japan, the characters and code required to use emoji are, thanks to the nature of software compatibility, often present in many phones' software. As a result, some phones such as Windows Phone 7 line and the iPhone allow access to the symbols without requiring a Japanese operator. Emoji have also started appearing in emailing services such as Gmail (accessed via Google Labs) in April 2009 and websites such as Flipnote Hatena. Several SMS applications for Android powered phones also provide plugins that allow the use of Emoji. Apple's Mac OS X operating system supports emoji as of version 10.7 Lion with the Apple Color Emoji typeface.
+Legacy encoded Emoji.
+For NTT DoCoMo's i-mode, each emoji symbol is drawn on a 12×12 pixel grid. When transmitted, emoji symbols are specified as a two-byte sequence, in the private-use range E63E through E757 in the Unicode character space, or F89F through F9FC for Shift-JIS. The basic specification has 176 symbols, with 76 more added in phones that support C-HTML 4.0.
+Emoji pictograms by au are specified using the IMG tag. SoftBank Mobile emoji are wrapped between SI/SO escape sequences, and support colors and animation. DoCoMo's emoji are the most compact to transmit while au's version is more flexible based on open standards.
+Emoji in the Unicode standard.
+Hundreds of Emoji characters were encoded in the Unicode Standard in version 6.0 released in October 2010 (and in the related international standard ISO/IEC 10646). The additions, originally requested by Google (Kat Momoi, Mark Davis, and Markus Scherer wrote the first draft for consideration by the Unicode Technical Committee in August 2007) and Apple Inc. (whose Yasuo Kida and Peter Edberg joined the first official UTC proposal for 607 characters as coauthors in January 2009), went through a long series of commenting by members of the Unicode Consortium and national standardization bodies of various countries participating in ISO/IEC JTC1/SC2/WG2, especially the United States, Germany, Ireland (led by Michael Everson), and Japan; various new characters (especially symbols for maps and European signs) were added during the consensus-building process. 
+The core emoji set as of Unicode 6.0 consists of 722 characters, of which 114 characters map to sequences of one or more characters in the pre-6.0 Unicode standard, and the remaining 608 characters map to sequences of one or more characters introduced in Unicode 6.0. There is no block specifically set aside for emoji – the new symbols were encoded in seven different blocks (some newly created), and there exists a Unicode data file called EmojiSources.txt that includes mappings to and from the Japanese vendors' legacy character sets.
+Windows 7 & 8 viewing.
+Emoji characters are directly supported on Windows 8. An optional update KB2729094 is available for Windows 7 through Windows Update. Without the update (or on earlier versions of the operating system) the charts below will not be readable.
+Regional Indicator Symbols.
+A set of Regional Indicator Symbols were defined as part of this set of characters as an alternative to encoding separate characters for national flags.
+Emoji characters.
+"SoftBank" Encoding.
+This encoding was used in Apple's iOS prior to version 5. It uses the following characters from the Unicode Private Use Area (this is unlikely to display correctly on systems that do not use SoftBank encoding, but a conversion table is available between Unicode, SoftBank and various other encodings).
+"Apple" Encoding.
+OS X Lion.
+This set includes all the symbols available in Apple Color Emoji on OS X Lion and iOS 5.
+OS X Mountain Lion.
+This set includes all the symbols available in Apple Color Emoji on OS X Mountain Lion and iOS 6.
+Places.
+🇯🇵 (Flag of Japan) = U+1F1EF U+1F1F5 (JP)
+🇰🇷 (Flag of South Korea) = U+1F1F0 U+1F1F7 (KR)
+🇩🇪 (Flag of Germany) = U+1F1E9 U+1F1EA (DE)
+🇨🇳 (Flag of China) = U+1F1E8 U+1F1F3 (CN)
+🇺🇸 (Flag of the United States) = U+1F1FA U+1F1F8 (US)
+🇫🇷 (Flag of France) = U+1F1EB U+1F1F7 (FR)
+🇪🇸 (Flag of Spain) = U+1F1EA U+1F1F8 (ES)
+🇮🇹 (Flag of Italy) = U+1F1EE U+1F1F9 (IT)
+🇷🇺 (Flag of Russia) = U+1F1F7 U+1F1FA (RU)
+🇬🇧 (Flag of the United Kingdom) = U+1F1EC U+1F1E7 (GB)

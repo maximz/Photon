@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>2048 - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/2048" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=2048&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=2048&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/2048" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2048","wgTitle":"2048","wgCurRevisionId":600449877,"wgRevisionId":600449877,"wgArticleId":326995,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Use mdy dates from March 2011","2048"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2048","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["ru-ru","ru","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q49923"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-2048 skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">2048</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">This article is about the year 2048. For the online game, see <a href="/wiki/2048_(video_game)" title="2048 (video game)">2048 (video game)</a>.</div>
+<table class="infobox" style="text-align: center;">
+<tr>
+<th style="text-align:right; font-size:smaller;"><a href="/wiki/Millennium" title="Millennium">Millennium</a>:</th>
+<td><a href="/wiki/3rd_millennium" title="3rd millennium">3rd&#160;millennium</a></td>
+</tr>
+<tr>
+<th style="text-align:right; font-size:smaller;"><a href="/wiki/List_of_centuries" title="List of centuries">Centuries</a>:</th>
+<td><a href="/wiki/20th_century" title="20th century">20th&#160;century</a> – <b><a href="/wiki/21st_century" title="21st century">21st&#160;century</a></b> – <a href="/wiki/22nd_century" title="22nd century">22nd&#160;century</a></td>
+</tr>
+<tr>
+<th style="text-align:right; font-size:smaller;"><a href="/wiki/List_of_decades" title="List of decades">Decades</a>:</th>
+<td><small><a href="/wiki/2010s" title="2010s">2010s</a>&#160; <a href="/wiki/2020s" title="2020s">2020s</a>&#160; <a href="/wiki/2030s" title="2030s">2030s</a>&#160; – <a href="/wiki/2040s" title="2040s">2040s</a> – &#160;<a href="/wiki/2050s" title="2050s">2050s</a> &#160;<a href="/wiki/2060s" title="2060s">2060s</a> &#160;<a href="/wiki/2070s" title="2070s">2070s</a></small></td>
+</tr>
+<tr>
+<th style="text-align:right; font-size:smaller;"><a href="/wiki/List_of_years" title="List of years">Years</a>:</th>
+<td><a href="/wiki/2045" title="2045">2045</a> <a href="/wiki/2046" title="2046">2046</a> <a href="/wiki/2047" title="2047">2047</a> – <b><strong class="selflink">2048</strong></b> – <a href="/wiki/2049" title="2049">2049</a> <a href="/wiki/2050" title="2050">2050</a> <a href="/wiki/2051" title="2051">2051</a></td>
+</tr>
+</table>
+<table class="infobox vevent" style="width:22em;">
+<caption style="font-size:125%;"><span class="summary dtstart">2048 in other calendars</span></caption>
+<tr>
+<td><a href="/wiki/Gregorian_calendar" title="Gregorian calendar">Gregorian calendar</a></td>
+<td>2048<br />
+<span style="font-family: serif;"><i>MMXLVIII</i></span></td>
+</tr>
+<tr>
+<td><a href="/wiki/Ab_urbe_condita" title="Ab urbe condita">Ab urbe condita</a></td>
+<td>2801</td>
+</tr>
+<tr>
+<td><a href="/wiki/Armenian_calendar" title="Armenian calendar">Armenian calendar</a></td>
+<td>1497<br />
+ԹՎ ՌՆՂԷ</td>
+</tr>
+<tr>
+<td><a href="/wiki/Assyrian_calendar" title="Assyrian calendar">Assyrian calendar</a></td>
+<td>6798</td>
+</tr>
+<tr>
+<td><a href="/wiki/Bah%C3%A1%27%C3%AD_calendar" title="Bahá'í calendar">Bahá'í calendar</a></td>
+<td>204–205</td>
+</tr>
+<tr>
+<td><a href="/wiki/Bengali_calendar" title="Bengali calendar">Bengali calendar</a></td>
+<td>1455</td>
+</tr>
+<tr>
+<td><a href="/wiki/Berber_calendar" title="Berber calendar">Berber calendar</a></td>
+<td>2998</td>
+</tr>
+<tr>
+<td><a href="/wiki/Regnal_years_of_English_monarchs" title="Regnal years of English monarchs">British Regnal year</a></td>
+<td><i>N/A</i></td>
+</tr>
+<tr>
+<td><a href="/wiki/Buddhist_calendar" title="Buddhist calendar">Buddhist calendar</a></td>
+<td>2592</td>
+</tr>
+<tr>
+<td><a href="/wiki/Traditional_Burmese_calendar" title="Traditional Burmese calendar" class="mw-redirect">Burmese calendar</a></td>
+<td>1410</td>
+</tr>
+<tr>
+<td><a href="/wiki/Byzantine_calendar" title="Byzantine calendar">Byzantine calendar</a></td>
+<td>7556–7557</td>
+</tr>
+<tr>
+<td><a href="/wiki/Chinese_calendar" title="Chinese calendar">Chinese calendar</a></td>
+<td><a href="/wiki/Sexagenary_cycle" title="Sexagenary cycle">丁卯</a>年 <small>(Fire&#160;<a href="/wiki/Rabbit_(zodiac)" title="Rabbit (zodiac)">Rabbit</a>)</small><br />
+4744 or 4684<br />
+&#160;&#160;&#160;&#160;<i>—&#160;to&#160;—</i><br />
+戊辰年 <small>(Earth&#160;<a href="/wiki/Dragon_(zodiac)" title="Dragon (zodiac)">Dragon</a>)</small><br />
+4745 or 4685</td>
+</tr>
+<tr>
+<td><a href="/wiki/Coptic_calendar" title="Coptic calendar">Coptic calendar</a></td>
+<td>1764–1765</td>
+</tr>
+<tr>
+<td><a href="/wiki/Discordian_calendar" title="Discordian calendar">Discordian calendar</a></td>
+<td>3214</td>
+</tr>
+<tr>
+<td><a href="/wiki/Ethiopian_calendar" title="Ethiopian calendar">Ethiopian calendar</a></td>
+<td>2040–2041</td>
+</tr>
+<tr>
+<td><a href="/wiki/Hebrew_calendar" title="Hebrew calendar">Hebrew calendar</a></td>
+<td>5808–5809</td>
+</tr>
+<tr>
+<td><a href="/wiki/Hindu_calendar" title="Hindu calendar">Hindu calendars</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&#160;- <i><a href="/wiki/Vikram_Samvat" title="Vikram Samvat">Vikram Samvat</a></i></td>
+<td>2104–2105</td>
+</tr>
+<tr>
+<td>&#160;- <i><a href="/wiki/Indian_national_calendar" title="Indian national calendar">Shaka Samvat</a></i></td>
+<td>1970–1971</td>
+</tr>
+<tr>
+<td>&#160;- <i><a href="/wiki/Kali_Yuga" title="Kali Yuga">Kali Yuga</a></i></td>
+<td>5149–5150</td>
+</tr>
+<tr>
+<td><a href="/wiki/Holocene_calendar" title="Holocene calendar">Holocene calendar</a></td>
+<td>12048</td>
+</tr>
+<tr>
+<td><a href="/wiki/Igbo_calendar" title="Igbo calendar">Igbo calendar</a></td>
+<td>1048–1049</td>
+</tr>
+<tr>
+<td><a href="/wiki/Iranian_calendars" title="Iranian calendars">Iranian calendar</a></td>
+<td>1426–1427</td>
+</tr>
+<tr>
+<td><a href="/wiki/Islamic_calendar" title="Islamic calendar">Islamic calendar</a></td>
+<td>1470–1471</td>
+</tr>
+<tr>
+<td><a href="/wiki/Japanese_calendar" title="Japanese calendar">Japanese calendar</a></td>
+<td><a href="/wiki/Heisei" title="Heisei" class="mw-redirect">Heisei</a> 60<br />
+<small>(平成６０年)</small></td>
+</tr>
+<tr>
+<td><a href="/wiki/North_Korean_calendar" title="North Korean calendar">Juche calendar</a></td>
+<td>137</td>
+</tr>
+<tr>
+<td><a href="/wiki/Julian_calendar" title="Julian calendar">Julian calendar</a></td>
+<td>Gregorian minus 13 days</td>
+</tr>
+<tr>
+<td><a href="/wiki/Korean_calendar" title="Korean calendar">Korean calendar</a></td>
+<td>4381</td>
+</tr>
+<tr>
+<td><a href="/wiki/Minguo_calendar" title="Minguo calendar">Minguo calendar</a></td>
+<td><a href="/wiki/Taiwan" title="Taiwan">ROC</a> 137<br />
+<small>民國137年</small></td>
+</tr>
+<tr>
+<td><a href="/wiki/Thai_solar_calendar" title="Thai solar calendar">Thai solar calendar</a></td>
+<td>2591</td>
+</tr>
+<tr>
+<td><a href="/wiki/Unix_time" title="Unix time">Unix time</a></td>
+<td>2461449600–2493071999</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center;">
+<div class="plainlinks hlist navbar"><span style="word-spacing:0;">This box:</span>
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Year_in_other_calendars" title="Template:Year in other calendars"><span title="View this template" style=";">view</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Year_in_other_calendars" title="Template talk:Year in other calendars"><span title="Discuss this template" style=";">talk</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Year_in_other_calendars&amp;action=edit"><span title="Edit this template" style=";">edit</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p><b>2048</b> (<b><a href="/wiki/Roman_numerals" title="Roman numerals">MMXLVIII</a></b>) will be a <a href="/wiki/Leap_year_starting_on_Wednesday" title="Leap year starting on Wednesday">leap year starting on Wednesday</a> of the <a href="/wiki/Gregorian_calendar" title="Gregorian calendar">Gregorian calendar</a>, the 2048th year of the <a href="/wiki/Common_Era" title="Common Era">Common Era</a> (CE) and <a href="/wiki/Anno_Domini" title="Anno Domini">Anno Domini</a> (AD) designations, the 48th year of the <a href="/wiki/3rd_millennium" title="3rd millennium">3rd millennium</a>, the 48th year of the <a href="/wiki/21st_century" title="21st century">21st century</a>, and the 9th year of the <a href="/wiki/2040s" title="2040s">2040s</a> decade.</p>
+<h2><span class="mw-headline" id="Predicted_and_scheduled_events">Predicted and scheduled events</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=2048&amp;action=edit&amp;section=1" title="Edit section: Predicted and scheduled events">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="January">January</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=2048&amp;action=edit&amp;section=2" title="Edit section: January">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a href="/wiki/January_14" title="January 14">January 14</a> – The <a href="/wiki/Protocol_on_Environmental_Protection_to_the_Antarctic_Treaty" title="Protocol on Environmental Protection to the Antarctic Treaty">Protocol on Environmental Protection to the Antarctic Treaty</a> will come up for review.</li>
+</ul>
+<h3><span class="mw-headline" id="February">February</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=2048&amp;action=edit&amp;section=3" title="Edit section: February">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a href="/wiki/February_29" title="February 29">February 29</a> – There will be a rare <a href="/wiki/Full_moon" title="Full moon">full moon</a>. This will be the first instance of a <a href="/wiki/Full_moon" title="Full moon">full moon</a> on a <a href="/wiki/Leap_day" title="Leap day" class="mw-redirect">leap day</a> since <a href="/wiki/1972" title="1972">1972</a>.</li>
+</ul>
+<h3><span class="mw-headline" id="June">June</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=2048&amp;action=edit&amp;section=4" title="Edit section: June">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a href="/wiki/June" title="June">June</a> - Asteroid <a href="/wiki/2007_VK184" title="2007 VK184">2007 VK184</a> has a chance of 1 in 3,030 of hitting Earth in this year.</li>
+</ul>
+<h2><span class="mw-headline" id="In_fiction">In fiction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=2048&amp;action=edit&amp;section=5" title="Edit section: In fiction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><i><a href="/wiki/Strider_(arcade_game)" title="Strider (arcade game)">Strider</a></i> (1989)</li>
+<li><i><a href="/wiki/Wipeout_2048" title="Wipeout 2048">Wipeout 2048</a></i> (2011)</li>
+<li><i><a href="/wiki/Fear_Effect_2:_Retro_Helix" title="Fear Effect 2: Retro Helix">Fear Effect 2: Retro Helix</a></i> (2001)</li>
+<li><i><a href="/wiki/Almost_Human_(TV_series)" title="Almost Human (TV series)">Almost Human</a></i> (2013)</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=2048&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;"></div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1175
+CPU time usage: 0.560 seconds
+Real time usage: 0.610 seconds
+Preprocessor visited node count: 3343/1000000
+Preprocessor generated node count: 5207/1500000
+Post‐expand include size: 10760/2048000 bytes
+Template argument size: 1601/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 5/500
+Lua time usage: 0.037/10.000 seconds
+Lua memory usage: 1.08 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:326995-0!*!0!!*!*!* and timestamp 20140329144901
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=2048&amp;oldid=600449877">http://en.wikipedia.org/w/index.php?title=2048&amp;oldid=600449877</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:2048" title="Category:2048">2048</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Use_mdy_dates_from_March_2011" title="Category:Use mdy dates from March 2011">Use mdy dates from March 2011</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=2048&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=2048" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/2048"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:2048"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/2048" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=2048&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=2048&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/2048" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/2048" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=2048&amp;oldid=600449877" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=2048&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q49923" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=2048&amp;id=600449877" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=2048">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=2048&amp;oldid=600449877&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=2048&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-af"><a href="//af.wikipedia.org/wiki/2048" title="2048 – Afrikaans" lang="af" hreflang="af">Afrikaans</a></li>
+			<li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D9%85%D9%84%D8%AD%D9%82:2048" title="ملحق:2048 – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bh"><a href="//bh.wikipedia.org/wiki/%E0%A5%A8%E0%A5%A6%E0%A5%AA%E0%A5%AE" title="२०४८ – भोजपुरी" lang="bh" hreflang="bh">भोजपुरी</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="//da.wikipedia.org/wiki/2048" title="2048 – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="//eo.wikipedia.org/wiki/2048" title="2048 – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/%DB%B2%DB%B0%DB%B4%DB%B8_(%D9%85%DB%8C%D9%84%D8%A7%D8%AF%DB%8C)" title="۲۰۴۸ (میلادی) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/2048" title="2048 – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gan"><a href="//gan.wikipedia.org/wiki/2048%E5%B9%B4" title="2048年 – Gan" lang="gan" hreflang="gan">贛語</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="//ko.wikipedia.org/wiki/2048%EB%85%84" title="2048년 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="//hr.wikipedia.org/wiki/2048." title="2048. – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="//he.wikipedia.org/wiki/2048" title="2048 – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-ka"><a href="//ka.wikipedia.org/wiki/2048" title="2048 – Georgian" lang="ka" hreflang="ka">ქართული</a></li>
+			<li class="interlanguage-link interwiki-kk"><a href="//kk.wikipedia.org/wiki/2048_%D0%B6%D1%8B%D0%BB" title="2048 жыл – Kazakh" lang="kk" hreflang="kk">Қазақша</a></li>
+			<li class="interlanguage-link interwiki-mk"><a href="//mk.wikipedia.org/wiki/2048" title="2048 – Macedonian" lang="mk" hreflang="mk">Македонски</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="//ms.wikipedia.org/wiki/2048" title="2048 – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nah"><a href="//nah.wikipedia.org/wiki/2048" title="2048 – Nāhuatl" lang="nah" hreflang="nah">Nāhuatl</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="//nl.wikipedia.org/wiki/2048" title="2048 – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ne"><a href="//ne.wikipedia.org/wiki/%E0%A4%B8%E0%A4%A8%E0%A5%8D_%E0%A5%A8%E0%A5%A6%E0%A5%AA%E0%A5%AE" title="सन् २०४८ – Nepali" lang="ne" hreflang="ne">नेपाली</a></li>
+			<li class="interlanguage-link interwiki-new"><a href="//new.wikipedia.org/wiki/%E0%A4%B8%E0%A4%A8%E0%A5%8D_%E0%A5%A8%E0%A5%A6%E0%A5%AA%E0%A5%AE" title="सन् २०४८ – Newari" lang="new" hreflang="new">नेपाल भाषा</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="//ja.wikipedia.org/wiki/2048%E5%B9%B4" title="2048年 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-nn"><a href="//nn.wikipedia.org/wiki/2048" title="2048 – Norwegian Nynorsk" lang="nn" hreflang="nn">Norsk nynorsk</a></li>
+			<li class="interlanguage-link interwiki-pi"><a href="//pi.wikipedia.org/wiki/%E0%A5%A8%E0%A5%A6%E0%A5%AA%E0%A5%AE" title="२०४८ – Pali" lang="pi" hreflang="pi">पालि</a></li>
+			<li class="interlanguage-link interwiki-qu"><a href="//qu.wikipedia.org/wiki/2048" title="2048 – Quechua" lang="qu" hreflang="qu">Runa Simi</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="//ru.wikipedia.org/wiki/2048_%D0%B3%D0%BE%D0%B4" title="2048 год – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="//simple.wikipedia.org/wiki/2048" title="2048 – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="//sk.wikipedia.org/wiki/2048" title="2048 – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-ckb"><a href="//ckb.wikipedia.org/wiki/%D9%A2%D9%A0%D9%A4%D9%A8" title="٢٠٤٨ – Sorani Kurdish" lang="ckb" hreflang="ckb">کوردی</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="//sr.wikipedia.org/wiki/2048" title="2048 – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="//sv.wikipedia.org/wiki/2048" title="2048 – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-tl"><a href="//tl.wikipedia.org/wiki/2048" title="2048 – Tagalog" lang="tl" hreflang="tl">Tagalog</a></li>
+			<li class="interlanguage-link interwiki-tt"><a href="//tt.wikipedia.org/wiki/2048_%D0%B5%D0%BB" title="2048 ел – Tatar" lang="tt" hreflang="tt">Татарча/tatarça</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="//th.wikipedia.org/wiki/%E0%B8%9E.%E0%B8%A8._2591" title="พ.ศ. 2591 – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tg"><a href="//tg.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D0%B8_2048" title="Соли 2048 – Tajik" lang="tg" hreflang="tg">Тоҷикӣ</a></li>
+			<li class="interlanguage-link interwiki-tk"><a href="//tk.wikipedia.org/wiki/2048" title="2048 – Turkmen" lang="tk" hreflang="tk">Türkmençe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="//uk.wikipedia.org/wiki/2048" title="2048 – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-war"><a href="//war.wikipedia.org/wiki/2048" title="2048 – Waray" lang="war" hreflang="war">Winaray</a></li>
+			<li class="interlanguage-link interwiki-zh-yue"><a href="//zh-yue.wikipedia.org/wiki/2048%E5%B9%B4" title="2048年 – Cantonese" lang="zh-yue" hreflang="zh-yue">粵語</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="//www.wikidata.org/wiki/Q49923#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 20 March 2014 at 13:48.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/wiki/2048" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1024 in 0.456 secs. -->
+	</body>
+</html>

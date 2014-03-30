@@ -1,0 +1,25 @@
+This is a list of operators in the C and C++ programming languages. All the operators listed exist in C++; the fourth column "Included in C", dictates whether an operator is also present in C. Note that C does not support operator overloading.
+When not overloaded, for the operators codice_1, codice_2, and codice_3 (the comma operator), there is a sequence point after the evaluation of the first operand.
+C++ also contains the type conversion operators codice_4, codice_5, codice_6, and codice_7. The formatting of these operators means that their precedence level is unimportant.
+Most of the operators available in C and C++ are also available in other languages such as C#, Java, Perl, and PHP with the same precedence, associativity, and semantics.
+Table.
+For the purposes of this table, codice_8, codice_9, and codice_10 represent valid values (literals, values from variables, or return value), object names, or lvalues, as appropriate.
+"Can overload" means that the operator can be overloaded in C++. "Included in C" means that the operator exists and has a semantic meaning in C (operators are not overloadable in C).
+Operator precedence.
+The following is a table that lists the precedence and associativity of all the operators in the C and C++ languages (when the operators also exist in Java, Perl, PHP and many other recent languages, the precedence is the same as that given). Operators are listed top to bottom, in descending precedence. Descending precedence refers to the priority of evaluation. Considering an expression, an operator which is listed on some row will be evaluated prior to any operator that is listed on a row further below it. Operators that are in the same cell (there may be several rows of operators listed in a cell) are evaluated with the same precedence, in the given direction. An operator's precedence is unaffected by overloading.
+" grammar specifies the precedence of operators in the evaluation of an expression, which is the same as the order of the major subclauses of this subclause, highest precedence first."
+A precedence table, while mostly adequate, cannot resolve a few details. In particular, note that the ternary operator allows any arbitrary expression as its middle operand, despite being listed as having higher precedence than the assignment and comma operators. Thus codice_11 is interpreted as codice_12, and not as the meaningless codice_13. Also, note that the immediate, unparenthesized result of a C cast expression cannot be the operand of codice_14. Therefore, codice_15 is interpreted as codice_16 and not codice_17.
+Notes.
+The precedence table determines the order of binding in chained expressions, when it is not expressly specified by parentheses.
+Many of the operators containing multi-character sequences are given "names" built from the operator name of each character. For example, codice_27 and codice_28 are often called "plus equal(s)" and "minus equal(s)", instead of the more verbose "assignment by addition" and "assignment by subtraction".
+logical-OR-expression ? expression : conditional-expression</source>
+logical-OR-expression ? expression : assignment-expression</source>
+e = a < d ? a++ : a = d</source>
+e = ((a < d ? a++ : a) = d)</source>
+e = (a < d ? a++ : (a = d))</source>
+which is a valid expression.
+The precedence of the bitwise logical operators has been criticized. Conceptually, & and | are arithmetic operators like + and *.
+The expression is syntactically parsed as whereas the expression is parsed as . This requires parentheses to be used more often than they otherwise would.
+C++ operator synonyms.
+C++ defines keywords to act as aliases for a number of operators: codice_29. These can be used exactly the same way as the symbols they replace as they are not the same operator under a different name, but rather simple text aliases for the "name" (character string) of respective operator. For instance, codice_30 may be used to replace not only the bitwise operator but also the address-of operator, and it can even be used to specify reference types (e.g. int bitand ref = n;).
+The ANSI C specification makes allowance for these keywords as preprocessor macros in the header file codice_31. For compatibility with C, C++ provides the header codice_32, inclusion of which has no effect.

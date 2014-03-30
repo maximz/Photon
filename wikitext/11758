@@ -1,0 +1,99 @@
+SQL ( "S-Q-L"; or Structured Query Language) is a special-purpose programming language designed for managing data in relational database management systems (RDBMS).
+Originally based upon relational algebra and tuple relational calculus, it is a declarative language with two parts: a data definition language and a data manipulation language. The scope of SQL includes data insert, query, update and delete, schema creation and modification, and data access control.
+SQL was one of the first commercial languages for Edgar F. Codd's relational model, as described in his influential 1970 paper, "A Relational Model of Data for Large Shared Data Banks". Despite not adhering to the relational model as described by Codd, it became the most widely used database language. Although SQL is often described as, and to a great extent is, a declarative language (4GL), it also includes procedural elements. SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standards (ISO) in 1987. Since then, the standard has been enhanced several times with added features. But code is not completely portable among different database systems, which can lead to vendor lock-in. The different makers do not perfectly follow the standard, they add extensions, and the standard is sometimes ambiguous.
+History.
+SQL was initially developed at IBM by Donald D. Chamberlin and Raymond F. Boyce in the early 1970s. This version, initially called SEQUEL ("Structured English Query Language"), was designed to manipulate and retrieve data stored in IBM's original quasi-relational database management system, System R, which a group at IBM San Jose Research Laboratory had developed during the 1970s. The acronym SEQUEL was later changed to SQL because "SEQUEL" was a trademark of the UK-based Hawker Siddeley aircraft company.
+In the late 1970s, Relational Software, Inc. (now Oracle Corporation) saw the potential of the concepts described by Codd, Chamberlin, and Boyce and developed their own SQL-based RDBMS with aspirations of selling it to the U.S. Navy, Central Intelligence Agency, and other U.S. government agencies. In June 1979, Relational Software, Inc. introduced the first commercially available implementation of SQL, Oracle V2 (Version2) for VAX computers. 
+After testing SQL at customer test sites to determine the usefulness and practicality of the system, IBM began developing commercial products based on their System R prototype including System/38, SQL/DS, and DB2, which were commercially available in 1979, 1981, and 1983, respectively.
+Language elements.
+Conditional (CASE) expressions.
+ 0 THEN 'positive' WHEN n < 0 THEN 'negative' ELSE 'zero' END
+</source>
+CASE n WHEN 1 then 'one' WHEN 2 THEN 'two' ELSE 'i cannot count that high' END
+</source>
+This syntax uses implicit equality comparisons, with the usual caveats for comparing with NULL.
+SELECT DECODE(n, 1, "one", 2, "two", "i cannot count that high") FROM some_table;
+</source>
+The last value is the default; if none is specified, it also defaults to codice_6.
+However, unlike the standard's "simple case", Oracle's codice_5 considers two codice_6s to be equal with each other.
+Queries.
+The most common operation in SQL is the query, which is performed with the declarative codice_9 statement. codice_9 retrieves data from one or more tables, or expressions. Standard codice_9 statements have no persistent effects on the database. Some non-standard implementations of codice_9 can have persistent effects, such as the codice_13 syntax that exists in some databases.
+Queries allow the user to describe desired data, leaving the database management system (DBMS) responsible for planning, optimizing, and performing the physical operations necessary to produce that result as it chooses.
+The following is an example of a codice_9 query that returns a list of expensive books. The query retrieves all rows from the "Book" table in which the "price" column contains a value greater than 100.00. The result is sorted in ascending order by "title". The asterisk (*) in the "select list" indicates that all columns of the "Book" table should be included in the result set.
+SELECT *
+</syntaxhighlight>
+The example below demonstrates a query of multiple tables, grouping, and aggregation, by returning a list of books and the number of authors associated with each book.
+SELECT Book.title AS Title,
+</syntaxhighlight>
+SELECT title,
+</syntaxhighlight>
+However, many vendors either do not support this approach, or require certain column naming conventions in order for natural joins to work effectively.
+SQL includes operators and functions for calculating values on stored values. SQL allows the use of expressions in the "select list" to project data, as in the following example which returns a list of books that cost more than 100.00 with an additional "sales_tax" column containing a sales tax figure calculated at 6% of the "price".
+SELECT isbn,
+</syntaxhighlight>
+Subqueries.
+SELECT isbn, title, price
+</syntaxhighlight>
+Since 1999 the SQL standard allows named subqueries called common table expression (named and designed after the IBM DB2 version 2 implementation; Oracle calls these subquery factoring). CTEs can be also be recursive by referring to themselves; the resulting mechanism allows tree or graph traversals (when represented as relations), and more generally fixpoint computations.
+Null and three-valued logic (3VL).
+The concept of Null was introduced into SQL to handle missing information in the relational model. The word codice_6 is a reserved keyword in SQL, used to identify the Null special marker. Comparisons with Null, for instance equality (=) in WHERE clauses, results in an Unknown truth value. In SELECT statements SQL returns only results for which the WHERE clause returns a value of True; i.e. it excludes results with values of False and also excludes those whose value is Unknown.
+Along with True and False, the Unknown resulting from direct comparisons with Null thus brings a fragment of three-valued logic to SQL. The truth tables SQL uses for AND, OR, and NOT correspond to a common fragment of the Kleene and Lukasiewicz three-valued logic (which differ in their definition of implication, however SQL defines no such operation). 
+There are however disputes about the semantic interpretation of Nulls in SQL because of its treatment outside direct comparisons. As seen in the table above direct equality comparisons between two NULLs in SQL (e.g. codice_35) returns a truth value of Unknown. This is in line with the interpretation that Null does not have a value (and is not a member of any data domain) but is rather a placeholder or "mark" for missing information. However, the principle that two Nulls aren't equal to each other is effectively violated in the SQL specification for the codice_36 and codice_37 operators, which do identify nulls with each other. Consequently, these set operations in SQL, may produce results not representing sure information, unlike operations involving explicit comparisons with NULL (e.g. those in a codice_20 clause discussed above). In Codd's 1979 proposal (which was basically adopted by SQL92) this semantic inconsistency is rationalized by arguing that removal of duplicates in set operations happens "at a lower level of detail than equality testing in the evaluation of retrieval operations." However, computer science professor Ron van der Meyden concluded that "The inconsistencies in the SQL standard mean that it is not possible to ascribe any intuitive logical semantics to the treatment of nulls in SQL." 
+Additionally, since SQL operators return Unknown when comparing anything with Null directly, SQL provides two Null-specific comparison predicates: codice_39 and codice_40 test whether data is or is not Null. Universal quantification is not explicitly supported by SQL, and must be worked out as a negated existential quantification. There is also the "<row value expression> IS DISTINCT FROM <row value expression>" infixed comparison operator which returns TRUE unless both operands are equal or both are NULL. Likewise, IS NOT DISTINCT FROM is defined as "NOT (<row value expression> IS DISTINCT FROM <row value expression>)". also introduced codice_41 type variables, which according to the standard can also hold Unknown values. In practice, a number of systems (e.g. PostgreSQL) implement the BOOLEAN Unknown as a BOOLEAN NULL.
+Data manipulation.
+INSERT INTO My_table
+</syntaxhighlight>
+UPDATE My_table
+</syntaxhighlight>
+DELETE FROM My_table
+</syntaxhighlight>
+</syntaxhighlight>
+Transaction controls.
+CREATE TABLE tbl_1(id int);
+COMMIT;
+SAVEPOINT id_1upd;
+ROLLBACK to id_1upd;
+</syntaxhighlight>
+Once the codice_53 statement completes, the transaction's changes cannot be rolled back.
+codice_53 and codice_54 terminate the current transaction and release data locks. In the absence of a codice_48 or similar statement, the semantics of SQL are implementation-dependent.
+The following example shows a classic transfer of funds transaction, where money is removed from one account and added to another. If either the removal or the addition fails, the entire transaction is rolled back.
+0 ROLLBACK;
+</syntaxhighlight>
+Data definition.
+CREATE TABLE My_table(
+</syntaxhighlight>
+ALTER TABLE My_table ADD my_field4 NUMBER(3) NOT NULL;
+</syntaxhighlight>
+TRUNCATE TABLE My_table;
+</syntaxhighlight>
+DROP TABLE My_table;
+</syntaxhighlight>
+Data types.
+Each column in an SQL table declares the type(s) that column may contain. ANSI SQL includes the following data types.
+Numbers.
+For example, the number 123.45 has a precision of 5 and a scale of 2. The precision is a positive integer that determines the number of significant digits in a particular radix (binary or decimal). The scale is a non-negative integer. A scale of 0 indicates that the number is an integer. For a decimal number with scale S, the exact numeric value is the integer value of the significant digits divided by 10S.
+SQL provides a function to round numerics or dates, called codice_88 (in Informix, DB2, PostgreSQL, Oracle and MySQL) or codice_89 (in Informix, SQLite, Sybase, Oracle, PostgreSQL and Microsoft SQL Server)
+Date and time.
+SQL provides several functions for generating a date / time variable out of a date / time string (codice_104, codice_105, codice_106), as well as for extracting the respective members (seconds, for instance) of such variables. The current system date / time of the database server can be called by using functions like codice_107.
+Data control.
+The Data Control Language (DCL) authorizes users to access and manipulate data.
+GRANT SELECT, UPDATE
+REVOKE SELECT, UPDATE
+</syntaxhighlight>
+Procedural extensions.
+In addition to the standard SQL/PSM extensions and proprietary SQL extensions, procedural and object-oriented programmability is available on many SQL platforms via DBMS integration with other languages. The SQL standard defines SQL/JRT extensions (SQL Routines and Types for the Java Programming Language) to support Java code in SQL databases. SQL Server 2005 uses the SQLCLR (SQL Server Common Language Runtime) to host managed .NET assemblies in the database, while prior versions of SQL Server were restricted to using unmanaged extended stored procedures that were primarily written in C. PostgreSQL allows functions to be written in a wide variety of languages including Perl, Python, Tcl, and C.
+Criticism.
+SQL deviates in several ways from its theoretical foundation, the relational model and its tuple calculus. In that model, a table is a set of tuples, while in SQL, tables and query results are lists of rows: the same row may occur multiple times, and the order of rows can be employed in queries (e.g. in the LIMIT clause). Furthermore, additional features (such as NULL and views) were introduced without founding them directly on the relational model, which makes them more difficult to interpret.
+Critics argue that SQL should be replaced with a language that strictly returns to the original foundation - for example, see "The Third Manifesto". Other critics suggest that Datalog has two advantages over SQL: it has a cleaner semantics which facilitates program understanding and maintenance, and it is more expressive, in particular for recursive queries. 
+Cross-vendor portability.
+Another criticism is that SQL implementations are incompatible between vendors. In particular date and time syntax, string concatenation, codice_6s, and comparison case sensitivity vary from vendor to vendor. A particular exception is PostgreSQL, which strives for compliance.
+Popular implementations of SQL commonly omit support for basic features of Standard SQL, such as the codice_90 or codice_92 data types. The most obvious such examples, and incidentally the most popular commercial and proprietary SQL DBMSs, are Oracle (whose codice_90 behaves as codice_114, and lacks a codice_92 type) and MS SQL Server (before the 2008 version). As a result, SQL code can rarely be ported between database systems without modifications.
+Standardization.
+SQL was adopted as a standard by the American National Standards Institute (ANSI) in 1986 as SQL-86 and the International Organization for Standardization (ISO) in 1987. Nowadays the standard is subject to continuous improvement by the Joint Technical Committee "ISO/IEC JTC 1, Information technology, Subcommittee SC 32, Data management and interchange" which affiliate to ISO as well as IEC. It is commonly denoted by the pattern: "ISO/IEC 9075-n:yyyy Part n: title", or, as a shortcut, "ISO/IEC 9075".
+"ISO/IEC 9075" is complemented by "ISO/IEC 13249: SQL Multimedia and Application Packages" (SQL/MM) which defines SQL based interfaces and packages to widely spread applications like video, audio and spatial data.
+Until 1996, the National Institute of Standards and Technology (NIST) data management standards program certified SQL DBMS compliance with the SQL standard. Vendors now self-certify the compliance of their products.
+The original SQL standard declared that the official pronunciation for SQL is "es queue el". Many English-speaking database professionals still use the original pronunciation (like the word "sequel"), including Donald Chamberlin himself.
+Interested parties may purchase SQL standards documents from ISO, IEC or ANSI. A draft of SQL:2008 is freely available as a zip archive.
+Standard structure.
+The SQL standard is divided into nine parts.
+ISO/IEC 9075 is complemented by ISO/IEC 13249 "SQL Multimedia and Application Packages". This closely related but separate standard is developed by the same committee. It defines interfaces and packages which are based on SQL. The aim is an unified access to typical database applications like text, pictures, data mining or spatial data.

@@ -1,0 +1,35 @@
+In physics, power is the rate at which energy is transferred, used, or transformed. The unit of power is the joule per second (J/s), known as the watt (in honor of James Watt, the eighteenth-century developer of the steam engine). For example, the rate at which a light bulb transforms electrical energy into heat and light is measured in watts—the more wattage, the more power, or equivalently the more electrical energy is used per unit time.
+Energy transfer can be used to do work, so power is also the rate at which this work is performed. The same amount of work is done when carrying a load up a flight of stairs whether the person carrying it walks or runs, but more power is expended during the running because the work is done in a shorter amount of time. The output power of an electric motor is the product of the torque the motor generates and the angular velocity of its output shaft. The power expended to move a vehicle is the product of the traction force of the wheels and the velocity of the vehicle.
+The integral of power over time defines the work done. Because this integral depends on the trajectory of the point of application of the force and torque, this calculation of work is said to be "path dependent."
+Units.
+The dimension of power is energy divided by time. The SI unit of power is the watt (W), which is equal to one joule per second. Other units of power include ergs per second (erg/s), horsepower (hp), metric horsepower (Pferdestärke (PS) or cheval vapeur, CV), and foot-pounds per minute. One horsepower is equivalent to 33,000 foot-pounds per minute, or the power required to lift 550 pounds by one foot in one second, and is equivalent to about 746 watts. Other units include dBm, a relative logarithmic measure with 1 milliwatt as reference; (food) calories per hour (often referred to as kilocalories per hour); Btu per hour (Btu/h); and tons of refrigeration (12,000 Btu/h).
+Average power.
+As a simple example, burning a kilogram of coal releases much more energy than does detonating a kilogram of TNT, but because the TNT reaction releases energy much more quickly, it delivers far more power than the coal.
+If Δ"W" is the amount of work performed during a period of time of duration Δ"t", the average power "P"avg over that period is given by the formula
+It is the average amount of work done or energy converted per unit of time. The average power is often simply called "power" when the context makes it clear.
+The instantaneous power is then the limiting value of the average power as the time interval Δ"t" approaches zero.
+In the context of energy conversion it is more customary to use the symbol "E" rather than "W".
+Mechanical power.
+Power in mechanical systems is the combination of forces and movement. In particular, power is the product of a force on an object and the object's velocity, or the product of a torque on a shaft and the shaft's angular velocity.
+where x defines the path "C" and v is the velocity along this path. The time derivative of the equation for work yields the instantaneous power,
+In rotational systems, power is the product of the torque τ and angular velocity ω,
+where ω measured in radians per second.
+In fluid power systems such as hydraulic actuators, power is given by
+where "p" is pressure in pascals, or N/m2 and "Q" is volumetric flow rate in m3/s in SI units.
+Mechanical advantage.
+If a mechanical system has no losses then the input power must equal the output power. This provides a simple formula for the mechanical advantage of the system.
+Let the input power to a device be a force "FA" acting on a point that moves with velocity "vA" and the output power be a force "FB" acts on a point that moves with velocity "vB". If there are no losses in the system, then
+and the mechanical advantage of the system is given by
+A similar relationship is obtained for rotating systems, where "TA" and "ωA" are the torque and angular velocity of the input and "TB" and "ωB" are the torque and angular velocity of the output. If there are no losses in the system, then
+which yields the mechanical advantage
+These relations are important because they define the maximum performance of a device in terms of velocity ratios determined by its physical dimensions. See for example gear ratios.
+Power in optics.
+In optics, or radiometry, the term "power" sometimes refers to radiant flux, the average rate of energy transport by electromagnetic radiation, measured in watts. In other contexts, it refers to optical power, the ability of a lens or other optical device to focus light. It is measured in dioptres (inverse metres), and equals the inverse of the focal length of the optical device.
+Electrical power.
+The instantaneous electrical power "P" delivered to a component is given by
+where 
+where
+is the resistance, measured in ohms.
+Peak power and duty cycle.
+One may define the pulse length formula_23 such that formula_24 so that the ratios
+are equal. These ratios are called the "duty cycle" of the pulse train.

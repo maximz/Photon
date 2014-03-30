@@ -1,0 +1,85 @@
+MIME's use, however, has grown beyond describing the content of email and now is often used to describe content type in general including for the web (see Internet media type) and as a storage for rich content in some commercial products (e.g., IBM Lotus Domino and IBM Lotus Quickr).
+Virtually all human-written Internet email and a fairly large proportion of automated email is transmitted via SMTP in MIME format. Internet email is so closely associated with the SMTP and MIME standards that it is sometimes called SMTP/MIME email.
+The content types defined by MIME standards are also of importance outside of email, such as in communication protocols like HTTP for the World Wide Web. HTTP requires that data be transmitted in the context of email-like messages, although the data most often is not actually email.
+MIME is specified in six linked RFC memoranda: RFC 2045, RFC 2046, RFC 2047, RFC 4288, RFC 4289 and RFC 2049, which together define the specifications.
+Introduction.
+The basic Internet email transmission protocol, SMTP, supports only 7-bit ASCII characters (see also 8BITMIME).
+This effectively limits Internet email to messages which, "when transmitted", include only the characters sufficient for writing a small number of languages, primarily English. Other languages based on the Latin alphabet typically include diacritics and are not supported in 7-bit ASCII, meaning text in these languages cannot be correctly represented in basic email.
+MIME defines mechanisms for sending other kinds of information in email. These include text in languages other than English using character encodings other than ASCII, and 8-bit binary content such as files containing images, sounds, movies, and computer programs. Parts of MIME are also reused in communication protocols such as HTTP, which requires that data be transmitted in the context of email-like messages even though the data might not (and usually doesn't) actually have anything to do with email, and the message body can actually be binary. Mapping messages into and out of MIME format is typically done automatically by an email client or by mail servers when sending or receiving Internet (SMTP/MIME) email.
+The basic format of Internet email is defined in RFC 5322, which is an updated version of RFC 2822 and RFC 822. These standards specify the familiar formats for text email headers and body and rules pertaining to commonly used header fields such as "To:", "Subject:", "From:", and "Date:".
+MIME defines a collection of email headers for specifying additional attributes of a message including "content type", and defines a set of "transfer encodings" which can be used to represent 8-bit binary data using characters from the 7-bit ASCII character set.
+MIME also specifies rules for encoding non-ASCII characters in email message headers, such as "Subject:", allowing these header fields to contain non-English characters.
+MIME is extensible. Its definition includes a method to register new "content types" and other MIME attribute values.
+The goals of the MIME definition included requiring no changes to existing email servers and allowing plain text email to function in both directions with existing clients. These goals were achieved by using additional RFC 822-style headers for all MIME message attributes and by making the MIME headers optional with default values ensuring a non-MIME message is interpreted correctly by a MIME-capable client. A simple MIME text message is therefore likely to be interpreted correctly by a non-MIME client even if it has email headers which the non-MIME client won't know how to interpret. Similarly, if the quoted printable transfer encoding (see below) is used, the ASCII part of the message will be intelligible to users with non-MIME clients.
+MIME headers.
+MIME-Version.
+The presence of this header indicates the message is MIME-formatted. The value is typically "1.0" so this header appears as
+According to MIME co-creator Nathaniel Borenstein, the intention was to allow MIME to change, to advance to version 2.0 and so forth, but this decision led to the opposite outcome, making it nearly impossible to create a new version of the standard.
+"We did not adequately specify how to handle a future MIME version," Borenstein said. "So if you write something that knows 1.0, what should you do if you encounter 2.0 or 1.1? I sort of thought it was obvious but it turned out everyone implemented that in different ways. And the result is that it would be just about impossible for the Internet to ever define a 2.0 or a 1.1."
+Content-Type.
+This header indicates the Internet media type of the message content, consisting of a "type" and "subtype", for example
+Through the use of the "multipart" type, MIME allows messages to have parts arranged in a tree structure where the leaf nodes are any non-multipart content type and the non-leaf nodes are any of a variety of multipart types.
+Content-Disposition.
+In addition to the presentation style, the content-disposition header also provides fields for specifying the name of the file, the creation date and modification date, which can be used by the reader's mail user agent to store the attachment.
+The following example is taken from RFC 2183, where the header is defined
+The filename may be encoded as defined by RFC 2231.
+As of 2010, a good majority of mail user agents do not follow this prescription fully. The widely used Mozilla Thunderbird mail client makes its own decisions about which MIME parts should be automatically displayed, ignoring the "content-disposition" headers in the messages. Thunderbird prior to version 3 also sends out newly composed messages with "inline" content-disposition for all MIME parts. Most users are unaware of how to set the content-disposition to "attachment". Many mail user agents also send messages with the file name in the "name" parameter of the "content-type" header instead of the "filename" parameter of the "content-disposition" header. This practice is discouraged – the file name should be specified either through just the
+"filename" parameter, or through both the "filename" and the "name" parameters.
+Content-Transfer-Encoding.
+The RFC and the IANA's list of transfer encodings define the values shown below, which are not case sensitive. Note that '7bit', '8bit', and 'binary' mean that no binary-to-text encoding on top of the original encoding was used. In these cases, the header is actually redundant for the email client to decode the message body, but it may still be useful as an indicator of what type of object is being sent. Values 'quoted-printable' and 'base64' tell the email client that a binary-to-text encoding scheme was used and that appropriate initial decoding is necessary before the message can be read with its original encoding (e.g. UTF-8).
+There is no encoding defined which is explicitly designed for sending arbitrary binary data through SMTP transports with the 8BITMIME extension. Thus base64 or quoted-printable (with their associated inefficiency) must sometimes still be used. This restriction does not apply to other uses of MIME such as Web Services with MIME attachments or MTOM
+Encoded-Word.
+Since RFC 2822, conforming message header names and values should be ASCII characters; values that contain non-ASCII data should use the MIME encoded-word syntax (RFC 2047) instead of a literal string. This syntax uses a string of ASCII characters indicating both the original character encoding (the ""charset"") and the content-transfer-encoding used to map the bytes of the charset into ASCII characters.
+The form is: "codice_1"charset"codice_2"encoding"codice_2"encoded text"codice_4".
+Difference between Q-encoding and quoted-printable.
+The ASCII codes for the question mark ("?") and equals sign ("=") may not be represented directly as they are used to delimit the encoded-word. The ASCII code for space may not be represented directly because it could cause older parsers to split up the encoded word undesirably. To make the encoding smaller and easier to read the underscore is used to represent the ASCII code for space creating the side effect that underscore cannot be represented directly. Use of encoded words in certain parts of headers imposes further restrictions on which characters may be represented directly.
+For example,
+codice_7
+is interpreted as "Subject: ¡Hola, señor!".
+The encoded-word format is not used for the names of the headers (for example codice_8). These header names are always in English in the raw message. When viewing a message with a non-English email client, the header names are usually translated by the client.
+Multipart messages.
+</pre>
+Each part consists of its own content header (zero or more "Content-" header fields) and a body. Multipart content can be nested. The content-transfer-encoding of a multipart type must always be "7bit", "8bit" or "binary" to avoid the complications that would be posed by multiple levels of decoding. The multipart block as a whole does not have a charset; non-ASCII characters in the part headers are handled by the Encoded-Word system, and the part bodies can have charsets specified if appropriate for their content-type.
+Multipart subtypes.
+The MIME standard defines various multipart-message subtypes, which specify the nature of the message parts and their relationship to one another. The subtype is specified in the "Content-Type" header of the overall message. For example, a multipart MIME message using the digest subtype would have its Content-Type set as "multipart/digest".
+The RFC initially defined 4 subtypes: mixed, digest, alternative and parallel. A minimally compliant application must support mixed and digest; other subtypes are optional. Applications must treat unrecognised subtypes as "multipart/mixed". Additional subtypes, such as signed and form-data, have since been separately defined in other RFCs.
+The following is a list of the most commonly used subtypes; it is not intended to be a comprehensive list.
+Mixed.
+Multipart/mixed is used for sending files with different "Content-Type" headers inline (or as attachments). If sending pictures or other easily readable files, most mail clients will display them inline (unless otherwise specified with the "Content-disposition" header). Otherwise it will offer them as attachments. The default content-type for each part is "text/plain".
+Defined in RFC 2046, Section 5.1.3
+Digest.
+Multipart/digest is a simple way to send multiple text messages. The default content-type for each part is "message/rfc822".
+Defined in RFC 2046, Section 5.1.5
+Message.
+A message/rfc822 part contains an email message, including any headers. "Rfc822" is a misnomer, since the message may be a full MIME message. This is used for digests as well as for email forwarding.
+Defined in RFC 2046.
+Alternative.
+The multipart/alternative subtype indicates that each part is an "alternative" version of the same (or similar) content, each in a different format denoted by its "Content-Type" header. The formats are ordered by how faithful they are to the original, with the least faithful first and the most faithful last. Systems can then choose the "best" representation they are capable of processing; in general, this will be the last part that the system can understand, although other factors may affect this.
+Since a client is unlikely to want to send a version that is less faithful than the plain text version, this structure places the plain text version (if present) first. This makes life easier for users of clients that do not understand multipart messages.
+Most commonly, multipart/alternative is used for email with two parts, one plain text (text/plain) and one HTML (text/html). The plain text part provides backwards compatibility while the HTML part allows use of formatting and hyperlinks. Most email clients offer a user option to prefer plain text over HTML; this is an example of how local factors may affect how an application chooses which "best" part of the message to display.
+While it is intended that each part of the message represent the same content, the standard does not require this to be enforced in any way. At one time, anti-spam filters would only examine the text/plain part of a message, because it is easier to parse than the text/html part. But spammers eventually took advantage of this, creating messages with an innocuous-looking text/plain part and advertising in the text/html part. Anti-spam software eventually caught up on this trick, penalizing messages with very different text in a multipart/alternative message.
+Defined in RFC 2046, Section 5.1.4
+Related.
+A multipart/related is used to indicate that each message part is a component of an aggregate whole. It is for compound objects consisting of several inter-related components - proper display cannot be achieved by individually displaying the constituent parts. The message consists of a root part (by default, the first) which reference other parts inline, which may in turn reference other parts. Message parts are commonly referenced by the "Content-ID" part header. The syntax of a reference is unspecified and is instead dictated by the encoding or protocol used in the part.
+One common usage of this subtype is to send a web page complete with images in a single message. The root part would contain the HTML document, and use image tags to reference images stored in the latter parts.
+Defined in RFC 2387
+Report.
+"Multipart/report" is a message type that contains data formatted for a mail server to read. It is split between a text/plain (or some other content/type easily readable) and a message/delivery-status, which contains the data formatted for the mail server to read.
+Defined in RFC 6522
+Signed.
+A multipart/signed message is used to attach a digital signature to a message. It has exactly two body parts, a body part and a signature part. The whole of the body part, including mime headers, is used to create the signature part. Many signature types are possible, like "application/pgp-signature" (RFC 3156) and "application/pkcs7-signature" (S/MIME).
+Defined in RFC 1847, Section 2.1
+Encrypted.
+A multipart/encrypted message has two parts. The first part has control information that is needed to decrypt the application/octet-stream second part. Similar to signed messages, there are different implementations which are
+identified by their separate content types for the control part. The most common types are
+"application/pgp-encrypted" (RFC 3156) and "application/pkcs7-mime" (S/MIME).
+Defined in RFC 1847, Section 2.2
+Form Data.
+As its name implies, multipart/form-data is used to express values submitted through a form. Originally defined as part of HTML 4.0, it is most commonly used for submitting files via HTTP.
+Defined in RFC 2388
+Mixed-Replace.
+The content type multipart/x-mixed-replace was developed as part of a technology to emulate server push and streaming over HTTP.
+All parts of a mixed-replace message have the same semantic meaning. However, each part invalidates - "replaces" - the previous parts as soon as it is received completely. Clients should process the individual parts as soon as they arrive and should not wait for the whole message to finish.
+Originally developed by Netscape, it is still supported by Mozilla, Firefox, Chrome, Safari, and Opera, but traditionally ignored by Microsoft. It is commonly used in IP cameras as the MIME type for MJPEG streams.
+Byteranges.
+The multipart/byteranges is used to represent noncontiguous byte ranges of a single message. It is used by HTTP when a server returns multiple byte ranges and is defined in RFC 2616.

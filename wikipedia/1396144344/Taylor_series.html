@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Taylor series - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Taylor_series" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Taylor_series&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Taylor_series&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Taylor_series" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Taylor_series","wgTitle":"Taylor series","wgCurRevisionId":601506172,"wgRevisionId":601506172,"wgArticleId":30448,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Good articles","Wikipedia articles needing clarification from February 2014","Real analysis","Complex analysis","Mathematical series"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Taylor_series","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["ko-kr","ko","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q131187"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Taylor_series skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Taylor series</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">For other notions of series expansion, see <a href="/wiki/Series_(mathematics)" title="Series (mathematics)">Series (mathematics)</a>.</div>
+<div style="display:none; right:10px;" class="metadata topicon nopopups" id="good-star"><a href="/wiki/Wikipedia:Good_articles" title="This is a good article. Click here for more information."><img alt="This is a good article. Click here for more information." src="//upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/15px-Symbol_support_vote.svg.png" width="15" height="15" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/23px-Symbol_support_vote.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/30px-Symbol_support_vote.svg.png 2x" /></a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Sintay_SVG.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Sintay_SVG.svg/300px-Sintay_SVG.svg.png" width="300" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Sintay_SVG.svg/450px-Sintay_SVG.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Sintay_SVG.svg/600px-Sintay_SVG.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Sintay_SVG.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+As the degree of the Taylor polynomial rises, it approaches the correct function. This image shows sin(x) and its Taylor approximations, polynomials of degree <span style="color:red;">1</span>, <span style="color:orange;">3</span>, <span style="color:yellow;">5</span>, <span style="color:green;">7</span>, <span style="color:blue;">9</span>, <span style="color:indigo;">11</span> and <span style="color:violet;">13</span>.</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Exp_series.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/62/Exp_series.gif/220px-Exp_series.gif" width="220" height="295" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/6/62/Exp_series.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/6/62/Exp_series.gif 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Exp_series.gif" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The <a href="/wiki/Exponential_function" title="Exponential function">exponential function</a> <i>e</i><sup><i>x</i></sup> (in blue), and the sum of the first <i>n</i>+1 terms of its Taylor series at 0 (in red).</div>
+</div>
+</div>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em;"><a href="/wiki/Calculus" title="Calculus">Calculus</a></th>
+</tr>
+<tr>
+<td class="plainlist" style="padding:0.3em 0.4em 0.3em;font-weight:bold;border-top: 1px solid #aaa; border-bottom: 1px solid #aaa;;">
+<ul>
+<li><a href="/wiki/Fundamental_theorem_of_calculus" title="Fundamental theorem of calculus">Fundamental theorem</a></li>
+<li><a href="/wiki/Limit_of_a_function" title="Limit of a function">Limits of functions</a></li>
+<li><a href="/wiki/Continuous_function" title="Continuous function">Continuity</a></li>
+<li><a href="/wiki/Mean_value_theorem" title="Mean value theorem">Mean value theorem</a></li>
+<li><a href="/wiki/Rolle%27s_theorem" title="Rolle's theorem">Rolle's theorem</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;text-align: center;"><a href="/wiki/Differential_calculus" title="Differential calculus">Differential calculus</a></div>
+<div class="NavContent hlist" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;">
+<dl>
+<dt>Definitions</dt>
+</dl>
+<ul>
+<li><a href="/wiki/Derivative" title="Derivative">Derivative</a></li>
+<li><a href="/wiki/Differential_(infinitesimal)" title="Differential (infinitesimal)">Differential (infinitesimal)</a></li>
+<li><a href="/wiki/Differential_of_a_function" title="Differential of a function">Differential of a function</a></li>
+<li><a href="/wiki/Generalizations_of_the_derivative" title="Generalizations of the derivative">Generalizations of the derivative</a></li>
+</ul>
+<dl>
+<dt>Concepts</dt>
+</dl>
+<ul>
+<li><a href="/wiki/Notation_for_differentiation" title="Notation for differentiation">Notation for differentiation</a></li>
+<li><a href="/wiki/Second_derivative" title="Second derivative">Second derivative</a></li>
+<li><a href="/wiki/Third_derivative" title="Third derivative">Third derivative</a></li>
+<li><a href="/wiki/Change_of_variables" title="Change of variables">Change of variables</a></li>
+<li><a href="/wiki/Implicit_function" title="Implicit function">Implicit differentiation</a></li>
+<li><a href="/wiki/Related_rates" title="Related rates">Related rates</a></li>
+<li><a href="/wiki/Taylor%27s_theorem" title="Taylor's theorem">Taylor's theorem</a></li>
+</ul>
+<dl>
+<dt><a href="/wiki/Differentiation_rules" title="Differentiation rules">Rules and identities</a></dt>
+</dl>
+<ul>
+<li><a href="/wiki/Sum_rule_in_differentiation" title="Sum rule in differentiation">Sums</a></li>
+<li><a href="/wiki/Product_rule" title="Product rule">Products</a></li>
+<li><a href="/wiki/Chain_rule" title="Chain rule">Chain rule</a></li>
+<li><a href="/wiki/Power_rule" title="Power rule">Powers</a></li>
+<li><a href="/wiki/Quotient_rule" title="Quotient rule">Quotients</a></li>
+<li><a href="/wiki/Fa%C3%A0_di_Bruno%27s_formula" title="Faà di Bruno's formula">Faà di Bruno's formula</a></li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;text-align: center;">Integral calculus</div>
+<div class="NavContent hlist" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;">
+<ul>
+<li><a href="/wiki/Lists_of_integrals" title="Lists of integrals">Lists of integrals</a></li>
+</ul>
+<dl>
+<dt>Definitions</dt>
+</dl>
+<ul>
+<li><a href="/wiki/Antiderivative" title="Antiderivative">Antiderivative</a></li>
+<li><a href="/wiki/Integral" title="Integral">Integral</a></li>
+<li><a href="/wiki/Improper_integral" title="Improper integral">Improper integral</a></li>
+<li><a href="/wiki/Riemann_integral" title="Riemann integral">Riemann integral</a></li>
+<li><a href="/wiki/Lebesgue_integration" title="Lebesgue integration">Lebesgue integration</a></li>
+<li><a href="/wiki/Methods_of_contour_integration" title="Methods of contour integration">Contour integral</a></li>
+</ul>
+<dl>
+<dt>Integration by</dt>
+</dl>
+<ul>
+<li><a href="/wiki/Integration_by_parts" title="Integration by parts">parts</a></li>
+<li><a href="/wiki/Disc_integration" title="Disc integration">discs</a></li>
+<li><a href="/wiki/Shell_integration" title="Shell integration">cylindrical shells</a></li>
+<li><a href="/wiki/Integration_by_substitution" title="Integration by substitution">substitution</a></li>
+<li><a href="/wiki/Trigonometric_substitution" title="Trigonometric substitution">trigonometric substitution</a></li>
+<li><a href="/wiki/Partial_fractions_in_integration" title="Partial fractions in integration" class="mw-redirect">partial fractions</a></li>
+<li><a href="/wiki/Order_of_integration_(calculus)" title="Order of integration (calculus)">changing order</a></li>
+<li><a href="/wiki/Integration_by_reduction_formulae" title="Integration by reduction formulae">reduction formulae</a></li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;text-align: center;"><a href="/wiki/Series_(mathematics)" title="Series (mathematics)">Series</a></div>
+<div class="NavContent hlist" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;">
+<ul>
+<li><a href="/wiki/Geometric_series" title="Geometric series">Geometric</a></li>
+<li><a href="/wiki/Arithmetico-geometric_sequence" title="Arithmetico-geometric sequence">Arithmetico-geometric</a></li>
+<li><a href="/wiki/Harmonic_series_(mathematics)" title="Harmonic series (mathematics)">Harmonic</a></li>
+<li><a href="/wiki/Alternating_series" title="Alternating series">Alternating</a></li>
+<li><a href="/wiki/Power_series" title="Power series">Power</a></li>
+<li><a href="/wiki/Binomial_series" title="Binomial series">Binomial</a></li>
+<li><strong class="selflink">Taylor</strong></li>
+</ul>
+<dl>
+<dt><a href="/wiki/Convergence_tests" title="Convergence tests">Convergence tests</a></dt>
+</dl>
+<ul>
+<li><a href="/wiki/Term_test" title="Term test">Summand limit (Term test)</a></li>
+<li><a href="/wiki/Ratio_test" title="Ratio test">Ratio</a></li>
+<li><a href="/wiki/Root_test" title="Root test">Root</a></li>
+<li><a href="/wiki/Integral_test_for_convergence" title="Integral test for convergence">Integral</a></li>
+<li><a href="/wiki/Direct_comparison_test" title="Direct comparison test">Direct comparison</a></li>
+<li><a href="/wiki/Limit_comparison_test" title="Limit comparison test">Limit comparison</a></li>
+<li><a href="/wiki/Alternating_series_test" title="Alternating series test">Alternating series</a></li>
+<li><a href="/wiki/Cauchy_condensation_test" title="Cauchy condensation test">Cauchy condensation</a></li>
+<li><a href="/wiki/Dirichlet%27s_test" title="Dirichlet's test">Dirichlet</a></li>
+<li><a href="/wiki/Abel%27s_test" title="Abel's test">Abel</a></li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;text-align: center;"><a href="/wiki/Vector_calculus" title="Vector calculus">Vector calculus</a></div>
+<div class="NavContent hlist" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;">
+<ul>
+<li><a href="/wiki/Gradient" title="Gradient">Gradient</a></li>
+<li><a href="/wiki/Divergence" title="Divergence">Divergence</a></li>
+<li><a href="/wiki/Curl_(mathematics)" title="Curl (mathematics)">Curl</a></li>
+<li><a href="/wiki/Laplace_operator" title="Laplace operator">Laplacian</a></li>
+<li><a href="/wiki/Gradient_theorem" title="Gradient theorem">Gradient theorem</a></li>
+<li><a href="/wiki/Green%27s_theorem" title="Green's theorem">Green's theorem</a></li>
+<li><a href="/wiki/Stokes%27_theorem" title="Stokes' theorem">Stokes' theorem</a></li>
+<li><a href="/wiki/Divergence_theorem" title="Divergence theorem">Divergence theorem</a></li>
+<li><a href="/wiki/Directional_derivative" title="Directional derivative">Directional derivative</a></li>
+<li><a href="/wiki/Vector_calculus_identities" title="Vector calculus identities">Vector calculus identities</a></li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;text-align: center;"><a href="/wiki/Multivariable_calculus" title="Multivariable calculus">Multivariable calculus</a></div>
+<div class="NavContent hlist" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;">
+<dl>
+<dt>Formalisms</dt>
+</dl>
+<ul>
+<li><a href="/wiki/Matrix_calculus" title="Matrix calculus">Matrix</a></li>
+<li><a href="/wiki/Tensor_calculus" title="Tensor calculus">Tensor</a></li>
+<li><a href="/wiki/Exterior_derivative" title="Exterior derivative">Exterior</a></li>
+<li><a href="/wiki/Geometric_calculus" title="Geometric calculus">Geometric</a></li>
+</ul>
+<dl>
+<dt>Definitions</dt>
+</dl>
+<ul>
+<li><a href="/wiki/Partial_derivative" title="Partial derivative">Partial derivative</a></li>
+<li><a href="/wiki/Multiple_integral" title="Multiple integral">Multiple integral</a></li>
+<li><a href="/wiki/Line_integral" title="Line integral">Line integral</a></li>
+<li><a href="/wiki/Surface_integral" title="Surface integral">Surface integral</a></li>
+<li><a href="/wiki/Volume_integral" title="Volume integral">Volume integral</a></li>
+<li><a href="/wiki/Jacobian_matrix_and_determinant" title="Jacobian matrix and determinant">Jacobian</a></li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;text-align: center;">Specialized calculi</div>
+<div class="NavContent hlist" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;">
+<ul>
+<li><a href="/wiki/Calculus_of_variations" title="Calculus of variations">Calculus of variations</a></li>
+<li><a href="/wiki/Fractional_calculus" title="Fractional calculus">Fractional</a></li>
+<li><a href="/wiki/Malliavin_calculus" title="Malliavin calculus">Malliavin</a></li>
+<li><a href="/wiki/Stochastic_calculus" title="Stochastic calculus">Stochastic</a></li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;padding-top: 0.6em;;">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Calculus" title="Template:Calculus"><span title="View this template" style=";">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Calculus" title="Template talk:Calculus"><span title="Discuss this template" style=";">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Calculus&amp;action=edit"><span title="Edit this template" style=";">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p>In <a href="/wiki/Mathematics" title="Mathematics">mathematics</a>, a <b>Taylor series</b> is a representation of a <a href="/wiki/Function_(mathematics)" title="Function (mathematics)">function</a> as an <a href="/wiki/Series_(mathematics)" title="Series (mathematics)">infinite sum</a> of terms that are calculated from the values of the function's <a href="/wiki/Derivative" title="Derivative">derivatives</a> at a single point.</p>
+<p>The concept of a Taylor series was discovered by the Scottish mathematician <a href="/wiki/James_Gregory_(mathematician)" title="James Gregory (mathematician)">James Gregory</a> and formally introduced by the English mathematician <a href="/wiki/Brook_Taylor" title="Brook Taylor">Brook Taylor</a> in 1715. If the Taylor series is centered at zero, then that series is also called a <b>Maclaurin series</b>, named after the Scottish mathematician <a href="/wiki/Colin_Maclaurin" title="Colin Maclaurin">Colin Maclaurin</a>, who made extensive use of this special case of Taylor series in the 18th century.</p>
+<p>It is common practice to approximate a function by using a finite number of terms of its Taylor series. <a href="/wiki/Taylor%27s_theorem" title="Taylor's theorem">Taylor's theorem</a> gives quantitative estimates on the error in this approximation. Any finite number of initial terms of the Taylor series of a function is called a <a href="/wiki/Taylor_polynomial" title="Taylor polynomial" class="mw-redirect">Taylor polynomial</a>. The Taylor series of a function is the <a href="/wiki/Limit_of_a_sequence" title="Limit of a sequence">limit</a> of that function's Taylor polynomials, provided that the limit exists. A function may not be equal to its Taylor series, even if its Taylor series converges at every point. A function that is equal to its Taylor series in an <a href="/wiki/Open_interval" title="Open interval" class="mw-redirect">open interval</a> (or a disc in the <a href="/wiki/Complex_plane" title="Complex plane">complex plane</a>) is known as an <a href="/wiki/Analytic_function" title="Analytic function">analytic function</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definition"><span class="tocnumber">1</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Examples"><span class="tocnumber">2</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#History"><span class="tocnumber">3</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Analytic_functions"><span class="tocnumber">4</span> <span class="toctext">Analytic functions</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Approximation_and_convergence"><span class="tocnumber">5</span> <span class="toctext">Approximation and convergence</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Generalization"><span class="tocnumber">5.1</span> <span class="toctext">Generalization</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#List_of_Maclaurin_series_of_some_common_functions"><span class="tocnumber">6</span> <span class="toctext">List of Maclaurin series of some common functions</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Calculation_of_Taylor_series"><span class="tocnumber">7</span> <span class="toctext">Calculation of Taylor series</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#First_example"><span class="tocnumber">7.1</span> <span class="toctext">First example</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Second_example"><span class="tocnumber">7.2</span> <span class="toctext">Second example</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Third_example"><span class="tocnumber">7.3</span> <span class="toctext">Third example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Taylor_series_as_definitions"><span class="tocnumber">8</span> <span class="toctext">Taylor series as definitions</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Taylor_series_in_several_variables"><span class="tocnumber">9</span> <span class="toctext">Taylor series in several variables</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Example"><span class="tocnumber">9.1</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Fractional_Taylor_series"><span class="tocnumber">10</span> <span class="toctext">Fractional Taylor series</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Comparison_with_Fourier_series"><span class="tocnumber">11</span> <span class="toctext">Comparison with Fourier series</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">12</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Notes"><span class="tocnumber">13</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#References"><span class="tocnumber">14</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#External_links"><span class="tocnumber">15</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=1" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Taylor series of a <a href="/wiki/Real-valued_function" title="Real-valued function">real</a> or <a href="/wiki/Complex-valued_function" title="Complex-valued function">complex-valued function</a> <i>ƒ</i>(<i>x</i>) that is <a href="/wiki/Infinitely_differentiable_function" title="Infinitely differentiable function" class="mw-redirect">infinitely differentiable</a> at a <a href="/wiki/Real_number" title="Real number">real</a> or <a href="/wiki/Complex_number" title="Complex number">complex number</a> <i>a</i> is the <a href="/wiki/Power_series" title="Power series">power series</a></p>
+<dl>
+<dd><img class="tex" alt="f(a)+\frac {f'(a)}{1!} (x-a)+ \frac{f''(a)}{2!} (x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+ \cdots. " src="//upload.wikimedia.org/math/d/8/f/d8f92ef8e46a567502e11ceb74574b40.png" /></dd>
+</dl>
+<p>which can be written in the more compact <a href="/wiki/Summation#Capital-sigma_notation" title="Summation">sigma notation</a> as</p>
+<dl>
+<dd><img class="tex" alt=" \sum_{n=0} ^ {\infty} \frac {f^{(n)}(a)}{n!} \, (x-a)^{n}" src="//upload.wikimedia.org/math/c/3/a/c3a379aaf2b04999084373279ed2da10.png" /></dd>
+</dl>
+<p>where <i>n</i>! denotes the <a href="/wiki/Factorial" title="Factorial">factorial</a> of <i>n</i> and <i>ƒ</i><sup>&#160;(<i>n</i>)</sup>(<i>a</i>) denotes the <i>n</i>th <a href="/wiki/Derivative" title="Derivative">derivative</a> of <i>ƒ</i> evaluated at the point <i>a</i>. The derivative of order zero <i>ƒ</i> is defined to be <i>ƒ</i> itself and <span class="nowrap">(<i>x</i> − <i>a</i>)<sup>0</sup></span> and 0! are both defined to be&#160;1. When <span class="nowrap"><i>a</i> = 0</span>, the series is also called a Maclaurin series.</p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=2" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Maclaurin series for any <a href="/wiki/Polynomial" title="Polynomial">polynomial</a> is the polynomial itself.</p>
+<p>The Maclaurin series for <span class="nowrap">(1 − <i>x</i>)<sup>−1</sup></span> at <i>a</i> = 0 is the <a href="/wiki/Geometric_series" title="Geometric series">geometric series</a></p>
+<dl>
+<dd><img class="tex" alt="1+x+x^2+x^3+\cdots\!" src="//upload.wikimedia.org/math/9/3/6/936843e26ad3826bf614e2d76a51e83a.png" /></dd>
+</dl>
+<p>so the Taylor series for <i>x</i><sup>−1</sup> at <span class="nowrap"><i>a</i> = 1</span> is</p>
+<dl>
+<dd><img class="tex" alt="1-(x-1)+(x-1)^2-(x-1)^3+\cdots.\!" src="//upload.wikimedia.org/math/0/9/0/090ccf1f46bc9ef17015af68170e5f83.png" /></dd>
+</dl>
+<p>By integrating the above Maclaurin series we find the Maclaurin series for <span class="nowrap">log(1 − <i>x</i>)</span>, where log denotes the <a href="/wiki/Natural_logarithm" title="Natural logarithm">natural logarithm</a>:</p>
+<dl>
+<dd><img class="tex" alt="-x-\frac{1}{2}x^2-\frac{1}{3}x^3-\frac{1}{4}x^4-\cdots\!" src="//upload.wikimedia.org/math/1/5/b/15bc189186772de586765f4ee44c28be.png" /></dd>
+</dl>
+<p>and the corresponding Taylor series for log(<i>x</i>) at <span class="nowrap"><i>a</i> = 1</span> is</p>
+<dl>
+<dd><img class="tex" alt="(x-1)-\frac{1}{2}(x-1)^2+\frac{1}{3}(x-1)^3-\frac{1}{4}(x-1)^4+\cdots,\!" src="//upload.wikimedia.org/math/8/9/5/895b92d3e7e940593ff1a90c12755b0c.png" /></dd>
+</dl>
+<p>and more generally, the corresponding Taylor series for log(<i>x</i>) at some <i>a</i> = <i>x</i><sub>0</sub> is:</p>
+<dl>
+<dd><img class="tex" alt=" \log ( x_0 ) + \frac{1}{x_0} ( x - x_0 ) - \frac{1}{x_0^2}\frac{( x - x_0 )^2}{2} + \cdots." src="//upload.wikimedia.org/math/0/5/a/05a27baeb01d985d2610fbae2b9c1c04.png" /></dd>
+</dl>
+<p>The Taylor series for the <a href="/wiki/Exponential_function" title="Exponential function">exponential function</a> e<sup><i>x</i></sup> at <i>a</i>&#160;= 0 is</p>
+<dl>
+<dd><img class="tex" alt="1 + \frac{x^1}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!}+ \cdots = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \frac{x^5}{120} + \cdots\! = \sum_{n=0}^\infty \frac{x^n}{n!}." src="//upload.wikimedia.org/math/4/5/9/4597c1e758b3aeb83adcb03d3f75d00e.png" /></dd>
+</dl>
+<p>The above expansion holds because the derivative of e<sup><i>x</i></sup> with respect to x is also e<sup><i>x</i></sup> and e<sup>0</sup> equals&#160;1. This leaves the terms <span class="nowrap">(<i>x</i> − 0)<sup><i>n</i></sup></span> in the numerator and <i>n</i>! in the denominator for each term in the infinite sum.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=3" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Greek philosopher <a href="/wiki/Zeno_of_Elea" title="Zeno of Elea">Zeno</a> considered the problem of summing an infinite series to achieve a finite result, but rejected it as an impossibility: the result was <a href="/wiki/Zeno%27s_paradox" title="Zeno's paradox" class="mw-redirect">Zeno's paradox</a>. Later, <a href="/wiki/Aristotle" title="Aristotle">Aristotle</a> proposed a philosophical resolution of the paradox, but the mathematical content was apparently unresolved until taken up by <a href="/wiki/Democritus" title="Democritus">Democritus</a> and then <a href="/wiki/Archimedes" title="Archimedes">Archimedes</a>. It was through Archimedes's <a href="/wiki/Method_of_exhaustion" title="Method of exhaustion">method of exhaustion</a> that an infinite number of progressive subdivisions could be performed to achieve a finite result.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> <a href="/wiki/Liu_Hui" title="Liu Hui">Liu Hui</a> independently employed a similar method a few centuries later.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>In the 14th century, the earliest examples of the use of Taylor series and closely related methods were given by <a href="/wiki/Madhava_of_Sangamagrama" title="Madhava of Sangamagrama">Madhava of Sangamagrama</a>.<sup id="cite_ref-MAT_314_3-0" class="reference"><a href="#cite_note-MAT_314-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-dani_4-0" class="reference"><a href="#cite_note-dani-4"><span>[</span>4<span>]</span></a></sup> Though no record of his work survives, writings of later <a href="/wiki/Indian_mathematics" title="Indian mathematics">Indian mathematicians</a> suggest that he found a number of special cases of the Taylor series, including those for the <a href="/wiki/Trigonometric_function" title="Trigonometric function" class="mw-redirect">trigonometric functions</a> of <a href="/wiki/Sine" title="Sine">sine</a>, <a href="/wiki/Cosine" title="Cosine" class="mw-redirect">cosine</a>, <a href="/wiki/Tangent_(trigonometric_function)" title="Tangent (trigonometric function)" class="mw-redirect">tangent</a>, and <a href="/wiki/Arctangent" title="Arctangent" class="mw-redirect">arctangent</a>. The <a href="/wiki/Kerala_school_of_astronomy_and_mathematics" title="Kerala school of astronomy and mathematics">Kerala school of astronomy and mathematics</a> further expanded his works with various series expansions and rational approximations until the 16th century.</p>
+<p>In the 17th century, <a href="/wiki/James_Gregory_(astronomer_and_mathematician)" title="James Gregory (astronomer and mathematician)" class="mw-redirect">James Gregory</a> also worked in this area and published several Maclaurin series. It was not until 1715 however that a general method for constructing these series for all functions for which they exist was finally provided by <a href="/wiki/Brook_Taylor" title="Brook Taylor">Brook Taylor</a>,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> after whom the series are now named.</p>
+<p>The Maclaurin series was named after <a href="/wiki/Colin_Maclaurin" title="Colin Maclaurin">Colin Maclaurin</a>, a professor in Edinburgh, who published the special case of the Taylor result in the 18th century.</p>
+<h2><span class="mw-headline" id="Analytic_functions">Analytic functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=4" title="Edit section: Analytic functions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="/wiki/File:Exp_neg_inverse_square.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Exp_neg_inverse_square.svg/200px-Exp_neg_inverse_square.svg.png" width="200" height="200" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Exp_neg_inverse_square.svg/300px-Exp_neg_inverse_square.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Exp_neg_inverse_square.svg/400px-Exp_neg_inverse_square.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Exp_neg_inverse_square.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The function <strong style="color:#803300">e<sup>−1/x²</sup></strong> is not analytic at <i>x</i>&#160;=&#160;0: the Taylor series is identically 0, although the function is not.</div>
+</div>
+</div>
+<p>If <i>f</i>(<i>x</i>) is given by a convergent power series in an open disc (or interval in the real line) centered at <i>b</i> in the complex plane, it is said to be <a href="/wiki/Analytic_function" title="Analytic function">analytic</a> in this disc. Thus for <i>x</i> in this disc, <i>f</i> is given by a convergent power series</p>
+<dl>
+<dd><img class="tex" alt="f(x) = \sum_{n=0}^\infty a_n(x-b)^n." src="//upload.wikimedia.org/math/a/1/d/a1de6f1af81ee02d8ec84752afe58743.png" /></dd>
+</dl>
+<p>Differentiating by <i>x</i> the above formula <i>n</i> times, then setting <i>x</i>=<i>b</i> gives:</p>
+<dl>
+<dd><img class="tex" alt="\frac{f^{(n)}(b)}{n!} = a_n" src="//upload.wikimedia.org/math/8/7/7/8777cff0aad365d81cda23ef53016535.png" /></dd>
+</dl>
+<p>and so the power series expansion agrees with the Taylor series. Thus a function is analytic in an open disc centered at <i>b</i> if and only if its Taylor series converges to the value of the function at each point of the disc.</p>
+<p>If <i>f</i>(<i>x</i>) is equal to its Taylor series for all <i>x</i> in the complex plane, it is called <a href="/wiki/Entire_function" title="Entire function">entire</a>. The polynomials and the <a href="/wiki/Exponential_function" title="Exponential function">exponential function</a> <i>e</i><sup><i>x</i></sup> and the <a href="/wiki/Trigonometric_function" title="Trigonometric function" class="mw-redirect">trigonometric functions</a> sine and cosine are examples of entire functions. Examples of functions that are not entire include the <a href="/wiki/Square_root" title="Square root">square root</a>, the <a href="/wiki/Logarithm" title="Logarithm">logarithm</a>, the <a href="/wiki/Trigonometric_function" title="Trigonometric function" class="mw-redirect">trigonometric function</a> tangent, and its inverse, <a href="/wiki/Arctan" title="Arctan" class="mw-redirect">arctan</a>. For these functions the Taylor series do not <a href="/wiki/Convergent_series" title="Convergent series">converge</a> if <i>x</i> is far from <i>b</i>. The Taylor series can be used to calculate the value of an entire function at every point, if the value of the function, and of all of its derivatives, are known at a single point.</p>
+<p>Uses of the Taylor series for analytic functions include:</p>
+<ol>
+<li>The partial sums (the <a href="/wiki/Taylor_polynomial" title="Taylor polynomial" class="mw-redirect">Taylor polynomials</a>) of the series can be used as approximations of the entire function. These approximations are good if sufficiently many terms are included.</li>
+<li>Differentiation and integration of power series can be performed term by term and is hence particularly easy.</li>
+<li>An <a href="/wiki/Analytic_function" title="Analytic function">analytic function</a> is uniquely extended to a <a href="/wiki/Holomorphic_function" title="Holomorphic function">holomorphic function</a> on an <a href="/wiki/Open_disk" title="Open disk" class="mw-redirect">open disk</a> in the <a href="/wiki/Complex_number" title="Complex number">complex plane</a>. This makes the machinery of <a href="/wiki/Complex_analysis" title="Complex analysis">complex analysis</a> available.</li>
+<li>The (truncated) series can be used to compute function values numerically, (often by recasting the polynomial into the <a href="/wiki/Chebyshev_form" title="Chebyshev form" class="mw-redirect">Chebyshev form</a> and evaluating it with the <a href="/wiki/Clenshaw_algorithm" title="Clenshaw algorithm">Clenshaw algorithm</a>).</li>
+<li>Algebraic operations can be done readily on the power series representation; for instance the <a href="/wiki/Euler%27s_formula" title="Euler's formula">Euler's formula</a> follows from Taylor series expansions for trigonometric and exponential functions. This result is of fundamental importance in such fields as <a href="/wiki/Harmonic_analysis" title="Harmonic analysis">harmonic analysis</a>.</li>
+<li>Approximations using the first few terms of a Taylor series can make otherwise unsolvable problems possible for a restricted domain; this approach is often used in physics.</li>
+</ol>
+<h2><span class="mw-headline" id="Approximation_and_convergence">Approximation and convergence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=5" title="Edit section: Approximation and convergence">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Taylorsine.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Taylorsine.svg/300px-Taylorsine.svg.png" width="300" height="225" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Taylorsine.svg/450px-Taylorsine.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Taylorsine.svg/600px-Taylorsine.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Taylorsine.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The sine function (blue) is closely approximated by its Taylor polynomial of degree 7 (pink) for a full period centered at the origin.</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:LogTay.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/LogTay.svg/300px-LogTay.svg.png" width="300" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/LogTay.svg/450px-LogTay.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/LogTay.svg/600px-LogTay.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:LogTay.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The Taylor polynomials for log(<i>1+x</i>) only provide accurate approximations in the range <span class="nowrap">−1 &lt; <i>x</i> ≤ 1</span>. Note that, for <span class="nowrap"><i>x</i> &gt; 1</span>, the Taylor polynomials of higher degree are <i><b>worse</b></i> approximations.</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Logarithm_GIF.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/27/Logarithm_GIF.gif/300px-Logarithm_GIF.gif" width="300" height="225" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/27/Logarithm_GIF.gif/450px-Logarithm_GIF.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/27/Logarithm_GIF.gif/600px-Logarithm_GIF.gif 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Logarithm_GIF.gif" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The Taylor approximations for log(<i>1+x</i>) (black). For <i>x &gt; 1</i>, any Taylor approximation is invalid.</div>
+</div>
+</div>
+<p>Pictured on the right is an accurate approximation of sin(<i>x</i>) around the point <i>x</i> = 0. The pink curve is a polynomial of degree seven:</p>
+<dl>
+<dd><img class="tex" alt="\sin\left( x \right) \approx x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}.\!" src="//upload.wikimedia.org/math/2/9/c/29cb648e96291f52707c7225630c1a17.png" /></dd>
+</dl>
+<p>The error in this approximation is no more than |<i>x</i>|<sup>9</sup>/9!. In particular, for <span class="nowrap">−1 &lt; <i>x</i> &lt; 1</span>, the error is less than 0.000003.</p>
+<p>In contrast, also shown is a picture of the natural logarithm function <span class="nowrap"><a href="/wiki/Natural_logarithm" title="Natural logarithm">log</a>(1 + <i>x</i>)</span> and some of its <a href="/wiki/Taylor_polynomial" title="Taylor polynomial" class="mw-redirect">Taylor polynomials</a> around <i>a</i> = 0. These approximations converge to the function only in the region −1 &lt; <i>x</i> ≤ 1; outside of this region the higher-degree Taylor polynomials are <i><b>worse</b></i> approximations for the function. This is similar to <a href="/wiki/Runge%27s_phenomenon" title="Runge's phenomenon">Runge's phenomenon</a>.</p>
+<p>The <b>error</b> incurred in approximating a function by its <i>n</i>th-degree Taylor polynomial is called the <b>remainder</b> or <i><a href="/wiki/Residual_(numerical_analysis)" title="Residual (numerical analysis)">residual</a></i> and is denoted by the function <i>R<sub>n</sub>(x)</i>. <a href="/wiki/Taylor%27s_theorem" title="Taylor's theorem">Taylor's theorem</a> can be used to obtain a bound on the size of the remainder.</p>
+<p>In general, Taylor series need not be <a href="/wiki/Convergent_series" title="Convergent series">convergent</a> at all. And in fact the set of functions with a convergent Taylor series is a <a href="/wiki/Meager_set" title="Meager set" class="mw-redirect">meager set</a> in the <a href="/wiki/Fr%C3%A9chet_space" title="Fréchet space">Fréchet space</a> of <a href="/wiki/Smooth_functions" title="Smooth functions" class="mw-redirect">smooth functions</a>. And even if the Taylor series of a function <i>f</i> does converge, its limit need not in general be equal to the value of the function <i>f</i>(<i>x</i>). For example, the function</p>
+<dl>
+<dd><img class="tex" alt="
+f(x) = \begin{cases}
+e^{-1/x^2}&amp;\mathrm{if}\ x\not=0\\
+0&amp;\mathrm{if}\ x=0
+\end{cases}
+" src="//upload.wikimedia.org/math/7/3/4/734173a08dcfe45fcff058190d4ec0a1.png" /></dd>
+</dl>
+<p>is <a href="/wiki/Infinitely_differentiable" title="Infinitely differentiable" class="mw-redirect">infinitely differentiable</a> at <span class="nowrap"><i>x</i> = 0</span>, and has all derivatives zero there. Consequently, the Taylor series of <i>f</i>(<i>x</i>) about <span class="nowrap"><i>x</i> = 0</span> is identically zero. However, <i>f</i>(<i>x</i>) is not equal to the zero function, and so it is not equal to its Taylor series around the origin.</p>
+<p>In <a href="/wiki/Real_analysis" title="Real analysis">real analysis</a>, this example shows that there are <a href="/wiki/Infinitely_differentiable_function" title="Infinitely differentiable function" class="mw-redirect">infinitely differentiable functions</a> <i>f</i>(<i>x</i>) whose Taylor series are <i>not</i> equal to <i>f</i>(<i>x</i>) even if they converge. By contrast, the <a href="/wiki/Holomorphic_function" title="Holomorphic function">holomorphic functions</a> studied in <a href="/wiki/Complex_analysis" title="Complex analysis">complex analysis</a> always possess a convergent Taylor series, and even the Taylor series of <a href="/wiki/Meromorphic_function" title="Meromorphic function">meromorphic functions</a>, which might have singularities, never converge to a value different from the function itself. The complex function e<sup>−<i>z</i><sup>−2</sup></sup>, however, does not approach 0 when <i>z</i> approaches 0 along the imaginary axis, so it is not <a href="/wiki/Continuous_function" title="Continuous function">continuous</a> in the complex plane and its Taylor series is undefined at 0.</p>
+<p>More generally, every sequence of real or complex numbers can appear as <a href="/wiki/Coefficient" title="Coefficient">coefficients</a> in the Taylor series of an infinitely differentiable function defined on the real line, a consequence of <a href="/wiki/Borel%27s_lemma" title="Borel's lemma">Borel's lemma</a> (see also <a href="/wiki/Non-analytic_smooth_function#Application_to_Taylor_series" title="Non-analytic smooth function">Non-analytic smooth function</a>). As a result, the <a href="/wiki/Radius_of_convergence" title="Radius of convergence">radius of convergence</a> of a Taylor series can be zero. There are even infinitely differentiable functions defined on the real line whose Taylor series have a radius of convergence 0 everywhere.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<p>Some functions cannot be written as Taylor series because they have a <a href="/wiki/Singularity_(mathematics)" title="Singularity (mathematics)">singularity</a>; in these cases, one can often still achieve a series expansion if one allows also negative powers of the variable <i>x</i>; see <a href="/wiki/Laurent_series" title="Laurent series">Laurent series</a>. For example, <i>f</i>(<i>x</i>)&#160;= <i>e</i><sup>−<i>x</i><sup>−2</sup></sup> can be written as a Laurent series.</p>
+<h3><span class="mw-headline" id="Generalization">Generalization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=6" title="Edit section: Generalization">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There is, however, a generalization<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup> of the Taylor series that does converge to the value of the function itself for any <a href="/wiki/Bounded_function" title="Bounded function">bounded</a> <a href="/wiki/Continuous_function" title="Continuous function">continuous function</a> on (0,∞), using the calculus of <a href="/wiki/Finite_differences" title="Finite differences" class="mw-redirect">finite differences</a>. Specifically, one has the following theorem, due to <a href="/wiki/Einar_Hille" title="Einar Hille">Einar Hille</a>, that for any <i>t</i>&#160;&gt;&#160;0,</p>
+<dl>
+<dd><img class="tex" alt="\lim_{h\to 0^+}\sum_{n=0}^\infty \frac{t^n}{n!}\frac{\Delta_h^nf(a)}{h^n} = f(a+t)." src="//upload.wikimedia.org/math/b/e/b/beb8284a42db1c0e948143b69eab9b6b.png" /></dd>
+</dl>
+<p>Here Δ<span style="display:inline-block; margin-bottom:-0.3em; vertical-align:-0.4em; line-height:1.2em; font-size:85%; text-align:left;"><i>n</i><br />
+<i>h</i></span> is the <i>n</i>-th finite difference operator with step size <i>h</i>. The series is precisely the Taylor series, except that divided differences appear in place of differentiation: the series is formally similar to the <a href="/wiki/Newton_series" title="Newton series" class="mw-redirect">Newton series</a>. When the function <i>f</i> is analytic at <i>a</i>, the terms in the series converge to the terms of the Taylor series, and in this sense generalizes the usual Taylor series.</p>
+<p>In general, for any infinite sequence <i>a</i><sub><i>i</i></sub>, the following power series identity holds:</p>
+<dl>
+<dd><img class="tex" alt="\sum_{n=0}^\infty\frac{u^n}{n!}\Delta^na_i = e^{-u}\sum_{j=0}^\infty\frac{u^j}{j!}a_{i+j}." src="//upload.wikimedia.org/math/8/a/0/8a092df8c30e28f647b9f8a64ef7012d.png" /></dd>
+</dl>
+<p>So in particular,</p>
+<dl>
+<dd><img class="tex" alt="f(a+t) = \lim_{h\to 0^+} e^{-t/h}\sum_{j=0}^\infty f(a+jh) \frac{(t/h)^j}{j!}." src="//upload.wikimedia.org/math/9/8/0/98058502a7ccbe36a880478051e1c017.png" /></dd>
+</dl>
+<p>The series on the right is the <a href="/wiki/Expectation_value" title="Expectation value" class="mw-redirect">expectation value</a> of <i>f</i>(a&#160;+&#160;<i>X</i>), where <i>X</i> is a <a href="/wiki/Poisson_distribution" title="Poisson distribution">Poisson distributed</a> <a href="/wiki/Random_variable" title="Random variable">random variable</a> that takes the value <i>jh</i> with probability <i>e</i><sup>−<i>t</i>/<i>h</i></sup>(<i>t</i>/<i>h</i>)<sup><i>j</i></sup>/<i>j</i>!. Hence,</p>
+<dl>
+<dd><img class="tex" alt="f(a+t) = \lim_{h\to 0^+} \int\limits_{-\infty}^\infty f(a+x)dP_{t/h,h}(x)." src="//upload.wikimedia.org/math/0/f/9/0f9edb2a6a21a3dd27a407523f131d34.png" /></dd>
+</dl>
+<p>The <a href="/wiki/Law_of_large_numbers" title="Law of large numbers">law of large numbers</a> implies that the identity holds.</p>
+<h2><span class="mw-headline" id="List_of_Maclaurin_series_of_some_common_functions">List of Maclaurin series of some common functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=7" title="Edit section: List of Maclaurin series of some common functions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl>
+<dd><i>See also <a href="/wiki/List_of_mathematical_series" title="List of mathematical series">List of mathematical series</a></i></dd>
+</dl>
+<div class="thumb tright">
+<div class="thumbinner" style="width:152px;"><a href="/wiki/File:TaylorCosCosEnhanced.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a1/TaylorCosCosEnhanced.svg/150px-TaylorCosCosEnhanced.svg.png" width="150" height="132" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a1/TaylorCosCosEnhanced.svg/225px-TaylorCosCosEnhanced.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a1/TaylorCosCosEnhanced.svg/300px-TaylorCosCosEnhanced.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:TaylorCosCosEnhanced.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The real part of the cosine function in the <a href="/wiki/Complex_plane" title="Complex plane">complex plane</a></div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:152px;"><a href="/wiki/File:TaylorCosPolSVG.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/07/TaylorCosPolSVG.svg/150px-TaylorCosPolSVG.svg.png" width="150" height="132" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/07/TaylorCosPolSVG.svg/225px-TaylorCosPolSVG.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/07/TaylorCosPolSVG.svg/300px-TaylorCosPolSVG.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:TaylorCosPolSVG.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An 8th-degree approximation of the cosine function in the <a href="/wiki/Complex_plane" title="Complex plane">complex plane</a></div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:152px;"><a href="/wiki/File:TaylorCosAllSVG.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/12/TaylorCosAllSVG.svg/150px-TaylorCosAllSVG.svg.png" width="150" height="132" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/12/TaylorCosAllSVG.svg/225px-TaylorCosAllSVG.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/12/TaylorCosAllSVG.svg/300px-TaylorCosAllSVG.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:TaylorCosAllSVG.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The two above curves put together</div>
+</div>
+</div>
+<p>Several important Maclaurin series expansions follow.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> All these expansions are valid for complex arguments <i>x</i>.</p>
+<p><a href="/wiki/Exponential_function" title="Exponential function">Exponential function</a></p>
+<dl>
+<dd><img class="tex" alt="e^{x} = \sum^{\infty}_{n=0} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots\quad\text{ for all } x\!" src="//upload.wikimedia.org/math/f/9/8/f98fd1cf18b61436b3adf73e1be3e6fc.png" /></dd>
+</dl>
+<p><a href="/wiki/Natural_logarithm" title="Natural logarithm">Natural logarithm</a>:</p>
+<dl>
+<dd><img class="tex" alt="\log(1-x) = - \sum^{\infty}_{n=1} \frac{x^n}n\quad\text{ for } |x| &lt; 1" src="//upload.wikimedia.org/math/3/b/d/3bdde0d52c0bfb8c9af62ccf23c39ab6.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\log(1+x) = \sum^\infty_{n=1} (-1)^{n+1}\frac{x^n}n\quad\text{ for } |x| &lt; 1" src="//upload.wikimedia.org/math/4/3/2/432c7fac4aec6915480694875c18b141.png" /></dd>
+</dl>
+<p><a href="/wiki/Geometric_series" title="Geometric series">Geometric series</a> (see article for variants):</p>
+<dl>
+<dd><img class="tex" alt="\frac{1}{1-x} = \sum^\infty_{n=0} x^n\quad\text{ for }|x| &lt; 1\!" src="//upload.wikimedia.org/math/2/a/7/2a79eec1f3d3d7d2c5780655315abeaa.png" /></dd>
+</dl>
+<p><a href="/wiki/Binomial_series" title="Binomial series">Binomial series</a> (includes the square root for <i>α</i> = 1/2 and the infinite geometric series for <i>α</i> = −1):</p>
+<dl>
+<dd><img class="tex" alt="(1+x)^\alpha = \sum_{n=0}^\infty {\alpha \choose n} x^n\quad\text{ for all }|x| &lt; 1 \text{ and all complex } \alpha\!" src="//upload.wikimedia.org/math/d/6/1/d61641dc1dbc3af1afd4fb37593d0b64.png" /></dd>
+</dl>
+<p>which, with the first several terms written out explicitly for the common <a href="/wiki/Square_root" title="Square root">square root</a> cases, is:</p>
+<dl>
+<dd><img class="tex" alt="(1+x)^{0.5} = \textstyle 1 + \frac{1}{2}x - \frac{1}{8}x^2 + \frac{1}{16}x^3 - \frac{5}{128}x^4 + \frac{7}{256}x^5 - \cdots" src="//upload.wikimedia.org/math/9/2/4/9244aadfe37587ee752a4fd2425d321e.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="(1+x)^{-0.5} = \textstyle 1 -\frac{1}{2}x + \frac{3}{8}x^2 - \frac{5}{16}x^3 + \frac{35}{128}x^4 - \frac{63}{256}x^5 + \cdots" src="//upload.wikimedia.org/math/0/2/6/026115496ddc547720ab56ab1fbd9751.png" /></dd>
+</dl>
+<p>with generalized <a href="/wiki/Binomial_coefficient" title="Binomial coefficient">binomial coefficients</a></p>
+<dl>
+<dd><img class="tex" alt="{\alpha\choose n} = \prod_{k=1}^n \frac{\alpha-k+1}k = \frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}" src="//upload.wikimedia.org/math/c/a/a/caa314238569007c91788ea436c94146.png" /></dd>
+</dl>
+<p><a href="/wiki/Trigonometric_function" title="Trigonometric function" class="mw-redirect">Trigonometric functions</a>:</p>
+<dl>
+<dd><img class="tex" alt="\sin x = \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots\quad\text{ for all } x\!" src="//upload.wikimedia.org/math/d/3/1/d313574308b26ae8292951977a7ee638.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\cos x = \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots\quad\text{ for all } x\!" src="//upload.wikimedia.org/math/5/8/0/5808cbc51cff8337a53942f6dead911e.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\tan x = \sum^{\infty}_{n=1} \frac{B_{2n} (-4)^n (1-4^n)}{(2n)!} x^{2n-1} = x + \frac{x^3}{3} + \frac{2 x^5}{15} + \cdots\quad\text{ for }|x| &lt; \frac{\pi}{2}\!" src="//upload.wikimedia.org/math/b/2/0/b20cd46867eebfe10c300deaa4a9082d.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\sec x = \sum^{\infty}_{n=0} \frac{(-1)^n E_{2n}}{(2n)!} x^{2n}\quad\text{ for }|x| &lt; \frac{\pi}{2}\!" src="//upload.wikimedia.org/math/f/5/b/f5b90df718a11fcac6ede33c05e6287f.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\arcsin x = \sum^{\infty}_{n=0} \frac{(2n)!}{4^n (n!)^2 (2n+1)} x^{2n+1}\quad\text{ for }|x| \le 1\!" src="//upload.wikimedia.org/math/e/6/e/e6e3b2d1f866e8869b81eb0236efe46f.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\arccos x ={\pi\over 2}-\arcsin x={\pi\over 2}- \sum^{\infty}_{n=0} \frac{(2n)!}{4^n (n!)^2 (2n+1)} x^{2n+1}\quad\text{ for }|x| \le 1\!" src="//upload.wikimedia.org/math/6/2/b/62b003db56f2f95fadf3c90eb10345f7.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\arctan x = \sum^{\infty}_{n=0} \frac{(-1)^n}{2n+1} x^{2n+1}\quad\text{ for }|x| \le 1, x\not=\pm i\!" src="//upload.wikimedia.org/math/7/b/d/7bdef024a896fb92d103409c9e2d5d72.png" /></dd>
+</dl>
+<p><a href="/wiki/Hyperbolic_function" title="Hyperbolic function">Hyperbolic functions</a>:</p>
+<dl>
+<dd><img class="tex" alt="\sinh x = \sum^{\infty}_{n=0} \frac{x^{2n+1}}{(2n+1)!} = x + \frac{x^3}{3!} + \frac{x^5}{5!} + \cdots\quad\text{ for all } x\!" src="//upload.wikimedia.org/math/4/3/0/43047f57ab3e2183d7875764566580f4.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\cosh x = \sum^{\infty}_{n=0} \frac{x^{2n}}{(2n)!} = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \cdots\quad\text{ for all } x\!" src="//upload.wikimedia.org/math/8/4/a/84aa1c9392c1d950fc6ab5a51043fc02.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\tanh x = \sum^{\infty}_{n=1} \frac{B_{2n} 4^n (4^n-1)}{(2n)!} x^{2n-1} = x-\frac{1}{3}x^3+\frac{2}{15}x^5-\frac{17}{315}x^7+\cdots \quad\text{ for }|x| &lt; \frac{\pi}{2}\!" src="//upload.wikimedia.org/math/a/1/6/a1635f7fd0e9e031ad7f92b27271226a.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\mathrm{arcsinh} (x) = \sum^{\infty}_{n=0} \frac{(-1)^n (2n)!}{4^n (n!)^2 (2n+1)} x^{2n+1}\quad\text{ for }|x| \le 1\!" src="//upload.wikimedia.org/math/a/1/6/a16ab4de81c1defff16cbf611258c4b2.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="\mathrm{arctanh} (x) = \sum^{\infty}_{n=0} \frac{x^{2n+1}}{2n+1} \quad\text{ for }|x| \le 1, x\not=\pm 1\!" src="//upload.wikimedia.org/math/d/2/1/d215ad3fd2d43dd749b6634cc69828a8.png" /></dd>
+</dl>
+<p>The numbers <i>B</i><sub><i>k</i></sub> appearing in the <i>summation</i> expansions of tan(<i>x</i>) and tanh(<i>x</i>) are the <a href="/wiki/Bernoulli_numbers" title="Bernoulli numbers" class="mw-redirect">Bernoulli numbers</a>. The <i>E</i><sub><i>k</i></sub> in the expansion of sec(<i>x</i>) are <a href="/wiki/Euler_number" title="Euler number">Euler numbers</a>.</p>
+<h2><span class="mw-headline" id="Calculation_of_Taylor_series">Calculation of Taylor series</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=8" title="Edit section: Calculation of Taylor series">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Several methods exist for the calculation of Taylor series of a large number of functions. One can attempt to use the Taylor series as-is and generalize the form of the coefficients<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (February 2014)">clarification needed</span></a></i>]</sup>, or one can use manipulations such as substitution, multiplication or division, addition or subtraction of standard Taylor series to construct the Taylor series of a function, by virtue of Taylor series being power series. In some cases, one can also derive the Taylor series by repeatedly applying <a href="/wiki/Integration_by_parts" title="Integration by parts">integration by parts</a>. Particularly convenient is the use of <a href="/wiki/Computer_algebra_system" title="Computer algebra system">computer algebra systems</a> to calculate Taylor series.</p>
+<h3><span class="mw-headline" id="First_example">First example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=9" title="Edit section: First example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In order to compute the 7th degree Maclaurin polynomial for the function</p>
+<dl>
+<dd><img class="tex" alt="f(x)=\log\cos x, \quad x\in(-\pi/2, \pi/2)\!" src="//upload.wikimedia.org/math/8/0/c/80c151e8c5d9c37d60df9e9632a9e3f3.png" />,</dd>
+</dl>
+<p>one may first rewrite the function as</p>
+<dl>
+<dd><img class="tex" alt="f(x)=\log(1+(\cos x-1))\!" src="//upload.wikimedia.org/math/a/b/a/abafd4abd941f811f26c2bb79e088859.png" />.</dd>
+</dl>
+<p>The Taylor series for the natural logarithm is (using the <a href="/wiki/Big_O_notation" title="Big O notation">big O notation</a>)</p>
+<dl>
+<dd><img class="tex" alt="\log(1+x) = x - \frac{x^2}2 + \frac{x^3}3 + {O}(x^4)\!" src="//upload.wikimedia.org/math/c/9/0/c907bb52d4933c966f3ae4f70f7214f9.png" /></dd>
+</dl>
+<p>and for the cosine function</p>
+<dl>
+<dd><img class="tex" alt="\cos x - 1 = -\frac{x^2}2 + \frac{x^4}{24} - \frac{x^6}{720} + {O}(x^8)\!" src="//upload.wikimedia.org/math/1/2/1/121bc5cd75ed17ba225b68cf01b1759d.png" />.</dd>
+</dl>
+<p>The latter series expansion has a zero <a href="/wiki/Constant_term" title="Constant term">constant term</a>, which enables us to substitute the second series into the first one and to easily omit terms of higher order than the 7th degree by using the big O notation:</p>
+<dl>
+<dd><img class="tex" alt="\begin{align}f(x)&amp;=\log(1+(\cos x-1))\\
+&amp;=\bigl(\cos x-1\bigr) - \frac12\bigl(\cos x-1\bigr)^2 + \frac13\bigl(\cos x-1\bigr)^3+ {O}\bigl((\cos x-1)^4\bigr)\\&amp;=\biggl(-\frac{x^2}2 + \frac{x^4}{24} - \frac{x^6}{720} +{O}(x^8)\biggr)-\frac12\biggl(-\frac{x^2}2+\frac{x^4}{24}+{O}(x^6)\biggr)^2+\frac13\biggl(-\frac{x^2}2+O(x^4)\biggr)^3 + {O}(x^8)\\ &amp; =-\frac{x^2}2 + \frac{x^4}{24}-\frac{x^6}{720} - \frac{x^4}8 + \frac{x^6}{48} - \frac{x^6}{24} +O(x^8)\\
+&amp; =- \frac{x^2}2 - \frac{x^4}{12} - \frac{x^6}{45}+O(x^8). \end{align}\!" src="//upload.wikimedia.org/math/1/d/7/1d7750f2c59cedb28f68241da7e75ce7.png" /></dd>
+</dl>
+<p>Since the cosine is an <a href="/wiki/Even_function" title="Even function" class="mw-redirect">even function</a>, the coefficients for all the odd powers <i>x</i>, <i>x</i><sup>3</sup>, <i>x</i><sup>5</sup>, <i>x</i><sup>7</sup>, <span class="nowrap">.</span>.. have to be zero.</p>
+<h3><span class="mw-headline" id="Second_example">Second example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=10" title="Edit section: Second example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Suppose we want the Taylor series at 0 of the function</p>
+<dl>
+<dd><img class="tex" alt="g(x)=\frac{e^x}{\cos x}.\!" src="//upload.wikimedia.org/math/9/e/7/9e745a36010ddb1b216717fc976d0cee.png" /></dd>
+</dl>
+<p>We have for the exponential function</p>
+<dl>
+<dd><img class="tex" alt="e^x = \sum^\infty_{n=0} {x^n\over n!} =1 + x + {x^2 \over 2!} + {x^3 \over 3!} + {x^4 \over 4!}+\cdots\!" src="//upload.wikimedia.org/math/7/6/1/761817f757cdba5b81003dc2b87a0475.png" /></dd>
+</dl>
+<p>and, as in the first example,</p>
+<dl>
+<dd><img class="tex" alt="\cos x = 1 - {x^2 \over 2!} + {x^4 \over 4!} - \cdots\!" src="//upload.wikimedia.org/math/9/8/c/98cb40ea4b7af87c8969e6b8f6f4af83.png" /></dd>
+</dl>
+<p>Assume the power series is</p>
+<dl>
+<dd><img class="tex" alt="{e^x \over \cos x} = c_0 + c_1 x + c_2 x^2 + c_3 x^3 + \cdots\!" src="//upload.wikimedia.org/math/1/5/8/158eaf9b38b0750fd952693d3effca29.png" /></dd>
+</dl>
+<p>Then multiplication with the denominator and substitution of the series of the cosine yields</p>
+<dl>
+<dd><img class="tex" alt="\begin{align} e^x &amp;= (c_0 + c_1 x + c_2 x^2 + c_3 x^3 + \cdots)\cos x\\
+&amp;=\left(c_0 + c_1 x + c_2 x^2 + c_3 x^3 + c_4x^4 + \cdots\right)\left(1 - {x^2 \over 2!} + {x^4 \over 4!} - \cdots\right)\\&amp;=c_0 - {c_0 \over 2}x^2 + {c_0 \over 4!}x^4 + c_1x - {c_1 \over 2}x^3 + {c_1 \over 4!}x^5 + c_2x^2 - {c_2 \over 2}x^4 + {c_2 \over 4!}x^6 + c_3x^3 - {c_3 \over 2}x^5 + {c_3 \over 4!}x^7 +\cdots \end{align}\!" src="//upload.wikimedia.org/math/d/e/6/de6723665c0450a2d21ad354e976ba46.png" /></dd>
+</dl>
+<p>Collecting the terms up to fourth order yields</p>
+<dl>
+<dd><img class="tex" alt="=c_0 + c_1x + \left(c_2 - {c_0 \over 2}\right)x^2 + \left(c_3 - {c_1 \over 2}\right)x^3+\left(c_4+{c_0 \over 4!}-{c_2\over 2}\right)x^4 + \cdots\!" src="//upload.wikimedia.org/math/b/6/9/b698a1587064dd2af87db5b17eb7d87a.png" /></dd>
+</dl>
+<p>Comparing coefficients with the above series of the exponential function yields the desired Taylor series</p>
+<dl>
+<dd><img class="tex" alt="\frac{e^x}{\cos x}=1 + x + x^2 + {2x^3 \over 3} + {x^4 \over 2} + \cdots.\!" src="//upload.wikimedia.org/math/7/2/c/72cc3d26ee4d563b27e0ffe6bed892d0.png" /></dd>
+</dl>
+<h3><span class="mw-headline" id="Third_example">Third example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=11" title="Edit section: Third example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Here we use a method called "Indirect Expansion" to expand the given function. This method uses the known Taylor expansion of the exponential function. In order to expand</p>
+<dl>
+<dd><img class="tex" alt="(1 + x)e^x" src="//upload.wikimedia.org/math/b/d/f/bdf3a58c8427f858d99637e0e020ae40.png" /></dd>
+</dl>
+<p>as a Taylor series in <i>x</i>, we use the known Taylor series of function <img class="tex" alt="e^x" src="//upload.wikimedia.org/math/5/c/f/5cffa5d7a0c145a80dee9dc2295d5cdf.png" />:</p>
+<dl>
+<dd><img class="tex" alt="e^x = \sum^\infty_{n=0} {x^n\over n!} =1 + x + {x^2 \over 2!} + {x^3 \over 3!} + {x^4 \over 4!}+\cdots\!, -\infty&lt;x&lt;+\infty" src="//upload.wikimedia.org/math/e/b/9/eb995ec0f82ffd611e84e50aeb7dbff8.png" /></dd>
+</dl>
+<p>Thus,</p>
+<dl>
+<dd><img class="tex" alt="\begin{align}(1+x)e^x &amp;= e^x + xe^x = \sum^\infty_{n=0} {x^n\over n!} + \sum^\infty_{n=0} {x^{n+1}\over n!} = 1 + \sum^\infty_{n=1} {x^n\over n!} + \sum^\infty_{n=0} {x^{n+1}\over n!} \\ &amp;= 1 + \sum^\infty_{n=1} {x^n\over n!} + \sum^\infty_{n=1} {x^{n}\over (n-1)!} =1 + \sum^\infty_{n=1}\left({1\over n!} + {1\over (n-1)!}\right)x^n \\ &amp;= 1 + \sum^\infty_{n=1}{n+1\over n!}x^n\\ &amp;= \sum^\infty_{n=0}{n+1\over n!}x^n\end{align}" src="//upload.wikimedia.org/math/1/9/3/193c55cda5fbfffb60df964ff8f0f03c.png" /></dd>
+</dl>
+<h2><span class="mw-headline" id="Taylor_series_as_definitions">Taylor series as definitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=12" title="Edit section: Taylor series as definitions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Classically, <a href="/wiki/Algebraic_function" title="Algebraic function">algebraic functions</a> are defined by an algebraic equation, and <a href="/wiki/Transcendental_function" title="Transcendental function">transcendental functions</a> (including those discussed above) are defined by some property that holds for them, such as a <a href="/wiki/Differential_equation" title="Differential equation">differential equation</a>. For example, the <a href="/wiki/Exponential_function" title="Exponential function">exponential function</a> is the function which is equal to its own derivative everywhere, and assumes the value 1 at the origin. However, one may equally well define an <a href="/wiki/Analytic_function" title="Analytic function">analytic function</a> by its Taylor series.</p>
+<p>Taylor series are used to define functions and "<a href="/wiki/Operator_(mathematics)" title="Operator (mathematics)">operators</a>" in diverse areas of mathematics. In particular, this is true in areas where the classical definitions of functions break down. For example, using Taylor series, one may define analytical functions of matrices and operators, such as the <a href="/wiki/Matrix_exponential" title="Matrix exponential">matrix exponential</a> or <a href="/wiki/Matrix_logarithm" title="Matrix logarithm" class="mw-redirect">matrix logarithm</a>.</p>
+<p>In other areas, such as formal analysis, it is more convenient to work directly with the <a href="/wiki/Power_series" title="Power series">power series</a> themselves. Thus one may define a solution of a differential equation <i>as</i> a power series which, one hopes to prove, is the Taylor series of the desired solution.</p>
+<h2><span class="mw-headline" id="Taylor_series_in_several_variables">Taylor series in several variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=13" title="Edit section: Taylor series in several variables">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Taylor series may also be generalized to functions of more than one variable with</p>
+<dl>
+<dd><img class="tex" alt="
+\begin{align}
+T(x_1,\dots,x_d) &amp;= \sum_{n_1=0}^\infty \sum_{n_2=0}^\infty \cdots \sum_{n_d = 0}^\infty 
+\frac{(x_1-a_1)^{n_1}\cdots (x_d-a_d)^{n_d}}{n_1!\cdots n_d!}\,\left(\frac{\partial^{n_1 + \cdots + n_d}f}{\partial x_1^{n_1}\cdots \partial x_d^{n_d}}\right)(a_1,\dots,a_d) \\
+&amp;= f(a_1, \dots,a_d) + \sum_{j=1}^d \frac{\partial f(a_1, \dots,a_d)}{\partial x_j} (x_j - a_j) \\ 
+&amp;\quad {} + \frac{1}{2!} \sum_{j=1}^d \sum_{k=1}^d \frac{\partial^2 f(a_1, \dots,a_d)}{\partial x_j \partial x_k} (x_j - a_j)(x_k - a_k) \\ 
+&amp;\quad {} + \frac{1}{3!} \sum_{j=1}^d\sum_{k=1}^d\sum_{l=1}^d \frac{\partial^3 f(a_1, \dots,a_d)}{\partial x_j \partial x_k \partial x_l} (x_j - a_j)(x_k - a_k)(x_l - a_l) + \dots
+\end{align}
+" src="//upload.wikimedia.org/math/4/5/f/45f03c0c0418d38bfd432deb2738963e.png" /></dd>
+</dl>
+<p><br />
+For example, for a function that depends on two variables, <i>x</i> and <i>y</i>, the Taylor series to second order about the point (<i>a</i>, <i>b</i>) is</p>
+<dl>
+<dd><img class="tex" alt="
+\begin{align}
+ f(a,b) &amp;+(x-a)\, f_x(a,b) +(y-b)\, f_y(a,b) \\
+&amp;+ \frac{1}{2!}\left[ (x-a)^2\,f_{xx}(a,b) + 2(x-a)(y-b)\,f_{xy}(a,b) +(y-b)^2\, f_{yy}(a,b) \right]
+\end{align}
+" src="//upload.wikimedia.org/math/8/f/f/8ff923be77d121bd6e746ddc933d6892.png" /></dd>
+</dl>
+<p>where the subscripts denote the respective <a href="/wiki/Partial_derivative" title="Partial derivative">partial derivatives</a>.</p>
+<p>A second-order Taylor series expansion of a scalar-valued function of more than one variable can be written compactly as</p>
+<dl>
+<dd><img class="tex" alt="T(\mathbf{x}) = f(\mathbf{a}) + \mathrm{D} f(\mathbf{a})^T (\mathbf{x} - \mathbf{a})  + \frac{1}{2!} (\mathbf{x} - \mathbf{a})^T \,\{\mathrm{D}^2 f(\mathbf{a})\}\,(\mathbf{x} - \mathbf{a}) + \cdots\!
+\,," src="//upload.wikimedia.org/math/1/b/1/1b18d64f090816b648f9b8c670fee944.png" /></dd>
+</dl>
+<p>where <img class="tex" alt="D f(\mathbf{a})\!" src="//upload.wikimedia.org/math/7/f/8/7f8573267a5f6c8b18351ed36f448b26.png" /> is the <a href="/wiki/Gradient" title="Gradient">gradient</a> of <img class="tex" alt="\,f" src="//upload.wikimedia.org/math/6/9/4/6942cf05cb0188b1e8e3129445991760.png" /> evaluated at <img class="tex" alt="\mathbf{x} = \mathbf{a}" src="//upload.wikimedia.org/math/f/d/6/fd60bb92d6515047c05fcbe64203f9b5.png" /> and <img class="tex" alt="D^2 f(\mathbf{a})\!" src="//upload.wikimedia.org/math/9/0/f/90f708ee09a65096888e2680b23d85a5.png" /> is the <a href="/wiki/Hessian_matrix" title="Hessian matrix">Hessian matrix</a>. Applying the <a href="/wiki/Multi-index_notation" title="Multi-index notation">multi-index notation</a> the Taylor series for several variables becomes</p>
+<dl>
+<dd><img class="tex" alt="T(\mathbf{x}) = \sum_{|\alpha| \ge 0}^{}\frac{(\mathbf{x}-\mathbf{a})^{\alpha}}{\alpha&#160;!}\,({\mathrm{\partial}^{\alpha}}\,f)(\mathbf{a})\,," src="//upload.wikimedia.org/math/9/a/2/9a234f577d90ae5c56ef5fcd1e761fab.png" /></dd>
+</dl>
+<p>which is to be understood as a still more abbreviated <a href="/wiki/Multi-index" title="Multi-index" class="mw-redirect">multi-index</a> version of the first equation of this paragraph, again in full analogy to the single variable case.</p>
+<h3><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=14" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="/wiki/File:Second_Order_Taylor.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Second_Order_Taylor.svg/200px-Second_Order_Taylor.svg.png" width="200" height="150" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Second_Order_Taylor.svg/300px-Second_Order_Taylor.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Second_Order_Taylor.svg/400px-Second_Order_Taylor.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Second_Order_Taylor.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Second-order Taylor series approximation (in orange) of a function <img class="tex" alt="f(x,y) = e^x\log{(1+y)}" src="//upload.wikimedia.org/math/b/3/a/b3a9fe7e653a16d66eba3dce3d6ef061.png" /> around origin.</div>
+</div>
+</div>
+<p>Compute a second-order Taylor series expansion around point (<i>a</i>, <i>b</i>) = (0, 0) of a function</p>
+<dl>
+<dd><img class="tex" alt="f(x,y)=e^x\log(1+y).\," src="//upload.wikimedia.org/math/5/a/b/5ab1d5bc1938ec988d5afb6319a4b036.png" /></dd>
+</dl>
+<p>Firstly, we compute all partial derivatives we need</p>
+<dl>
+<dd><img class="tex" alt="f_x(a,b)=e^x\log(1+y)\bigg|_{(x,y)=(0,0)}=0\,," src="//upload.wikimedia.org/math/9/9/4/994f641bfba0ce56f3aabcf5d6f3cc94.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="f_y(a,b)=\frac{e^x}{1+y}\bigg|_{(x,y)=(0,0)}=1\,," src="//upload.wikimedia.org/math/f/d/3/fd33fe83b97b66ae057fcfd468d41fc6.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="f_{xx}(a,b)=e^x\log(1+y)\bigg|_{(x,y)=(0,0)}=0\,," src="//upload.wikimedia.org/math/2/c/c/2cccbc3571085347cfea76d9c2943cb6.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="f_{yy}(a,b)=-\frac{e^x}{(1+y)^2}\bigg|_{(x,y)=(0,0)}=-1\,," src="//upload.wikimedia.org/math/0/d/6/0d6b81524defff97f2a73020a308fd9a.png" /></dd>
+</dl>
+<dl>
+<dd><img class="tex" alt="f_{xy}(a,b)=f_{yx}(a,b)=\frac{e^x}{1+y}\bigg|_{(x,y)=(0,0)}=1." src="//upload.wikimedia.org/math/2/3/0/2301155d1d8495ae4efa330167370975.png" /></dd>
+</dl>
+<p>The Taylor series is</p>
+<dl>
+<dd><img class="tex" alt="\begin{align} T(x,y) = f(a,b) &amp; +(x-a)\, f_x(a,b) +(y-b)\, f_y(a,b) \\
+&amp;+\frac{1}{2!}\left[ (x-a)^2\,f_{xx}(a,b) + 2(x-a)(y-b)\,f_{xy}(a,b) +(y-b)^2\, f_{yy}(a,b) \right]+
+\cdots\,,\end{align}" src="//upload.wikimedia.org/math/d/a/d/dad3055d4695f7e70e10c5e403a92112.png" /></dd>
+</dl>
+<p>which in this case becomes</p>
+<dl>
+<dd><img class="tex" alt="\begin{align}T(x,y) &amp;= 0 + 0(x-0) + 1(y-0) + \frac{1}{2}\Big[ 0(x-0)^2 + 2(x-0)(y-0) + (-1)(y-0)^2 \Big] + \cdots \\
+&amp;= y + xy - \frac{y^2}{2} + \cdots. \end{align}
+" src="//upload.wikimedia.org/math/f/e/2/fe2770b7f29c8d32af5ca24d26b9cd99.png" /></dd>
+</dl>
+<p>Since <span class="nowrap">log(1 + <i>y</i>)</span> is analytic in |<i>y</i>|&#160;&lt;&#160;1, we have</p>
+<dl>
+<dd><img class="tex" alt="e^x\log(1+y)= y + xy - \frac{y^2}{2} + \cdots" src="//upload.wikimedia.org/math/6/c/b/6cb330326a4a453381d633888ac49343.png" /></dd>
+</dl>
+<p>for |<i>y</i>|&#160;&lt;&#160;1.</p>
+<h2><span class="mw-headline" id="Fractional_Taylor_series">Fractional Taylor series</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=15" title="Edit section: Fractional Taylor series">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>With the emergence of <a href="/wiki/Fractional_calculus" title="Fractional calculus">fractional calculus</a>, a natural question arises about what the Taylor Series expansion would be. Odibat and Shawagfeh answered this in 2007.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup> By using the Caputo fractional derivative, <img class="tex" alt="0&lt;\alpha&lt;1\,\!" src="//upload.wikimedia.org/math/a/6/c/a6c76bd785cf3a69b6b0ebea14c10ba7.png" />, and <img class="tex" alt="x+\,\!" src="//upload.wikimedia.org/math/c/8/a/c8a1af2e25b3b3321f5337dc78b584e3.png" /> indicating the limit as we approach <img class="tex" alt="x\,\!" src="//upload.wikimedia.org/math/6/3/7/6373accf16c083723e8abae2f5401af2.png" /> from the right, the fractional Taylor series can be written as</p>
+<dl>
+<dd><img class="tex" alt="f(x+\Delta x) = f(x) + {D_x}^\alpha  f(x+)\frac{(\Delta x)^\alpha}{\Gamma(\alpha+1)} + {D_x}^\alpha  {D_x}^\alpha f(x+)\frac{(\Delta x)^{2\alpha}}{\Gamma(2\alpha+1)} + \cdots." src="//upload.wikimedia.org/math/e/4/2/e421ff61cf565b89e6d2b311d319f734.png" /></dd>
+</dl>
+<h2><span class="mw-headline" id="Comparison_with_Fourier_series">Comparison with Fourier series</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=16" title="Edit section: Comparison with Fourier series">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Fourier_series" title="Fourier series">Fourier series</a></div>
+<p>The trigonometric <a href="/wiki/Fourier_series" title="Fourier series">Fourier series</a> allows one to express a <a href="/wiki/Periodic_function" title="Periodic function">periodic function</a> (or a function defined on a compact interval) as an infinite sum of <a href="/wiki/Trigonometric_function" title="Trigonometric function" class="mw-redirect">trigonometric functions</a> (<a href="/wiki/Sine" title="Sine">sines</a> and <a href="/wiki/Cosine" title="Cosine" class="mw-redirect">cosines</a>). In this sense, the Fourier series is analogous to Taylor series, since the latter allows to express a function as an infinite sum of <a href="/wiki/Power_function" title="Power function">powers</a>. Nevertheless both types of series differ in several relevant issues:</p>
+<ul>
+<li>The computation of Taylor series requires the knowledge of the function on an arbitrary small <a href="/wiki/Neighbourhood_(mathematics)" title="Neighbourhood (mathematics)">neighbourhood</a> of a point, whereas the computation of the Fourier series requires knowing the function on its whole domain <a href="/wiki/Interval_(mathematics)" title="Interval (mathematics)">interval</a>. In a certain sense one could say that the Taylor series is "local" and the Fourier series is "global."</li>
+<li>The computation of the Taylor series requires the function to be of class C<sup>∞</sup>, whereas that of Fourier series only requires the function to be <a href="/wiki/Integrable_function" title="Integrable function" class="mw-redirect">integrable</a> (and thus may not even be continuous).</li>
+<li>The convergence of both series has very different properties. Even if the Taylor series has positive convergence radius, the resulting series may not coincide with the function; but if the function is analytic then the series converges <a href="/wiki/Pointwise_convergence" title="Pointwise convergence">pointwise</a> to the function, and <a href="/wiki/Uniform_convergence" title="Uniform convergence">uniformly</a> on every compact set. Concerning the Fourier series, if the function is <a href="/wiki/Square-integrable_function" title="Square-integrable function">square-integrable</a> then the series converges in <a href="/wiki/Convergence_in_quadratic_mean" title="Convergence in quadratic mean" class="mw-redirect">quadratic mean</a>, but additional requirements are needed to ensure the pointwise or uniform convergence (for instance, if the function is periodic and of class C<sup>1</sup> then the convergence is uniform).</li>
+<li>Finally, in practice one wants to approximate the function with a finite number of terms, let's say with a Taylor polynomial or a partial sum of the trigonometric series, respectively. In the case of the Taylor series the error is very small in a neighbourhood of the point where it is computed, while it may be very large at a distant point. In the case of the Fourier series the error is distributed along the domain of the function.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=17" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Laurent_series" title="Laurent series">Laurent series</a></li>
+<li><a href="/wiki/Madhava_series" title="Madhava series">Madhava series</a></li>
+<li><a href="/wiki/Newton_polynomial" title="Newton polynomial">Newton's divided difference interpolation</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=18" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation book">Kline, M. (1990). <i>Mathematical Thought from Ancient to Modern Times</i>. New York: Oxford University Press. pp.&#160;35–37. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-19-506135-7" title="Special:BookSources/0-19-506135-7">0-19-506135-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.aufirst=M.&amp;rft.au=Kline%2C+M.&amp;rft.aulast=Kline&amp;rft.btitle=Mathematical+Thought+from+Ancient+to+Modern+Times&amp;rft.date=1990&amp;rft.genre=book&amp;rft.isbn=0-19-506135-7&amp;rft.pages=35%E2%80%9337&amp;rft.place=New+York&amp;rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation book">Boyer, C.; Merzbach, U. (1991). <i>A History of Mathematics</i> (Second revised ed.). John Wiley and Sons. pp.&#160;202–203. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-09763-2" title="Special:BookSources/0-471-09763-2">0-471-09763-2</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.au=Boyer%2C+C.&amp;rft.aufirst=C.&amp;rft.aulast=Boyer&amp;rft.au=Merzbach%2C+U.&amp;rft.btitle=A+History+of+Mathematics&amp;rft.date=1991&amp;rft.edition=Second+revised&amp;rft.genre=book&amp;rft.isbn=0-471-09763-2&amp;rft.pages=202%E2%80%93203&amp;rft.pub=John+Wiley+and+Sons&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-MAT_314-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-MAT_314_3-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.canisius.edu/topos/rajeev.asp">"Neither Newton nor Leibniz – The Pre-History of Calculus and Celestial Mechanics in Medieval Kerala"</a>. <i>MAT 314</i>. Canisius College<span class="reference-accessdate">. Retrieved 2006-07-09</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.atitle=Neither+Newton+nor+Leibniz+%E2%80%93+The+Pre-History+of+Calculus+and+Celestial+Mechanics+in+Medieval+Kerala&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.canisius.edu%2Ftopos%2Frajeev.asp&amp;rft.jtitle=MAT+314&amp;rft.pub=Canisius+College&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-dani-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-dani_4-0">^</a></b></span> <span class="reference-text"><span class="citation journal">S. G. Dani (2012). "Ancient Indian Mathematics – A Conspectus". <i>Resonance</i> <b>17</b> (3): 236–246.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.atitle=Ancient+Indian+Mathematics+%E2%80%93+A+Conspectus&amp;rft.aulast=S.+G.+Dani&amp;rft.au=S.+G.+Dani&amp;rft.date=2012&amp;rft.genre=article&amp;rft.issue=3&amp;rft.jtitle=Resonance&amp;rft.pages=236%E2%80%93246&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=17" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Taylor, Brook, <i>Methodus Incrementorum Directa et Inversa</i> [Direct and Reverse Methods of Incrementation] (London, 1715), pages 21–23 (Proposition VII, Theorem 3, Corollary 2). Translated into English in D. J. Struik, <i>A Source Book in Mathematics 1200–1800</i> (Cambridge, Massachusetts: Harvard University Press, 1969), pages 329–332.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span id="CITEREFRudin1980" class="citation"><a href="/wiki/Walter_Rudin" title="Walter Rudin">Rudin, Walter</a> (1980), <i>Real and Complex Analysis</i>, New Dehli: McGraw-Hill, p.&#160;418, Exercise 13, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-07-099557-5" title="Special:BookSources/0-07-099557-5">0-07-099557-5</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.aufirst=Walter&amp;rft.aulast=Rudin&amp;rft.au=Rudin%2C+Walter&amp;rft.btitle=Real+and+Complex+Analysis&amp;rft.date=1980&amp;rft.genre=book&amp;rft.isbn=0-07-099557-5&amp;rft.pages=418%2C+Exercise+13&amp;rft.place=New+Dehli&amp;rft.pub=McGraw-Hill&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span id="CITEREFFeller1971" class="citation"><a href="/wiki/William_Feller" title="William Feller">Feller, William</a> (1971), <i>An introduction to probability theory and its applications, Volume 2</i> (3rd ed.), Wiley, pp.&#160;230–232</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.au=Feller%2C+William&amp;rft.aufirst=William&amp;rft.aulast=Feller&amp;rft.btitle=An+introduction+to+probability+theory+and+its+applications%2C+Volume+2&amp;rft.date=1971&amp;rft.edition=3rd&amp;rft.genre=book&amp;rft.pages=230%26ndash%3B232&amp;rft.pub=Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span id="CITEREFHillePhillips1957" class="citation"><a href="/wiki/Einar_Hille" title="Einar Hille">Hille, Einar</a>; <a href="/wiki/Ralph_S._Phillips" title="Ralph S. Phillips">Phillips, Ralph S.</a> (1957), <i>Functional analysis and semi-groups</i>, AMS Colloquium Publications <b>31</b>, American Mathematical Society, p.&#160;300–327</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.aufirst=Einar&amp;rft.au=Hille%2C+Einar&amp;rft.aulast=Hille&amp;rft.au=Phillips%2C+Ralph+S.&amp;rft.btitle=Functional+analysis+and+semi-groups&amp;rft.date=1957&amp;rft.genre=book&amp;rft.pages=300%26ndash%3B327&amp;rft.pub=American+Mathematical+Society&amp;rft.series=AMS+Colloquium+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=31" class="Z3988"><span style="display:none;">&#160;</span></span>.</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">Most of these can be found in (<a href="#CITEREFAbramowitzStegun1970">Abramowitz &amp; Stegun 1970</a>).</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="citation journal">Odibat, Z. M.; Shawagfeh, N. T. (2007). "Generalized Taylor's formula". <i>Applied Mathematics and Computation</i> <b>186</b> (1): 286–293. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1016%2Fj.amc.2006.07.102">10.1016/j.amc.2006.07.102</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.atitle=Generalized+Taylor%27s+formula&amp;rft.aufirst=Z.+M.&amp;rft.aulast=Odibat&amp;rft.au=Odibat%2C+Z.+M.&amp;rft.au=Shawagfeh%2C+N.+T.&amp;rft.date=2007&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1016%2Fj.amc.2006.07.102&amp;rft.issue=1&amp;rft.jtitle=Applied+Mathematics+and+Computation&amp;rft.pages=286%E2%80%93293&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=186" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1016.2Fj.amc.2006.07.102&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=19" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span id="CITEREFAbramowitzStegun1970" class="citation"><a href="/wiki/Milton_Abramowitz" title="Milton Abramowitz">Abramowitz, Milton</a>; <a href="/wiki/Irene_Stegun" title="Irene Stegun">Stegun, Irene A.</a> (1970), <i><a href="/wiki/Abramowitz_and_Stegun" title="Abramowitz and Stegun">Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables</a></i>, New York: <a href="/wiki/Dover_Publications" title="Dover Publications">Dover Publications</a>, Ninth printing</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.au=Abramowitz%2C+Milton&amp;rft.aufirst=Milton&amp;rft.aulast=Abramowitz&amp;rft.au=Stegun%2C+Irene+A.&amp;rft.btitle=Handbook+of+Mathematical+Functions+with+Formulas%2C+Graphs%2C+and+Mathematical+Tables&amp;rft.date=1970&amp;rft.genre=book&amp;rft.place=New+York&amp;rft.pub=Dover+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span id="CITEREFThomasFinney1996" class="citation">Thomas, George B. Jr.; Finney, Ross L. (1996), <i>Calculus and Analytic Geometry (9th ed.)</i>, Addison Wesley, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-201-53174-7" title="Special:BookSources/0-201-53174-7">0-201-53174-7</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.au=Finney%2C+Ross+L.&amp;rft.aufirst=George+B.+Jr.&amp;rft.aulast=Thomas&amp;rft.au=Thomas%2C+George+B.+Jr.&amp;rft.btitle=Calculus+and+Analytic+Geometry+%289th+ed.%29&amp;rft.date=1996&amp;rft.genre=book&amp;rft.isbn=0-201-53174-7&amp;rft.pub=Addison+Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span id="CITEREFGreenberg1998" class="citation">Greenberg, Michael (1998), <i>Advanced Engineering Mathematics (2nd ed.)</i>, Prentice Hall, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-321431-1" title="Special:BookSources/0-13-321431-1">0-13-321431-1</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.aufirst=Michael&amp;rft.au=Greenberg%2C+Michael&amp;rft.aulast=Greenberg&amp;rft.btitle=Advanced+Engineering+Mathematics+%282nd+ed.%29&amp;rft.date=1998&amp;rft.genre=book&amp;rft.isbn=0-13-321431-1&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Taylor_series&amp;action=edit&amp;section=20" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span id="CITEREFHazewinkel2001" class="citation">Hazewinkel, Michiel, ed. (2001), <a rel="nofollow" class="external text" href="http://www.encyclopediaofmath.org/index.php?title=p/t092320">"Taylor series"</a>, <i><a href="/wiki/Encyclopedia_of_Mathematics" title="Encyclopedia of Mathematics">Encyclopedia of Mathematics</a></i>, <a href="/wiki/Springer_Science%2BBusiness_Media" title="Springer Science+Business Media">Springer</a>, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-55608-010-4" title="Special:BookSources/978-1-55608-010-4">978-1-55608-010-4</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATaylor+series&amp;rft.atitle=Encyclopedia+of+Mathematics&amp;rft.btitle=Taylor+series&amp;rft.date=2001&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.encyclopediaofmath.org%2Findex.php%3Ftitle%3Dp%2Ft092320&amp;rft.isbn=978-1-55608-010-4&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation mathworld" id="Reference-Mathworld-Taylor_Series"><a href="/wiki/Eric_W._Weisstein" title="Eric W. Weisstein">Weisstein, Eric W.</a>, "<a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/TaylorSeries.html">Taylor Series</a>", <i><a href="/wiki/MathWorld" title="MathWorld">MathWorld</a></i>.</span></li>
+<li><a rel="nofollow" class="external text" href="http://www-groups.dcs.st-and.ac.uk/~history/Projects/Pearce/Chapters/Ch9_3.html">Madhava of Sangamagramma</a></li>
+<li><a rel="nofollow" class="external text" href="http://math.fullerton.edu/mathews/c2003/TaylorSeriesMod.html">Taylor Series Representation Module by John H. Mathews</a></li>
+<li>"<a rel="nofollow" class="external text" href="http://csma31.csm.jmu.edu/physics/rudmin/ParkerSochacki.htm">Discussion of the Parker-Sochacki Method</a>"</li>
+<li><a rel="nofollow" class="external text" href="http://stud3.tuwien.ac.at/~e0004876/taylor/Taylor_en.html">Another Taylor visualisation</a> — where you can choose the point of the approximation and the number of derivatives</li>
+<li><a rel="nofollow" class="external text" href="http://numericalmethods.eng.usf.edu/topics/taylor_series.html">Taylor series revisited for numerical methods</a> at <a rel="nofollow" class="external text" href="http://numericalmethods.eng.usf.edu">Numerical Methods for the STEM Undergraduate</a></li>
+<li><a rel="nofollow" class="external text" href="http://cinderella.de/files/HTMLDemos/2C02_Taylor.html">Cinderella 2: Taylor expansion</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.sosmath.com/calculus/tayser/tayser01/tayser01.html">Taylor series</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.efunda.com/math/taylor_series/inverse_trig.cfm">Inverse trigonometric functions Taylor series</a></li>
+</ul>
+<p><span id="interwiki-ca-ga"></span></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1094
+CPU time usage: 1.120 seconds
+Real time usage: 1.574 seconds
+Preprocessor visited node count: 2127/1000000
+Preprocessor generated node count: 9061/1500000
+Post‐expand include size: 49572/2048000 bytes
+Template argument size: 1392/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 4/500
+Lua time usage: 0.068/10.000 seconds
+Lua memory usage: 2.3 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:30448-0!*!0!!en!4!*!math=0 and timestamp 20140330015732
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Taylor_series&amp;oldid=601506172">http://en.wikipedia.org/w/index.php?title=Taylor_series&amp;oldid=601506172</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Real_analysis" title="Category:Real analysis">Real analysis</a></li><li><a href="/wiki/Category:Complex_analysis" title="Category:Complex analysis">Complex analysis</a></li><li><a href="/wiki/Category:Mathematical_series" title="Category:Mathematical series">Mathematical series</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Good_articles" title="Category:Good articles">Good articles</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_February_2014" title="Category:Wikipedia articles needing clarification from February 2014">Wikipedia articles needing clarification from February 2014</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Taylor+series&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Taylor+series" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Taylor_series"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Taylor_series"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Taylor_series" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Taylor_series&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Taylor_series&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Taylor_series" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Taylor_series" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Taylor_series&amp;oldid=601506172" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Taylor_series&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q131187" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Taylor_series&amp;id=601506172" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Taylor+series">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Taylor+series&amp;oldid=601506172&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Taylor_series&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D9%85%D8%AA%D8%B3%D9%84%D8%B3%D9%84%D8%A9_%D8%AA%D8%A7%D9%8A%D9%84%D9%88%D8%B1_%D9%88%D9%85%D8%A7%D9%83%D9%84%D9%88%D8%B1%D9%8A%D9%86" title="متسلسلة تايلور وماكلورين – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-az"><a href="//az.wikipedia.org/wiki/Teylor_s%C4%B1ras%C4%B1" title="Teylor sırası – Azerbaijani" lang="az" hreflang="az">Azərbaycanca</a></li>
+			<li class="interlanguage-link interwiki-bn"><a href="//bn.wikipedia.org/wiki/%E0%A6%9F%E0%A7%87%E0%A6%87%E0%A6%B2%E0%A6%B0_%E0%A6%A7%E0%A6%BE%E0%A6%B0%E0%A6%BE" title="টেইলর ধারা – Bengali" lang="bn" hreflang="bn">বাংলা</a></li>
+			<li class="interlanguage-link interwiki-be"><a href="//be.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4_%D0%A2%D1%8D%D0%B9%D0%BB%D0%B0%D1%80%D0%B0" title="Рад Тэйлара – Belarusian" lang="be" hreflang="be">Беларуская</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="//bg.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B4_%D0%BD%D0%B0_%D0%A2%D0%B5%D0%B9%D0%BB%D1%8A%D1%80" title="Ред на Тейлър – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-bar"><a href="//bar.wikipedia.org/wiki/Taylorreihe" title="Taylorreihe – Bavarian" lang="bar" hreflang="bar">Boarisch</a></li>
+			<li class="interlanguage-link interwiki-bs"><a href="//bs.wikipedia.org/wiki/Taylorov_red" title="Taylorov red – Bosnian" lang="bs" hreflang="bs">Bosanski</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="//ca.wikipedia.org/wiki/S%C3%A8rie_de_Taylor" title="Sèrie de Taylor – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="//cs.wikipedia.org/wiki/Taylorova_%C5%99ada" title="Taylorova řada – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="//da.wikipedia.org/wiki/Taylorpolynomium" title="Taylorpolynomium – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="//de.wikipedia.org/wiki/Taylorreihe" title="Taylorreihe – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="//et.wikipedia.org/wiki/Taylori_rida" title="Taylori rida – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="//el.wikipedia.org/wiki/%CE%A3%CE%B5%CE%B9%CF%81%CE%AC_%CE%A4%CE%AD%CE%B9%CE%BB%CE%BF%CF%81" title="Σειρά Τέιλορ – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="//es.wikipedia.org/wiki/Serie_de_Taylor" title="Serie de Taylor – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="//eo.wikipedia.org/wiki/Serio_de_Taylor" title="Serio de Taylor – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="//eu.wikipedia.org/wiki/Taylor_serie" title="Taylor serie – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/%D8%A8%D8%B3%D8%B7_%D8%AA%DB%8C%D9%84%D9%88%D8%B1" title="بسط تیلور – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/S%C3%A9rie_de_Taylor" title="Série de Taylor – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="//gl.wikipedia.org/wiki/Serie_de_Taylor" title="Serie de Taylor – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="//ko.wikipedia.org/wiki/%ED%85%8C%EC%9D%BC%EB%9F%AC_%EA%B8%89%EC%88%98" title="테일러 급수 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hi"><a href="//hi.wikipedia.org/wiki/%E0%A4%9F%E0%A5%87%E0%A4%B2%E0%A4%B0_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%A3%E0%A5%80" title="टेलर श्रेणी – Hindi" lang="hi" hreflang="hi">हिन्दी</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="//id.wikipedia.org/wiki/Deret_Taylor" title="Deret Taylor – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-is"><a href="//is.wikipedia.org/wiki/Taylorr%C3%B6%C3%B0" title="Taylorröð – Icelandic" lang="is" hreflang="is">Íslenska</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="//it.wikipedia.org/wiki/Serie_di_Taylor" title="Serie di Taylor – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="//he.wikipedia.org/wiki/%D7%98%D7%95%D7%A8_%D7%98%D7%99%D7%99%D7%9C%D7%95%D7%A8" title="טור טיילור – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-kk"><a href="//kk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%B9%D0%BB%D0%BE%D1%80_%D2%9B%D0%B0%D1%82%D0%B0%D1%80%D1%8B" title="Тейлор қатары – Kazakh" lang="kk" hreflang="kk">Қазақша</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="//lv.wikipedia.org/wiki/Teilora_rinda" title="Teilora rinda – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-lt"><a href="//lt.wikipedia.org/wiki/Teiloro_eilut%C4%97" title="Teiloro eilutė – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="//hu.wikipedia.org/wiki/Taylor-sor" title="Taylor-sor – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="//ms.wikipedia.org/wiki/Siri_Taylor" title="Siri Taylor – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="//nl.wikipedia.org/wiki/Taylorreeks" title="Taylorreeks – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="//ja.wikipedia.org/wiki/%E3%83%86%E3%82%A4%E3%83%A9%E3%83%BC%E5%B1%95%E9%96%8B" title="テイラー展開 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="//no.wikipedia.org/wiki/Taylorrekke" title="Taylorrekke – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-nn"><a href="//nn.wikipedia.org/wiki/Taylorrekkje" title="Taylorrekkje – Norwegian Nynorsk" lang="nn" hreflang="nn">Norsk nynorsk</a></li>
+			<li class="interlanguage-link interwiki-pms"><a href="//pms.wikipedia.org/wiki/Serie_%C3%ABd_Taylor" title="Serie ëd Taylor – Piedmontese" lang="pms" hreflang="pms">Piemontèis</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="//pt.wikipedia.org/wiki/S%C3%A9rie_de_Taylor" title="Série de Taylor – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ro"><a href="//ro.wikipedia.org/wiki/Serie_Taylor" title="Serie Taylor – Romanian" lang="ro" hreflang="ro">Română</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="//ru.wikipedia.org/wiki/%D0%A0%D1%8F%D0%B4_%D0%A2%D0%B5%D0%B9%D0%BB%D0%BE%D1%80%D0%B0" title="Ряд Тейлора – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-si"><a href="//si.wikipedia.org/wiki/%E0%B6%A7%E0%B7%9A%E0%B6%BD%E0%B6%BB%E0%B7%8A_%E0%B7%81%E0%B7%8A%E2%80%8D%E0%B6%BB%E0%B7%9A%E0%B6%AB%E0%B7%92%E0%B6%BA" title="ටේලර් ශ්‍රේණිය – Sinhala" lang="si" hreflang="si">සිංහල</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="//simple.wikipedia.org/wiki/Taylor_series" title="Taylor series – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="//sk.wikipedia.org/wiki/Taylorov_rad" title="Taylorov rad – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="//sl.wikipedia.org/wiki/Taylorjeva_vrsta" title="Taylorjeva vrsta – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="//sr.wikipedia.org/wiki/%D0%A2%D0%B5%D1%98%D0%BB%D0%BE%D1%80%D0%BE%D0%B2_%D0%BF%D0%BE%D0%BB%D0%B8%D0%BD%D0%BE%D0%BC" title="Тејлоров полином – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-sh"><a href="//sh.wikipedia.org/wiki/Tejlorov_polinom" title="Tejlorov polinom – Serbo-Croatian" lang="sh" hreflang="sh">Srpskohrvatski / српскохрватски</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="//fi.wikipedia.org/wiki/Taylorin_sarja" title="Taylorin sarja – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="//sv.wikipedia.org/wiki/Taylorserie" title="Taylorserie – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-ta"><a href="//ta.wikipedia.org/wiki/%E0%AE%9F%E0%AF%86%E0%AE%AF%E0%AF%8D%E0%AE%B2%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AF%8A%E0%AE%9F%E0%AE%B0%E0%AF%8D" title="டெய்லர் தொடர் – Tamil" lang="ta" hreflang="ta">தமிழ்</a></li>
+			<li class="interlanguage-link interwiki-tg"><a href="//tg.wikipedia.org/wiki/%D2%9A%D0%B0%D1%82%D0%BE%D1%80%D0%B8_%D0%A2%D0%B5%D0%B9%D0%BB%D0%BE%D1%80" title="Қатори Тейлор – Tajik" lang="tg" hreflang="tg">Тоҷикӣ</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="//tr.wikipedia.org/wiki/Taylor_serisi" title="Taylor serisi – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="//uk.wikipedia.org/wiki/%D0%A0%D1%8F%D0%B4_%D0%A2%D0%B5%D0%B9%D0%BB%D0%BE%D1%80%D0%B0" title="Ряд Тейлора – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-ur"><a href="//ur.wikipedia.org/wiki/%D9%B9%DB%8C%D9%84%D8%B1_%D8%B3%D9%84%D8%B3%D9%84%DB%81" title="ٹیلر سلسلہ – Urdu" lang="ur" hreflang="ur">اردو</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="//vi.wikipedia.org/wiki/Chu%E1%BB%97i_Taylor" title="Chuỗi Taylor – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="//zh.wikipedia.org/wiki/%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0" title="泰勒级数 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="//www.wikidata.org/wiki/Q131187#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 27 March 2014 at 14:00.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/wiki/Taylor_series" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1162 in 0.381 secs. -->
+	</body>
+</html>

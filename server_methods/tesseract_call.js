@@ -3,7 +3,7 @@ var fs = require('fs');
 
 // Call the tesseract method
 var execute = function(imageDir, outputDir, callback) {
-  child = exec('tesseract ' + imageDir + ' ' + outputDir + ' photonenglish', function (error, stdout, stderr) {
+  child = exec('tesseract ' + imageDir + ' ' + outputDir + ' -psm 1 photonenglish', function (error, stdout, stderr) {
       console.log('stdout: ' + stdout);
       console.log('stderr: ' + stderr);
       if (error != null) {

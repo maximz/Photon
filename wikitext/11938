@@ -1,0 +1,21 @@
+Variables used in an experiment or modelling can be divided into three types: "dependent variable", "independent variable", or other. The "dependent variable" represents the output or effect, or is tested to see if it is the effect. The "independent variables" represent the inputs or causes, or are tested to see if they are the cause. Other variables may also be observed for various reasons.
+Use.
+Mathematics.
+In calculus, a function is a map whose action is specified on variables. Take "x" and "y" to be two variables. A function "f" may map "x" to some expression in "x". Assigning formula_1 gives a relation between "y" and "x". If there is some relation specifying "y" in terms of "x", then "y" is known as a dependent variable (and "x" is an independent variable).
+Statistics.
+In a statistics experiment, the dependent variable is the event studied and expected to change whenever the independent variable is altered.
+Modelling.
+In mathematical modelling, the dependent variable is studied to see if and how much it varies as the independent variables vary. In the simple stochastic linear model formula_2 the term formula_3 is the "i" th value of the dependent variable and formula_4 is "i" th value of the independent variable. The term formula_5 is known as the "error" and contains the variability of the dependent variable not explained by the independent variable.
+Simulation.
+In simulation, the dependent variable is changed in response to changes in the independent variables.
+Statistics Synonyms.
+Independent variable.
+An independent variable is also known as a "predictor variable", "regressor", "controlled variable", "manipulated variable", "explanatory variable", "exposure variable" (see reliability theory), "risk factor" (see medical statistics), "feature" (in machine learning and pattern recognition) or an "input variable."
+"Explanatory variable" is preferred by some authors over "independent variable" when the quantities treated as "independent variables" may not be statistically independent.
+Dependent variable.
+A dependent variable is also known as a "response variable", "regressand", "measured variable", "responding variable", "explained variable", "outcome variable", "experimental variable", and "output variable".
+If the independent variable is referred to as an "explanatory variable" (see above) then the term "response variable" is preferred by some authors for the dependent variable.
+Other variables.
+A variable may be thought to alter the dependent or independent variables, but may not actually be the focus of the experiment. So that variable will be kept constant or monitored to try to minimise its effect on the experiment. Such variables may be called a "controlled variable" or "control variable" or "extraneous variable".
+In quasi-experiments, differentiating between dependent and other variables may be downplayed in favour of differentiating between those variables that can be altered by the researcher and those that cannot. Variables in quasi-experiments may be referred to as "extraneous variables", "subject variables", "experimental variables", "situational variables", "pseudo-independent variables", "ex post facto variables", "natural group variables" or "non-manipulated variables".
+In modelling, variability that is not covered by the explanatory variable is designated by formula_5 and is known as the "residual", "side effect", "error", "unexplained share", "residual variable", or "tolerance".

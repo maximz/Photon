@@ -1,0 +1,67 @@
+JSON ( , ), or JavaScript Object Notation, is a text-based open standard designed for human-readable data interchange. It is derived from the JavaScript scripting language for representing simple data structures and associative arrays, called objects. Despite its relationship to JavaScript, it is language-independent, with parsers available for many languages.
+The JSON format was originally specified by Douglas Crockford, and is described in RFC 4627. The official Internet media type for JSON is codice_1. The JSON filename extension is codice_2.
+The JSON format is often used for serializing and transmitting structured data over a network connection. It is used primarily to transmit data between a server and web application, serving as an alternative to XML.
+History.
+Douglas Crockford was the first to specify and popularize the JSON format.
+JSON was used at State Software Inc., a company co-founded by Crockford, starting in April 2001, and funded by Tesla Ventures. When State was founded in early 2001 by 6 former employees of Communities.com, they agreed to build a system that used standard browser capabilities and provided an abstraction layer for Web developers to create stateful Web applications that had a persistent duplex connection to a Web server by holding the 2 http connections open and recycling them before standard browser time outs if no further data was exchanged. The idea for the State Application Framework stemmed from a project at Communities.com for Cartoon Network which used a plug-in with a proprietary messaging format to manipulate dhtml elements (this system is also owned by 3DO); upon discovery of early AJAX capabilities (i.e, digiGroups and Noosh, founded by Uri Sarid) and others using frames to pass information into the user browsers' visual field without refreshing a Web application's visual context, it was deduced that the basic components to realize real-time rich Web applications were available by using only the standard HTTP, HTML and Javascript capabilities of Netscape 4.0.5+ and IE 5+. Douglas Crockford then found that javascript could be used as an object based messaging format for such a system. The system was sold to Sun Microsystems, Amazon.com and EDS. The JSON.org website was launched in 2002. In December 2005, Yahoo! began offering some of its web services in JSON. Google started offering JSON feeds for its GData web protocol in December 2006.
+Although JSON was based on a subset of the JavaScript scripting language
+(specifically, Standard ECMA-262 3rd Edition—December 1999) and is commonly used with that language, it is a language-independent data format. Code for parsing and generating JSON data is readily available for a large variety of programming languages. JSON's website provides a comprehensive listing of existing JSON libraries, organized by language.
+Data types, syntax and example.
+Non-significant white space may be added freely around the "structural characters" (i.e. brackets "{}[]", colons ":" and commas ",").
+The following example shows the JSON representation of an object that describes a person. The object has string fields for first name and last name, a number field for age, contains an object representing the person's address, and contains a list (an array) of phone number objects.
+</source>
+One potential pitfall of the free-form nature of JSON comes from the ability to write numbers as either numbers or strings. Consider for example a value such as the zip code 10021. 10021 may be written with quotes by one writer but without by another. This could give surprises or even errors, for example, when postal codes are exchanged between systems or even searched for within the same system. Searching for double-quoted "10021" won't necessarily find an unquoted 10021. In addition, postal codes in the USA are numbers but other countries use letters as well. This is a type of problem that the use of a JSON Schema (see below) is intended to reduce. 
+</source>
+The codice_7 variable must be wrapped in parentheses to avoid an ambiguity in JavaScript's syntax.
+The recommended way, however, is to use a JSON parser. Unless a client absolutely trusts the source of the text, or must parse and accept text that is not strictly JSON-compliant, one should avoid codice_6. A correctly implemented JSON parser will accept only valid JSON, preventing potentially malicious code from being executed inadvertently.
+</source>
+Browsers, such as Firefox 4 and Internet Explorer 8, include special features for parsing JSON. As native browser support is more efficient and secure than codice_6, native JSON support is included in the recently-released Edition 5 of the ECMAScript standard.
+Despite the widespread belief that JSON is a JavaScript subset, "this is not the case". Specifically, JSON allows the Unicode line terminators and to appear unescaped in quoted strings, while JavaScript does not. This is a consequence of JSON disallowing only "control characters". This subtlety is important when generating JSONP.
+Unsupported native data types.
+JavaScript syntax defines several native data types that are not included in the JSON standard: Date, Error, Regular Expression, and Function. These JavaScript data types must be represented as some other data format, with the programs on both ends agreeing on how to convert between the types. As of 2011, there are some de facto standards for e.g. converting between Date and String, but none universally recognized. Other languages may have a different set of native types that must be serialized carefully to deal with this type of conversion.
+Schema.
+JSON Schema is a specification for a JSON-based format for defining the structure of JSON data. JSON Schema provides a contract for what JSON data is required for a given application and how it can be modified, much like the XML Schema provides for XML. JSON Schema is intended to provide validation, documentation, and interaction control of JSON data. JSON Schema is based on the concepts from XML Schema, RelaxNG, and Kwalify, but is intended to be JSON-based, so that JSON data in the form of a schema can be used to validate JSON data, the same serialization/deserialization tools can be used for the schema and data, and it can be self descriptive.
+JSON Schema was written up as an IETF draft, which expired in 2011. However, there are several validators currently available for different programming languages, each with varying levels of conformance. Currently the most complete and compliant JSON Schema validator available is JSV.
+</source>
+</source>
+MIME type.
+The official MIME type for JSON text is "codice_1".
+JSON-RPC.
+JSON-RPC is a RPC protocol built on JSON, as a replacement for XML-RPC or SOAP. It is a very simple protocol, defining only a handful of data types and commands. JSON-RPC allows for notifications (information sent to the server that does not require a response) and for multiple calls to be sent to the server which may be answered out of order. 
+Example of a JSON-RPC 2.0 request and response using positional parameters.
+</source>
+When exposing services that accept and return JSON data, one can use JSON-RPC to replace SOAP or XML-RPC.
+Use in Ajax.
+JSON is often used in Ajax techniques. Ajax is a term for the ability of a webpage to request new data after it has loaded into the web browser, usually in response to user actions on the displayed webpage. As part of the Ajax model, the new data is usually incorporated into the user interface display dynamically as it arrives back from the server. An example of this in practice might be that while the user is typing into a search box, client-side code sends what they have typed so far to a server that responds with a list of possible complete search terms from its database. These may be displayed in a drop-down list beneath the search, so that the user may stop typing and select a complete and commonly used search string directly. When it was originally described in the mid-2000s, Ajax commonly used XML as the data interchange format but many developers have also used JSON to pass Ajax updates between the server and the client. 
+The following JavaScript code is one example of a client using XMLHttpRequest to request data in JSON format from a server. (The server-side programming is omitted; it has to be set up to respond to requests at codice_13 with a JSON-formatted string.)
+var my_JSON_object = {};
+var http_request = new XMLHttpRequest();
+http_request.open("GET", url, true);
+http_request.onreadystatechange = function () {
+http_request.send(null);
+</source>
+Security issues.
+Although JSON is intended as a data serialization format, its design as a subset of the JavaScript scripting language poses several security concerns. These concerns center on the use of a JavaScript interpreter to execute JSON text dynamically as JavaScript, thus exposing a program to errant or malicious script contained therein—often a chief concern when dealing with data retrieved from the Internet. While not the only way to process JSON, it is an easy and popular technique, stemming from JSON's compatibility with JavaScript's eval() function, and illustrated by the following code examples.
+JavaScript codice_6.
+Because most JSON-formatted text is also syntactically legal JavaScript code, an easy way for a JavaScript program to parse JSON-formatted data is to use the built-in JavaScript codice_6 function, which was designed to evaluate JavaScript expressions. Rather than using a JSON-specific parser, the JavaScript interpreter itself is used to "execute" the JSON data to produce native JavaScript objects. However, there are some Unicode characters that are valid in JSON strings but invalid in JavaScript, so additional escaping would be needed before using a JavaScript interpreter.
+var my_JSON_object = !(/[^,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]/.test(
+</source>
+A new function, codice_17, was developed as a safer alternative to codice_18. It is specifically intended to process JSON data and not JavaScript. It was originally planned for inclusion in the Fourth Edition of the ECMAScript standard, but this did not occur. It was first added to the Fifth Edition, and is now supported by the major browsers given below. For older ones, a compatible JavaScript library is available at JSON.org.
+Native encoding and decoding in browsers.
+The default character encoding for JSON is UTF8; it also supports UTF16 and UTF32.
+Object references.
+The JSON standard does not support object references, but the Dojo Toolkit illustrates how conventions can be adopted to support such references using standard JSON.
+Specifically, the dojox.json.ref module provides support for several forms of referencing including circular, multiple, inter-message, and lazy referencing.
+Alternatively, non-standard solutions exist such as the use of Mozilla JavaScript Sharp Variables, although this functionality has been removed in Firefox version 12.
+Comparison with other formats.
+JSON is promoted as a low-overhead alternative to XML as both of these formats have widespread support for creation, reading and decoding in the real-world situations where they are commonly used. Apart from XML, examples could include OGDL, YAML and CSV. Also, Google Protocol Buffers can fill this role, although it is not a data interchange language. 
+XML.
+XML has been used to describe structured data and to serialize objects. Various XML-based protocols exist to represent the same kind of data structures as JSON for the same kind of data interchange purposes. When data is encoded in XML, the result is typically larger than an equivalent encoding in JSON, mainly because of XML's closing tags. Yet, if the data is compressed using an algorithm like gzip there is little difference because compression is good at saving space when a pattern is repeated.
+In XML (as with JSON) there are alternative ways to encode the same information because some values can be represented both as child nodes and attributes. This can make automated data exchange complicated unless the used XML format is strictly specified as programs need to deal with many different variations of the data structure.
+</source>
+Both of the following XML examples carry the same information as the JSON example above in different ways (Note, however, that the reverse may not be true, as JavaScript implementations allow for implementation dependent iteration order, while XML element children may or may not ordered . A more round-trippable JSON serialization might use arrays rather than objects).
+</person>
+</source>
+</person>
+</source>
+The XML encoding "may" therefore be comparable in length to the equivalent JSON encoding. A wide range of XML processing technologies exist, from the Document Object Model to XPath and XSLT. XML can also be styled for immediate display using CSS. XHTML is a form of XML so that elements can be passed in this form ready for direct insertion into webpages using client-side scripting.

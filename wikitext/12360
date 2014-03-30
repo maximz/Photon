@@ -1,0 +1,26 @@
+The vertical bar (|) is a character with various uses in mathematics, where it can be used to represent absolute value, among others; in computing and programming and in general typography, as a divider not unlike the interpunct. It may be called by various other names including the polon, pipe (by the Unix community, referring to the I/O pipeline construct), Sheffer stroke (by computer or mathematical logicians), verti-bar, vbar, stick, vertical line, vertical slash, or bar, think colon, poley, or divider line.
+Usage.
+Mathematics.
+The vertical bar is used as a mathematical symbol in
+Computing.
+Pipe.
+where the output from the "egrep" process is piped to the "more" process.
+The same "pipe" feature is also found in later versions of DOS and Microsoft Windows.
+Disjunction.
+In many programming languages, the vertical bar is used to designate the logic operation "or", either bitwise "or" or logical "or".
+Specifically, in C and other languages following C syntax conventions, such as C++, Perl, Java and C#, codice_1 denotes a bitwise or; whilst a double vertical bar codice_2 denotes a (short-circuited) logical or.
+In regular expression syntax, the vertical bar again indicates logical "or". For example: the Unix command grep -E 'foo|bar' matches lines containing 'foo' or 'bar'.
+Concatenation.
+In PL/I and certain dialects of SQL, the operator "||" denotes string concatenation.
+Delimiter.
+Although not as common as commas or tabs, the vertical bar can be used as a delimiter in a flat file. Examples of a pipe-delimited standard data format are LEDES 1998B and HL7. It is frequently used because vertical bar is typically uncommon in the data itself.
+Similarly, the vertical bar may see use as a delimiter for regular expression operations (e.g. in sed). This is useful when the regular expression contains instances of the more common forward slash (codice_3) delimiter; using a vertical bar eliminates the need to escape all instances of the forward slash.
+Backus-Naur form.
+In Backus-Naur form, an expression consists of sequences of symbols and/or sequences separated by '|', indicating a choice, the whole being a possible substitution for the symbol on the left.
+The broken bar (¦) in computing was historically an allograph of the vertical bar and was perceived so before a broad implementation of extended ASCII character sets (namely, ISO/IEC 8859 series), which did distinguish both. Since 1990s, it is considered a separate character, not a part of ASCII, and also termed "parted rule" in Unicode documentation. But in the text mode fonts, as well as in other TUI applications on DOS, Windows and Unix-like systems, the glyph used for the vertical bar may look exactly like a broken bar. This is no longer the case on Windows 7.
+Due to historical confusion between the two, computer keyboards and displays may not clearly or consistently differentiate them. The typical keyboard layout used in the United Kingdom features separate keys for vertical bar and broken bar; however, typically on Windows PCs the vertical bar key produces a broken-bar symbol. Some keyboard drivers map the broken bar key to the vertical bar, and the vertical bar key, shared with the grave accent (`), generates the broken bar when pressed in combination with AltGr.
+The broken bar has hardly any practical application and does not appear to have any clearly identified uses distinct from the vertical bar. In non-computing use — for example in mathematics, physics and general typography — the broken bar is not an acceptable substitute for the vertical bar. Aforementioned usages in computing rely on the abstract character with code point 124 (0x7C) in ASCII (or ASCII compatible code page) and do not depend on visual rendering, which actually may be a broken bar in some environments.
+Some variants of the EBCDIC family of code pages such as EBCDIC 500 had distinguished broken bar from a solid vertical bar.
+In text processing.
+In LaTeX, the vertical bar can be used as delimiter in mathematical mode. The sequence \| creates a double vertical line (a | b \| c is set as formula_26). This has different spacing from \mid and \parallel, which are relational operators: a \mid b \parallel c is set as formula_27. In LaTeX text mode, the vertical bar produces an em dash (—), or you can use the \textbar command instead.
+The vertical bar is also used as special character in other Lightweight markup languages, notably Wikipedia's own Wikitext.

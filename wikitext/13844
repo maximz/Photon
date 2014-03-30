@@ -1,0 +1,26 @@
+American wire gauge (AWG), also known as the Brown & Sharpe wire gauge, is a standardized wire gauge system used since 1857 predominantly in the United States and Canada for the diameters of round, solid, nonferrous, electrically conducting wire. The cross-sectional area of each gauge is an important factor for determining its current-carrying capacity. 
+__TOC__
+The steel industry does not use AWG and prefers a number of other wire gauges. These include Washburn & Moen (or W&M) Wire Gauge, US Steel Wire Gauge, and Music Wire Gauge (see Piano wire).
+Increasing gauge numbers give decreasing wire diameters, which is similar to many other non-metric gauging systems. This gauge system originated in the number of drawing operations used to produce a given gauge of wire. Very fine wire (for example, 30 gauge) required more passes through the drawing dies than did 0 gauge wire. Manufacturers of wire formerly had proprietary wire gauge systems; the development of standardized wire gauges rationalized selection of wire for a particular purpose. 
+The AWG tables are for a single, solid, round conductor. The AWG of a stranded wire is determined by the total cross-sectional area of the conductor, which determines its current-carrying capacity and electrical resistance. Because there are also small gaps between the strands, a stranded wire will always have a slightly larger overall diameter than a solid wire with the same AWG. 
+AWG is also commonly used to specify body piercing jewelry sizes (especially smaller sizes), even when the material is not metallic.
+Formula.
+By definition, No. 36 AWG is 0.005 inches in diameter, and No. 0000 is 0.46 inches in diameter. The ratio of these diameters is 1:92, and there are 40 gauge sizes from No. 36 to No. 0000, or 39 steps. Using this common ratio, wire gauge sizes vary geometrically according to the following formula: The diameter of a No. "n" AWG wire is
+or equivalently
+The gauge can be calculated from the diameter using
+and the cross-section area is
+The ASTM B 258-02 standard defines the ratio between successive sizes to be the 39th root of 92, or approximately 1.1229322. ASTM B 258-02 also dictates that wire diameters should be tabulated with no more than 4 significant figures, with a resolution of no more than 0.0001 inches (0.1 mils) for wires larger than No. 44 AWG, and 0.00001 inches (0.01 mils) for wires No. 45 AWG and smaller.
+Sizes with multiple zeros are successively larger than No. 0 and can be denoted using ""number of zeros"/0", for example 4/0 for 0000. For an "m"/0 AWG wire, use "n" = −("m"−1) = 1−"m" in the above formulas. For instance, for No. 0000 or 4/0, use n = −3.
+Rules of thumb.
+Additionally, a decrease of ten gauge numbers, for example from No. 10 to 1/0, multiplies the area and weight by approximately 10 and reduces the resistance by a factor of approximately 10.
+Aluminum wire has a conductivity of approximately 61% of copper, so an aluminum wire has almost the same resistance as a copper wire 2 AWG smaller. (Which has 62.9% of the area.)
+Tables of AWG wire sizes.
+The table below shows various data including both the resistance of the various wire gauges and the allowable current (ampacity) based on plastic insulation. The diameter information in the table applies to "solid" wires. Stranded wires are calculated by calculating the equivalent cross sectional copper area. Fusing Current (melting wire) is estimated based on 25°C ambient temperature. The table below assumes DC, or AC frequencies equal to or less than 60 Hz, and does not take skin effect into account. Turns of wire is an upper limit for wire with no insulation.
+In the North American electrical industry, conductors larger than 4/0 AWG are generally identified by the area in thousands of circular mils (kcmil), where 1 kcmil = 0.5067 mm². The next wire size larger than 4/0 has a cross section of 250 kcmil. A "circular mil" is the area of a wire one mil in diameter. One million circular mils is the area of a circle with 1000 mil = 1 inch diameter. An older abbreviation for one thousand circular mils is "MCM".
+Stranded wire AWG sizes.
+AWG gauges are also used to describe stranded wire. In this case, it describes the total cross-sectional area of the conductor; the gaps between strands are not counted. Using circular strands, these gaps occupy about 10% of the wire area, thus requiring a wire about 5% thicker than equivalent solid wire.
+Stranded wires are specified with three numbers, the overall AWG size, the number of strands, and the AWG size of a strand. The number of strands and the AWG of a strand are separated by a slash. For example, a 22 AWG 7/30 stranded wire is a 22 AWG wire made from seven strands of 30 AWG wire.
+Nomenclature and abbreviations in electrical distribution.
+Alternate ways are commonly used in the electrical industry to specify wire sizes as AWG.
+Pronunciation.
+and so on.

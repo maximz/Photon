@@ -1,0 +1,23 @@
+Young's modulus, also known as the tensile modulus or elastic modulus, is a measure of the stiffness of an elastic material and is a quantity used to characterize materials. It is defined as the ratio of the stress along an axis over the strain along that axis in the range of stress in which Hooke's law holds. In solid mechanics, the slope of the stress-strain curve at any point is called the tangent modulus. The tangent modulus of the initial, linear portion of a stress-strain curve is called "Young's modulus". It can be experimentally determined from the slope of a stress-strain curve created during tensile tests conducted on a sample of the material. In anisotropic materials, Young's modulus may have different values depending on the direction of the applied force with respect to the material's structure.
+Young's modulus is the most common "elastic modulus", sometimes called the "modulus of elasticity", but there are other elastic moduli measured, too, such as the bulk modulus and the shear modulus.
+It is named after Thomas Young, the 19th century British scientist. However, the concept was developed in 1727 by Leonhard Euler, and the first experiments that used the concept of Young's modulus in its current form were performed by the Italian scientist Giordano Riccati in 1782, predating Young's work by 25 years.
+Units.
+Young's modulus is the ratio of stress, which has units of pressure, to strain, which is dimensionless; therefore, Young's modulus has units of pressure.
+The SI unit of modulus of elasticity (E, or less commonly Y) is the pascal (Pa or N/m² or m−1·kg·s−2). The practical units used are megapascals (MPa or N/mm²) or gigapascals (GPa or kN/mm²). In United States customary units, it is expressed as pounds (force) per square inch (psi). The abbreviation ksi refers to thousands of psi.
+Usage.
+The Young's modulus enables the calculation of the change in the dimension of a bar made of an isotropic elastic material under tensile or compressive loads. For instance, it predicts how much a material sample extends under tension or shortens under compression. Young's modulus is used in order to predict the deflection that will occur in a statically determinate beam when a load is applied at a point in between the beam's supports. Some calculations also require the use of other material properties, such as the shear modulus, density, or Poisson's ratio.
+Linear versus non-linear.
+For many materials, the ratio of stress over strain is essentially constant over a range of strains. Such materials are called linear, and are said to obey Hooke's law. Examples of linear materials are steel, carbon fiber and glass. Young's modulus does not apply to Non-linear materials, including rubber and soils, except under very small strains.
+Directional materials.
+Young's modulus is not always the same in all orientations of a material. Most metals and ceramics, along with many other materials, are isotropic, and their mechanical properties are the same in all orientations. However, metals and ceramics can be treated with certain impurities, and metals can be mechanically worked to make their grain structures directional. These materials then become anisotropic, and Young's modulus will change depending on the direction of the force vector. Anisotropy can be seen in many composites as well. For example, carbon fiber has much higher Young's modulus (is much stiffer) when force is loaded parallel to the fibers (along the grain). Other such materials include wood and reinforced concrete. Engineers can use this directional phenomenon to their advantage in creating structures.
+Calculation.
+where
+Force exerted by stretched or compressed material.
+The Young's modulus of a material can be used to calculate the force it exerts under specific strain. 
+where F is the force exerted by the material when compressed or stretched by ΔL. 
+Hooke's law can be derived from this formula, which describes the stiffness of an ideal spring: 
+where
+Elastic potential energy.
+where e is the elastic potential energy.
+Approximate values.
+Young's modulus can vary somewhat due to differences in sample composition and test method. The rate of deformation has the greatest impact on the data collected, especially in polymers. The values here are approximate and only meant for relative comparison.

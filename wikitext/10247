@@ -1,0 +1,20 @@
+The version history of Android mobile operating system began with the release of the Android beta in November 2007. The first commercial version, Android 1.0, was released in September 2008. Android is under ongoing development by Google and the Open Handset Alliance, and has seen a number of updates to its base operating system since its original release. These updates typically fix bugs and add new features. 
+Since April 2009, Android versions have been developed under a codename and released in alphabetical order: Cupcake, Donut, Eclair, Froyo, Gingerbread, Honeycomb, Ice Cream Sandwich, and Jelly Bean. , over 500 million active devices use the Android OS worldwide. The most recent major Android update was Jelly Bean 4.2, which was released on commercial devices in November 2012.
+Pre-commercial release versions (2007–2008).
+Android alpha.
+There were at least two internal releases inside Google/OHA before the Android beta was released in November 2007. In a temporary naming scheme, the second of these releases was code-named "R2-D2". Dan Morrill created some of the first mascot logos, but the current green Android logo was designed by Irina Blok. Ryan Gibson conceived of the confections naming scheme that has been used for the majority of the public releases, starting with Android 1.5 Cupcake in April 2009.
+Version history by API level.
+Android 2.2–2.2.3 Froyo (API level 8).
+On 20 May 2010, the SDK for Android 2.2 (Froyo, short for frozen yogurt) was released, based on Linux kernel 2.6.32.
+Android 3.2 Honeycomb (API level 13).
+Most first- and second-generation Google TV-enabled devices utilize Honeycomb 3.2.
+Android 4.0–4.0.2 Ice Cream Sandwich (API level 14).
+The SDK for Android 4.0.1 (Ice Cream Sandwich), based on Linux kernel 3.0.1, was publicly released on 19 October 2011. Google's Gabe Cohen stated that Android 4.0 was "theoretically compatible" with any Android 2.3.x device in production at that time. The source code for Android 4.0 became available on 14 November 2011.
+Android 4.0.3–4.0.4 Ice Cream Sandwich (API level 15).
+Support for Adobe Systems' Flash player ended with Ice Cream Sandwich.
+Android 4.1 Jelly Bean (API level 16).
+Google announced Android 4.1 (Jelly Bean) at the Google I/O conference on 27 June 2012. Based on Linux kernel 3.0.31, Jelly Bean was an incremental update with the primary aim of improving the functionality and performance of the user interface. The performance improvement involved "Project Butter", which uses touch anticipation, triple buffering, extended vsync timing and a fixed frame rate of 60 fps to create a fluid and "buttery-smooth" UI. Android 4.1 Jelly Bean was released to the Android Open Source Project on 9 July 2012, and the Nexus 7 tablet, the first device to run Jelly Bean, was released on 13 July 2012.
+Android 4.2 Jelly Bean (API level 17).
+Google was expected to announce Jelly Bean 4.2 at an event in New York City on 29 October 2012, but the event was cancelled due to Hurricane Sandy. Instead of rescheduling the live event, Google announced the new version with a press release, under the slogan "A new flavor of Jelly Bean". The first devices to run Android 4.2 were LG's Nexus 4 and Samsung's Nexus 10, which were released on 13 November 2012.
+Android 5.0 Key Lime Pie (API level 18).
+On 3 December 2012, it was reported that Google was working on Android 5.0, the successor to Jelly Bean, and confirmed by a Google employee that the OS version will sport the name of Key Lime Pie. In February 2013, a leaked Qualcomm document revealed that Key Lime Pie would be released in the second quarter of 2013.

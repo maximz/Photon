@@ -1,0 +1,21 @@
+A uniform resource locator, abbreviated URL, also known as web address, is a specific character string that constitutes a reference to a resource. In most web browsers, the URL of a web page is displayed on top inside an address bar. An example of a typical URL would be ""http://en.example.org/wiki/Main_Page"". A URL is technically a type of uniform resource identifier (URI), but in many technical documents and verbal discussions, URL is often used as a synonym for URI.
+History.
+The Uniform Resource Locator was created in 1994 by Tim Berners-Lee and the URI working group of the Internet Engineering Task Force (IETF) as an outcome of collaboration started at the IETF Living Documents "Birds of a Feather" session in 1992. The format combines the pre-existing system of domain names (created in 1985) with file path syntax, where forward slashes are used to separate folder and file names. Conventions already existed where server names could be prepended to complete file paths, preceded by a double-slash (//).
+Syntax.
+Every URL consists of some of the following: the scheme name (commonly called protocol), followed by a colon, two slashes, then, depending on scheme, a server name (exp. ftp., www., smtp., etc.) followed by a dot (.) then a domain name (alternatively, IP address), a port number, the path of the resource to be fetched or the program to be run, then, for programs such as Common Gateway Interface (CGI) scripts, a query string, and an optional fragment identifier.
+The syntax is: scheme://domain:port/path?query_string#fragment_id
+Other examples of scheme names include https:, gopher:, wais:, ftp:. URLs with https as a scheme (such as https://example.com/) require that requests and responses will be made over a secure connection to the website. Some schemes that require authentication allow a username, and perhaps a password too, to be embedded in the URL, for example ftp://asmith@ftp.example.org. Passwords embedded in this way are not conducive to secure working, but the full possible syntax isscheme://username:password@domain:port/path?query_string#fragment_id
+List of allowed URL characters.
+May be encoded but it is not necessary
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+0 1 2 3 4 5 6 7 8 9 - _ . ~
+Have to be encoded sometimes
+Further details can for example be found in RFC 3986 and http://www.w3.org/Addressing/URL/uri-spec.html​.
+URLs as locators.
+A URL is a URI that, in addition to identifying a resource, provides a means of locating the resource by describing its "primary access mechanism (e.g., its network location)".
+Internet hostnames.
+On the Internet, a hostname is a domain name assigned to a host computer. This is usually a combination of the host's local name with its parent domain's name. For example, en.example.org consists of a local hostname ("en") and the domain name "example.org". The hostname is translated into an IP address via the local hosts file, or the domain name system (DNS) resolver. It is possible for a single host computer to have several hostnames; but generally the operating system of the host prefers to have one hostname that the host uses for itself.
+Any domain name can also be a hostname, as long as the restrictions mentioned below are followed. For example, both "en.example.org" and "example.org" can be hostnames if they both have IP addresses assigned to them. The domain name "xyz.example.org" may not be a hostname if it does not have an IP address, but "aa.xyz.example.org" may still be a hostname. All hostnames are domain names, but not all domain names are hostnames.
+Modern usage.
+Major computer manufacturers such as Apple have begun to deprecate APIs that take local paths as parameters, in favour of using URLs. This is because remote and local resources (via the file:// scheme) may both be represented using a URL, but may additionally provide a protocol (particularly useful for remote items) and credentials.

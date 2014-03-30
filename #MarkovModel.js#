@@ -1,0 +1,151 @@
+l// symbol table to hold the frequency of words that follow individual kgams
+var h = new Object();
+var k = 4; 
+
+
+var Markov = function()
+{
+	var freq;
+	
+	for (var i = 10001; i <= 14861; i++)
+	{
+		var fs=require('fs');
+		fs.readFile('./' + i + '.txt', function(err, data) 
+		{
+			if (err) throw err;
+			input = data;
+	
+			// wrapping around of first k characters to the initial input text
+			input += input.substring(0, k);
+	
+			// filling up of symbol table with the kgrams as keys and an array
+			// containing frequency of characters as value
+				for (var i = 0; i < input.length() - k; i++) 
+				{
+					if (h.hasOwnProperty[input.substring(i, i + k)]) 
+					{	
+						// initialises the frequency array corresponding to the kgram
+						// with all zeroes,finds the next character in it and increments
+						// its frequency and writes the frequncy array as the value
+						// corresponding to the kgram in the symbol table
+						freq = new Array();
+						for (var j = 0; j < 128; j++)
+							freq[j] = 0;
+						var index = input[i + k].charCodeAt(0);
+						freq[index]++;
+					
+						h[input.substring(i, i + k)] = freq;
+					}	
+            
+					else // if kgram is already in the symbol table
+					{
+						// gets the frequency array corresponding to the kgram,
+						// finds character in it and increments its frequency and
+						// overwrites new frequency array as the value corresponding to
+						// the kgram in the symbol table
+                
+						freq = h[input.substring(i, i + k)];
+						var index = input[i + k].charCodeAt(0);
+						freq[index]++;
+						h[input.substring(i, i + k)] = freq;
+					}
+				}
+		});
+	}
+}
+
+var totalfreq = function(kgram)
+{
+	//counter to calculate frequency of kgram
+	var c = 0;
+	
+	var temp = new Array();
+	
+	// adds the frequency of individual characters associated with a kgram
+    // in the symbol table to get frequency of the kgram
+	if (h.hasOwnProperty(kgram))
+	{
+		temp = h[kgram];
+		for (var i = 0; i < temp.length; i++)
+			c += temp[i];
+	}
+	
+	return c;
+}
+
+// number of times that character c follows kgram (throws an exception if
+// kgram is not of length k)
+var freq = function(kgram, c)
+{
+	 // retrieves from the frequency array associated with a kgram in the
+     // symbol table the frequency of a particular kgram
+	 if (h.hasOwnProperty(kgram))
+	 {
+		var temp = h[kgram];
+		return temp[c.charCodeAt(0)];
+	 }
+	else
+		return 0;
+}
+
+// generates a random character following given kgram (Throws an exception
+// if kgram is not of length k or if no such kgram exists.
+var rand = function(kgram)
+{
+	if (kgram.length != k)
+		return;
+	if (totalfreq(kgram) == 0)
+		return;
+		
+	// to hold probability of individual characters following the kgram
+    var prob = new Array();
+		
+	// to hold the frequency array corresponding to the given kgram
+	var temp = h[kgram];
+	
+	prob[0] = temp[0] / totalfreq(kgram);
+	
+	// filling up of probabilities
+    for (var i = 1; i < temp.length; i++)
+            prob[i] = prob[i - 1] + temp[i] / totalfreq(kgram);
+	
+	// generate a random character taking into account the individual
+    // probabilities of occurence of every possible character after the kgram
+    var num = Math.random();
+	
+	if (num < prob[0])
+		return String.fromCharCode(0);
+		
+	for (var i = 1; i < prob.length; i++)
+		if (num > prob[i - 1] && num < prob[i])
+			return String.fromCharCode(i);
+}
+
+// generate a String of length T characters by simulating a trajectory
+// through the corresponding Markov chain assuming that T is atleast k.
+var gen = function(kgram, T)
+{
+	// to hold psuedo random text and modified kgram
+	var stringbuilding = "";
+	var modifiedkgram = kgram;
+	
+	// filling up of psuedo random text by generating one character at a
+    // time
+	for (var i = 0; i < T - k; i++)
+	{
+		stringbuilding += rand(modifiedkgram);
+		modifiedkgram = stringbuilding.sunstring(i + 1, i + 1 + k);
+	}
+	
+	return stringbuilding;
+}
+
+/*// method to replace unknown characters
+var replaceUnknown = function(corrupted)
+{
+	var copy = corrupted;
+	
+	for (var i = k; i < copy.length() - k; i++)
+		if (copy[i] == '~')
+
+}*/
