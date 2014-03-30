@@ -86,6 +86,7 @@ public class CameraFragment extends Fragment {
 		        fos.flush();
 				fos.close();
 				bmp.recycle();
+				System.gc();
 			} catch (FileNotFoundException e) {
 
 			} catch (IOException e) {
