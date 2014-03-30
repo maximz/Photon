@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -21,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.comparty.photon.camera.CameraPreview;
 
@@ -28,6 +30,8 @@ public class CameraFragment extends Fragment {
 	
 	private Camera mCamera;
 	private CameraPreview mCameraPreview;
+	
+	TextView instructions;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +39,9 @@ public class CameraFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_camera, container,
 				false);
 
+		instructions = (TextView) rootView.findViewById(R.id.instructions);
+		instructions.setVisibility(View.VISIBLE);
+		
 		mCamera = getCameraInstance();
 		mCameraPreview = new CameraPreview(getActivity(), mCamera);
 		FrameLayout preview = (FrameLayout) rootView.findViewById(R.id.camera_preview);
@@ -75,6 +82,8 @@ public class CameraFragment extends Fragment {
 				return;
 			}
 			try {
+				instructions.setVisibility(View.GONE);
+				
 				Bitmap bmp = BitmapFactory.decodeByteArray(data , 0, data.length);
 				
 				Matrix matrix = new Matrix();
@@ -87,6 +96,13 @@ public class CameraFragment extends Fragment {
 				fos.close();
 				bmp.recycle();
 				System.gc();
+				//camera.startPreview();
+				
+				//start spritz
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
+				ft.setCustomAnimations(R.animator.alpha, R.animator.nochange);
+				ft.add(R.id.container, new SpritzFragment());
+				ft.commit();
 			} catch (FileNotFoundException e) {
 
 			} catch (IOException e) {
