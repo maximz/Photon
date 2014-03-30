@@ -35,7 +35,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+	String currentText;
+	
+	int wpm = 500;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -65,6 +68,12 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+
+	@Override
+	public void onBackPressed() {
+		// do nothing
 	}
 
 	/**

@@ -10,6 +10,7 @@
         android:layout_height="match_parent" />
 
     <TextView
+        android:id="@+id/instructions"
         android:layout_gravity="top"
         android:gravity="center"
         android:layout_width="match_parent"
