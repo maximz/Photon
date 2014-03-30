@@ -1,9 +1,0 @@
-Model–view–controller (MVC) is a software architecture pattern that separates the representation of information from the user's interaction with it.
-The "model" consists of application data, business rules, logic, and functions. A "view" can be any output representation of data, such as a chart or a diagram. Multiple views of the same data are possible, such as a pie chart for management and a tabular view for accountants. The "controller" mediates input, converting it to commands for the model or view. The central ideas behind MVC are code reusability and separation of concerns.
-History.
-The model-view-controller pattern was originally formulated in the late 1970s by Trygve Reenskaug at Xerox PARC, as part of the Smalltalk system.→
-Component interactions.
-In addition to dividing the application into three kinds of components, the MVC design defines the interactions between them.
-Use in web applications.
-Although originally developed for personal computing, Model View Controller has been adapted as an architecture for World Wide Web applications. Several commercial and noncommercial application frameworks have been created that enforce the pattern. These frameworks vary in their interpretations, mainly in the way that the MVC responsibilities are divided between the client and server.
-Early web MVC frameworks took a thin client approach that placed almost the entire model, view and controller logic on the server. In this approach, the client sends either hyperlink requests or form input to the controller and then receives a complete and updated web page (or other document) from the view; the model exists entirely on the server. As client technologies have matured, frameworks such as JavaScriptMVC and Backbone have been created that allow the MVC components to execute partly on the client (see also AJAX).

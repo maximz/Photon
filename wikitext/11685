@@ -1,8 +1,0 @@
-Windows 8 has four editions, with varying feature sets.
-Editions.
-Unlike Windows Vista and Windows 7, there are no Starter, Home Basic, Home Premium, or Ultimate editions.
-Regional restrictions and variations.
-All editions have the ability to use language packs, enabling multiple user interface languages. (This functionality was previously only available in Windows 7 Ultimate or Enterprise.) However, in China and a small number of other emerging markets, an edition of Windows 8 without this capability will be offered. In China, a region-specific edition, "Windows 8 for China", will be released, as confirmed by Steve Guggenheimer, Corporate Vice President. It will be offered at relatively low price in an attempt to curb rampant software piracy in China. On emerging markets, a similar edition called "Windows 8 Single Language" was released as well.
-Additional Windows 8 editions specially destined for European markets have the letter "N" suffixed to their names and do not include a bundled copy of Windows Media Player. Microsoft was required to create the "N" editions of Windows after the European Commission ruled in 2004 that it needed to provide a copy of Windows without Windows Media Player tied in.
-Upgrade compatibility.
-The following in-place upgrade paths are supported from Windows 7. Note that it is only possible to upgrade from a IA-32 version of Windows 7 to an IA-32 version of Windows 8; an x64 version of Windows 7 can only be upgraded to an x64 version of Windows 8. It is possible to upgrade Windows XP or Windows Vista to Windows 8 Pro. Finally, there is no upgrade path for Windows RT, as it is the only version of Windows that currently supports the ARM architecture.
