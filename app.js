@@ -12,8 +12,8 @@ app.use(express.static(__dirname + '/public'));
 app.post('/web', function(req, res) {
     console.log('req: ' + req.files);
   var time1 = new Date().getTime();
+  
   var outputPath = './output/out' + time1;
-  var preOutputPath = 'pre' + outputPath;
 
   // Should we refine images before giving them to tesseract?
   // Could be a bonus project
