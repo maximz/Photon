@@ -28,7 +28,6 @@ app.post('/web', function(req, res) {
 //    }
 //
   
-  santize(req.files.image.path,  
     tesseract(req.files.image.path, outputPath, function(imagePath, outputPath) {
       // Used to measure the amount of time tesseract takes
       var time2 = new Date().getTime();
