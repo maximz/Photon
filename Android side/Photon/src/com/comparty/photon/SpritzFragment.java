@@ -49,7 +49,7 @@ public class SpritzFragment extends Fragment {
 			public void done() {
 				startButton.post(new Runnable() {
 					public void run() {
-						startButton.setImageResource(R.drawable.ic_media_play);
+						startButton.setBackgroundResource(R.drawable.ic_media_play);
 					}
 				});								
 				playing = false;
@@ -65,11 +65,11 @@ public class SpritzFragment extends Fragment {
 				if (!playing) {
 					s.start();
 					playing = true;
-					startButton.setImageResource(R.drawable.ic_media_pause);
+					startButton.setBackgroundResource(R.drawable.ic_media_pause);
 				} else {
 					s.pause();
 					playing = false;
-					startButton.setImageResource(R.drawable.ic_media_play);
+					startButton.setBackgroundResource(R.drawable.ic_media_play);
 				}
 			}
 		});
@@ -79,7 +79,6 @@ public class SpritzFragment extends Fragment {
 			public void onClick(View v) {
 				s.clearText();
 				s.setText(((MainActivity) getActivity()).currentText);
-				s.start();
 			}
 		});
 

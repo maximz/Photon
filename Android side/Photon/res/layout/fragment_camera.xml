@@ -31,11 +31,10 @@
         android:layout_gravity="bottom" >
 
         <ImageButton
-            android:src="@drawable/camera_button"
-            android:background="@null"
+            android:background="@drawable/camera_button0"
             android:id="@+id/button_capture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:layout_marginBottom="10dp"

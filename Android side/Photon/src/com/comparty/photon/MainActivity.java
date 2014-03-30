@@ -73,7 +73,7 @@ public class MainActivity extends Activity {
 
 	@Override
 	public void onBackPressed() {
-		// do nothing
+		finish();
 	}
 
 	/**

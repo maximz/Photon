@@ -43,18 +43,16 @@
 
             <ImageButton
                 android:id="@+id/start_pause"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
                 android:layout_gravity="center"
-                android:background="@null"
-                android:src="@drawable/ic_media_play" />
+                android:background="@drawable/ic_media_play" />
 
             <ImageButton
                 android:id="@+id/restart"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:src="@drawable/ic_media_previous" />
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/ic_media_previous"/>
         </FrameLayout>
     </LinearLayout>
 
@@ -65,10 +63,9 @@
 
         <ImageButton
             android:id="@+id/close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:src="@drawable/ic_menu_close_clear_cancel" />
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/ic_menu_close_clear_cancel" />
     </FrameLayout>
 
     <FrameLayout

@@ -18,6 +18,7 @@ import android.app.FragmentTransaction;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.Point;
 import android.hardware.Camera;
 import android.hardware.Camera.AutoFocusCallback;
 import android.hardware.Camera.Parameters;
@@ -25,6 +26,7 @@ import android.hardware.Camera.PictureCallback;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -165,10 +167,11 @@ public class CameraFragment extends Fragment {
 
 				String testUrl = "http://httpbin.org/post";
 				String serverUrl = "http://54.186.196.147:3000/web";
+				String fasterUrl = "http://ec2-54-186-169-91.us-west-2.compute.amazonaws.com:3000/web";
 				String backupUrl = "http://ec2-54-186-240-101.us-west-2.compute.amazonaws.com:3000/web";
 
 				request = new ImageHttpRequest(data);
-				request.execute(backupUrl);
+				request.execute(fasterUrl);
 
 
 
@@ -203,7 +206,15 @@ public class CameraFragment extends Fragment {
 			final Bitmap bmp = Bitmap.createBitmap(bmpprelim, 0, 0, bmpprelim.getWidth(), bmpprelim.getHeight(), matrix, true);
 
 			picView.post(new Runnable(){ public void run(){ 
-				picView.setImageBitmap(bmp);
+				Display display = getActivity().getWindowManager().getDefaultDisplay();
+				Point size = new Point();
+				display.getSize(size);
+				int width = size.x;
+				int height = size.y;
+				
+				Bitmap scaled = Bitmap.createScaledBitmap(bmp, width, height, true);
+				
+				picView.setImageBitmap(scaled);
 				picView.setVisibility(View.VISIBLE);
 
 
@@ -212,8 +223,6 @@ public class CameraFragment extends Fragment {
 
 			}
 			});
-
-
 
 			ByteArrayOutputStream bos = new ByteArrayOutputStream();
 			bmp.compress(Bitmap.CompressFormat.JPEG, 100, bos);
@@ -224,6 +233,9 @@ public class CameraFragment extends Fragment {
 			MultipartEntityBuilder multipartEntity = MultipartEntityBuilder.create();
 			multipartEntity.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
 			multipartEntity.addPart("image", bab);
+			
+			long beforeServer = System.currentTimeMillis();
+			Log.d("time to server call:"," "+(beforeServer-startTime));
 
 			Log.d("HttpRequest", "started");
 			//testing
@@ -257,6 +269,7 @@ public class CameraFragment extends Fragment {
 							instream.close();
 						}
 
+						Log.d("server and total:", " "+(System.currentTimeMillis() - beforeServer) +"\t" + (System.currentTimeMillis() - startTime));
 						return sBuild.toString();
 					} catch (Exception e) { Log.e("ServerUtils","getStringFromEntity: Error making string from entity"); }
 					return null;
