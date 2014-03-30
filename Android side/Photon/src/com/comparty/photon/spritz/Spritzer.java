@@ -239,10 +239,7 @@ public class Spritzer {
 					Thread.sleep(getInterWordDelay());
 				}
 			}
-		} else {
-			if (cb != null)
-				cb.done();
-		}
+		} 
 	}
 
 	/**
@@ -400,6 +397,8 @@ public class Spritzer {
 									if (mBus != null) {
 										mBus.post(new SpritzFinishedEvent());
 									}
+									if (cb != null)
+										cb.done();
 								}
 							} catch (InterruptedException e) {
 								e.printStackTrace();
