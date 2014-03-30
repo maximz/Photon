@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Handle requests (assumes that the request comes with an image file)
 app.post('/web', function(req, res) {
-    console.log('req: ' + req.files);
+    console.log('Request received');
   var time1 = new Date().getTime();
   var outputPath = './output/out' + time1;
   var preOutputPath = 'pre' + outputPath;

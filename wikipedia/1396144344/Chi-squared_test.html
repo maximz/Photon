@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Chi-squared test - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Chi-squared_test" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Chi-squared_test&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Chi-squared_test&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Chi-squared_test" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Chi-squared_test","wgTitle":"Chi-squared test","wgCurRevisionId":595165220,"wgRevisionId":595165220,"wgArticleId":226680,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing cleanup from April 2008","All articles needing cleanup","Cleanup tagged articles without a reason field from April 2008","Wikipedia pages needing cleanup from April 2008","Articles needing more detailed references","Statistical tests","Non-parametric statistics","Categorical data"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Chi-squared_test","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en","en-gb"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1071004"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Chi-squared_test skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Chi-squared test</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-style ambox-Cleanup" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>may require <a href="/wiki/Wikipedia:Cleanup" title="Wikipedia:Cleanup">cleanup</a> to meet Wikipedia's <a href="/wiki/Wikipedia:Manual_of_Style" title="Wikipedia:Manual of Style">quality standards</a></b>. <span class="hide-when-compact">No <a href="/wiki/Template:Cleanup/doc" title="Template:Cleanup/doc">cleanup reason</a> has been specified. Please help <a class="external text" href="//en.wikipedia.org/w/index.php?title=Chi-squared_test&amp;action=edit">improve this article</a> if you can.</span> <small><i>(April 2008)</i></small></span></td>
+</tr>
+</table>
+<p>A <b>chi-squared test</b>, also referred to as <b>chi-square test</b> or <b><img class="tex" alt="χw²" src="//upload.wikimedia.org/math/3/f/1/3f1654642bee437631079661bd54ddc4.png" /> test</b>, is any <a href="/wiki/Statistical" title="Statistical" class="mw-redirect">statistical</a> <a href="/wiki/Hypothesis_test" title="Hypothesis test" class="mw-redirect">hypothesis test</a> in which the <a href="/wiki/Sampling_distribution" title="Sampling distribution">sampling distribution</a> of the test statistic is a <a href="/wiki/Chi-squared_distribution" title="Chi-squared distribution">chi-squared distribution</a> when the <a href="/wiki/Null_hypothesis" title="Null hypothesis">null hypothesis</a> is true. Also considered a chi-squared test is a test in which this is <i>asymptotically</i> true, meaning that the sampling distribution (if the null hypothesis is true) can be made to approximate a chi-squared distribution as closely as desired by making the sample size large enough.</p>
+<p>Some examples of chi-squared tests where the <a href="/wiki/Chi-squared_distribution" title="Chi-squared distribution">chi-squared distribution</a> is only approximately valid:</p>
+<ul>
+<li><a href="/wiki/Pearson%27s_chi-squared_test" title="Pearson's chi-squared test">Pearson's chi-squared test</a>, also known as the chi-squared goodness-of-fit test or chi-squared test for independence. When the chi-squared test is mentioned without any modifiers or without other precluding context, this test is usually meant (for an exact test used in place of <img class="tex" alt="χ²" src="//upload.wikimedia.org/math/3/f/1/3f1654642bee437631079661bd54ddc4.png" />, see <a href="/wiki/Fisher%27s_exact_test" title="Fisher's exact test">Fisher's exact test</a>).</li>
+<li><a href="/wiki/Yates%27s_correction_for_continuity" title="Yates's correction for continuity">Yates's correction for continuity</a>, also known as Yates' chi-squared test.</li>
+<li><a href="/wiki/Cochran%E2%80%93Mantel%E2%80%93Haenszel_statistics" title="Cochran–Mantel–Haenszel statistics">Cochran–Mantel–Haenszel chi-squared test</a>.</li>
+<li><a href="/wiki/McNemar%27s_test" title="McNemar's test">McNemar's test</a>, used in certain 2&#160;×&#160;2 tables with pairing</li>
+<li><a href="/wiki/Tukey%27s_test_of_additivity" title="Tukey's test of additivity">Tukey's test of additivity</a></li>
+<li>The <a href="/wiki/Portmanteau_test" title="Portmanteau test">portmanteau test</a> in <a href="/wiki/Time-series_analysis" title="Time-series analysis" class="mw-redirect">time-series analysis</a>, testing for the presence of <a href="/wiki/Autocorrelation" title="Autocorrelation">autocorrelation</a></li>
+<li><a href="/wiki/Likelihood-ratio_test" title="Likelihood-ratio test">Likelihood-ratio tests</a> in general statistical modelling, for testing whether there is evidence of the need to move from a simple model to a more complicated one (where the simple model is nested within the complicated one).</li>
+</ul>
+<p>One case where the distribution of the <a href="/wiki/Test_statistic" title="Test statistic">test statistic</a> is an exact <a href="/wiki/Chi-squared_distribution" title="Chi-squared distribution">chi-squared distribution</a> is the test that the variance of a normally distributed population has a given value based on a <a href="/wiki/Sample_variance" title="Sample variance" class="mw-redirect">sample variance</a>. Such a test is uncommon in practice because values of variances to test against are seldom known exactly.</p>
+<h2><span class="mw-headline" id="Chi-squared_test_for_variance_in_a_normal_population">Chi-squared test for variance in a normal population</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Chi-squared_test&amp;action=edit&amp;section=1" title="Edit section: Chi-squared test for variance in a normal population">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If a sample of size <i>n</i> is taken from a population having a <a href="/wiki/Normal_distribution" title="Normal distribution">normal distribution</a>, then there is a result (see <a href="/wiki/Variance#Distribution_of_the_sample_variance" title="Variance">distribution of the sample variance</a>) which allows a test to be made of whether the variance of the population has a pre-determined value. For example, a manufacturing process might have been in stable condition for a long period, allowing a value for the variance to be determined essentially without error. Suppose that a variant of the process is being tested, giving rise to a small sample of <i>n</i> product items whose variation is to be tested. The test statistic <i>T</i> in this instance could be set to be the sum of squares about the sample mean, divided by the nominal value for the variance (i.e. the value to be tested as holding). Then <i>T</i> has a chi-squared distribution with <i>n</i> − 1 <a href="/wiki/Degrees_of_freedom_(statistics)" title="Degrees of freedom (statistics)">degrees of freedom</a>. For example if the sample size is 21, the acceptance region for <i>T</i> for a significance level of 5% is the interval 9.59 to 34.17.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Chi-squared_test&amp;action=edit&amp;section=2" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="noprint tright portal" style="border:solid #aaa 1px;margin:0.5em 0 0.5em 1em;">
+<table style="background:#f9f9f9;font-size:85%;line-height:110%;max-width:175px;">
+<tr valign="middle">
+<td style="text-align:center;"><a href="/wiki/File:Fisher_iris_versicolor_sepalwidth.svg" class="image"><img alt="Portal icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/32px-Fisher_iris_versicolor_sepalwidth.svg.png" width="32" height="22" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/48px-Fisher_iris_versicolor_sepalwidth.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/64px-Fisher_iris_versicolor_sepalwidth.svg.png 2x" /></a></td>
+<td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;"><a href="/wiki/Portal:Statistics" title="Portal:Statistics">Statistics portal</a></td>
+</tr>
+</table>
+</div>
+<ul>
+<li><a href="/wiki/Nomogram#Chi-squared_test_computation_nomogram" title="Nomogram">Chi-squared test nomogram</a></li>
+<li><a href="/wiki/G-test" title="G-test"><i>G</i>-test</a></li>
+<li><a href="/wiki/Minimum_chi-square_estimation" title="Minimum chi-square estimation">Minimum chi-square estimation</a></li>
+<li>The <a href="/wiki/Wald_test" title="Wald test">Wald test</a> can be evaluated against a chi-squared distribution.</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Chi-squared_test&amp;action=edit&amp;section=3" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="citation mathworld" id="Reference-Mathworld-Chi-Squared_Test"><a href="/wiki/Eric_W._Weisstein" title="Eric W. Weisstein">Weisstein, Eric W.</a>, "<a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/Chi-SquaredTest.html">Chi-Squared Test</a>", <i><a href="/wiki/MathWorld" title="MathWorld">MathWorld</a></i>.</span></li>
+<li>Corder, G.W., Foreman, D.I. (2009). <i>Nonparametric Statistics for Non-Statisticians: A Step-by-Step Approach</i> Wiley, <a href="/wiki/Special:BookSources/9780470454619" class="internal mw-magiclink-isbn">ISBN 978-0-470-45461-9</a></li>
+<li>Greenwood, P.E., Nikulin, M.S. (1996) <i>A guide to chi-squared testing</i>. Wiley, New York. <a href="/wiki/Special:BookSources/047155779X" class="internal mw-magiclink-isbn">ISBN 0-471-55779-X</a></li>
+<li>Nikulin, M.S. (1973). "Chi-squared test for normality". In: <i>Proceedings of the International Vilnius Conference on Probability Theory and Mathematical Statistics</i>, v.2, pp.&#160;119–122.</li>
+<li>Bagdonavicius, V., Nikulin, M.S. (2011) "Chi-square goodness-of-fit test for right censored data". <i>The International Journal of Applied Mathematics and Statistics</i>, p. 30-50.<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citing_sources#What_information_to_include" title="Wikipedia:Citing sources"><span title="A more detailed citation is required. (January 2013)">full citation needed</span></a></i>]</sup></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible uncollapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Statistics" title="Template:Statistics"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Statistics" title="Template talk:Statistics"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Statistics&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="/wiki/Statistics" title="Statistics">Statistics</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";;"><span style="float:left;width:6em;">&#160;</span>
+<div style="font-size:110%;"><a href="/wiki/Descriptive_statistics" title="Descriptive statistics">Descriptive statistics</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks hlist navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Continuous_probability_distribution" title="Continuous probability distribution" class="mw-redirect">Continuous data</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Location_parameter" title="Location parameter">Location</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Mean" title="Mean">Mean</a> (<a href="/wiki/Arithmetic_mean" title="Arithmetic mean">Arithmetic</a>, <a href="/wiki/Geometric_mean" title="Geometric mean">Geometric</a>, <a href="/wiki/Harmonic_mean" title="Harmonic mean">Harmonic</a>)</li>
+<li><a href="/wiki/Median" title="Median">Median</a></li>
+<li><a href="/wiki/Mode_(statistics)" title="Mode (statistics)">Mode</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Statistical_dispersion" title="Statistical dispersion">Dispersion</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Range_(statistics)" title="Range (statistics)">Range</a></li>
+<li><a href="/wiki/Standard_deviation" title="Standard deviation">Standard deviation</a></li>
+<li><a href="/wiki/Coefficient_of_variation" title="Coefficient of variation">Coefficient of variation</a></li>
+<li><a href="/wiki/Percentile" title="Percentile">Percentile</a></li>
+<li><a href="/wiki/Interquartile_range" title="Interquartile range">Interquartile range</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Shape_of_the_distribution" title="Shape of the distribution">Shape</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Variance" title="Variance">Variance</a></li>
+<li><a href="/wiki/Skewness" title="Skewness">Skewness</a></li>
+<li><a href="/wiki/Kurtosis" title="Kurtosis">Kurtosis</a></li>
+<li><a href="/wiki/Moment_(mathematics)" title="Moment (mathematics)">Moments</a></li>
+<li><a href="/wiki/L-moment" title="L-moment">L-moments</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Count_data" title="Count data">Count data</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Index_of_dispersion" title="Index of dispersion">Index of dispersion</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Summary tables</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Grouped_data" title="Grouped data">Grouped data</a></li>
+<li><a href="/wiki/Frequency_distribution" title="Frequency distribution">Frequency distribution</a></li>
+<li><a href="/wiki/Contingency_table" title="Contingency table">Contingency table</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Correlation_and_dependence" title="Correlation and dependence">Dependence</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Pearson_product-moment_correlation_coefficient" title="Pearson product-moment correlation coefficient">Pearson product-moment correlation</a></li>
+<li><a href="/wiki/Rank_correlation" title="Rank correlation">Rank correlation</a> (<a href="/wiki/Spearman%27s_rank_correlation_coefficient" title="Spearman's rank correlation coefficient">Spearman's rho</a>, <a href="/wiki/Kendall_tau_rank_correlation_coefficient" title="Kendall tau rank correlation coefficient">Kendall's tau</a>)</li>
+<li><a href="/wiki/Partial_correlation" title="Partial correlation">Partial correlation</a></li>
+<li><a href="/wiki/Scatter_plot" title="Scatter plot">Scatter plot</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Statistical_graphics" title="Statistical graphics">Statistical graphics</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Bar_chart" title="Bar chart">Bar chart</a></li>
+<li><a href="/wiki/Biplot" title="Biplot">Biplot</a></li>
+<li><a href="/wiki/Box_plot" title="Box plot">Box plot</a></li>
+<li><a href="/wiki/Control_chart" title="Control chart">Control chart</a></li>
+<li><a href="/wiki/Correlogram" title="Correlogram">Correlogram</a></li>
+<li><a href="/wiki/Fan_chart_(statistics)" title="Fan chart (statistics)">Fan chart</a></li>
+<li><a href="/wiki/Forest_plot" title="Forest plot">Forest plot</a></li>
+<li><a href="/wiki/Histogram" title="Histogram">Histogram</a></li>
+<li><a href="/wiki/Pie_chart" title="Pie chart">Pie chart</a></li>
+<li><a href="/wiki/Q%E2%80%93Q_plot" title="Q–Q plot">Q–Q plot</a></li>
+<li><a href="/wiki/Run_chart" title="Run chart">Run chart</a></li>
+<li><a href="/wiki/Scatter_plot" title="Scatter plot">Scatter plot</a></li>
+<li><a href="/wiki/Stemplot" title="Stemplot" class="mw-redirect">Stemplot</a></li>
+<li><a href="/wiki/Radar_chart" title="Radar chart">Radar chart</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";;"><span style="float:left;width:6em;">&#160;</span>
+<div style="font-size:110%;"><a href="/wiki/Data_collection" title="Data collection">Data collection</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group">Designing studies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Effect_size" title="Effect size">Effect size</a></li>
+<li><a href="/wiki/Standard_error" title="Standard error">Standard error</a></li>
+<li><a href="/wiki/Statistical_power" title="Statistical power">Statistical power</a></li>
+<li><a href="/wiki/Sample_size_determination" title="Sample size determination">Sample size determination</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Survey_methodology" title="Survey methodology">Survey methodology</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Sampling_(statistics)" title="Sampling (statistics)">Sampling</a></li>
+<li><a href="/wiki/Stratified_sampling" title="Stratified sampling">Stratified sampling</a></li>
+<li><a href="/wiki/Cluster_sampling" title="Cluster sampling">Cluster sampling</a></li>
+<li><a href="/wiki/Opinion_poll" title="Opinion poll">Opinion poll</a></li>
+<li><a href="/wiki/Questionnaire" title="Questionnaire">Questionnaire</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Experiment#Controlled_experiments" title="Experiment">Controlled experiment</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Design_of_experiments" title="Design of experiments">Design of experiments</a></li>
+<li><a href="/wiki/Randomized_experiment" title="Randomized experiment">Randomized experiment</a></li>
+<li><a href="/wiki/Random_assignment" title="Random assignment">Random assignment</a></li>
+<li><a href="/wiki/Replication_(statistics)" title="Replication (statistics)">Replication</a></li>
+<li><a href="/wiki/Blocking_(statistics)" title="Blocking (statistics)">Blocking</a></li>
+<li><a href="/wiki/Factorial_experiment" title="Factorial experiment">Factorial experiment</a></li>
+<li><a href="/wiki/Optimal_design" title="Optimal design">Optimal design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Uncontrolled studies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Natural_experiment" title="Natural experiment">Natural experiment</a></li>
+<li><a href="/wiki/Quasi-experiment" title="Quasi-experiment">Quasi-experiment</a></li>
+<li><a href="/wiki/Observational_study" title="Observational study">Observational study</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";;"><span style="float:left;width:6em;">&#160;</span>
+<div style="font-size:110%;"><a href="/wiki/Statistical_inference" title="Statistical inference">Statistical inference</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Statistical_theory" title="Statistical theory">Statistical theory</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Sampling_distribution" title="Sampling distribution">Sampling distribution</a></li>
+<li><a href="/wiki/Order_statistic" title="Order statistic">Order statistic</a></li>
+<li><a href="/wiki/Scan_statistic" title="Scan statistic">Scan statistic</a></li>
+<li><a href="/wiki/Record_value" title="Record value">Record value</a></li>
+<li><a href="/wiki/Sufficient_statistic" title="Sufficient statistic">Sufficiency</a></li>
+<li><a href="/wiki/Completeness_(statistics)" title="Completeness (statistics)">Completeness</a></li>
+<li><a href="/wiki/Exponential_family" title="Exponential family">Exponential family</a></li>
+<li><a href="/wiki/Permutation_test" title="Permutation test" class="mw-redirect">Permutation test</a> (<a href="/wiki/Randomization_test" title="Randomization test" class="mw-redirect">Randomization test</a>)</li>
+<li><a href="/wiki/Empirical_distribution_function" title="Empirical distribution function">Empirical distribution</a></li>
+<li><a href="/wiki/Bootstrap_(statistics)" title="Bootstrap (statistics)" class="mw-redirect">Bootstrap</a></li>
+<li><a href="/wiki/U-statistic" title="U-statistic">U statistic</a></li>
+<li><a href="/wiki/Efficiency_(statistics)" title="Efficiency (statistics)">Efficiency</a></li>
+<li><a href="/wiki/Asymptotic_theory_(statistics)" title="Asymptotic theory (statistics)">Asymptotics</a></li>
+<li><a href="/wiki/Robust_statistics" title="Robust statistics">Robustness</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Frequentist_inference" title="Frequentist inference">Frequentist inference</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Bias_of_an_estimator" title="Bias of an estimator">Unbiased estimator</a> (<a href="/wiki/Minimum-variance_unbiased_estimator" title="Minimum-variance unbiased estimator">Mean unbiased minimum variance</a>, <a href="/wiki/Median-unbiased_estimator" title="Median-unbiased estimator" class="mw-redirect">Median unbiased</a>)</li>
+<li>Biased <a href="/wiki/Estimator" title="Estimator">estimators</a> (<a href="/wiki/Maximum_likelihood" title="Maximum likelihood">Maximum likelihood</a>, <a href="/wiki/Method_of_moments_(statistics)" title="Method of moments (statistics)">Method of moments</a>, <a href="/wiki/Minimum_distance_estimation" title="Minimum distance estimation">Minimum distance</a>, <a href="/wiki/Density_estimation" title="Density estimation">Density estimation</a>)</li>
+<li><a href="/wiki/Confidence_interval" title="Confidence interval">Confidence interval</a></li>
+<li><a href="/wiki/Statistical_hypothesis_testing" title="Statistical hypothesis testing">Testing hypotheses</a></li>
+<li><a href="/wiki/Power_(statistics)" title="Power (statistics)" class="mw-redirect">Power</a></li>
+<li>Parametric tests (<a href="/wiki/Likelihood-ratio_test" title="Likelihood-ratio test">Likelihood-ratio</a>, <a href="/wiki/Wald_test" title="Wald test">Wald</a>, <a href="/wiki/Score_test" title="Score test">Score</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Specific tests</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Z-test" title="Z-test"><i>Z</i> (normal)</a></li>
+<li><a href="/wiki/Student%27s_t-test" title="Student's t-test">Student's <i>t</i>-test</a></li>
+<li><i><a href="/wiki/F-test" title="F-test">F</a></i></li>
+<li><a href="/wiki/Goodness_of_fit" title="Goodness of fit">Goodness of fit</a> (<strong class="selflink">Chi-squared</strong>, <a href="/wiki/G-test" title="G-test"><i>G</i></a>, <a href="/wiki/Anderson%E2%80%93Darling_test" title="Anderson–Darling test">Sample source</a>, <a href="/wiki/Shapiro%E2%80%93Wilk_test" title="Shapiro–Wilk test">sample normality</a>, <a href="/wiki/Jarque-Bera_test" title="Jarque-Bera test" class="mw-redirect">Skewness &amp; kurtosis Normality</a>, <a href="/wiki/Likelihood-ratio_test" title="Likelihood-ratio test">Model comparison</a>, <a href="/wiki/Akaike_information_criterion" title="Akaike information criterion">Model quality</a>)</li>
+<li><a href="/wiki/Rank_statistics" title="Rank statistics" class="mw-redirect">Signed-rank</a> (<a href="/wiki/Wilcoxon_signed-rank_test" title="Wilcoxon signed-rank test">1-sample</a>, <a href="/wiki/Mann%E2%80%93Whitney_U" title="Mann–Whitney U">2-sample</a>, <a href="/wiki/Kruskal%E2%80%93Wallis_test" title="Kruskal–Wallis test" class="mw-redirect">1-way anova</a>)</li>
+<li><a href="/wiki/Shapiro%E2%80%93Wilk_test" title="Shapiro–Wilk test">Shapiro–Wilk</a></li>
+<li><a href="/wiki/Kolmogorov%E2%80%93Smirnov_test" title="Kolmogorov–Smirnov test">Kolmogorov–Smirnov</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Bayesian_inference" title="Bayesian inference">Bayesian inference</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Bayesian_probability" title="Bayesian probability">Bayesian probability</a></li>
+<li><a href="/wiki/Prior_probability" title="Prior probability">Prior</a></li>
+<li><a href="/wiki/Posterior_probability" title="Posterior probability">Posterior</a></li>
+<li><a href="/wiki/Credible_interval" title="Credible interval">Credible interval</a></li>
+<li><a href="/wiki/Bayes_factor" title="Bayes factor">Bayes factor</a></li>
+<li><a href="/wiki/Bayes_estimator" title="Bayes estimator">Bayesian estimator</a></li>
+<li><a href="/wiki/Maximum_a_posteriori_estimation" title="Maximum a posteriori estimation">Maximum posterior estimator</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";;"><span style="float:left;width:6em;">&#160;</span>
+<div style="font-size:110%;"><a href="/wiki/Correlation_and_dependence" title="Correlation and dependence">Correlation</a> and <a href="/wiki/Regression_analysis" title="Regression analysis">regression analysis</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Correlation_and_dependence" title="Correlation and dependence">Correlation</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Pearson_product-moment_correlation_coefficient" title="Pearson product-moment correlation coefficient">Pearson product–moment correlation</a></li>
+<li><a href="/wiki/Partial_correlation" title="Partial correlation">Partial correlation</a></li>
+<li><a href="/wiki/Confounding" title="Confounding">Confounding variable</a></li>
+<li><a href="/wiki/Coefficient_of_determination" title="Coefficient of determination">Coefficient of determination</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics">Errors and residuals</a></li>
+<li><a href="/wiki/Regression_model_validation" title="Regression model validation">Regression model validation</a></li>
+<li><a href="/wiki/Mixed_model" title="Mixed model">Mixed effects models</a></li>
+<li><a href="/wiki/Simultaneous_equations_model" title="Simultaneous equations model">Simultaneous equations models</a></li>
+<li><a href="/wiki/Multivariate_adaptive_regression_splines" title="Multivariate adaptive regression splines">MARS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Simple_linear_regression" title="Simple linear regression">Simple linear regression</a></li>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><a href="/wiki/General_linear_model" title="General linear model">General linear model</a></li>
+<li><a href="/wiki/Bayesian_linear_regression" title="Bayesian linear regression">Bayesian regression</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Non-standard predictors</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Nonlinear_regression" title="Nonlinear regression">Nonlinear regression</a></li>
+<li><a href="/wiki/Nonparametric_regression" title="Nonparametric regression">Nonparametric</a></li>
+<li><a href="/wiki/Semiparametric_regression" title="Semiparametric regression">Semiparametric</a></li>
+<li><a href="/wiki/Isotonic_regression" title="Isotonic regression">Isotonic</a></li>
+<li><a href="/wiki/Robust_regression" title="Robust regression">Robust</a></li>
+<li><a href="/wiki/Heteroscedasticity" title="Heteroscedasticity">Heteroscedasticity</a></li>
+<li><a href="/wiki/Homoscedasticity" title="Homoscedasticity">Homoscedasticity</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Generalized_linear_model" title="Generalized linear model">Generalized linear model</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Exponential_family" title="Exponential family">Exponential families</a></li>
+<li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic (Bernoulli)</a></li>
+<li><a href="/wiki/Binomial_regression" title="Binomial regression">Binomial</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Poisson</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Partition_of_sums_of_squares" title="Partition of sums of squares">Partition of variance</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Analysis_of_variance" title="Analysis of variance">Analysis of variance (ANOVA)</a></li>
+<li><a href="/wiki/Analysis_of_covariance" title="Analysis of covariance">Analysis of covariance</a></li>
+<li><a href="/wiki/Multivariate_analysis_of_variance" title="Multivariate analysis of variance">Multivariate ANOVA</a></li>
+<li><a href="/wiki/Degrees_of_freedom_(statistics)" title="Degrees of freedom (statistics)">Degrees of freedom</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";;"><span style="float:left;width:6em;">&#160;</span>
+<div style="font-size:110%;"><a href="/wiki/Categorical_data" title="Categorical data" class="mw-redirect">Categorical</a>, <a href="/wiki/Multivariate_statistics" title="Multivariate statistics">multivariate</a>, <a href="/wiki/Time_series" title="Time series">time-series</a>, or <a href="/wiki/Survival_analysis" title="Survival analysis">survival</a> analysis</div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Categorical_data" title="Categorical data" class="mw-redirect">Categorical data</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Cohen%27s_kappa" title="Cohen's kappa">Cohen's kappa</a></li>
+<li><a href="/wiki/Contingency_table" title="Contingency table">Contingency table</a></li>
+<li><a href="/wiki/Graphical_model" title="Graphical model">Graphical model</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Log-linear model</a></li>
+<li><a href="/wiki/McNemar%27s_test" title="McNemar's test">McNemar's test</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Multivariate_statistics" title="Multivariate statistics">Multivariate statistics</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/General_linear_model" title="General linear model">Multivariate regression</a></li>
+<li><a href="/wiki/Principal_component_analysis" title="Principal component analysis">Principal components</a></li>
+<li><a href="/wiki/Factor_analysis" title="Factor analysis">Factor analysis</a></li>
+<li><a href="/wiki/Cluster_analysis" title="Cluster analysis">Cluster analysis</a></li>
+<li><a href="/wiki/Statistical_classification" title="Statistical classification">Classification</a></li>
+<li><a href="/wiki/Copula_(probability_theory)" title="Copula (probability theory)">Copulas</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Time_series" title="Time series">Time series analysis</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group">General</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Decomposition_of_time_series" title="Decomposition of time series">Decomposition</a></li>
+<li><a href="/wiki/Trend_estimation" title="Trend estimation">Trend</a></li>
+<li><a href="/wiki/Stationary_process" title="Stationary process">Stationarity</a></li>
+<li><a href="/wiki/Seasonal_adjustment" title="Seasonal adjustment">Seasonal adjustment</a></li>
+<li><a href="/wiki/Exponential_smoothing" title="Exponential smoothing">Exponential smoothing</a></li>
+<li><a href="/wiki/Cointegration" title="Cointegration">Cointegration</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Specific tests</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Granger_causality" title="Granger causality">Granger causality</a></li>
+<li><a href="/wiki/Ljung%E2%80%93Box_test" title="Ljung–Box test">Q-Statistic</a></li>
+<li><a href="/wiki/Durbin%E2%80%93Watson_statistic" title="Durbin–Watson statistic">Durbin–Watson</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Time_domain" title="Time domain">Time domain</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Autocorrelation" title="Autocorrelation">ACF</a></li>
+<li><a href="/wiki/Partial_autocorrelation_function" title="Partial autocorrelation function">PACF</a></li>
+<li><a href="/wiki/Cross-correlation_function" title="Cross-correlation function" class="mw-redirect">XCF</a></li>
+<li><a href="/wiki/Autoregressive%E2%80%93moving-average_model" title="Autoregressive–moving-average model">ARMA model</a></li>
+<li><a href="/wiki/Box%E2%80%93Jenkins" title="Box–Jenkins">ARIMA model</a></li>
+<li><a href="/wiki/Autoregressive_conditional_heteroskedasticity" title="Autoregressive conditional heteroskedasticity">ARCH</a></li>
+<li><a href="/wiki/Vector_autoregression" title="Vector autoregression">Vector autoregression</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Frequency_domain" title="Frequency domain">Frequency domain</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Spectral_density_estimation" title="Spectral density estimation">Spectral density estimation</a></li>
+<li><a href="/wiki/Fourier_analysis" title="Fourier analysis">Fourier analysis</a></li>
+<li><a href="/wiki/Wavelet" title="Wavelet">Wavelet</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Survival_analysis" title="Survival analysis">Survival analysis</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Survival_function" title="Survival function">Survival function</a></li>
+<li><a href="/wiki/Kaplan%E2%80%93Meier_estimator" title="Kaplan–Meier estimator">Kaplan–Meier</a></li>
+<li><a href="/wiki/Logrank_test" title="Logrank test">Logrank test</a></li>
+<li><a href="/wiki/Failure_rate" title="Failure rate">Failure rate</a></li>
+<li><a href="/wiki/Proportional_hazards_models" title="Proportional hazards models" class="mw-redirect">Proportional hazards models</a></li>
+<li><a href="/wiki/Accelerated_failure_time_model" title="Accelerated failure time model">Accelerated failure time model</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";;"><span style="float:left;width:6em;">&#160;</span>
+<div style="font-size:110%;"><a href="/wiki/List_of_fields_of_application_of_statistics" title="List of fields of application of statistics">Applications</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Biostatistics" title="Biostatistics">Biostatistics</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Bioinformatics" title="Bioinformatics">Bioinformatics</a></li>
+<li><a href="/wiki/Clinical_trial" title="Clinical trial">Clinical trials</a> &amp; <a href="/wiki/Clinical_study_design" title="Clinical study design">studies</a></li>
+<li><a href="/wiki/Epidemiology" title="Epidemiology">Epidemiology</a></li>
+<li><a href="/wiki/Medical_statistics" title="Medical statistics">Medical statistics</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Engineering_statistics" title="Engineering statistics">Engineering statistics</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Chemometrics" title="Chemometrics">Chemometrics</a></li>
+<li><a href="/wiki/Methods_engineering" title="Methods engineering">Methods engineering</a></li>
+<li><a href="/wiki/Probabilistic_design" title="Probabilistic design">Probabilistic design</a></li>
+<li><a href="/wiki/Statistical_process_control" title="Statistical process control">Process &amp;</a> <a href="/wiki/Quality_control" title="Quality control">Quality control</a></li>
+<li><a href="/wiki/Reliability_engineering" title="Reliability engineering">Reliability</a></li>
+<li><a href="/wiki/System_identification" title="System identification">System identification</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Social_statistics" title="Social statistics">Social statistics</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Actuarial_science" title="Actuarial science">Actuarial science</a></li>
+<li><a href="/wiki/Census" title="Census">Census</a></li>
+<li><a href="/wiki/Crime_statistics" title="Crime statistics">Crime statistics</a></li>
+<li><a href="/wiki/Demographic_statistics" title="Demographic statistics">Demography</a></li>
+<li><a href="/wiki/Econometrics" title="Econometrics">Econometrics</a></li>
+<li><a href="/wiki/National_accounts" title="National accounts">National accounts</a></li>
+<li><a href="/wiki/Official_statistics" title="Official statistics">Official statistics</a></li>
+<li><a href="/wiki/Statistical_population" title="Statistical population">Population</a></li>
+<li><a href="/wiki/Psychometrics" title="Psychometrics">Psychometrics</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Spatial_analysis" title="Spatial analysis">Spatial statistics</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Cartography" title="Cartography">Cartography</a></li>
+<li><a href="/wiki/Environmental_statistics" title="Environmental statistics">Environmental statistics</a></li>
+<li><a href="/wiki/Geographic_information_system" title="Geographic information system">Geographic information system</a></li>
+<li><a href="/wiki/Geostatistics" title="Geostatistics">Geostatistics</a></li>
+<li><a href="/wiki/Kriging" title="Kriging">Kriging</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="/wiki/Category:Statistics" title="Category:Statistics">Category</a></li>
+<li><a href="/wiki/Portal:Statistics" title="Portal:Statistics">Portal</a></li>
+<li><a href="/wiki/Outline_of_statistics" title="Outline of statistics">Outline</a></li>
+<li><a href="/wiki/List_of_statistics_articles" title="List of statistics articles">Index</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1034
+CPU time usage: 0.948 seconds
+Real time usage: 1.017 seconds
+Preprocessor visited node count: 1496/1000000
+Preprocessor generated node count: 12114/1500000
+Post‐expand include size: 205252/2048000 bytes
+Template argument size: 19917/2048000 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 8/500
+Lua time usage: 0.109/10.000 seconds
+Lua memory usage: 2.25 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:226680-0!*!0!!*!4!*!math=0 and timestamp 20140324142621
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Chi-squared_test&amp;oldid=595165220">http://en.wikipedia.org/w/index.php?title=Chi-squared_test&amp;oldid=595165220</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Statistical_tests" title="Category:Statistical tests">Statistical tests</a></li><li><a href="/wiki/Category:Non-parametric_statistics" title="Category:Non-parametric statistics">Non-parametric statistics</a></li><li><a href="/wiki/Category:Categorical_data" title="Category:Categorical data">Categorical data</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_needing_cleanup_from_April_2008" title="Category:Articles needing cleanup from April 2008">Articles needing cleanup from April 2008</a></li><li><a href="/wiki/Category:All_articles_needing_cleanup" title="Category:All articles needing cleanup">All articles needing cleanup</a></li><li><a href="/wiki/Category:Cleanup_tagged_articles_without_a_reason_field_from_April_2008" title="Category:Cleanup tagged articles without a reason field from April 2008">Cleanup tagged articles without a reason field from April 2008</a></li><li><a href="/wiki/Category:Wikipedia_pages_needing_cleanup_from_April_2008" title="Category:Wikipedia pages needing cleanup from April 2008">Wikipedia pages needing cleanup from April 2008</a></li><li><a href="/wiki/Category:Articles_needing_more_detailed_references" title="Category:Articles needing more detailed references">Articles needing more detailed references</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Chi-squared+test&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Chi-squared+test" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Chi-squared_test"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Chi-squared_test"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Chi-squared_test" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Chi-squared_test&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Chi-squared_test&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Chi-squared_test" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Chi-squared_test" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Chi-squared_test&amp;oldid=595165220" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Chi-squared_test&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q1071004" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Chi-squared_test&amp;id=595165220" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Chi-squared+test">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Chi-squared+test&amp;oldid=595165220&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Chi-squared_test&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1_%D9%85%D8%B1%D8%A8%D8%B9_%D9%83%D8%A7%D9%8A" title="اختبار مربع كاي – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="//da.wikipedia.org/wiki/Chi_i_anden-test" title="Chi i anden-test – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="//de.wikipedia.org/wiki/Chi-Quadrat-Test" title="Chi-Quadrat-Test – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="//es.wikipedia.org/wiki/Prueba_%CF%87%C2%B2" title="Prueba χ² – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="//eu.wikipedia.org/wiki/Doikuntzaren_egokitasunerako_khi-karratu_froga" title="Doikuntzaren egokitasunerako khi-karratu froga – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/%D8%A2%D8%B2%D9%85%D9%88%D9%86_%D8%AE%DB%8C%E2%80%8C%D8%AF%D9%88%DB%8C_%D9%BE%DB%8C%D8%B1%D8%B3%D9%88%D9%86" title="آزمون خی‌دوی پیرسون – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/Test_du_%CF%87%C2%B2" title="Test du χ² – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ga"><a href="//ga.wikipedia.org/wiki/Triail_ch%C3%AD-chearn%C3%B3ige" title="Triail chí-chearnóige – Irish" lang="ga" hreflang="ga">Gaeilge</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="//ko.wikipedia.org/wiki/%EC%B9%B4%EC%9D%B4%EC%A0%9C%EA%B3%B1_%EA%B2%80%EC%A0%95" title="카이제곱 검정 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hi"><a href="//hi.wikipedia.org/wiki/%E0%A4%9A%E0%A4%BE%E0%A4%88-%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%97_%E0%A4%AA%E0%A4%B0%E0%A5%80%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3" title="चाई-वर्ग परीक्षण – Hindi" lang="hi" hreflang="hi">हिन्दी</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="//it.wikipedia.org/wiki/Test_chi_quadrato" title="Test chi quadrato – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="//he.wikipedia.org/wiki/%D7%9E%D7%91%D7%97%D7%9F_%D7%9B%D7%99_%D7%91%D7%A8%D7%99%D7%91%D7%95%D7%A2" title="מבחן כי בריבוע – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="//lv.wikipedia.org/wiki/H%C4%AB_kvadr%C4%81ta_krit%C4%93rijs" title="Hī kvadrāta kritērijs – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="//hu.wikipedia.org/wiki/Kh%C3%AD-n%C3%A9gyzet_pr%C3%B3ba" title="Khí-négyzet próba – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="//nl.wikipedia.org/wiki/Chi-kwadraattoets" title="Chi-kwadraattoets – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="//ja.wikipedia.org/wiki/%E3%82%AB%E3%82%A4%E4%BA%8C%E4%B9%97%E6%A4%9C%E5%AE%9A" title="カイ二乗検定 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="//pl.wikipedia.org/wiki/Test_zgodno%C5%9Bci_chi-kwadrat" title="Test zgodności chi-kwadrat – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="//pt.wikipedia.org/wiki/Teste_Qui-Quadrado" title="Teste Qui-Quadrado – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-su"><a href="//su.wikipedia.org/wiki/Tes_chi-kuadrat" title="Tes chi-kuadrat – Sundanese" lang="su" hreflang="su">Basa Sunda</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="//fi.wikipedia.org/wiki/%CE%A7%C2%B2-testi" title="Χ²-testi – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="//uk.wikipedia.org/wiki/%D0%A5%D1%96-%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82_%D1%82%D0%B5%D1%81%D1%82" title="Хі-квадрат тест – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="//vi.wikipedia.org/wiki/Ki%E1%BB%83m_%C4%91%E1%BB%8Bnh_chi_b%C3%ACnh_ph%C6%B0%C6%A1ng" title="Kiểm định chi bình phương – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="//zh.wikipedia.org/wiki/%E5%8D%A1%E6%96%B9%E6%A3%80%E9%AA%8C" title="卡方检验 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="//www.wikidata.org/wiki/Q1071004#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 12 February 2014 at 17:14.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/wiki/Chi-squared_test" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1218 in 0.265 secs. -->
+	</body>
+</html>
